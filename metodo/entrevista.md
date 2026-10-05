@@ -33,7 +33,7 @@ Antes de empezar, leer completos `metodo/control-documental.md` y `plantillas/ba
 
 Se hace en silencio, antes de la primera pregunta:
 
-1. Anotar la hora.
+1. Mirar la hora. Se tiene presente en la conversación y se escribe como hora de inicio al crear el registro de la sesión.
 2. Leer la hoja de la persona: su rol, sus procesos, sus "Preguntas preparadas", sus "Documentos prometidos" y si está confirmada.
 3. Leer `empresa/glosario.md`, si existe, para entender las palabras propias de la empresa.
 4. Leer en `empresa/mapa-de-procesos.md` el estado y la prioridad de cada proceso de su hoja. Se buscan por código. El estado y la prioridad no se leen en la hoja.
@@ -151,7 +151,7 @@ Cuando la persona acepta:
 - Si critica a alguien, se anota el hecho que afecta al trabajo, no el juicio.
 - Si cuenta algo de otro proceso, anotarlo en "Temas para otra sesión" del registro y volver al tema.
 - Un cambio que ya está decidido o en marcha no es una idea, ni es lo que se hace hoy. Se anota en "Temas para otra sesión", en una línea que empieza con `Cambio:`. Lo retoma el responsable del programa, con `metodo/cambio-en-curso.md`.
-- Si aparece una palabra propia de la empresa que no está en el glosario, preguntar qué significa y agregarla. Si `empresa/glosario.md` todavía no existe, se crea copiando `plantillas/glosario.md` y se pone al día la fila `GL-GEN-001` de la lista maestra.
+- Si aparece una palabra propia de la empresa que no está en el glosario, preguntar qué significa y agregarla. Si `empresa/glosario.md` todavía no existe, se crea copiando `plantillas/glosario.md`, en estado `en curso`, y se pone al día la fila `GL-GEN-001` de la lista maestra.
 - No apurar.
 
 ### Cuando la respuesta es vaga
@@ -272,10 +272,11 @@ Si hoy no hay tiempo, se anota en "Temas para otra sesión".
    | Se cerraron todos los temas y la persona confirmó la lectura final | `borrador`, aunque falte escuchar a otras personas. |
 
 3. Sumar una fila al historial de la ficha y de cualquier otro documento controlado que la sesión cambió, con la versión, la fecha, qué se agregó y quién lo contó.
-4. Poner al día la hoja de la persona: "Su parte", las preguntas marcadas, los documentos prometidos y "Última actualización".
-5. Completar "Cómo terminó" en el registro, con su línea de subida. Si quien confirmó la lectura final de la ficha completa es el dueño del proceso, anotarlo ahí: es lo que la revisión necesita para validar.
-6. Hacer el guardado final y la subida, como indica "Al cerrar la sesión" en `metodo/guardado.md`.
-7. Despedirse con la frase de "Despedida".
+4. Si en esta sesión se creó el glosario, pasarlo a `borrador`, en su bloque de control y en la lista maestra.
+5. Poner al día la hoja de la persona: "Su parte", las preguntas marcadas, los documentos prometidos y "Última actualización".
+6. Completar "Cómo terminó" en el registro, con su línea de subida. Si quien confirmó la lectura final de la ficha completa es el dueño del proceso, anotarlo ahí: es lo que la revisión necesita para validar.
+7. Hacer el guardado final y la subida, como indica "Al cerrar la sesión" en `metodo/guardado.md`.
+8. Despedirse con la frase de "Despedida".
 
 ## Seguir en otra sesión
 

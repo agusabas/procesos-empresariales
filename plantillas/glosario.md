@@ -16,10 +16,10 @@ Este glosario tiene una sola definición por cada término propio de la empresa,
 
 _Los términos van en orden alfabético, uno por línea. Cuando aparece una palabra propia de la empresa que no figura aquí, se pregunta qué significa y se agrega._
 
-_La primera forma se usa cuando lo explicó directamente quien usa el término. La segunda se usa cuando la definición sale de material de terceros, de segunda mano o no quedó clara. Cuando la persona nombrada lo confirma, se quita el marcador y la fuente pasa a ser esa persona, con la fecha._
+_La primera forma se usa cuando lo explicó directamente quien usa el término. La segunda se usa cuando la definición sale de material de terceros, de segunda mano o no quedó clara: la fuente dice quién lo dijo, en qué archivo y en qué fecha. Cuando la persona nombrada lo confirma, se quita el marcador y la fuente pasa a ser esa persona, con la fecha._
 
-- **`<término>`:** `<qué significa, en una o dos frases>`. Fuente: `<quién lo explicó>`, `<AAAA-MM-DD>`.
-- **`<término>`:** `<qué significa, en una o dos frases>`. Fuente: `<de qué material sale o quién lo contó>`, `<AAAA-MM-DD>`. `A CONFIRMAR con <quién>`.
+- **`<término>`:** `<qué significa, en una o dos frases>` (fuente: `<quién lo explicó>`, `<AAAA-MM-DD>`).
+- **`<término>`:** `<qué significa, en una o dos frases>` (fuente: `<quién lo dijo>`, `<archivo>`, `<AAAA-MM-DD>`). `A CONFIRMAR con <quién>`.
 
 _Si un término se usa con dos sentidos que conviven, se numeran en la misma línea y se dice dónde se usa cada uno. Si dos personas lo definen distinto, se dejan las dos versiones en un bloque `CONFLICTO`._
 

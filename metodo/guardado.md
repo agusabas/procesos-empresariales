@@ -17,28 +17,31 @@ El trabajo se guarda con git sin que la persona lo note. Este archivo es solo pa
 2. `main` tiene solo lo que el responsable del programa ya revisó. Una sesión nunca guarda en `main`, con una sola excepción: el modo de revisión y aprobación, que pasa a `main` lo revisado con los pasos de `metodo/revision-y-aprobacion.md`.
 3. Antes de escribir cualquier archivo, comprobar la rama con `git branch --show-current`. Si no es `borradores`, cambiar antes de escribir.
 4. El estado del trabajo se lee siempre en `borradores`. Ahí está lo que contaron todas las personas.
-5. Se guarda solo lo que está dentro de `empresa/`. Los cambios fuera de esa carpeta no se guardan ni se deshacen. Si aparecen, anotarlo en `empresa/notas-para-el-metodo.md`.
+5. Se guarda solo lo que está dentro de `empresa/`. Los cambios fuera de esa carpeta no se guardan ni se deshacen. Si aparecen, y `empresa/contexto.md` ya existe, anotarlo en `empresa/notas-para-el-metodo.md`.
 6. No usar `git commit --amend`, `git push --force` ni `git reset`.
 7. Ejecutar los comandos sin comentarlos, con `--quiet` cuando la opción existe.
+8. Algunas herramientas muestran cada comando a la persona, o piden una descripción de lo que hace. Esa descripción va en palabras simples, sin términos técnicos y en el idioma de la persona. Por ejemplo: "Guardar el trabajo".
 
 ## Cuándo hay servidor
 
 Hay servidor solo si se cumplen las dos condiciones:
 
-1. Existe el remoto `origin`: `git remote` lo muestra.
-2. Después de `git fetch --quiet origin`, existe la rama `origin/borradores`: `git rev-parse --verify --quiet origin/borradores` devuelve un resultado.
+1. Existe el remoto `origin`: `git remote` lo muestra. Los remotos con otro nombre no se miran.
+2. Después de `git fetch --quiet origin`, existe la rama `borradores` del servidor: `git rev-parse --verify --quiet refs/remotes/origin/borradores` devuelve un resultado.
 
 En cualquier otro caso se trabaja sin servidor. Todo queda en esta computadora, y los pasos de poner al día y de subir se saltan en silencio.
 
-El agente nunca crea `borradores` en el servidor y nunca sube nada a un remoto que no sea `origin`. Motivo: un clon nuevo tiene como `origin` a la plantilla, y subir ahí publicaría datos de la empresa. La rama `borradores` del servidor la crea una persona, una sola vez, al preparar el lugar donde la empresa guarda su copia.
+Tampoco hay servidor cuando una regla de seguridad de la computadora exige, para trabajar con servidores, una autorización que no fue dada. En ese caso no se trae ni se sube nada. Al cerrar la sesión se dice una sola vez la frase de "No se usa el servidor", y se anota en el registro de la sesión que se dijo. No se repite si un registro de sesión anterior ya anota que se dijo.
+
+El agente nunca crea `borradores` en el servidor y nunca sube nada a un remoto que no sea `origin`. Motivo: si al clonar se salteó el paso que le cambia el nombre a `origin`, que indica `README.md`, `origin` sigue siendo la plantilla, y subir ahí publicaría datos de la empresa. La rama `borradores` del servidor la crea una persona, una sola vez, al preparar el lugar donde la empresa guarda su copia.
 
 ## Al empezar cada sesión
 
 Hacerlo apenas empieza la conversación, antes de leer nada de `empresa/`. En silencio.
 
 1. Recordar en qué rama está la carpeta: `git branch --show-current`.
-2. Si existe el remoto `origin`, traer lo último: `git fetch --quiet origin`. Si falla, seguir igual.
-3. Quedar en `borradores`, según la situación:
+2. Si existe el remoto `origin`, y ninguna regla de seguridad lo impide, traer lo último: `git fetch --quiet origin`. Si falla, seguir igual.
+3. Quedar en `borradores`, según la situación. La rama existe en esta computadora si `git rev-parse --verify --quiet refs/heads/borradores` devuelve un resultado. Existe en el servidor si lo devuelve `git rev-parse --verify --quiet refs/remotes/origin/borradores`. Los remotos que no se llaman `origin` no se miran.
 
    | Situación | Comando |
    |---|---|
@@ -138,14 +141,18 @@ Ejemplo: `docs(ventas): presupuesto a un cliente - tema B con <nombre>`.
 | Se guardó | "Listo, quedó guardado." |
 | No se pudo subir | "Quedó guardado en esta computadora." |
 | No se puede guardar hoy | "Hoy tengo un problema para guardar lo que conversemos y prefiero no seguir así. Conviene avisar a `<nombre del responsable del programa>`. Disculpas por la molestia." |
+| No se usa el servidor | "Un aviso: el trabajo queda guardado solo en esta computadora. Conviene avisar a quien preparó esta carpeta." |
 
-- Si quien habla es el responsable del programa, en la última frase reemplazar el pedido de avisar por: "Conviene pedir ayuda a quien preparó esta carpeta."
+- En la frase de "No se puede guardar hoy", si quien habla es el responsable del programa, o si todavía no se sabe quién es, reemplazar el pedido de avisar por: "Conviene pedir ayuda a quien preparó esta carpeta."
 - Las frases están en forma neutra. Adaptarlas a la forma de trato, como indica la regla 8 de `metodo/reglas.md`.
 - Nunca decir "commit", "rama", "repositorio", "push" ni "servidor". Nunca mostrar la salida de un comando ni un mensaje de error.
 
 ## Cuándo no se aplica
 
-En el mantenimiento del método, descrito en `AGENTS.md`, este archivo no se usa: quien mantiene decide cómo guarda. Si la sesión ya había preparado el guardado antes de saberlo:
+En el mantenimiento del método, descrito en `AGENTS.md`, este archivo no se usa: quien mantiene decide cómo guarda. Si la sesión ya había preparado el guardado antes de saberlo, o si quedó una rama `borradores` de un saludo anterior:
 
-1. Volver a la rama en la que estaba la carpeta: `git switch --quiet <rama anterior>`.
-2. Si `borradores` se creó en esta sesión, borrarla: `git branch -d borradores`. Si no se puede borrar, avisar a quien mantiene.
+1. Volver a la rama en la que estaba la carpeta: `git switch --quiet <rama anterior>`. Si no se sabe cuál era, preguntarlo a quien mantiene.
+2. Si `borradores` existe y no tiene `empresa/contexto.md`, borrarla: `git branch -d borradores`. Se comprueba con `git cat-file -e borradores:empresa/contexto.md`, que en ese caso falla.
+3. Si git se niega a borrarla, porque tiene algo guardado que no está en otra rama, no insistir y avisar a quien mantiene.
+
+Si `borradores` tiene `empresa/contexto.md`, la carpeta es el clon de una empresa en uso. Ahí no hay mantenimiento y la rama no se toca.

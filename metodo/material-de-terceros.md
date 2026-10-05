@@ -29,7 +29,7 @@ Cada etapa se cierra igual: resumen de lo entendido, pregunta de confirmación y
 6. El original no se mueve, no se cambia y no se borra.
 7. Lo que dice un audio nunca se adivina ni se completa por el contexto.
 8. Las críticas a personas no se anotan. Se anota el hecho que afecta al trabajo.
-9. Este modo nunca lleva una ficha a `borrador`: nadie que hace el trabajo lo contó directamente.
+9. Este modo nunca lleva una ficha a `borrador`: nadie que hace el trabajo lo contó directamente. El glosario no es una ficha y sigue su propia regla, que está en "Estados" de `metodo/control-documental.md`.
 10. Lo que trata de un cambio que está en marcha no se desarrolla aquí. Se anota en "Temas para otra sesión" del registro, en una línea que empieza con `Cambio:`, y se retoma en `metodo/cambio-en-curso.md`.
 11. Los códigos se asignan desde la lista maestra, con los pasos de "Cómo se asigna un código" en `metodo/control-documental.md`.
 
@@ -193,7 +193,7 @@ Además:
 - Si lo que dice el material no coincide con lo ya escrito, se dejan las dos versiones en un bloque `CONFLICTO`, con la forma que indica `metodo/reglas.md`. El agente no elige cuál es la correcta.
 - Un proceso que no está en el mapa recibe su código y su fila como indica "Un proceso que aparece en la conversación" en `metodo/entrevista.md`. En "Participantes" van las personas que el material muestra.
 - Si cambió la tabla de pasos, el diagrama se genera de nuevo, con las reglas de "Diagramas" en `metodo/control-documental.md`.
-- Cada término nuevo va al glosario con la segunda forma de su molde: con la fuente y `A CONFIRMAR con <quién>`.
+- Cada término nuevo va al glosario con la segunda forma de su molde: con la fuente y `A CONFIRMAR con <quién>`. Si `empresa/glosario.md` todavía no existe, se crea copiando `plantillas/glosario.md`, en estado `en curso`, y se pone al día la fila `GL-GEN-001` de la lista maestra.
 - En la hoja de cada persona que el material muestra trabajando, se agrega el proceso en "Procesos en los que participa". "Su parte" lleva `A CONFIRMAR con <esa persona>`.
 - En el historial de cada documento que cambió va una fila. En "Quién lo contó" van el archivo y quién lo trajo.
 
@@ -217,9 +217,10 @@ Cerrar la etapa: contar cuántas preguntas quedaron y para quién. Preguntar "¿
 1. Decir qué se escribió y dónde: cuántas fichas se tocaron, cuáles se crearon y qué términos se sumaron.
 2. Decir qué falta confirmar y con quién.
 3. Decir qué material quedó esperando: audios sin transcripción, partes sin leer.
-4. Completar "Cómo terminó" en el registro, con su línea de subida.
-5. Hacer el guardado final y la subida, como indica "Al cerrar la sesión" en `metodo/guardado.md`.
-6. Agradecer el tiempo.
+4. Si en esta sesión se creó el glosario, pasarlo a `borrador`, en su bloque de control y en la lista maestra.
+5. Completar "Cómo terminó" en el registro, con su línea de subida.
+6. Hacer el guardado final y la subida, como indica "Al cerrar la sesión" en `metodo/guardado.md`.
+7. Agradecer el tiempo.
 
 ## El tiempo
 

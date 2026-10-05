@@ -104,7 +104,7 @@ No hay conflictos, porque en un clon solo se escribe dentro de `empresa/` y las 
 Quien mantiene la plantilla marca su copia de trabajo una sola vez:
 
 ```
-git config plantilla.mantenimiento true
+git config --local plantilla.mantenimiento true
 ```
 
 La marca es local: no viaja al clonar. Con ella, el agente trata toda sesión en esa carpeta como mantenimiento del método y no empieza un relevamiento ahí.

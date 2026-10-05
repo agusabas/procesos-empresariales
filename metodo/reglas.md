@@ -40,7 +40,7 @@ Tres marcadores señalan lo que todavía no es firme. Se escriben siempre igual 
 
 | Marcador | Qué significa | Forma exacta | Quién lo cierra |
 |---|---|---|---|
-| `PENDIENTE` | Falta un dato y nadie en la conversación lo sabe. | `PENDIENTE: preguntar a <quién>` | La persona nombrada, cuando responde. |
+| `PENDIENTE` | Falta un dato y nadie en la conversación lo sabe. | `PENDIENTE: <qué falta>`. Tiene dos formas habituales: `PENDIENTE: preguntar a <quién>` y `PENDIENTE: falta la transcripción de <archivo>` | La persona nombrada, cuando responde. En la segunda forma, la transcripción, cuando llega. |
 | `CONFLICTO` | Hay dos versiones distintas de lo mismo. | Bloque con las dos versiones | El dueño del proceso. |
 | `A CONFIRMAR` | El dato viene de material de terceros o de segunda mano. | `A CONFIRMAR con <quién>` | La persona nombrada, cuando lo confirma directamente. |
 
@@ -58,7 +58,7 @@ Tres marcadores señalan lo que todavía no es firme. Se escriben siempre igual 
 Ejemplos, con una situación inventada en la que un cliente pide un presupuesto:
 
 - Plazo para enviar el presupuesto: `PENDIENTE: preguntar a <nombre>`.
-- El presupuesto vence a los 15 días (fuente: notas de una reunión, AAAA-MM-DD). `A CONFIRMAR con <nombre>`.
+- El presupuesto vence a los 15 días (fuente: `<quién lo dijo>`, `<archivo>`, AAAA-MM-DD). `A CONFIRMAR con <quién>`.
 
 ## Detalle de las reglas
 
@@ -84,8 +84,9 @@ Ejemplos, con una situación inventada en la que un cliente pide un presupuesto:
 ### 4. Material de terceros o de segunda mano
 
 - Es todo lo que no contó directamente quien hace el trabajo: conversaciones exportadas, notas, capturas de pantalla, documentos anteriores, o lo que alguien cuenta sobre el trabajo de otra persona.
-- Se escribe con su fuente y con `A CONFIRMAR con <quién>`.
+- Se escribe con su fuente y con `A CONFIRMAR con <quién>`. La fuente va en la misma línea, con esta forma: `(fuente: <quién lo dijo>, <archivo>, <AAAA-MM-DD>)`.
 - Sirve para preguntar mejor. Nunca cuenta como validado.
+- Única excepción: lo que dijo en el material la misma persona que lo trae. Si confirma en la conversación que sigue siendo así, vale como su palabra directa y no lleva marcador. Lo que dijo cualquier otra persona sigue `A CONFIRMAR`.
 
 ### 5. Un documento vigente no se reescribe
 
@@ -132,9 +133,13 @@ Ejemplos, con una situación inventada en la que un cliente pide un presupuesto:
 
 Forma de trato:
 
-- Usar la forma de trato registrada en `empresa/contexto.md`.
-- Mientras no esté registrada, usar la misma forma en que escribe la persona.
-- Las frases de ejemplo del método están escritas en forma neutra. Adaptarlas a la forma de trato que corresponda, sin cambiar su sentido.
+Se usa la primera de estas que se pueda:
+
+1. La forma de trato registrada en `empresa/contexto.md`.
+2. Si todavía no está registrada, la misma forma en que escribe la persona.
+3. Si tampoco se sabe cómo escribe, frases sin verbo en segunda persona. Cuando una no se pueda evitar, se usa "usted".
+
+Las frases de ejemplo del método están escritas en forma neutra. Adaptarlas a la forma de trato que corresponda, sin cambiar su sentido.
 
 ### 9. Confirmación por etapa
 
@@ -146,13 +151,14 @@ Vale al cerrar cada etapa o cada tema, en todos los modos:
 4. Solo después, escribir y guardar como indica `metodo/guardado.md`.
 
 - No pasar a la etapa siguiente sin la confirmación.
-- Quien confirma un resumen de material de terceros confirma la lectura, no los hechos. Lo extraído sigue marcado `A CONFIRMAR`.
+- Quien confirma un resumen de material de terceros confirma la lectura, no los hechos. Lo extraído sigue marcado `A CONFIRMAR`, con la excepción que indica la regla 4.
 
 ### 10. El método no se edita en un clon
 
 - Un clon es la copia del repositorio que usa una empresa. En un clon, el agente escribe solo dentro de `empresa/`.
 - No se modifica nada fuera de `empresa/`. Tampoco `empresa/README.md`, que es parte del método.
 - Si falta una instrucción, o una instrucción no alcanza para un caso, anotarlo en `empresa/notas-para-el-metodo.md` con la fecha, qué faltó y en qué archivo del método.
+- Esas notas se escriben solo cuando el relevamiento ya empezó, es decir, cuando existe `empresa/contexto.md`. Antes de eso no se escribe nada.
 - Esa nota se escribe sin datos de la empresa: sin nombres de personas, de la empresa, de sistemas ni de lugares.
 - No cubrir la falta con una regla propia. Si la falta impide seguir, decirlo con palabras simples.
 - Única excepción: el mantenimiento del método, que se hace en la plantilla y está descrito en `AGENTS.md`.

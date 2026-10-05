@@ -136,6 +136,7 @@ Los estados avanzan en este orden: `pendiente`, `en curso`, `borrador`, `validad
 - Un marcador cambia el sentido cuando afecta quién hace algo, qué se hace, en qué orden, con qué regla o con qué excepción. No lo cambia cuando falta un detalle, como una duración exacta. Ante la duda, lo cambia.
 - Un documento `validado` vuelve a `borrador` si aparece un `PENDIENTE`, un `CONFLICTO` o un `A CONFIRMAR` que cambia el sentido.
 - Una ficha en `borrador` vuelve a `en curso` si una entrevista posterior queda con temas sin cerrar.
+- El glosario se crea en estado `en curso` y pasa a `borrador` al cerrar la sesión en la que se creó. Desde ahí sigue el camino de la revisión y la aprobación. Mientras no esté `vigente`, se le siguen sumando términos.
 - Un documento `vigente` no retrocede. Lo que cambia se anota como indica "Cambios en un documento vigente".
 - El estado se escribe en tres lugares: el bloque de control, la lista maestra y, si es una ficha, el mapa de procesos. Se cambian los tres en el mismo guardado.
 

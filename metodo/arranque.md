@@ -29,7 +29,7 @@ Las rutas de la tabla están dentro de `empresa/`. Los minutos son aproximados: 
 6. Todo lo que sale del material de la etapa 4 lleva su fuente y `A CONFIRMAR con <quién>`.
 7. De las personas se anota solo el nombre de pila y el rol.
 8. Si una respuesta es vaga, repreguntar: cuántos, cada cuánto, quién.
-9. Una palabra propia de la empresa que no se entiende se pregunta y se anota en `empresa/glosario.md`. La primera vez, ese archivo se crea copiando `plantillas/glosario.md` y se pone al día la fila `GL-GEN-001` de la lista maestra.
+9. Una palabra propia de la empresa que no se entiende se pregunta y se anota en `empresa/glosario.md`. La primera vez, ese archivo se crea copiando `plantillas/glosario.md`, en estado `en curso`, y se pone al día la fila `GL-GEN-001` de la lista maestra.
 10. Los códigos se asignan desde la lista maestra, con los pasos de "Cómo se asigna un código" en `metodo/control-documental.md`.
 11. Este modo deja los documentos, como mucho, en `borrador`. Nunca en `validado` ni en `vigente`.
 
@@ -48,7 +48,7 @@ Una etapa se puede confirmar aunque queden datos sin saber, siempre que cada uno
 ## El tiempo
 
 - Al presentar el trabajo, decir cuánto lleva en total y que se puede repartir en varias conversaciones.
-- Al empezar cada sesión, anotar la hora en silencio.
+- Al empezar cada sesión, mirar la hora en silencio. Mientras no exista el registro de la sesión, la hora se tiene presente en la conversación. Al crear el registro, se escribe como hora de inicio.
 - Al cerrar cada etapa, mirar cuánto tiempo pasó. Si pasaron unos 25 minutos o más, usar la frase de "Ofrecer cortar" en lugar de la pregunta de "Avance". Se ofrece sin insistir.
 - Si no se puede ver la hora, ofrecer cortar al cerrar cada segunda etapa.
 - Se corta al terminar una etapa. Si la persona tiene que irse en medio de una, resumir lo que alcanzó a contar, confirmarlo, escribirlo, dejar la etapa sin marcar y cerrar la sesión.
@@ -252,15 +252,16 @@ Lista para enviar: ofrecerla para las personas que no van a sentarse a conversar
 Se hace siempre que una sesión termina, esté o no completo el arranque:
 
 1. Sumar una fila al historial de cada documento controlado que la sesión cambió, con la versión `0`, la fecha, qué se agregó y quién lo contó.
-2. Completar "Cómo terminó" en el registro de la sesión, con su línea de subida.
-3. Hacer el guardado final y la subida, como indica "Al cerrar la sesión" en `metodo/guardado.md`.
-4. Agradecer el tiempo. Si quedan etapas, decir que la próxima vez alcanza con abrir la carpeta y saludar.
+2. Si en esta sesión se creó el glosario, pasarlo a `borrador`, en su bloque de control y en la lista maestra.
+3. Completar "Cómo terminó" en el registro de la sesión, con su línea de subida.
+4. Hacer el guardado final y la subida, como indica "Al cerrar la sesión" en `metodo/guardado.md`.
+5. Agradecer el tiempo. Si quedan etapas, decir que la próxima vez alcanza con abrir la carpeta y saludar.
 
 ## Cierre del arranque
 
 Se hace una sola vez, al cerrar la etapa 8 y antes del cierre de la sesión:
 
-1. Pasar a `borrador` el contexto y el mapa de procesos, y también el glosario si existe. El estado se cambia en el bloque de control y en la lista maestra.
+1. Pasar a `borrador` el contexto y el mapa de procesos. El estado se cambia en el bloque de control y en la lista maestra. El glosario ya pasó a `borrador` al cerrar la sesión en la que se creó.
 2. Resumir todo lo que quedó escrito, con palabras simples y con cantidades: áreas, personas, procesos y preguntas preparadas. Decir cuántas cosas quedaron por confirmar o por preguntar.
 3. Decir qué sigue. Mirar la tabla de modos de `AGENTS.md` y nombrar solo lo que ya tiene fila. No prometer lo que todavía no está disponible. Si en el arranque apareció un cambio en marcha, ofrecer abrirlo en otra conversación, con `metodo/cambio-en-curso.md`.
 4. Si no hay servidor, como lo define "Cuándo hay servidor" en `metodo/guardado.md`, decir una sola vez la frase de "Sin servidor". Anotar en el registro de la sesión que se dijo.

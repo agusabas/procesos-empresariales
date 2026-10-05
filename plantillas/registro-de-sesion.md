@@ -3,7 +3,7 @@
 # Sesión `<AAAA-MM-DD>`: `<nombre>`, `<tema>`
 
 - **Persona:** `<nombre de pila y rol>`
-- **Modo:** `<modo de trabajo de la sesión>`
+- **Modo:** `<arranque, entrevista, material de terceros, cambio en curso o revisión y aprobación>`
 - **Proceso o asunto:** `<nombre del proceso, como figura en el mapa, o asunto de la sesión>`
 - **Ficha:** `<ruta de la ficha del proceso, o —>`
 - **Hora de inicio y de fin:** `<HH:MM>` a `<HH:MM>`

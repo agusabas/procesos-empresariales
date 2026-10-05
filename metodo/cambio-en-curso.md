@@ -18,8 +18,8 @@ Cada etapa se cierra igual: resumen de lo entendido, pregunta de confirmación y
 
 ## Reglas de este modo
 
-1. Se trabaja con el responsable del programa.
-2. Quien lleva el cambio dentro de la empresa puede ser otra persona. Se anota en la ficha del cambio. No es un rol del relevamiento.
+1. Se trabaja con el responsable del programa. También con quien lleva el cambio dentro de la empresa, pero solo sobre su propio cambio.
+2. Quien lleva el cambio dentro de la empresa puede ser otra persona que el responsable del programa. Se anota en "Quiénes participan" de la ficha del cambio. No es un rol del relevamiento.
 3. Las personas de afuera de la empresa, como alguien de un proveedor, se anotan en la ficha del cambio con su nombre de pila y su rol. No llevan hoja.
 4. La ficha de un proceso cuenta lo que pasa hoy. "Cómo va a quedar" es un plan y vive solo en la ficha del cambio.
 5. Este modo no escribe en las fichas de proceso. Una ficha cambia cuando la forma nueva ya se usa, y por el camino normal: quien hace el trabajo lo cuenta en una entrevista, y la revisión y la aprobación suben la versión.
@@ -32,7 +32,8 @@ Cada etapa se cierra igual: resumen de lo entendido, pregunta de confirmación y
 ## Al empezar cada sesión
 
 1. Leer qué cambios hay en `empresa/cambios/` y en qué estado está cada uno.
-2. Saber de qué cambio se trata:
+2. Si quien habla no es el responsable del programa, comprobar que figura como quien lleva algún cambio, en "Quiénes participan" de su ficha. Con esa persona se trabaja solo sobre ese cambio, y no se abre uno nuevo. Si no lleva ninguno, este modo no se abre: lo que cuente sobre un cambio se anota como indica `metodo/entrevista.md`.
+3. Saber de qué cambio se trata:
 
    | Situación | Qué se hace |
    |---|---|
@@ -41,7 +42,7 @@ Cada etapa se cierra igual: resumen de lo entendido, pregunta de confirmación y
    | Hay más de uno | Preguntar de cuál se trata. |
    | El cambio está `en pausa` y la persona dice que se retomó | Pasarlo a `abierto`, anotarlo en su historial y seguir "Seguir un cambio". |
 
-3. Crear el registro de la sesión, como indica "El registro de la sesión".
+4. Crear el registro de la sesión, como indica "El registro de la sesión".
 
 ## Abrir un cambio
 
