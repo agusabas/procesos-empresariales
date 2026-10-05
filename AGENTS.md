@@ -60,7 +60,9 @@ El estado se lee después de preparar el guardado, porque el trabajo al día est
    - Si quien habla es el responsable del programa y el contexto de la empresa sigue `en curso` con las ocho etapas confirmadas, falta el cierre del arranque. Hacerlo como paso previo, antes de elegir el modo, como indica "Cierre del arranque" en `metodo/arranque.md`. No se retoma ninguna etapa.
    - Si la persona no tiene hoja, no se la rechaza. Preguntarle qué hace en la empresa, con una pregunta que pueda responder a lo largo. Con lo que cuente, anotar su rol y su área, y preguntar aparte solo lo que falte. Crear una hoja provisional marcada `A CONFIRMAR con <responsable del programa>` y continuar.
    - Si el nombre coincide con más de una hoja, preguntar el área para distinguir.
-   - Si la persona puede entrar a más de un modo y no dijo a qué viene, decirle en una frase qué hay pendiente y preguntar por dónde seguir. Es una sola pregunta. Lo pendiente se mira en la lista maestra, en `empresa/insumos/catalogo.md`, en las fichas de `empresa/cambios/` y en la hoja de la persona.
+   - Un modo corresponde cuando se cumple su columna "Cuándo corresponde": la persona trae algo de ese modo, o tiene algo pendiente de ese modo. La columna "Con quién" solo dice quién puede entrar.
+   - Si corresponde un solo modo, se entra directo a ese modo, sin preguntar a qué viene. Una persona con hoja que saluda y no trae nada de otro modo entra a la entrevista.
+   - Se pregunta a qué viene solo cuando corresponde más de un modo y la persona no lo dijo. En ese caso, decirle en una frase qué hay pendiente y preguntar por dónde seguir. Es una sola pregunta. Lo pendiente se mira en la lista maestra, en `empresa/insumos/catalogo.md`, en las fichas de `empresa/cambios/` y en la hoja de la persona.
 
 Con el modo elegido, buscar su fila en la tabla de modos:
 
@@ -105,7 +107,7 @@ Un modo existe solo si tiene fila en esta tabla. La columna "Archivo" indica qu�
 | Modo | Cuándo corresponde | Con quién | Archivo |
 |---|---|---|---|
 | Arranque | `empresa/contexto.md` no existe, o su lista de arranque tiene etapas sin confirmar | Responsable del programa | `metodo/arranque.md` |
-| Entrevista | La persona viene a contar cómo hace su trabajo, o trae un tema o un archivo de un trabajo suyo | Cualquier persona con hoja, también el responsable del programa | `metodo/entrevista.md` |
+| Entrevista | La persona viene a contar cómo hace su trabajo, o trae un tema o un archivo de un trabajo suyo. También cuando saluda y no trae nada de otro modo | Cualquier persona con hoja, también el responsable del programa | `metodo/entrevista.md` |
 | Material de terceros | La persona trae material en el que hablan otras personas: una conversación exportada, notas de una reunión, un hilo de correos, capturas o audios | Responsable del programa. También cualquier persona con hoja | `metodo/material-de-terceros.md` |
 | Cambio en curso | La empresa está cambiando algo que altera cómo se trabaja, como un sistema nuevo, una sede nueva, una reorganización o una norma nueva, y hay que abrirlo, seguirlo o cerrarlo | Responsable del programa. También quien figura como quien lleva ese cambio en "Quiénes participan" de su ficha, en `empresa/cambios/` | `metodo/cambio-en-curso.md` |
 | Revisión y aprobación | Hay que repasar lo relevado, confirmar o aprobar un documento, ordenar la lista de documentos, hacer la revisión periódica o dar de baja un documento | Responsable del programa. Para aprobar un documento, o para dar de baja uno `vigente`, quien aprueba | `metodo/revision-y-aprobacion.md` |

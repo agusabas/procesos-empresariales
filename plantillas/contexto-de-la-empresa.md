@@ -57,7 +57,7 @@ Las tres letras de un área no se cambian después: los códigos de los document
 | Área | Carpeta | Letras | Qué hace |
 |---|---|---|---|
 | `<nombre del área>` | `<carpeta>` | `<letras>` | `<qué hace, en una frase>` |
-| Toda la empresa | `general` | `GEN` | Lo que no es de un área sola. |
+| General | `general` | `GEN` | Lo que es de toda la empresa y no de un área sola. |
 
 ## Sistemas y herramientas
 

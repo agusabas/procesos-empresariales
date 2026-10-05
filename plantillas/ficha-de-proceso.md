@@ -1,4 +1,4 @@
-> **Nota para el agente.** Este molde se copia a `empresa/procesos/<area>/<codigo>-<slug>.md` al empezar el relevamiento de un proceso. Si la ficha ya existe, no se copia de nuevo: se le suma lo que cuenta cada persona. En la copia, cada comodín (lo que va entre `<` y `>`) se reemplaza junto con las comillas invertidas que lo rodean, y cada ayuda en cursiva se reemplaza por el contenido. Lo que no se sabe se escribe `PENDIENTE: preguntar a <quién>`. Esta nota se borra de la copia. Las reglas de control están en `metodo/control-documental.md`.
+> **Nota para el agente.** Este molde se copia a `empresa/procesos/<area>/<codigo>-<slug>.md` al empezar el relevamiento de un proceso. Si la ficha ya existe, no se copia de nuevo: se le suma lo que cuenta cada persona. En la copia, cada comodín (lo que va entre `<` y `>`) se reemplaza junto con las comillas invertidas que lo rodean, y cada ayuda en cursiva se reemplaza por el contenido. Una parte que todavía no tiene nada conserva su ayuda hasta que haya algo para anotar. Las ayudas que encabezan "Cómo se hace hoy", "Problemas e ideas" y "Cambios propuestos (sin aprobar)" explican la parte y quedan en la copia. Lo que no se sabe se escribe `PENDIENTE: preguntar a <quién>`. Esta nota se borra de la copia. Las reglas de control están en `metodo/control-documental.md`.
 
 # `<nombre del proceso, como figura en el mapa de procesos>`
 
@@ -40,7 +40,7 @@ _Lo que hay que tener antes de empezar: datos, documentos, autorizaciones. Quié
 
 ### Pasos
 
-_Una fila por paso, en el orden en que se hacen. En "Con qué" va el sistema, la planilla o el papel que se usa hoy._
+_Una fila por paso, en el orden en que se hacen. Si un paso lo hacen dos sectores, va en dos filas. En "Con qué" va el sistema, la planilla o el papel que se usa hoy._
 
 | Paso | Quién | Qué hace | Con qué (sistema/planilla) | Cuánto tarda |
 |---|---|---|---|---|

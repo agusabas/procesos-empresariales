@@ -41,13 +41,16 @@ Tres marcadores señalan lo que todavía no es firme. Se escriben siempre igual 
 | Marcador | Qué significa | Forma exacta | Quién lo cierra |
 |---|---|---|---|
 | `PENDIENTE` | Falta un dato y nadie en la conversación lo sabe. | `PENDIENTE: <qué falta>`. Tiene dos formas habituales: `PENDIENTE: preguntar a <quién>` y `PENDIENTE: falta la transcripción de <archivo>` | La persona nombrada, cuando responde. En la segunda forma, la transcripción, cuando llega. |
-| `CONFLICTO` | Hay dos versiones distintas de lo mismo. | Bloque con las dos versiones | El dueño del proceso. |
+| `CONFLICTO` | Hay dos versiones distintas de lo mismo. | Bloque con las dos versiones | El dueño del proceso. Si el proceso no tiene dueño, el responsable del programa. |
 | `A CONFIRMAR` | El dato viene de material de terceros o de segunda mano. | `A CONFIRMAR con <quién>` | La persona nombrada, cuando lo confirma directamente. |
 
 - `<quién>` es el nombre de pila de la persona que puede responder. Si nadie sabe quién es, se escribe `A DEFINIR`. Por ejemplo: `PENDIENTE: preguntar a A DEFINIR`.
 - Lo marcado `A CONFIRMAR` nunca cuenta como validado, aunque parezca confiable.
+- Un marcador se cierra solo cuando la persona que nombra responde sobre ese punto. Confirmar un resumen, aceptar un documento en una revisión o aprobarlo no cierra sus marcadores.
+- Si un dato que estaba `PENDIENTE` llega de otra fuente, se escribe con su fuente y el marcador pasa a ser `A CONFIRMAR con` la misma persona. Sigue abierto.
 - Cada marcador se escribe una sola vez, en el documento donde vive el dato. Los demás lugares pueden nombrar lo que falta, pero sin repetir el marcador.
-- Un registro de sesión no es el lugar de un marcador: queda cerrado y nadie lo podría quitar. Si un dato todavía no tiene un documento donde vivir, se anota como pregunta en la hoja del responsable del programa.
+- Si el mismo dato aparece en varias partes de un documento, el marcador va en la primera. Las demás lo nombran sin el marcador.
+- Un registro de sesión no es el lugar de un marcador: queda cerrado y nadie lo podría quitar. Lo que falta sobre un archivo recibido vive en su fila del catálogo. Si un dato todavía no tiene un documento donde vivir, se anota como pregunta en la hoja del responsable del programa.
 - El bloque de `CONFLICTO` tiene esta forma:
 
   ```
@@ -56,6 +59,16 @@ Tres marcadores señalan lo que todavía no es firme. Se escriben siempre igual 
   - Versión de <nombre> (AAAA-MM-DD): <qué dijo>
   Lo resuelve: <dueño del proceso>
   ```
+
+- En "Lo resuelve" va el dueño del proceso. Si el proceso todavía no tiene dueño, va el responsable del programa.
+
+Cuando la persona que un marcador nombra responde que no sabe:
+
+1. El marcador sigue abierto. La pregunta preparada se marca en su hoja, con la fecha y la aclaración "no supo".
+2. Preguntar una sola vez a quién habría que consultarle.
+3. Si nombra a alguien, un `PENDIENTE` pasa a nombrar a esa persona, y la pregunta se suma a su hoja.
+4. Si no sabe a quién, un `PENDIENTE` pasa a `PENDIENTE: preguntar a A DEFINIR`, y la pregunta se suma a la hoja del responsable del programa.
+5. Un `A CONFIRMAR` queda como está: lo sigue cerrando la persona que nombra.
 
 Ejemplos, con una situación inventada en la que un cliente pide un presupuesto:
 
@@ -75,6 +88,8 @@ Ejemplos, con una situación inventada en la que un cliente pide un presupuesto:
 - No completar un hueco con una suposición, aunque parezca obvia. Vale para pasos, nombres, números y responsables.
 - Lo que falta se escribe `PENDIENTE: preguntar a <quién>`.
 - Que una persona no sepa algo está bien. Decirlo así: "No hay problema. Lo anoto para preguntárselo a quien corresponda." Después, preguntar a quién habría que consultarle.
+- A quién consultar se pregunta una sola vez por asunto. Si la persona ya dijo que tampoco lo sabe, no se le vuelve a preguntar por ese asunto: va `A DEFINIR`.
+- No se pregunta a quién consultar cuando el modo ya indica qué se hace con lo que falta.
 
 ### 3. Dos versiones distintas
 
@@ -87,8 +102,12 @@ Ejemplos, con una situación inventada en la que un cliente pide un presupuesto:
 
 - Es todo lo que no contó directamente quien hace el trabajo: conversaciones exportadas, notas, capturas de pantalla, documentos anteriores, o lo que alguien cuenta sobre el trabajo de otra persona.
 - Se escribe con su fuente y con `A CONFIRMAR con <quién>`. La fuente va en la misma línea, con esta forma: `(fuente: <quién lo dijo>, <archivo>, <AAAA-MM-DD>)`.
+- Si del material solo se sabe una fecha aproximada, va lo que se sabe, seguido de "aprox.": `AAAA-MM aprox.` o `AAAA aprox.`. Si no se sabe nada, va `sin fecha`.
 - Sirve para preguntar mejor. Nunca cuenta como validado.
-- Única excepción: lo que dijo en el material la misma persona que lo trae. Si confirma en la conversación que sigue siendo así, vale como su palabra directa y no lleva marcador. Lo que dijo cualquier otra persona sigue `A CONFIRMAR`.
+- Hay dos excepciones, las dos con la persona que trae el material y en la misma conversación:
+  - Lo que ella misma dijo en el material.
+  - Lo que el material dice sobre su propio trabajo, lo haya dicho quien lo haya dicho.
+- En los dos casos se le pregunta si es así. Si lo confirma, vale como su palabra directa y no lleva marcador. Todo lo demás sigue `A CONFIRMAR`.
 
 ### 5. Un documento vigente no se reescribe
 
@@ -120,6 +139,7 @@ Ejemplos, con una situación inventada en la que un cliente pide un presupuesto:
 - Usar palabras de todos los días y frases cortas.
 - Hacer una pregunta por mensaje y esperar la respuesta. Nunca varias preguntas juntas.
 - Una pregunta por mensaje no quiere decir un dato por mensaje. Preferir una pregunta que la persona pueda responder a lo largo, con sus palabras. Después, proponer lo que se entendió y pedir que lo corrija. Preguntar aparte solo lo que todavía falta.
+- Si la persona no responde ni sí ni no a un ofrecimiento, o dice que no sabe, cuenta como no. No se insiste: alcanza con decir que lo puede pedir después.
 - Nunca mostrar mensajes de error ni texto técnico. Si algo falla por detrás, resolverlo o decirlo con palabras simples.
 - Sin emojis.
 - No apurar. Si la persona se desvía del tema, escuchar: muchas veces ahí aparece la excepción que importa. Después, volver al tema.
@@ -159,7 +179,8 @@ Vale al cerrar cada etapa o cada tema, en todos los modos:
 4. Solo después, escribir y guardar como indica `metodo/guardado.md`. Si escribir va a llevar un rato, avisarlo antes con una frase corta, por ejemplo: "Un momento, lo dejo anotado."
 
 - No pasar a la etapa siguiente sin la confirmación.
-- Quien confirma un resumen de material de terceros confirma la lectura, no los hechos. Lo extraído sigue marcado `A CONFIRMAR`, con la excepción que indica la regla 4.
+- Si el contenido de la etapa ya se le mostró entero a la persona, como un resumen o una lista, y ella lo corrigió o lo aceptó, ese intercambio es la confirmación. No se pregunta "¿Es así?" otra vez por lo mismo. Se vuelve a preguntar solo si después se sumó algo que la persona no vio.
+- Quien confirma un resumen de material de terceros confirma la lectura, no los hechos. Lo extraído sigue marcado `A CONFIRMAR`, con las excepciones que indica la regla 4.
 
 ### 10. El método no se edita en un clon
 
@@ -183,5 +204,5 @@ Vale al cerrar cada etapa o cada tema, en todos los modos:
 
 - En español neutro y profesional, en tercera persona. La forma de trato es para la conversación, no para los documentos.
 - Con frases cortas y concretas. Sin emojis.
-- Con las fechas en la forma `AAAA-MM-DD`.
+- Con las fechas en la forma `AAAA-MM-DD`. Una fecha aproximada se escribe con lo que se sabe y "aprox.", como indica la regla 4.
 - Con los nombres de archivos y carpetas que indica `empresa/README.md`.

@@ -29,6 +29,7 @@ Cada etapa se cierra igual: resumen de lo entendido, pregunta de confirmación y
 9. Un cambio `cerrado` no se reabre. Si vuelve a moverse, se abre un cambio nuevo que lo nombra.
 10. Los códigos se asignan desde la lista maestra, con los pasos de "Cómo se asigna un código" en `metodo/control-documental.md`. A la persona no se le dicen: cada documento se nombra por su título.
 11. Cada marcador se escribe una sola vez, en la ficha del cambio. En el registro de la sesión no se escriben marcadores.
+12. Si lo que se cuenta cambia un dato de `empresa/contexto.md`, como algo que antes no estaba decidido, se anota ahí, como indica "Datos del contexto que aparecen después del arranque" en `metodo/control-documental.md`.
 
 ## Al empezar cada sesión
 
@@ -43,7 +44,7 @@ Cada etapa se cierra igual: resumen de lo entendido, pregunta de confirmación y
    | Hay más de uno | Preguntar de cuál se trata. |
    | El cambio está `en pausa` y la persona dice que se retomó | Pasarlo a `abierto`, anotarlo en su historial y seguir "Seguir un cambio". |
 
-4. Crear el registro de la sesión, como indica "El registro de la sesión".
+4. Si el cambio ya tiene ficha, crear el registro de la sesión, como indica "El registro de la sesión". Si se abre un cambio nuevo, el registro se crea al cerrar la etapa 1, cuando ya existe el nombre corto.
 
 ## Abrir un cambio
 
@@ -55,7 +56,7 @@ Una pregunta por mensaje no quiere decir un dato por mensaje:
 2. Con ese relato, armar lo que se entendió de cada etapa.
 3. En cada etapa, decir lo que ya se entendió y preguntar qué hay que corregir. Preguntar aparte solo lo que falta.
 
-Cada etapa se cierra igual, con su resumen y su confirmación, aunque el relato ya la haya cubierto.
+Si lo entendido de una etapa ya se mostró entero y la persona lo corrigió o lo aceptó, eso vale como su confirmación, como indica la regla 9 de `metodo/reglas.md`. No se pregunta dos veces por lo mismo. Cada etapa se escribe y se guarda igual.
 
 | Etapa | Preguntas de guía, solo si no salió | Dónde se escribe |
 |---|---|---|
@@ -72,7 +73,9 @@ Al cerrar la etapa 1, después de la confirmación:
 
 1. Acordar con la persona un nombre corto para el cambio. De ese nombre sale `<slug>`: en minúsculas, con guiones y sin acentos.
 2. Crear la ficha copiando `plantillas/ficha-de-cambio.md` a `empresa/cambios/<slug>/ficha-del-cambio.md`, con estado `abierto`.
-3. Sumar la primera fila de su historial: la fecha, "Se abrió el cambio" y quién lo contó. El molde trae el historial sin filas.
+3. Sumar la primera fila de su historial: la fecha, "Se abrió el cambio" y quién lo contó. El molde trae el historial sin filas. En la apertura va esa sola fila.
+4. Crear el registro de la sesión, como indica "El registro de la sesión", y anotar en el bloque de la etapa 1 lo conversado hasta ahí.
+5. Buscar lo que ya se anotó sobre este cambio en otras sesiones, como indica "Lo anotado en otras sesiones". Se hace ahora, y no al final, para que las etapas siguientes no pregunten lo que ya está anotado: lo dicen y preguntan qué hay que corregir.
 
 En la etapa 2:
 
@@ -87,9 +90,11 @@ En la etapa 4:
 
 Al cerrar la etapa 8:
 
-1. Buscar lo que ya se anotó sobre este cambio en otras sesiones, como indica "Lo anotado en otras sesiones".
-2. Sumar cada `PENDIENTE: preguntar a` y cada `A CONFIRMAR con` de la ficha del cambio a "Preguntas preparadas" de la hoja de la persona nombrada. La pregunta nombra lo que falta: el marcador queda en la ficha del cambio. Lo marcado `PENDIENTE: preguntar a A DEFINIR` va a la hoja del responsable del programa, como pregunta sobre a quién hay que consultar.
-3. Resumir toda la ficha y decir qué sigue.
+1. Sumar cada `PENDIENTE: preguntar a` y cada `A CONFIRMAR con` de la ficha del cambio a "Preguntas preparadas" de la hoja de la persona nombrada. La pregunta nombra lo que falta: el marcador queda en la ficha del cambio. Lo marcado `PENDIENTE: preguntar a A DEFINIR` va a la hoja del responsable del programa, como pregunta sobre a quién hay que consultar.
+2. Resumir toda la ficha y decir qué sigue. Ese resumen no lleva una confirmación aparte: cada etapa ya se confirmó.
+3. Si hay pendientes con terceros, ofrecer una sola vez la lista para enviar.
+
+Los tres pasos van en el guardado de la etapa 8.
 
 - Se puede cortar al terminar cualquier etapa. Si pasaron unos 25 minutos, ofrecer cortar con la frase de "Ofrecer cortar".
 - Si la persona elige seguir, no se vuelve a ofrecer hasta que pasen otros 25 minutos. Después de la última etapa no se ofrece: solo falta el cierre.
@@ -102,11 +107,13 @@ La tabla tiene estas columnas: `| Proceso | Cómo se hace hoy | Cómo va a queda
 | El proceso | En "Cómo se hace hoy" va | Además |
 |---|---|---|
 | Tiene ficha | Un enlace a la ficha, con su código: `[<codigo>](../../procesos/<area>/<codigo>-<slug>.md)` | Nada. Lo que dice la ficha no se copia ni se reescribe. |
-| Está en el mapa y todavía no tiene ficha | "sin ficha: relevar primero" | En el mapa, su prioridad pasa a `P1`, para que se releve primero. |
-| No está en el mapa | "sin ficha: relevar primero" | Agregarlo como indica "Un proceso que aparece en la conversación" en `metodo/entrevista.md`, con prioridad `P1`. |
+| Está en el mapa y todavía no tiene ficha | "sin ficha: relevar primero" | Proponer que su prioridad pase a `P1`, para que se releve primero, y preguntarlo. |
+| No está en el mapa | "sin ficha: relevar primero" | Agregarlo como indica "Un proceso que aparece en la conversación" en `metodo/entrevista.md`. Proponer la prioridad `P1` y preguntarlo. |
 | Va a dejar de hacerse | El enlace a su ficha, si la tiene | En "Cómo va a quedar" va "deja de hacerse". Su baja se decide en la revisión, cuando ya no se haga. |
 | Es nuevo y todavía no se hace | "todavía no se hace" | No entra al mapa hasta que empiece a hacerse. |
 
+- La prioridad la decide el responsable del programa. Si acepta la propuesta, se corrige en el mapa y se marca la pregunta que hubiera por esa prioridad en su hoja. Si quien conversa es otra persona, la propuesta se suma como pregunta a la hoja del responsable del programa.
+- Este modo nunca reemplaza un marcador por su cuenta. Si la celda tenía un `PENDIENTE`, lo cierra solo la respuesta de la persona que nombra.
 - "Cómo va a quedar" es un plan. No pasa a ninguna ficha de proceso.
 - "Qué falta definir" dice qué falta y quién lo tiene que definir. Si depende de alguien de afuera, va también a "Pendientes con terceros".
 
@@ -120,6 +127,7 @@ Cada decisión lleva fecha, qué se decidió, quién lo decidió, por qué y la 
 | La cuenta otra persona | Con `A CONFIRMAR con <quién decidió>`. |
 | Sale de material o de un registro de sesión | Con la fuente en la forma que indica `metodo/material-de-terceros.md` y con `A CONFIRMAR con <quién decidió>`. |
 | La tomó alguien de afuera de la empresa | Con `A CONFIRMAR con` y el nombre de quien lleva el cambio en la empresa. |
+| La cuenta alguien que no sabe quién la tomó | Con quien la contó como fuente. En "Quién lo decidió" va `PENDIENTE: preguntar a <quién>`. |
 
 Cuando quien decidió la confirma, se quita el marcador y se anota la fecha en la fuente.
 
@@ -130,20 +138,20 @@ Cada pendiente lleva la pregunta, a quién se le hizo, desde cuándo y la respue
 - En "A quién" van el nombre de pila y el rol de la persona de afuera.
 - Al empezar cada sesión de seguimiento se dice primero qué sigue sin respuesta y desde cuándo.
 - Cuando llega una respuesta, se escribe con su fecha y con quién la contó.
-- Se ofrece la lista para enviar: un mensaje con las preguntas numeradas, en palabras simples, para que lo envíe la persona de la empresa que trata con ese tercero.
+- Se ofrece la lista para enviar: un mensaje con las preguntas numeradas, en palabras simples, para que lo envíe la persona de la empresa que trata con ese tercero. En la apertura se ofrece al cerrar la etapa 8. En el seguimiento, en la etapa 3.
 
 ## Lo anotado en otras sesiones
 
 Las entrevistas y las sesiones de material dejan lo que aparece sobre un cambio en "Temas para otra sesión" de su registro, en líneas que empiezan con `Cambio:`. Los registros están cerrados, así que la ficha del cambio lleva la cuenta de cuáles ya se leyeron.
 
 1. Tomar los registros de `empresa/sesiones/` que no figuran en "Registros de sesión ya leídos" de esta ficha.
-2. En cada uno, leer las líneas de "Temas para otra sesión" que empiezan con `Cambio:`.
+2. En cada uno, leer entera la parte "Temas para otra sesión". Se toman las líneas que empiezan con `Cambio:`. Las demás sirven para entenderlas.
 3. Contar a la persona lo que se encontró sobre este cambio y preguntar con la frase de "Lo anotado en otras conversaciones".
-4. Llevar cada línea aceptada a su lugar en la ficha: una decisión, un pendiente con un tercero, un proceso afectado, algo para preparar o algo que puede salir mal. Va con su fuente y con `A CONFIRMAR con <quién lo dijo>`.
+4. Llevar cada línea aceptada a su lugar en la ficha: una decisión, un pendiente con un tercero, un proceso afectado, algo para preparar o algo que puede salir mal. Va con su fuente y con `A CONFIRMAR con <quién lo dijo>`. Si lo dijo alguien de afuera de la empresa, el marcador nombra a quien lleva el cambio.
 5. Anotar cada registro en "Registros de sesión ya leídos", con lo que se tomó. Se anota también cuando no se tomó nada.
 
 - La fuente dice quién lo dijo, en qué registro o material y en qué fecha.
-- Si la línea la dijo la misma persona que está en la conversación, y la confirma ahora, vale como su palabra directa y va sin marcador.
+- Si la línea la dijo la misma persona que está en la conversación, y la confirma ahora, vale como su palabra directa y va sin marcador. Lo mismo vale para lo que la línea dice sobre el trabajo de esa persona, o sobre una decisión suya: se le pregunta en el momento.
 - Si una línea es de otro cambio que todavía no tiene ficha, decirlo con la frase de "Otro cambio".
 
 ## Seguir un cambio
@@ -191,7 +199,7 @@ Cerrar un cambio es comprobar que lo que cambió ya quedó contado y aprobado. E
 ## El registro de la sesión
 
 - Va uno por sesión. Se crea copiando `plantillas/registro-de-sesion.md` a `empresa/sesiones/AAAA-MM-DD-<quien>-cambio-<slug>.md`.
-- En "Modo" va `cambio en curso`.
+- En "Modo" va `cambio en curso`. En "Ficha" va la ruta de la ficha del cambio.
 - En "Etapas o temas" van las etapas de lo que se hace: las ocho de la apertura o las tres del seguimiento.
 - Al cerrar la sesión, completar "Cómo terminó" y seguir "Al cerrar la sesión" en `metodo/guardado.md`. En "Último resumen que confirmó la persona" va el de la última etapa cerrada.
 

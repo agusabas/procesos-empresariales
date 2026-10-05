@@ -44,7 +44,8 @@ El tipo de cada archivo sale de su lugar en `empresa/`:
 | `sesiones/`, `insumos/` y `adjuntos/` | Registro | No lleva |
 
 - Todo documento nuevo se crea copiando su molde de `plantillas/`. La nota inicial de cada molde dice a qué lugar de `empresa/` va la copia. La única excepción es `empresa/notas-para-el-metodo.md`, que no tiene molde: su forma está en la regla 10 de `metodo/reglas.md`.
-- Un documento creado con una versión anterior de su molde no se rehace. Lo que le falta se completa la próxima vez que se toca ese documento.
+- Un documento creado con una versión anterior de su molde no se rehace. La próxima vez que se toca, se completa solo su estructura: las secciones y las columnas que le faltan. Lo que ya estaba escrito no se mueve ni se pasa a la forma nueva.
+- Una parte nueva queda con su ayuda hasta que alguien cuente ese dato. Si ya ninguna etapa lo va a preguntar, se suma como pregunta a la hoja del responsable del programa.
 - El `catalogo.md` de `insumos/` y el de cada carpeta de `adjuntos/` son documentos de trabajo: se actualizan cada vez que llega un archivo.
 - Los formularios todavía no tienen lugar propio ni molde. Hasta que se definan, no se asignan códigos `FO`. Un formulario que aporta una persona se guarda como cualquier otro archivo aportado, en `empresa/adjuntos/`.
 
@@ -59,17 +60,18 @@ El código tiene la forma `TIPO-ÁREA-NNN`. Por ejemplo, `PR-VEN-001` es la prim
 | `NNN` | Tres cifras | Correlativo dentro de cada tipo y área. Empieza en `001` |
 
 - En las rutas, la carpeta del área lleva el nombre del área (`<area>`). El código lleva sus tres letras. La correspondencia entre nombre y letras está en `empresa/contexto.md`.
-- Lo que es de toda la empresa usa la carpeta `general` y las letras `GEN`.
-- El código de un documento no cambia cuando cambian su nombre, su estado o su versión.
+- Lo que es de toda la empresa usa el área "General", la carpeta `general` y las letras `GEN`.
+- Un proceso también puede ser de toda la empresa, como decidir hacia dónde va. Su código es `PR-GEN-NNN` y su ficha va en `empresa/procesos/general/`.
+- El código de un documento no cambia cuando cambian su nombre, su estado o su versión. Cambia solo en los dos casos de "Cambiar un código".
 - Un número nunca se reutiliza, aunque el documento quede `obsoleto` o se haya creado por error.
 
 ### Cómo se asigna un código
 
 1. Abrir `empresa/lista-maestra.md`. Si no existe, crearla copiando `plantillas/lista-maestra.md`.
 2. Comprobar que el documento no tiene ya un código: buscar su título y su ubicación en la lista.
-3. Definir el tipo y el área. Si no se sabe de qué área es, o si el área no tiene letras en `empresa/contexto.md`, el código no se asigna y no se inventa nada. Un proceso en esa situación figura igual en el mapa, sin código, como indica "Mapa de procesos". Recibe su código cuando se sabe su área.
-4. Buscar en la lista todas las filas de ese tipo y esa área, también las que están `obsoleto`. Tomar el número más alto y sumar 1. Si no hay ninguna, el número es `001`.
-5. Agregar la fila a la lista, con estado `pendiente` y versión `0`. La fila se escribe antes que cualquier otra cosa.
+3. Definir el tipo y el área. Si no se sabe de qué área es, o si el área no tiene letras en `empresa/contexto.md`, el código no se asigna y no se inventa nada. Un proceso en esa situación figura igual en el mapa, sin código, como indica "Mapa de procesos". Recibe su código cuando se sabe su área. La única excepción es la entrevista sobre ese proceso, que no se posterga: ahí toma un área provisoria, como indica "Un proceso sin código" en `metodo/entrevista.md`.
+4. Buscar en la lista todas las filas de ese tipo y esa área, también las que están `obsoleto`. Contar también los códigos anteriores anotados en "Observaciones". Tomar el número más alto y sumar 1. Si no hay ninguno, el número es `001`.
+5. Agregar la fila a la lista, con estado `pendiente` y versión `0`. En "Elaboró" va `—` mientras el documento no tiene archivo. La fila se escribe antes que cualquier otra cosa.
 6. Escribir el código donde corresponde: en la fila del mapa de procesos, si es un proceso; en el nombre del archivo y en el bloque de control, cuando el archivo se crea. Si el proceso ya figuraba en el mapa sin código, cambiar también el `—` por el código en las hojas de las personas que lo tienen anotado.
 7. El código queda guardado con el guardado del tema o de la etapa en curso. No lleva un guardado propio.
 
@@ -84,13 +86,25 @@ Puede pasar cuando dos computadoras asignan un código antes de ponerse al día.
 3. Escribir el marcador una sola vez, en la columna "Observaciones" de la fila del documento que se guardó después: `PENDIENTE: preguntar a <responsable del programa>`, con la aclaración "código duplicado". Si no se sabe cuál fue primero, va en cualquiera de las dos filas. En "Observaciones" de la otra fila se anota, sin marcador, con qué documento se repite el código.
 4. Seguir con el trabajo. El duplicado se resuelve en la etapa de conciliación de `metodo/revision-y-aprobacion.md`.
 
-Para resolverlo:
+Para resolverlo, seguir "Cambiar un código" con el documento que se guardó después.
 
-1. Asignar al segundo documento el siguiente número libre, con los pasos de "Cómo se asigna un código".
-2. Cambiar el código en su bloque de control, en el nombre del archivo, en la lista maestra y en el mapa de procesos.
-3. Anotar el código anterior en el historial del documento y en "Observaciones".
-4. No corregir los registros ya cerrados que nombran el código anterior.
-5. Si el documento que cambia de código está `vigente`, hace falta la palabra de quien aprueba. Su versión no cambia.
+### Cambiar un código
+
+Un código cambia solo en dos casos:
+
+| Caso | Cuándo se hace |
+|---|---|
+| Dos documentos quedaron con el mismo código | En la etapa de conciliación de `metodo/revision-y-aprobacion.md`. |
+| Quien tenía que confirmar el área provisoria de un proceso la corrige | Cuando lo dice, y solo si la ficha no está `vigente`. |
+
+1. Asignar el código nuevo con los pasos de "Cómo se asigna un código".
+2. Cambiar el código en el bloque de control, en el nombre del archivo, en la fila de la lista maestra, en el mapa de procesos y en las hojas de las personas que tienen anotado el proceso.
+3. Si cambió el área, pasar el archivo a la carpeta del área nueva. Su carpeta de `empresa/adjuntos/` pasa también.
+4. Anotar el código anterior en el historial del documento y en "Observaciones" de su fila de la lista maestra.
+5. No corregir los registros ya cerrados que nombran el código anterior.
+6. Si el documento está `vigente` y el cambio es por un código duplicado, hace falta la palabra de quien aprueba. Su versión no cambia.
+
+El número del código anterior no se vuelve a usar.
 
 ## Bloque de control
 
@@ -108,7 +122,7 @@ Todo documento controlado empieza, debajo del título, con dos tablas. Son tabla
 
 | Campo | Qué va | Cuándo cambia |
 |---|---|---|
-| Código | El código asignado en la lista maestra. | Nunca, salvo un duplicado. |
+| Código | El código asignado en la lista maestra. | Nunca, salvo los dos casos de "Cambiar un código". |
 | Versión | Un número entero. `0` hasta la primera aprobación. | Solo al aprobar. |
 | Estado | Uno de los seis estados. | Como indica "Estados". |
 | Vigente desde | La fecha en que se aprobó la versión actual. `—` hasta la primera aprobación. | Solo al aprobar. |
@@ -118,7 +132,7 @@ Todo documento controlado empieza, debajo del título, con dos tablas. Son tabla
 | Aprobó | El nombre de pila de quien aprobó. `—` hasta la aprobación. | Solo al aprobar. |
 
 - El agente nunca figura en el bloque.
-- Los documentos de toda la empresa (`GEN`) no tienen dueño de proceso. En ellos revisa el responsable del programa.
+- El contexto, el mapa de procesos y el glosario no tienen dueño de proceso. En ellos revisa el responsable del programa. Una ficha de proceso del área "General" tiene dueño, como cualquier otra.
 - Si el bloque y la lista maestra no coinciden, vale el bloque. Mientras un documento no tiene archivo, vale su fila de la lista.
 
 ## Estados
@@ -187,6 +201,19 @@ Tres datos del mapa de procesos se actualizan sin aprobación, aunque el mapa es
 
 Lo que un cambio en marcha va a modificar no se anota en la ficha del proceso mientras sea un plan. Va en la ficha del cambio, como indica `metodo/cambio-en-curso.md`.
 
+## Datos del contexto que aparecen después del arranque
+
+En cualquier modo puede aparecer un dato de la empresa que cambia `empresa/contexto.md`: una herramienta que no figuraba, para qué se usa, quién la usa, un lugar nuevo o algo que se decidió. Ese modo lo escribe ahí, con su fuente, en la forma que indica la regla 4 de `metodo/reglas.md`.
+
+| Estado del contexto | Qué se hace |
+|---|---|
+| `en curso` o `borrador` | Escribir el dato en su parte. Si es de segunda mano, lleva `A CONFIRMAR con <quién>`. |
+| `validado` | Escribirlo igual. El contexto vuelve a `borrador`. |
+| `vigente` | No tocar lo escrito. Va una fila en "Cambios propuestos (sin aprobar)". |
+
+- La sesión suma su fila al historial del contexto, como cualquier sesión que cambia un documento.
+- Un área nueva es la excepción: la suma solo el responsable del programa, porque sus letras no se cambian después. Mientras tanto va como pregunta en su hoja.
+
 ## Revisión periódica
 
 - La próxima revisión es la fecha de aprobación más el período definido en el arranque, que figura en `empresa/contexto.md`. Si no está definido, son 12 meses.
@@ -218,17 +245,22 @@ Qué se hace con cada documento se decide en `metodo/revision-y-aprobacion.md`:
 
 | Tipo | Qué procesos reúne |
 |---|---|
-| Conducción | Cómo se decide y se dirige. |
+| Conducción | Cómo se decide y se dirige. Aunque sea informal y decida una sola persona, lleva al menos una fila. |
 | Operación | La cadena que va desde el pedido de un cliente hasta el cobro. |
 | Apoyo | Lo que sostiene a la operación. |
 
 - Sus columnas son: `| Código | Proceso | Área | Tipo | Dueño | Participantes | Estado | Prioridad | Ficha |`.
 - Es la lista oficial de nombres de procesos. Todos los demás archivos nombran cada proceso exactamente como figura en el mapa.
 - Para sumar un proceso, se le asigna el código, si ya se sabe su área, y se agrega su fila. Si el mapa está `vigente`, la fila va a "Cambios propuestos (sin aprobar)" hasta que se apruebe. El proceso se puede relevar mientras tanto.
+- Un proceso que es de toda la empresa lleva el área "General".
 - Un proceso del que todavía no se sabe el área figura en el mapa sin código: en "Código" va `—` y en "Área" va `PENDIENTE: preguntar a <quién>`. No tiene fila en la lista maestra hasta que recibe su código.
-- En "Participantes" van solo los nombres de pila. Lo que hace cada persona en el proceso, y su marcador, están en la hoja de esa persona.
+- Un proceso puede tener un área provisoria: en "Área" va el área, seguida de `A CONFIRMAR con <quién>`. Tiene código. Si esa persona corrige el área, el código cambia como indica "Cambiar un código".
+- En "Participantes" van los nombres de pila de quienes intervienen además del dueño. El dueño no se repite ahí. Si no interviene nadie más, va `—`.
+- Lo que hace cada persona en el proceso está en la ficha, con su marcador. Mientras el proceso no tiene ficha, está en la hoja de esa persona, y el marcador va ahí.
+- Cuando un modo sabe de un participante nuevo, suma su nombre a "Participantes" y el proceso a la hoja de esa persona, en el mismo guardado.
 - En "Prioridad" va `P1`, `P2`, `P3` o `sin definir`.
 - Lo que no se sabe de un grupo entero, o de dónde empieza y dónde termina la cadena, va en la sección "Pendientes del mapa". Ahí va también un proceso que nombra el material y que nadie reconoció todavía: no lleva fila hasta que alguien lo confirme.
+- Lo que el material dice sobre un proceso que todavía no tiene código va también a "Pendientes del mapa", con su fuente, hasta que el proceso tenga ficha.
 
 ## Ramas: `borradores` y `main`
 
@@ -260,15 +292,18 @@ Con el archivo a la vista:
 4. Anotarlo en el `catalogo.md` de esa carpeta. Si no existe, crearlo copiando `plantillas/catalogo-de-archivos.md`. Ese molde tiene la lista de tipos y las frases de "Observaciones".
 5. Anotarlo en el registro de la sesión, en "Documentos".
 
-El archivo queda guardado con el guardado del tema o de la etapa en la que llegó. Lleva un guardado propio solo si llega fuera de un tema o de una etapa.
+- El archivo se copia y se cataloga al recibirlo, después de revisarlo. No espera la confirmación de la etapa. Lo que se lee en él se escribe después de que la persona confirma la lectura.
+- El archivo queda guardado con el guardado del tema o de la etapa en la que llegó. Lleva un guardado propio solo si llega fuera de un tema o de una etapa.
+- Lo que falta sobre un archivo se anota en "Observaciones" de su fila del catálogo, con su marcador. El catálogo se puede editar; el registro de la sesión, no.
 
 | Caso | Qué se hace |
 |---|---|
-| Un audio sin transcripción | No copiarlo. Catalogarlo con `sin transcribir` y pedir la transcripción. Su contenido nunca se adivina. |
+| Un audio sin transcripción | No copiarlo. Catalogarlo con `sin transcribir` y con `PENDIENTE: falta la transcripción de <archivo>`, y pedir la transcripción. Su contenido nunca se adivina. |
 | Una conversación entre otras personas | No copiarla todavía. Catalogarla con `se lee en otra sesión`. No se lee de paso: se recibe, se filtra y se lee en `metodo/material-de-terceros.md`. |
 | Un formato que no se puede abrir | Guardarlo y catalogarlo con `no revisado por el agente`. Anotarlo en el registro de la sesión para el responsable del programa. |
 | Un archivo de más de 10 MB | No copiarlo. Catalogarlo con `no se copió: pesa más de 10 MB`. |
-| No hay archivo, pero la persona lo dicta o lo pega en la conversación | Escribirlo en un archivo `.md` de la carpeta y catalogarlo con `transcripto por el agente, sin el original`. |
+| No hay archivo, pero la persona lo dicta o lo pega en la conversación | Escribirlo en un archivo `.md` de la carpeta y catalogarlo con `transcripto por el agente, sin el original`. En "Nombre original" va `—`. |
+| Un archivo que se nombra y que nadie entregó | No hay nada que copiar. Catalogarlo con `no entregado` y con `PENDIENTE: preguntar a <quién>`, con el nombre de quien lo puede acercar. En "Archivo", en "Quién lo aportó" y en "Fecha" va `—`. En el registro de la sesión va como `No entregado`. |
 | Tiene datos personales de terceros y no hay otra versión | No guardarlo. Catalogarlo con `no se guardó: contiene datos personales de terceros`. En el registro de la sesión va como `NO INCORPORADO`. |
 | Tiene datos comerciales que la empresa deja afuera y no hay otra versión | No guardarlo. Catalogarlo con `no se guardó: contiene datos comerciales que la empresa deja afuera`. En el registro de la sesión va como `NO INCORPORADO`. |
 | Llega una versión en blanco o con los datos tapados | Guardarla. Catalogarla con `guardado sin los datos personales de terceros`, con `guardado sin los datos comerciales que la empresa deja afuera`, o con las dos frases. |
@@ -278,9 +313,9 @@ El archivo queda guardado con el guardado del tema o de la etapa en la que lleg�
 Cada ficha de proceso lleva un diagrama hecho con Mermaid. Un `subgraph` por sector se parece a las columnas de un cursograma, como los que describe la norma IRAM 34502. Es una aproximación y no pretende cumplir esa norma.
 
 1. La tabla de pasos manda. El diagrama no dice nada que la ficha no diga.
-2. Cada vez que la tabla de pasos cambia, el diagrama se genera entero de nuevo.
+2. Cada vez que cambia la tabla de pasos, o una regla o una excepción que el diagrama dibuja, el diagrama se genera entero de nuevo.
 3. El tipo de diagrama es `flowchart TD`.
-4. Va un `subgraph` por cada sector o rol de la columna "Quién". No va uno por persona: si la columna tiene un nombre de pila, se usa el rol o el área de esa persona.
+4. Va un `subgraph` por cada sector o rol de la columna "Quién". No va uno por persona: si la columna tiene un nombre de pila, se usa el rol o el área de esa persona. Un paso que hacen dos sectores va en dos filas de la tabla, una por sector.
 5. Va un nodo por paso, con el número del paso y un texto corto.
 6. Fuera de los `subgraph` va un nodo de inicio, con lo que pone en marcha el proceso, y uno de fin, con lo que queda hecho al terminar.
 7. Una decisión se dibuja como rombo, con una flecha rotulada por cada salida. Solo se dibuja si figura en la tabla de pasos, en "Reglas que se siguen" o en "Excepciones".

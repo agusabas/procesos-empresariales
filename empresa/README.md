@@ -64,7 +64,7 @@ Los nombres van en minúsculas, con guiones en lugar de espacios, sin acentos ni
 | Parte | Qué va |
 |---|---|
 | `<nombre>`, `<quien>` | El nombre de pila de la persona. Si dos personas comparten el nombre, se agrega el área: `<nombre>-<area>`. |
-| `<area>` | El nombre del área, como figura en `contexto.md`. Lo que es de toda la empresa usa `general`. |
+| `<area>` | El nombre del área, como figura en `contexto.md`. Lo que es de toda la empresa usa `general`, también un proceso que no es de un área sola. |
 | `<codigo>` | El código del documento, asignado desde `lista-maestra.md`. |
 | `<slug>` | El nombre del proceso, del instructivo o del cambio. |
 | `<proceso>` | El mismo nombre que el archivo de la ficha del proceso, sin `.md`. |
@@ -77,5 +77,5 @@ Los nombres van en minúsculas, con guiones en lugar de espacios, sin acentos ni
 - Cada archivo y cada carpeta se crean cuando hacen falta, no antes.
 - No se crean lugares que no estén en este esquema. Si hace falta uno, se anota en `notas-para-el-metodo.md`.
 - Los archivos guardados en `insumos/` no se modifican después. Su `catalogo.md` sí se pone al día. Lo único que se quita de un archivo, antes de copiarlo, son los datos que no se guardan.
-- Un registro de `sesiones/` no se edita una vez cerrado, salvo su línea de subida. Por eso en un registro no se escriben marcadores.
+- Un registro de `sesiones/` no se edita una vez cerrado, salvo su línea de subida. Por eso en un registro no se escriben marcadores. Lo que falta sobre un archivo recibido se anota en su fila del catálogo.
 - En toda la carpeta valen las reglas de privacidad de `metodo/reglas.md`: no se guardan datos personales de terceros, ni los datos comerciales que la política de `contexto.md` deja afuera o todavía no definió.

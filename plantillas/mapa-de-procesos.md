@@ -16,9 +16,9 @@ Este mapa reúne todos los procesos de la empresa que se identificaron hasta aho
 
 - **Código:** el código de la ficha del proceso. `—` quiere decir que todavía no lo tiene, porque falta saber su área.
 - **Proceso:** es el nombre oficial. Todos los demás documentos lo usan exactamente así.
-- **Área:** el área a la que pertenece el proceso.
+- **Área:** el área a la que pertenece el proceso. "General" quiere decir que es de toda la empresa. Si lleva `A CONFIRMAR`, es provisoria.
 - **Dueño:** quien responde por el proceso. `A DEFINIR` quiere decir que todavía no se sabe.
-- **Participantes:** quiénes más intervienen, por su nombre de pila. Lo que hace cada persona está en su hoja.
+- **Participantes:** quiénes intervienen además del dueño, por su nombre de pila. `—` quiere decir que no interviene nadie más. Lo que hace cada persona está en la ficha del proceso.
 - **Estado:** el estado de la ficha de ese proceso.
 - **Ficha:** el enlace a la ficha. `—` quiere decir que todavía no se creó.
 
@@ -64,7 +64,7 @@ Lo que sostiene a la operación.
 
 ## Pendientes del mapa
 
-_Lo que todavía no se sabe y no entra en la fila de un proceso: lo que falta de un grupo entero, dónde empieza y dónde termina la cadena, o un proceso que nombra el material y que nadie reconoció todavía. Una línea por pendiente, con `PENDIENTE: preguntar a <quién>` o con `A CONFIRMAR con <quién>`. Si no hay ninguno, se escribe "Ninguno"._
+_Lo que todavía no se sabe y no entra en la fila de un proceso: lo que falta de un grupo entero, dónde empieza y dónde termina la cadena, un proceso que nombra el material y que nadie reconoció todavía, o lo que el material dice sobre un proceso que todavía no tiene código. Una línea por pendiente, con `PENDIENTE: preguntar a <quién>` o con `A CONFIRMAR con <quién>`. Si no hay ninguno, se escribe "Ninguno"._
 
 ## Historial
 

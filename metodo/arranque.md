@@ -14,14 +14,14 @@ Funciona aunque en `empresa/` no haya nada más que `README.md`. Antes de empeza
 | 4. Qué hay ya escrito | El material que ya existe | `insumos/` y su `catalogo.md` | 5 sin material; 15 o más con material |
 | 5. Áreas y sistemas | Las áreas con sus tres letras, los sistemas y las herramientas | "Áreas" y "Sistemas y herramientas", en `contexto.md` | 10 a 15 |
 | 6. Personas | Quién trabaja en cada área y de qué se ocupa | Una hoja por persona, en `personas/` | 10 a 20 |
-| 7. Mapa de procesos | Qué procesos hay, con su dueño, sus participantes y su prioridad | `mapa-de-procesos.md`, filas de la lista maestra y hojas de personas | 30 a 45 |
-| 8. Plan de relevamiento y preguntas | A quién se escucha y qué se le pregunta a cada persona | Preguntas en cada hoja | 15 a 20 |
+| 7. Mapa de procesos | Qué procesos hay, con su dueño, sus participantes y su prioridad | `mapa-de-procesos.md`, filas de la lista maestra y hojas de personas | Unos 5 por proceso |
+| 8. Plan de relevamiento y preguntas | A quién se escucha y qué se le pregunta a cada persona | Preguntas en cada hoja y procesos en el catálogo de `insumos/` | 15 a 20 |
 
 Las rutas de la tabla están dentro de `empresa/`.
 
 - Los minutos son aproximados y cuentan solo la conversación. A eso se suma lo que el agente tarda en escribir al cerrar cada etapa.
 - En total son entre dos y tres horas, repartidas en varias conversaciones.
-- La etapa 7 crece con la cantidad de procesos: unos cinco minutos por cada uno.
+- La etapa 7 depende de la cantidad de procesos: con diez procesos lleva unos 50 minutos.
 
 ## Reglas de este modo
 
@@ -45,12 +45,14 @@ Una pregunta por mensaje no quiere decir un dato por mensaje. En cada etapa:
 
 1. Abrir con una pregunta amplia, que la persona pueda responder a lo largo y con sus palabras.
 2. Con lo que cuenta, y con lo que ya quedó escrito en las etapas anteriores, armar lo que se entendió.
-3. Mostrarlo como un resumen o como una lista corta, y preguntar qué hay que corregir.
+3. Mostrarlo como un resumen o como una lista corta, y preguntar qué hay que corregir. Si así se mostró todo el contenido de la etapa, la respuesta vale como su confirmación.
 4. Preguntar aparte solo lo que todavía falta, con una pregunta por mensaje.
 
 Las tablas de cada etapa dicen qué tiene que quedar. Su pregunta se usa solo si ese dato no salió antes.
 
 ## Cómo se cierra cada etapa
+
+Los pasos 1 a 3 se saltean cuando el contenido de la etapa ya se mostró entero y la persona lo corrigió o lo aceptó: ese intercambio es la confirmación, como indica la regla 9 de `metodo/reglas.md`. Se hacen solo si después se sumó algo que la persona no vio.
 
 1. Resumir lo entendido en dos o tres frases. Si son varios elementos, como áreas, personas o procesos, en una lista corta.
 2. Preguntar: "¿Es así?"
@@ -149,20 +151,27 @@ Preguntar: "¿Hay algo ya escrito sobre cómo se trabaja? Sirve cualquier cosa: 
 
 Si no hay nada, anotarlo en el registro de la sesión y cerrar la etapa. El relevamiento sigue con preguntas.
 
-Si hay material, recibir cada archivo con los pasos de "Archivos recibidos", en `metodo/control-documental.md`. Va a `empresa/insumos/` y se anota en su `catalogo.md`. Los archivos no llevan un guardado propio: se guardan con el cierre de la etapa. Después:
+Si hay material, recibir cada archivo con los pasos de "Archivos recibidos", en `metodo/control-documental.md`. Va a `empresa/insumos/` y se anota en su `catalogo.md`.
+
+- Cada archivo se copia y se cataloga al recibirlo, después de revisarlo. No espera la confirmación de la etapa. Lo que se lee en él se escribe después de que la persona confirma la lectura.
+- Los archivos no llevan un guardado propio: se guardan con el cierre de la etapa.
+- En "Proceso y paso" del catálogo va `sin definir`, porque el mapa todavía no existe. Se completa en la etapa 8.
+- Si el texto llegó pegado en la conversación, en "Nombre original" va `—`.
+
+Después:
 
 | Material | Qué se hace en esta etapa |
 |---|---|
 | Un documento sobre cómo se trabaja | Leerlo entero. |
 | Una conversación entre otras personas | Solo catalogarla, con `se lee en otra sesión`. No se lee de paso: se recibe y se lee después, con `metodo/material-de-terceros.md`. |
-| Un audio sin transcripción | Solo catalogarlo, con `sin transcribir`, y pedir la transcripción. Su contenido nunca se adivina. |
+| Un audio sin transcripción | Solo catalogarlo, con `sin transcribir` y con `PENDIENTE: falta la transcripción de <archivo>`, y pedir la transcripción. Su contenido nunca se adivina. |
 | Un archivo que no se puede abrir | Catalogarlo con `no revisado por el agente`. |
 
 Con cada documento leído:
 
 1. Contar en dos o tres frases qué es, de cuándo es y qué temas trata.
 2. Preguntar: "¿Leí bien?" La persona confirma la lectura, no los hechos.
-3. Anotar de cuándo es en la columna "Fecha del material" del catálogo. Si no se sabe, va `sin fecha`.
+3. Anotar de cuándo es en la columna "Fecha del material" del catálogo. Si solo se sabe una fecha aproximada, va lo que se sabe y "aprox.". Si no se sabe, va `sin fecha`.
 4. Tomar lo que nombra el documento como propuestas para las etapas 5 a 7: áreas, sistemas, personas y procesos.
 
 - Lo que se escriba a partir del material lleva su fuente y `A CONFIRMAR con <quién>`. La fuente es el nombre del archivo en `empresa/insumos/`. `<quién>` es la persona que hace ese trabajo; si no se sabe, el responsable del programa.
@@ -179,7 +188,7 @@ Preguntas de apertura, una para cada parte:
 
 | Qué tiene que quedar | Pregunta, solo si no salió |
 |---|---|
-| De qué se ocupa cada área | "¿De qué se ocupa `<área>`?" |
+| De qué se ocupa cada área | "¿De qué se ocupa cada una?" |
 | Para qué se usa cada sistema | "¿Para qué se usa `<sistema>`?" |
 | Quiénes lo usan | "¿Quiénes lo usan?" |
 
@@ -191,26 +200,26 @@ Cada área lleva tres letras, que después forman los códigos de sus documentos
 4. Una vez escritas, no se cambian.
 
 - La carpeta del área es su nombre en minúsculas, con guiones y sin acentos.
-- Si la empresa no tiene áreas, todo va en `general`, con las letras `GEN`.
+- Si la empresa no tiene áreas, todo va en el área "General", con la carpeta `general` y las letras `GEN`.
 - Quién usa un sistema es un dato de la empresa y vale como directo. Cómo lo usa cada persona es de segunda mano.
 - De los sistemas nunca se anotan usuarios ni claves.
 - Se escribe en "Áreas" y en "Sistemas y herramientas", en `empresa/contexto.md`.
 
 ## Etapa 6. Personas
 
-Se pregunta una vez por área: "¿Quiénes trabajan en `<área>`, y de qué se ocupa cada persona? Con el nombre de pila alcanza."
+Se pregunta una sola vez, para todas las áreas: "¿Quiénes trabajan en cada área, y de qué se ocupa cada persona? Con el nombre de pila alcanza." Si son muchas áreas o muchas personas, se pregunta área por área.
 
-Con lo que cuenta de cada área, armar la lista de personas y mostrarla para corregir. No se pregunta persona por persona, ni qué sistemas usa cada una: eso ya salió en la etapa 5.
+Con lo que cuenta, armar la lista de personas y mostrarla para corregir. No se pregunta persona por persona, ni qué sistemas usa cada una: eso ya salió en la etapa 5.
 
-Antes de cerrar la etapa, comparar la cantidad de personas anotadas con la que se dijo en la etapa 2 y preguntar si falta alguien, con la frase de "Falta alguien".
+Antes de cerrar la etapa, comparar la cantidad de personas anotadas con la que se dijo en la etapa 2. La frase de "Falta alguien" se usa solo si las cantidades no coinciden, o si en la etapa 2 no quedó una cantidad.
 
 Al escribir:
 
 1. Crear una hoja por persona, copiando `plantillas/persona.md` a `empresa/personas/<nombre>.md`.
 2. Crear también la hoja del responsable del programa y la de quien aprueba.
 3. En "Rol en el relevamiento" va `participante`, salvo en esas dos hojas, que llevan su rol.
-4. En "Sistemas y herramientas que usa" va lo que se dijo en la etapa 5.
-5. En "Origen de la hoja" va que los datos los dio el responsable del programa, con la fecha.
+4. En "Sistemas y herramientas que usa" va lo que se dijo en la etapa 5. Si se dijo que no usa ninguna, va `—`. Si no se sabe, va `PENDIENTE: preguntar a <esa persona>`.
+5. En "Origen de la hoja" va que los datos los dio el responsable del programa, con la fecha. "Cómo participa" queda en "conversa", hasta que en la etapa 8 se sepa otra cosa.
 6. En "De dónde sale cada dato", lo que describe el trabajo de otra persona lleva `A CONFIRMAR con <esa persona>`. El marcador va ahí y no junto a cada dato.
 7. Las partes "Procesos en los que participa" y "Preguntas preparadas" quedan con su ayuda hasta las etapas 7 y 8.
 8. En la hoja del responsable del programa, anotar en "Documentos prometidos" el material que prometió en la etapa 4. Anotar en sus "Preguntas preparadas" lo que quedó en "Pendientes" de los registros del arranque sin un documento donde vivir.
@@ -240,7 +249,7 @@ Con cada relato:
 
 1. Armar las filas con lo que dijo y con lo que ya se sabe de las etapas 5 y 6: proceso, área, grupo, dueño y participantes.
 2. Mostrarlas como una lista corta del grupo y preguntar qué hay que corregir.
-3. Preguntar aparte solo lo que falta. Por ejemplo: "¿Quién responde por que esto salga bien?" o "¿De qué área es?"
+3. Preguntar aparte solo lo que falta, con una sola pregunta para todos los procesos a los que les falta lo mismo. Por ejemplo, con la lista a la vista: "¿Quién responde por cada uno de estos?" o "¿De qué área es cada uno?"
 
 La prioridad se pregunta una sola vez, al final y para toda la lista: "De todos estos, ¿cuáles son los dos o tres que más duelen o que más urgen?"
 
@@ -258,6 +267,8 @@ Además:
 
 - El dueño es un rol del relevamiento: vale lo que define el responsable del programa. Si no lo sabe, va `A DEFINIR`.
 - Quiénes participan vale como dato directo. Lo que hace cada persona en el proceso es de segunda mano.
+- Un proceso que es de toda la empresa, como decidir hacia dónde va, lleva el área "General". Su código usa `GEN` y su ficha va en la carpeta `general`. No se pregunta de qué área es.
+- La conducción lleva al menos una fila, aunque sea informal y decida una sola persona.
 - Dónde va la compra depende de la empresa. Si forma parte del recorrido del pedido al cobro, va en operación. Si no, va en apoyo. Queda en el grupo en que la nombró la persona.
 - Los procesos que salen del material de la etapa 4 se proponen junto con los demás. Si la persona no reconoce alguno, no lleva fila: va una línea en "Pendientes del mapa", con su fuente y `A CONFIRMAR con <quién>`.
 - Si aparece un área que no figura en `empresa/contexto.md`, agregarla ahí con sus tres letras, como en la etapa 5, antes de asignar códigos.
@@ -267,8 +278,8 @@ Además:
 Al escribir:
 
 1. Crear `empresa/mapa-de-procesos.md` copiando `plantillas/mapa-de-procesos.md`. Poner al día la fila `MP-GEN-001` de la lista maestra: estado `en curso` y "Elaboró".
-2. Asignar el código de cada proceso que ya tiene área, con los pasos de "Cómo se asigna un código". Su fila de la lista maestra queda con estado `pendiente`, versión `0` y ubicación `—`, porque la ficha todavía no existe.
-3. Agregar la fila de cada proceso en su grupo del mapa, con estado `pendiente` y ficha `—`. En "Participantes" van solo los nombres.
+2. Asignar el código de cada proceso que ya tiene área, con los pasos de "Cómo se asigna un código". Su fila de la lista maestra queda con estado `pendiente`, versión `0`, y con `—` en "Elaboró" y en la ubicación, porque la ficha todavía no existe.
+3. Agregar la fila de cada proceso en su grupo del mapa, con estado `pendiente` y ficha `—`. En "Participantes" van los nombres de quienes intervienen además del dueño. Si no interviene nadie más, va `—`.
 4. En la hoja de cada persona nombrada, agregar el proceso en "Procesos en los que participa". En "Su parte" va lo que hace, si el relato lo dijo. Si no lo dijo, va `—`, sin marcador: se completa en su entrevista. El marcador `A CONFIRMAR con <esa persona>` va una sola vez, en "De dónde sale cada dato" de esa hoja. Si la persona no tiene hoja, crearla.
 5. En la hoja de cada dueño, anotar en "Rol en el relevamiento" de qué proceso es dueño.
 
@@ -276,26 +287,39 @@ Todo va en un solo guardado, al cerrar la etapa.
 
 ## Etapa 8. Plan de relevamiento y preguntas
 
-El orden ya quedó en la etapa 7: primero los procesos `P1`. Aquí se define a quién se escucha y qué se le pregunta.
+El orden ya quedó en la etapa 7: primero los procesos `P1`. Aquí se define a quién se escucha y qué se le pregunta. Primero se prepara todo en silencio. Después se muestra y se hace una sola pregunta.
 
-1. Nombrar los procesos `P1` con las personas ya anotadas en cada uno, y preguntar si hay que escuchar a alguien más.
-2. Preguntar si alguna de las personas anotadas en el relevamiento no va a poder sentarse a conversar.
-3. Si en esta etapa cambia una prioridad, corregirla en el mapa.
+Volver al catálogo de `empresa/insumos/`, ahora que el mapa existe:
+
+1. Completar "Proceso y paso" de cada fila con el nombre del proceso, como figura en el mapa.
+2. Preparar una pregunta de confirmación para quien escribió cada documento leído: si lo que dice sigue siendo así. Va en su hoja. Si no se sabe quién lo escribió, o no es de la empresa, va en la hoja del responsable del programa.
 
 Preguntas preparadas:
 
-1. Buscar cada `PENDIENTE: preguntar a` y cada `A CONFIRMAR con` en `empresa/`. La búsqueda deja afuera `empresa/sesiones/` y `empresa/insumos/`.
-2. Convertir cada uno en una sola pregunta, en palabras simples.
+1. Buscar cada `PENDIENTE: preguntar a` y cada `A CONFIRMAR con` en `empresa/`. La búsqueda deja afuera los registros de `empresa/sesiones/` y los archivos guardados en `empresa/insumos/`. Los catálogos sí se miran.
+2. Convertir cada uno en una sola pregunta, en palabras simples. De un marcador que abarca varios procesos sale una sola pregunta.
 3. Escribirla en "Preguntas preparadas" de la hoja de la persona nombrada, agrupada por proceso, con el lugar de donde sale. La pregunta nombra lo que falta: el marcador queda donde estaba.
 4. Lo que nombra al responsable del programa va a su propia hoja. También se preparan preguntas para él.
 5. Lo marcado `PENDIENTE: preguntar a A DEFINIR` va a la hoja del responsable del programa, como pregunta sobre a quién hay que consultar.
 6. Las filas del mapa con el dueño `A DEFINIR` o con la prioridad `sin definir` no son marcadores y la búsqueda no las encuentra. También van a la hoja del responsable del programa, como preguntas.
-7. Contar al responsable del programa, en pocas frases, cuántas preguntas quedaron para cada persona, con uno o dos ejemplos.
-8. Preguntar si quiere sumar alguna.
 
 Aquí se preparan solo las preguntas propias de cada persona. Las preguntas generales sobre un proceso no se anotan en las hojas: salen de `plantillas/banco-de-preguntas.md` durante la entrevista.
 
-Lista para enviar: se ofrece siempre, con la frase de "Lista para enviar".
+Mostrar el plan:
+
+1. Mostrar una lista corta: los procesos `P1` con las personas anotadas en cada uno, y cuántas preguntas quedaron para cada persona, con uno o dos ejemplos.
+2. Hacer una sola pregunta abierta, con la frase de "Plan". Su respuesta es la confirmación de la etapa.
+3. Anotar lo que la persona diga:
+
+| Lo que dice | Dónde se anota |
+|---|---|
+| Hay que escuchar a alguien más sobre un proceso | Si esa persona interviene en el proceso, en "Participantes" del mapa y en su hoja. Si no interviene, pero conviene escucharla, como pregunta en su hoja. Si no tiene hoja, se crea. |
+| Alguien no va a poder conversar | En "Cómo participa" de su hoja: "recibe las preguntas por escrito". |
+| Cambia una prioridad | En el mapa. |
+| Quiere sumar una pregunta | En "Preguntas preparadas" de la hoja que corresponde. |
+| No sabe, o no tiene nada para cambiar | No se anota nada y no se insiste. |
+
+Lista para enviar: se ofrece una sola vez, con la frase de "Lista para enviar". Si la persona no responde ni sí ni no, cuenta como no, y se le dice que la puede pedir después.
 
 1. Si acepta, mostrar en la conversación un mensaje por persona: una frase que diga para qué es y las preguntas numeradas, en palabras simples.
 2. Anotar en la hoja de esa persona, junto a cada pregunta, que se envió y en qué fecha.
@@ -305,7 +329,7 @@ Lista para enviar: se ofrece siempre, con la frase de "Lista para enviar".
 
 Se hace una sola vez, después de cerrar la etapa 8 y antes del cierre de la sesión:
 
-1. Resumir todo lo que quedó escrito, con palabras simples y con cantidades: áreas, personas, procesos y preguntas preparadas. Decir cuántas cosas quedaron por confirmar o por preguntar.
+1. Resumir todo lo que quedó escrito, con palabras simples y con cantidades: áreas, personas, procesos y preguntas preparadas. Lo que falta confirmar o preguntar se cuenta por preguntas preparadas, no por marcadores.
 2. Preguntar: "¿Es así?" Corregir lo que la persona marque.
 3. Pasar a `borrador` el contexto y el mapa de procesos, en su bloque de control y en la lista maestra. Ese cambio se guarda con el cierre de la sesión. El glosario ya pasó a `borrador` al cerrar la sesión en la que se creó.
 4. Decir qué sigue. Mirar la tabla de modos de `AGENTS.md` y nombrar solo lo que ya tiene fila. No prometer lo que todavía no está disponible. Si en el arranque apareció un cambio en marcha, ofrecer abrirlo en otra conversación, con `metodo/cambio-en-curso.md`.
@@ -349,6 +373,7 @@ Las frases son modelos. Se dicen cada vez con otras palabras, como indica la reg
 | Ofrecer cortar | "Ya llevamos un buen rato. Lo conversado quedó guardado. ¿Seguimos, o cortamos aquí y continuamos otro día?" |
 | La persona no sabe algo | "No hay problema. Lo anoto para preguntárselo a quien corresponda. ¿A quién habría que consultarle?" |
 | Falta alguien | "Anoté `<cantidad>` personas, y al principio eran unas `<cantidad>`. ¿Falta alguien?" |
+| Plan | "Este es el plan. ¿Qué habría que cambiar o agregar? Por ejemplo, alguien más a quien escuchar, alguien que no vaya a poder conversar o alguna pregunta para sumar." |
 | Lista para enviar | "¿Preparo las preguntas en un mensaje listo para enviar a quien no pueda conversar?" |
 | Retomar | "La vez pasada llegamos hasta la etapa `<número>`. Hoy sigue esta: `<nombre de la etapa>`." |
 | Habla otra persona | "La preparación de este trabajo todavía no terminó. `<nombre del responsable del programa>` va a avisar cuándo se puede empezar." |
