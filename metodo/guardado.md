@@ -14,7 +14,7 @@ El trabajo se guarda con git sin que la persona lo note. Este archivo es solo pa
 ## Reglas fijas
 
 1. Todas las sesiones escriben en una sola rama: `borradores`.
-2. `main` tiene solo lo que el responsable del programa ya revisó. Una sesión nunca guarda en `main`. Lo que pasa de `borradores` a `main` se decide al revisar.
+2. `main` tiene solo lo que el responsable del programa ya revisó. Una sesión nunca guarda en `main`, con una sola excepción: el modo de revisión y aprobación, que pasa a `main` lo revisado con los pasos de `metodo/revision-y-aprobacion.md`.
 3. Antes de escribir cualquier archivo, comprobar la rama con `git branch --show-current`. Si no es `borradores`, cambiar antes de escribir.
 4. El estado del trabajo se lee siempre en `borradores`. Ahí está lo que contaron todas las personas.
 5. Se guarda solo lo que está dentro de `empresa/`. Los cambios fuera de esa carpeta no se guardan ni se deshacen. Si aparecen, anotarlo en `empresa/notas-para-el-metodo.md`.
@@ -137,7 +137,7 @@ Ejemplo: `docs(ventas): presupuesto a un cliente - tema B con <nombre>`.
 |---|---|
 | Se guardó | "Listo, quedó guardado." |
 | No se pudo subir | "Quedó guardado en esta computadora." |
-| No se puede guardar hoy | "Hoy tengo un problema para guardar lo que conversemos y prefiero no seguir así. Conviene avisar a <responsable del programa>. Disculpas por la molestia." |
+| No se puede guardar hoy | "Hoy tengo un problema para guardar lo que conversemos y prefiero no seguir así. Conviene avisar a `<nombre del responsable del programa>`. Disculpas por la molestia." |
 
 - Si quien habla es el responsable del programa, en la última frase reemplazar el pedido de avisar por: "Conviene pedir ayuda a quien preparó esta carpeta."
 - Las frases están en forma neutra. Adaptarlas a la forma de trato, como indica la regla 8 de `metodo/reglas.md`.

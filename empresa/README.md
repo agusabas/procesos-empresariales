@@ -54,6 +54,8 @@ empresa/
 | `adjuntos/<area>/<proceso>/` | Los archivos aportados durante las sesiones, con su `catalogo.md`. |
 | `cambios/<slug>/ficha-del-cambio.md` | Un cambio en curso que altera cómo se trabaja. |
 
+Qué tipo de archivo es cada lugar, y cómo se controla, está en `metodo/control-documental.md`.
+
 ## Cómo se nombra
 
 Los nombres van en minúsculas, con guiones en lugar de espacios, sin acentos ni eñes. La única excepción es `<codigo>`, que se escribe tal como figura en la lista maestra.
@@ -61,7 +63,7 @@ Los nombres van en minúsculas, con guiones en lugar de espacios, sin acentos ni
 | Parte | Qué va |
 |---|---|
 | `<nombre>`, `<quien>` | El nombre de pila de la persona. Si dos personas comparten el nombre, se agrega el área: `<nombre>-<area>`. |
-| `<area>` | El nombre del área, como figura en `contexto.md`. |
+| `<area>` | El nombre del área, como figura en `contexto.md`. Lo que es de toda la empresa usa `general`. |
 | `<codigo>` | El código del documento, asignado desde `lista-maestra.md`. |
 | `<slug>` | El nombre del proceso, del instructivo o del cambio. |
 | `<proceso>` | El mismo nombre que el archivo de la ficha del proceso, sin `.md`. |

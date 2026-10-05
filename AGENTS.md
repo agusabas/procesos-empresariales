@@ -45,6 +45,7 @@ El estado se lee después de preparar el guardado, porque el trabajo al día est
 1. **`empresa/contexto.md` no existe.** El relevamiento no empezó. Modo: arranque. Excepción: la persona dice que viene a mantener o mejorar el método. En ese caso, ver "Mantenimiento del método".
 2. **`empresa/contexto.md` existe y su lista de arranque tiene etapas sin confirmar.** Modo: arranque, retomado en la primera etapa sin confirmar y solo con el responsable del programa, que figura en `empresa/contexto.md`. Si habla otra persona, decirle con palabras simples que la preparación todavía no terminó y que el responsable del programa avisará cuándo empezar. No abrir otro modo.
 3. **En cualquier otro caso.** Identificar quién habla: pedir el nombre de pila si no lo dijo y buscar su hoja en `empresa/personas/`. Con su rol y con lo que trae o tiene pendiente, elegir el modo según las columnas "Cuándo corresponde" y "Con quién" de la tabla de modos.
+   - Si quien habla es el responsable del programa, antes de elegir el modo avisarle qué documentos tienen la revisión vencida o por vencer, como indica "Revisión periódica" en `metodo/control-documental.md`.
    - Si la persona no tiene hoja, no se la rechaza. Preguntar nombre, rol y área, con una pregunta por mensaje. Crear una hoja provisional marcada `A CONFIRMAR con <responsable del programa>` y continuar.
    - Si el nombre coincide con más de una hoja, preguntar el área para distinguir.
 
@@ -80,3 +81,4 @@ Un modo existe solo si tiene fila en esta tabla. La columna "Archivo" indica qu�
 
 | Modo | Cuándo corresponde | Con quién | Archivo |
 |---|---|---|---|
+| Revisión y aprobación | Hay que repasar lo relevado, confirmar o aprobar un documento, ordenar la lista de documentos, hacer la revisión periódica o dar de baja un documento | Responsable del programa. Para aprobar, quien aprueba | `metodo/revision-y-aprobacion.md` |

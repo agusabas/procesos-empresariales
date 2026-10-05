@@ -1,0 +1,275 @@
+# Control documental
+
+Este archivo indica cómo se identifica, se versiona, se aprueba y se revisa cada archivo de `empresa/`. Leerlo completo antes de crear un documento, de asignar un código o de cambiar un estado.
+
+Este vocabulario es para el agente. En la conversación se usan las palabras simples de la regla 8 de `metodo/reglas.md`.
+
+## En una mirada
+
+| Tema | Regla |
+|---|---|
+| Tipos de archivo | Documento controlado, documento de trabajo o registro. Cada tipo se cuida distinto. |
+| Código | `TIPO-ÁREA-NNN`. Se asigna solo desde `empresa/lista-maestra.md`. |
+| Bloque de control | Dos tablas al principio de cada documento controlado. Es la fuente de verdad. |
+| Estados | `pendiente`, `en curso`, `borrador`, `validado`, `vigente` y `obsoleto`. |
+| Versión | `0` hasta la primera aprobación. Cada aprobación suma 1. |
+| Aprobar | Cuatro cosas juntas o ninguna: versión, historial, próxima revisión y lista maestra. |
+| Documento vigente | No se reescribe. Los cambios se anotan como propuestos hasta que se aprueban. |
+| Revisión periódica | Fecha de aprobación más el período definido en el arranque. |
+| Ramas | Las sesiones escriben en `borradores`. `main` tiene solo lo revisado. |
+| Diagramas | Salen de la tabla de pasos y se vuelven a generar cuando la tabla cambia. |
+
+## Los tres tipos de archivo
+
+| Tipo | Cuáles son | Cómo se cuida |
+|---|---|---|
+| Documento controlado | Contexto, mapa de procesos, fichas de proceso, instructivos, formularios y glosario | Lleva código, versión, estado, aprobación y revisión periódica. |
+| Documento de trabajo | Hojas de personas, fichas de cambio, lista maestra y notas para el método | Se identifica por su ruta. Se actualiza libremente. No se aprueba. |
+| Registro | Sesiones, insumos y adjuntos | Se cierra una vez escrito. Después no se edita. |
+
+El tipo de cada archivo sale de su lugar en `empresa/`:
+
+| Lugar en `empresa/` | Tipo | Código |
+|---|---|---|
+| `contexto.md` | Documento controlado | `CT-GEN-001` |
+| `mapa-de-procesos.md` | Documento controlado | `MP-GEN-001` |
+| `glosario.md` | Documento controlado | `GL-GEN-001` |
+| `procesos/<area>/<codigo>-<slug>.md` | Documento controlado | `PR-ÁREA-NNN` |
+| `instructivos/<area>/<codigo>-<slug>.md` | Documento controlado | `IN-ÁREA-NNN` |
+| `personas/<nombre>.md` | Documento de trabajo | No lleva |
+| `cambios/<slug>/ficha-del-cambio.md` | Documento de trabajo | No lleva |
+| `lista-maestra.md` | Documento de trabajo | No lleva |
+| `notas-para-el-metodo.md` | Documento de trabajo | No lleva |
+| `sesiones/`, `insumos/` y `adjuntos/` | Registro | No lleva |
+
+- Todo documento nuevo se crea copiando su molde de `plantillas/`. La nota inicial de cada molde dice a qué lugar de `empresa/` va la copia.
+- El `catalogo.md` de `insumos/` y el de cada carpeta de `adjuntos/` son documentos de trabajo: se actualizan cada vez que llega un archivo.
+- Los formularios todavía no tienen lugar propio ni molde. Hasta que se definan, no se asignan códigos `FO`. Un formulario que aporta una persona se guarda como cualquier otro archivo aportado, en `empresa/adjuntos/`.
+
+## Códigos
+
+El código tiene la forma `TIPO-ÁREA-NNN`. Por ejemplo, `PR-VEN-001` es la primera ficha de proceso de un área cuyas letras son `VEN`.
+
+| Parte | Qué es | Valores |
+|---|---|---|
+| `TIPO` | Dos letras según el tipo de documento | `CT` contexto, `MP` mapa de procesos, `GL` glosario, `PR` ficha de proceso, `IN` instructivo, `FO` formulario |
+| `ÁREA` | Tres letras mayúsculas | Las que se definieron en el arranque y figuran en `empresa/contexto.md`. `GEN` para lo que es de toda la empresa |
+| `NNN` | Tres cifras | Correlativo dentro de cada tipo y área. Empieza en `001` |
+
+- En las rutas, la carpeta del área lleva el nombre del área (`<area>`). El código lleva sus tres letras. La correspondencia entre nombre y letras está en `empresa/contexto.md`.
+- Lo que es de toda la empresa usa la carpeta `general` y las letras `GEN`.
+- El código de un documento no cambia cuando cambian su nombre, su estado o su versión.
+- Un número nunca se reutiliza, aunque el documento quede `obsoleto` o se haya creado por error.
+
+### Cómo se asigna un código
+
+1. Abrir `empresa/lista-maestra.md`. Si no existe, crearla copiando `plantillas/lista-maestra.md`.
+2. Comprobar que el documento no tiene ya un código: buscar su título y su ubicación en la lista.
+3. Definir el tipo y el área. Si el área no tiene letras en `empresa/contexto.md`, no inventarlas: anotar `PENDIENTE: preguntar a <responsable del programa>` y no asignar el código.
+4. Buscar en la lista todas las filas de ese tipo y esa área, también las que están `obsoleto`. Tomar el número más alto y sumar 1. Si no hay ninguna, el número es `001`.
+5. Agregar la fila a la lista, con estado `pendiente` y versión `0`. La fila se escribe antes que cualquier otra cosa.
+6. Escribir el código donde corresponde: en la fila del mapa de procesos, si es un proceso; en el nombre del archivo y en el bloque de control, cuando el archivo se crea.
+7. Guardar como indica `metodo/guardado.md`.
+
+El número se elige mirando la lista maestra. Nunca se eligen números contando los archivos de una carpeta. Las filas de la lista no se borran.
+
+### Dos documentos con el mismo código
+
+Puede pasar cuando dos computadoras asignan un código antes de ponerse al día. Al encontrarlo:
+
+1. No borrar, no unir y no cambiar de código nada en el momento.
+2. Conserva el código el documento que se guardó primero. La fecha del primer guardado de cada archivo se ve con `git log --diff-filter=A --format=%as -- <ruta>`. Si no se puede saber cuál fue primero, lo decide el responsable del programa.
+3. Anotar en la columna "Observaciones" de las dos filas de la lista: `PENDIENTE: preguntar a <responsable del programa>`, con la aclaración "código duplicado". Si el otro documento no está `vigente`, anotarlo también junto a su código, en el bloque de control.
+4. Seguir con el trabajo. El duplicado se resuelve en la etapa de conciliación de `metodo/revision-y-aprobacion.md`.
+
+Para resolverlo:
+
+1. Asignar al segundo documento el siguiente número libre, con los pasos de "Cómo se asigna un código".
+2. Cambiar el código en su bloque de control, en el nombre del archivo, en la lista maestra y en el mapa de procesos.
+3. Anotar el código anterior en el historial del documento y en "Observaciones".
+4. No corregir los registros ya cerrados que nombran el código anterior.
+5. Si el documento que cambia de código está `vigente`, hace falta la palabra de quien aprueba. Su versión no cambia.
+
+## Bloque de control
+
+Todo documento controlado empieza, debajo del título, con dos tablas. Son tablas a la vista, y no datos ocultos al principio del archivo, para que sigan ahí cuando el documento se imprime o se exporta.
+
+```
+| Código | Versión | Estado | Vigente desde | Próxima revisión |
+|---|---|---|---|---|
+| <código> | 0 | en curso | — | — |
+
+| Elaboró | Revisó | Aprobó |
+|---|---|---|
+| <nombre> | — | — |
+```
+
+| Campo | Qué va | Cuándo cambia |
+|---|---|---|
+| Código | El código asignado en la lista maestra. | Nunca, salvo un duplicado. |
+| Versión | Un número entero. `0` hasta la primera aprobación. | Solo al aprobar. |
+| Estado | Uno de los seis estados. | Como indica "Estados". |
+| Vigente desde | La fecha en que se aprobó la versión actual. `—` hasta la primera aprobación. | Solo al aprobar. |
+| Próxima revisión | La fecha en que toca volver a mirarlo. `—` hasta la primera aprobación. | Al aprobar y en la revisión periódica. |
+| Elaboró | El nombre de pila del responsable del programa, que es quien conduce el relevamiento. | Al crear el documento. |
+| Revisó | El nombre de pila del dueño del proceso que validó. `—` hasta que valide. | Al pasar a `validado`. |
+| Aprobó | El nombre de pila de quien aprobó. `—` hasta la aprobación. | Solo al aprobar. |
+
+- El agente nunca figura en el bloque.
+- Los documentos de toda la empresa (`GEN`) no tienen dueño de proceso. En ellos revisa el responsable del programa.
+- Si el bloque y la lista maestra no coinciden, vale el bloque. Mientras un documento no tiene archivo, vale su fila de la lista.
+
+## Estados
+
+Los estados avanzan en este orden: `pendiente`, `en curso`, `borrador`, `validado`, `vigente`. Aparte está `obsoleto`.
+
+| Estado | Qué significa | Cuándo se pone |
+|---|---|---|
+| `pendiente` | Tiene código y fila en la lista maestra. Todavía no se relevó nada. El archivo puede no existir. | Al asignar el código. |
+| `en curso` | El relevamiento empezó y quedan temas sin conversar. | En la sesión de relevamiento que crea el archivo. |
+| `borrador` | Se conversaron todos los temas. Quedan marcadores abiertos, o falta que el dueño del proceso confirme. | En la sesión de relevamiento que completa los temas. |
+| `validado` | El dueño del proceso confirmó que es así, y ningún marcador abierto cambia el sentido. | Solo en `metodo/revision-y-aprobacion.md`. |
+| `vigente` | Está aprobado. Es la versión oficial. | Solo en `metodo/revision-y-aprobacion.md`, con la palabra explícita de quien aprueba. |
+| `obsoleto` | Fue reemplazado o dado de baja. Se conserva y no se edita más. | Solo en `metodo/revision-y-aprobacion.md`. |
+
+- Un marcador cambia el sentido cuando afecta quién hace algo, qué se hace, en qué orden, con qué regla o con qué excepción. No lo cambia cuando falta un detalle, como una duración exacta. Ante la duda, lo cambia.
+- Un documento `validado` vuelve a `borrador` si aparece un `PENDIENTE`, un `CONFLICTO` o un `A CONFIRMAR` que cambia el sentido.
+- Un documento `vigente` no retrocede. Lo que cambia se anota como indica "Cambios en un documento vigente".
+- El estado se escribe en tres lugares: el bloque de control, la lista maestra y, si es una ficha, el mapa de procesos. Se cambian los tres en el mismo guardado.
+
+## Versiones e historial
+
+- La versión es un número entero: `0`, `1`, `2`.
+- Todo documento controlado termina con la sección `## Historial`, con estas columnas: `| Versión | Fecha | Qué cambió | Quién lo contó | Quién aprobó |`.
+- Cada sesión que cambia el documento suma una fila con la versión que tiene en ese momento, la fecha, qué se agregó y quién lo contó. En "Quién aprobó" va `—`.
+- Cada aprobación suma una fila con la versión nueva y el nombre de pila de quien aprobó.
+- Las filas del historial no se borran ni se reescriben.
+
+## Aprobar: cuatro cosas juntas
+
+Antes de aprobar tienen que cumplirse las cuatro condiciones:
+
+1. El documento está `validado`. O está `vigente` y tiene cambios propuestos que el dueño del proceso confirmó.
+2. Ningún marcador abierto cambia el sentido.
+3. Quien aprueba lo dijo de forma explícita, en esta conversación y para este documento.
+4. El documento tiene su fila en la lista maestra.
+
+Al aprobar se hacen cuatro cosas juntas, en un mismo guardado:
+
+| N.º | Qué se hace | Dónde |
+|---|---|---|
+| 1 | La versión suma 1. | Bloque de control |
+| 2 | Se agrega una fila con la versión nueva, la fecha, qué cambió, quién lo contó y quién aprobó. | `## Historial` |
+| 3 | La próxima revisión pasa a ser la fecha de aprobación más el período. | Bloque de control |
+| 4 | La fila del documento queda al día. | `empresa/lista-maestra.md` |
+
+- Junto con las cuatro se escriben "Vigente desde", "Aprobó" y el estado `vigente`. El estado se escribe al final.
+- Si alguna de las cuatro no se puede hacer, el agente se niega a dejar el documento como `vigente`. Deshace lo que escribió para ese documento con `git restore -- <rutas>` y dice con palabras simples qué falta.
+- Cada aprobación se guarda por separado, para poder deshacer una sin tocar las otras.
+
+## Cambios en un documento vigente
+
+1. No tocar lo ya escrito.
+2. Anotar el cambio en la sección `## Cambios propuestos (sin aprobar)`, que va justo antes de `## Historial`. Si el documento no tiene esa sección, agregarla ahí.
+3. Usar una fila por cambio, con estas columnas: `| Fecha | Quién lo cuenta | Qué cambió | Confirmó el dueño |`.
+4. El estado sigue `vigente` y la versión no cambia.
+5. Cuando el cambio se aprueba, pasa al cuerpo del documento, su fila sale de la sección y se hacen las cuatro cosas de "Aprobar".
+
+Dos datos del mapa de procesos se actualizan sin aprobación, aunque el mapa esté `vigente`: las columnas "Estado" y "Ficha". Copian datos de cada ficha.
+
+## Revisión periódica
+
+- La próxima revisión es la fecha de aprobación más el período definido en el arranque, que figura en `empresa/contexto.md`. Si no está definido, son 12 meses.
+- La fecha cae el mismo día, tantos meses después. Si ese día no existe en el mes, cae el último día de ese mes.
+- Una revisión está vencida cuando su fecha es anterior a hoy. Está por vencer cuando faltan 30 días o menos.
+
+Aviso: al empezar cada sesión con el responsable del programa, en cualquier modo, leer la columna "Próxima revisión" de la lista maestra y avisar qué documentos están vencidos o por vencer. Por ejemplo: "Antes de empezar: hay dos documentos que toca volver a mirar." Después, nombrar cada uno con su fecha. Si no hay ninguno, no decir nada.
+
+Qué se hace con cada documento se decide en `metodo/revision-y-aprobacion.md`:
+
+| Resultado | Qué pasa con el documento |
+|---|---|
+| Sigue igual | La versión no cambia. Se suma una fila al historial y se fija una nueva próxima revisión. |
+| Cambió | El cambio se anota como propuesto y sigue el camino normal hasta su aprobación. |
+| Ya no se usa | Pasa a `obsoleto`. |
+
+## Lista maestra
+
+- Es `empresa/lista-maestra.md` y se crea copiando `plantillas/lista-maestra.md`. Es un documento de trabajo.
+- Tiene una fila por cada documento controlado, con su código, título, tipo, área, estado, versión, fechas, quién elaboró, revisó y aprobó, ubicación y observaciones.
+- Tiene una tabla de registros: qué se guarda, dónde y por cuánto tiempo.
+- La fuente de verdad es el bloque de control de cada documento. La lista se concilia contra los bloques en `metodo/revision-y-aprobacion.md`.
+- Cada vez que la lista cambia, se actualiza su línea "Última actualización".
+
+## Mapa de procesos
+
+- Es `empresa/mapa-de-procesos.md` y se crea copiando `plantillas/mapa-de-procesos.md`. Es un documento controlado.
+- Agrupa los procesos en tres tipos:
+
+| Tipo | Qué procesos reúne |
+|---|---|
+| Conducción | Cómo se decide y se dirige. |
+| Operación | La cadena que va desde el pedido de un cliente hasta el cobro. |
+| Apoyo | Lo que sostiene a la operación. |
+
+- Sus columnas son: `| Código | Proceso | Área | Tipo | Dueño | Participantes | Estado | Prioridad | Ficha |`.
+- Es la lista oficial de nombres de procesos. Todos los demás archivos nombran cada proceso exactamente como figura en el mapa.
+- Para sumar un proceso, primero se le asigna el código y después se agrega su fila. Si el mapa está `vigente`, la fila va a "Cambios propuestos (sin aprobar)" hasta que se apruebe. El proceso se puede relevar mientras tanto.
+
+## Ramas: `borradores` y `main`
+
+- Las sesiones escriben en `borradores`, como indica `metodo/guardado.md`.
+- `main` tiene solo lo que el responsable del programa ya revisó.
+- Lo que pasa de `borradores` a `main`, y toda aprobación, se hacen en `metodo/revision-y-aprobacion.md`.
+- La versión oficial de un documento es la que está en `main` con estado `vigente`.
+
+## Diagramas
+
+Cada ficha de proceso lleva un diagrama hecho con Mermaid. Un `subgraph` por sector se parece a las columnas de un cursograma, como los que describe la norma IRAM 34502. Es una aproximación y no pretende cumplir esa norma.
+
+1. La tabla de pasos manda. El diagrama no dice nada que la ficha no diga.
+2. Cada vez que la tabla de pasos cambia, el diagrama se genera entero de nuevo.
+3. El tipo de diagrama es `flowchart TD`.
+4. Va un `subgraph` por cada sector o rol de la columna "Quién". No va uno por persona: si la columna tiene un nombre de pila, se usa el rol o el área de esa persona.
+5. Va un nodo por paso, con el número del paso y un texto corto.
+6. Fuera de los `subgraph` va un nodo de inicio, con lo que pone en marcha el proceso, y uno de fin, con lo que queda hecho al terminar.
+7. Una decisión se dibuja como rombo, con una flecha rotulada por cada salida. Solo se dibuja si figura en la tabla de pasos, en "Reglas que se siguen" o en "Excepciones".
+8. Todos los textos van entre comillas dobles. Los identificadores son cortos, en minúsculas, sin acentos ni espacios. La palabra `end` no se usa como identificador.
+9. Sin colores ni estilos.
+10. Al terminar, comprobar que cada paso de la tabla está en el diagrama y que no hay nodos de más.
+
+Ejemplo, con una situación inventada en la que un cliente pide un presupuesto. Esta es la tabla de pasos:
+
+| Paso | Quién | Qué hace | Con qué (sistema/planilla) | Cuánto tarda |
+|---|---|---|---|---|
+| 1 | Ventas | Recibe el pedido de presupuesto | Correo electrónico | 5 minutos |
+| 2 | Ventas | Prepara el presupuesto | Lista de precios | 20 minutos |
+| 3 | Administración | Revisa las condiciones de pago, si el monto supera el límite fijado | Sistema de gestión | 10 minutos |
+| 4 | Ventas | Envía el presupuesto al cliente | Correo electrónico | 5 minutos |
+
+Y este es el diagrama que sale de esa tabla:
+
+```mermaid
+flowchart TD
+    inicio(["Un cliente pide un presupuesto"])
+    fin(["El cliente recibe el presupuesto"])
+
+    subgraph ventas ["Ventas"]
+        p1["1. Recibe el pedido de presupuesto"]
+        p2["2. Prepara el presupuesto"]
+        d1{"¿El monto supera el límite fijado?"}
+        p4["4. Envía el presupuesto al cliente"]
+    end
+
+    subgraph administracion ["Administración"]
+        p3["3. Revisa las condiciones de pago"]
+    end
+
+    inicio --> p1
+    p1 --> p2
+    p2 --> d1
+    d1 -->|"Sí"| p3
+    d1 -->|"No"| p4
+    p3 --> p4
+    p4 --> fin
+```
