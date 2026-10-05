@@ -81,7 +81,7 @@ Al escribir, en este orden:
 1. Crear `empresa/lista-maestra.md` copiando `plantillas/lista-maestra.md`.
 2. Crear `empresa/contexto.md` copiando `plantillas/contexto-de-la-empresa.md`. El nombre de pila de quien conduce va en "Elaboró" y en la fila "Responsable del programa".
 3. Poner al día la fila `CT-GEN-001` de la lista maestra: estado `en curso` y "Elaboró".
-4. Crear el registro de la sesión copiando `plantillas/registro-de-sesion.md` a `empresa/sesiones/AAAA-MM-DD-<quien>-arranque.md`. En "Etapas o temas" van las ocho etapas.
+4. Crear el registro de la sesión copiando `plantillas/registro-de-sesion.md` a `empresa/sesiones/AAAA-MM-DD-<quien>-arranque.md`. En "Modo" va `arranque`. En "Etapas o temas" van las ocho etapas.
 
 ## Etapa 2. La empresa
 
@@ -96,6 +96,7 @@ Al escribir, en este orden:
 
 - Se escribe en "La empresa", en `empresa/contexto.md`.
 - De los clientes se anota qué tipo de clientes son, no sus nombres.
+- Si la respuesta a "por qué ahora" muestra que la empresa está cambiando algo, como un sistema nuevo o una reorganización, anotarlo en "Temas para otra sesión" del registro, en una línea que empieza con `Cambio:`. No se desarrolla durante el arranque.
 
 ## Etapa 3. Cómo se organiza el relevamiento
 
@@ -261,7 +262,7 @@ Se hace una sola vez, al cerrar la etapa 8 y antes del cierre de la sesión:
 
 1. Pasar a `borrador` el contexto y el mapa de procesos, y también el glosario si existe. El estado se cambia en el bloque de control y en la lista maestra.
 2. Resumir todo lo que quedó escrito, con palabras simples y con cantidades: áreas, personas, procesos y preguntas preparadas. Decir cuántas cosas quedaron por confirmar o por preguntar.
-3. Decir qué sigue. Mirar la tabla de modos de `AGENTS.md` y nombrar solo lo que ya tiene fila. No prometer lo que todavía no está disponible.
+3. Decir qué sigue. Mirar la tabla de modos de `AGENTS.md` y nombrar solo lo que ya tiene fila. No prometer lo que todavía no está disponible. Si en el arranque apareció un cambio en marcha, ofrecer abrirlo en otra conversación, con `metodo/cambio-en-curso.md`.
 4. Si no hay servidor, como lo define "Cuándo hay servidor" en `metodo/guardado.md`, decir una sola vez la frase de "Sin servidor". Anotar en el registro de la sesión que se dijo.
 
 ## Guardado en este modo

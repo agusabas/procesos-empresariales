@@ -135,6 +135,7 @@ Los estados avanzan en este orden: `pendiente`, `en curso`, `borrador`, `validad
 
 - Un marcador cambia el sentido cuando afecta quién hace algo, qué se hace, en qué orden, con qué regla o con qué excepción. No lo cambia cuando falta un detalle, como una duración exacta. Ante la duda, lo cambia.
 - Un documento `validado` vuelve a `borrador` si aparece un `PENDIENTE`, un `CONFLICTO` o un `A CONFIRMAR` que cambia el sentido.
+- Una ficha en `borrador` vuelve a `en curso` si una entrevista posterior queda con temas sin cerrar.
 - Un documento `vigente` no retrocede. Lo que cambia se anota como indica "Cambios en un documento vigente".
 - El estado se escribe en tres lugares: el bloque de control, la lista maestra y, si es una ficha, el mapa de procesos. Se cambian los tres en el mismo guardado.
 
@@ -176,7 +177,9 @@ Al aprobar se hacen cuatro cosas juntas, en un mismo guardado:
 4. El estado sigue `vigente` y la versión no cambia.
 5. Cuando el cambio se aprueba, pasa al cuerpo del documento, su fila sale de la sección y se hacen las cuatro cosas de "Aprobar".
 
-Dos datos del mapa de procesos se actualizan sin aprobación, aunque el mapa esté `vigente`: las columnas "Estado" y "Ficha". Copian datos de cada ficha.
+Tres datos del mapa de procesos se actualizan sin aprobación, aunque el mapa esté `vigente`: las columnas "Estado", "Ficha" y "Prioridad". Las dos primeras copian datos de cada ficha. La prioridad es el orden del relevamiento y la decide el responsable del programa.
+
+Lo que un cambio en marcha va a modificar no se anota en la ficha del proceso mientras sea un plan. Va en la ficha del cambio, como indica `metodo/cambio-en-curso.md`.
 
 ## Revisión periódica
 

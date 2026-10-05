@@ -36,7 +36,7 @@ _Lo que quedó sin saber, una línea por dato, con la forma `PENDIENTE: pregunta
 
 ## Documentos
 
-_Los archivos que llegaron en la sesión, uno por línea, con la forma que corresponda. Del archivo que no se incorpora no se copia nada: esta línea es su único rastro._
+_Los archivos que llegaron en la sesión, uno por línea, con la forma que corresponda. Del archivo que no se incorpora no se copia nada: esta línea es su único rastro. En una sesión de material de terceros, debajo de cada archivo incorporado van tres líneas más: quiénes participan, qué fechas cubre y cómo llegó._
 
 - Incorporado: `<archivo>`, `<qué es>`. Quedó en `<carpeta>`.
 - NO INCORPORADO: `<archivo>`, contiene datos personales de terceros.
@@ -48,7 +48,7 @@ _Lo que la persona dijo que iba a acercar y todavía no llegó. Se anota tambié
 
 ## Temas para otra sesión
 
-_Lo que apareció y no era de esta sesión._
+_Lo que apareció y no era de esta sesión, una línea por tema. Lo que trata de un cambio que la empresa está haciendo empieza con `Cambio:` y dice quién lo contó._
 
 ## Cómo terminó
 

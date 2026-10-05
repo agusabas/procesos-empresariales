@@ -23,5 +23,5 @@ Qué se guarda como registro, dónde y por cuánto tiempo. Un registro no se edi
 | Registro | Qué se guarda | Dónde | Por cuánto tiempo |
 |---|---|---|---|
 | Sesiones | El registro de cada conversación | `sesiones/` | `<plazo>` |
-| Insumos | El material original, tal como se recibió | `insumos/` | `<plazo>` |
+| Insumos | El material recibido, sin los datos personales de terceros | `insumos/` | `<plazo>` |
 | Adjuntos | Los archivos aportados durante las sesiones | `adjuntos/` | `<plazo>` |

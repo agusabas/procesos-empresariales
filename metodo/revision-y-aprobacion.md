@@ -36,7 +36,7 @@ Antes de empezar, leer completo `metodo/control-documental.md`. Este archivo usa
 
 ## Registro de la sesión
 
-Al empezar, crear el registro copiando `plantillas/registro-de-sesion.md` a `empresa/sesiones/AAAA-MM-DD-<quien>-revision.md`. Anotar en él, etapa por etapa:
+Al empezar, crear el registro copiando `plantillas/registro-de-sesion.md` a `empresa/sesiones/AAAA-MM-DD-<quien>-revision.md`. En "Modo" va `revisión y aprobación`. Anotar en él, etapa por etapa:
 
 - Qué se repasó, qué quedó aceptado y qué no.
 - Qué se validó.
@@ -45,7 +45,7 @@ Al empezar, crear el registro copiando `plantillas/registro-de-sesion.md` a `emp
 - Qué quedó pendiente y para quién.
 - La línea de subida que indica `metodo/guardado.md`.
 
-Una vez cerrado, el registro no se edita.
+Una vez cerrado, el registro no se edita, salvo su línea de subida.
 
 ## Etapa 1. Qué hay pendiente
 
@@ -59,6 +59,7 @@ Reunir en silencio:
 | Documentos `vigente` con cambios propuestos | Sección "Cambios propuestos (sin aprobar)" con filas |
 | Marcadores abiertos | `PENDIENTE`, `CONFLICTO` y `A CONFIRMAR` en los archivos de `empresa/` |
 | Hojas provisionales | `A CONFIRMAR con <responsable del programa>` en las hojas de `empresa/personas/` |
+| Fichas que esperan por un cambio | La parte "Fichas a actualizar" de cada ficha de `empresa/cambios/` |
 | Códigos duplicados | Columna "Observaciones" de la lista maestra |
 
 Después:

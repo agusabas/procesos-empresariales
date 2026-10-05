@@ -68,7 +68,7 @@ Los nombres van en minúsculas, con guiones en lugar de espacios, sin acentos ni
 | `<codigo>` | El código del documento, asignado desde `lista-maestra.md`. |
 | `<slug>` | El nombre del proceso, del instructivo o del cambio. |
 | `<proceso>` | El mismo nombre que el archivo de la ficha del proceso, sin `.md`. |
-| `<tema>` | El proceso o el asunto de la conversación. En una entrevista, el nombre del archivo de la ficha, sin `.md`. |
+| `<tema>` | El proceso o el asunto de la conversación. En una entrevista, el nombre del archivo de la ficha, sin `.md`. En el seguimiento de un cambio, `cambio-<slug>`. |
 | Archivos de `insumos/` y de `adjuntos/` | `AAAA-MM-DD-descripcion-corta.extension`, con el día en que llegó. El nombre original queda en el `catalogo.md`. Una entrega de varios archivos va en una carpeta con ese mismo formato de nombre. |
 | `AAAA-MM-DD` | La fecha: año, mes y día. |
 
@@ -77,5 +77,5 @@ Los nombres van en minúsculas, con guiones en lugar de espacios, sin acentos ni
 - Cada archivo y cada carpeta se crean cuando hacen falta, no antes.
 - No se crean lugares que no estén en este esquema. Si hace falta uno, se anota en `notas-para-el-metodo.md`.
 - Los archivos guardados en `insumos/` no se modifican después. Su `catalogo.md` sí se pone al día. Lo único que se quita de un archivo, antes de copiarlo, son los datos personales de terceros.
-- Un registro de `sesiones/` no se edita una vez cerrado.
+- Un registro de `sesiones/` no se edita una vez cerrado, salvo su línea de subida.
 - En toda la carpeta valen las reglas de privacidad de `metodo/reglas.md`.

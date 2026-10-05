@@ -70,7 +70,7 @@ Cuando no trae ningún tema, se propone así:
 
 Con el proceso elegido:
 
-1. Leer todo lo que ya existe sobre él: la ficha, si está creada; los registros de sesión de cualquier persona; el material de `empresa/insumos/` que lo nombra; los archivos de su carpeta en `empresa/adjuntos/`. El material sirve para preguntar mejor, no como verdad.
+1. Leer todo lo que ya existe sobre él: la ficha, si está creada; los registros de sesión de cualquier persona; el material de `empresa/insumos/` que lo nombra; los archivos de su carpeta en `empresa/adjuntos/`; y lo que quedó anotado sobre este proceso en "Temas para otra sesión" de otros registros. El material sirve para preguntar mejor, no como verdad.
 2. Crear el registro de la sesión, como indica "El registro de la sesión".
 
 ## Etapa 1. Apertura
@@ -149,8 +149,9 @@ Cuando la persona acepta:
 - Si la persona no sabe algo, decir la frase de "No sabe algo" y anotar `PENDIENTE: preguntar a <quién>`.
 - Si cuenta cómo debería ser, o propone una mejora, va a "Problemas e ideas". Si no queda claro, preguntar: "¿Eso es lo que se hace hoy, o lo que convendría hacer?"
 - Si critica a alguien, se anota el hecho que afecta al trabajo, no el juicio.
-- Si cuenta algo de otro proceso, o de un cambio que está en marcha, anotarlo en "Temas para otra sesión" del registro y volver al tema.
-- Si aparece una palabra propia de la empresa que no está en el glosario, preguntar qué significa y agregarla.
+- Si cuenta algo de otro proceso, anotarlo en "Temas para otra sesión" del registro y volver al tema.
+- Un cambio que ya está decidido o en marcha no es una idea, ni es lo que se hace hoy. Se anota en "Temas para otra sesión", en una línea que empieza con `Cambio:`. Lo retoma el responsable del programa, con `metodo/cambio-en-curso.md`.
+- Si aparece una palabra propia de la empresa que no está en el glosario, preguntar qué significa y agregarla. Si `empresa/glosario.md` todavía no existe, se crea copiando `plantillas/glosario.md` y se pone al día la fila `GL-GEN-001` de la lista maestra.
 - No apurar.
 
 ### Cuando la respuesta es vaga

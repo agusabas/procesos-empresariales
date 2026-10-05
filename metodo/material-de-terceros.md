@@ -23,14 +23,14 @@ Cada etapa se cierra igual: resumen de lo entendido, pregunta de confirmación y
 
 1. El material lo trae, por lo general, el responsable del programa. Lo puede traer cualquier persona con hoja, y las reglas son las mismas.
 2. Todo lo que se escribe a partir del material lleva su fuente y `A CONFIRMAR con <quién>`.
-3. Eso vale también para lo que dijo en el material la misma persona que lo trae. Su parte se confirma después, en una entrevista.
+3. La única excepción es lo que dijo en el material la misma persona que lo trae. Se le pregunta en el momento si sigue siendo así. Si lo confirma, vale como su palabra directa y no lleva marcador.
 4. Quien trae el material confirma la lectura, no los hechos.
 5. Nada se copia a `empresa/` antes de quitarle los datos personales de terceros.
 6. El original no se mueve, no se cambia y no se borra.
 7. Lo que dice un audio nunca se adivina ni se completa por el contexto.
 8. Las críticas a personas no se anotan. Se anota el hecho que afecta al trabajo.
 9. Este modo nunca lleva una ficha a `borrador`: nadie que hace el trabajo lo contó directamente.
-10. Lo que trata de un cambio que está en marcha no se desarrolla aquí. Se anota en "Temas para otra sesión" del registro.
+10. Lo que trata de un cambio que está en marcha no se desarrolla aquí. Se anota en "Temas para otra sesión" del registro, en una línea que empieza con `Cambio:`, y se retoma en `metodo/cambio-en-curso.md`.
 11. Los códigos se asignan desde la lista maestra, con los pasos de "Cómo se asigna un código" en `metodo/control-documental.md`.
 
 ## Etapa 1. Recibir y catalogar
@@ -54,6 +54,8 @@ Una pregunta por mensaje, y solo lo que el material no dice por sí mismo:
 | Quiénes participan | "¿Quiénes hablan ahí, y qué hace cada una de esas personas?" |
 | Cómo llegó | "¿Cómo se obtuvo: lo exportó alguien que participa, lo reenviaron, lo anotó alguien?" |
 | Si lo saben | "¿Las personas que hablan ahí saben que se usa para este trabajo?" |
+
+Si no lo saben, decir una sola vez la frase de "Conviene avisar", anotar la respuesta en "Cómo llegó" y seguir. El material no se rechaza: si se usa o no lo decide el responsable del programa.
 
 ### La copia sin datos personales
 
@@ -135,8 +137,8 @@ Leer el material completo, en orden de fecha. Cada fragmento útil va a una de e
 |---|---|---|
 | Cómo se hace hoy | Alguien cuenta o muestra cómo se hace un trabajo. | A la parte que corresponde de "Cómo se hace hoy", en la ficha del proceso. |
 | Regla o excepción | Un criterio para decidir, o un caso que se sale de lo habitual. | A "Reglas que se siguen" o a "Excepciones". |
-| Decisión sobre un cambio en marcha | Algo que se decidió o se definió sobre un cambio, como un sistema nuevo o una reorganización. | A "Temas para otra sesión" del registro. No se escribe en ninguna ficha. |
-| Pregunta abierta con un tercero | Algo que se le preguntó a alguien de afuera y sigue sin respuesta. | A la ficha, como `PENDIENTE: preguntar a <quién>`, con el nombre de la persona de la empresa que trata con ese tercero. Si es sobre un cambio en marcha, a "Temas para otra sesión". |
+| Decisión sobre un cambio en marcha | Algo que se decidió o se definió sobre un cambio, como un sistema nuevo o una reorganización. | A "Temas para otra sesión" del registro, en una línea que empieza con `Cambio:` y lleva su fuente. No se escribe en ninguna ficha. |
+| Pregunta abierta con un tercero | Algo que se le preguntó a alguien de afuera y sigue sin respuesta. | A la ficha, como `PENDIENTE: preguntar a <quién>`, con el nombre de la persona de la empresa que trata con ese tercero. Si es sobre un cambio en marcha, a "Temas para otra sesión", también con `Cambio:`. |
 | Término para el glosario | Una palabra propia de la empresa. | Al glosario, con su fuente y `A CONFIRMAR con <quién>`. |
 | Ruido | Saludos, bromas, temas personales o la coordinación de un día puntual. | No se escribe. En el registro se anota solo que lo hubo. |
 
@@ -157,6 +159,7 @@ Se repasa un proceso por mensaje:
 4. Corregir la lectura en el registro, si la persona la corrige.
 
 - La persona confirma la lectura, no los hechos. Lo leído sigue `A CONFIRMAR`.
+- La excepción es lo que ella misma dijo en el material. Se le pregunta con la frase de "Lo que dijo quien lo trae". Si lo confirma, vale como su palabra directa y se escribe sin marcador. Si lo corrige, se escribe lo que cuenta ahora.
 - Lo que la persona agrega de su parte sobre el trabajo de otras es de segunda mano: también lleva `A CONFIRMAR con <esa persona>`.
 - Lo poco claro queda como `PENDIENTE: preguntar a <quién>`, con el nombre de quien lo dijo.
 
@@ -173,6 +176,7 @@ Cada afirmación se escribe con esta forma:
 - `<quién>` es la persona que hace ese trabajo. Si no se sabe, el dueño del proceso. Si tampoco se sabe, el responsable del programa.
 - En la tabla de pasos, la fuente y el marcador van en la celda "Qué hace".
 - Lo que viene del material no reemplaza lo que una persona contó directamente. Se agrega.
+- Lo que quien trajo el material confirmó sobre lo que ella misma dijo se escribe sin marcador. En el historial figura como contado por ella, con la fecha de hoy.
 
 Qué se hace según el estado de la ficha. Vale la primera fila que se cumple:
 
@@ -203,7 +207,7 @@ Cerrar la etapa: resumir qué se escribió y en qué ficha. Preguntar "¿Es así
 4. Ofrecer la lista para enviar, como indica la etapa 8 de `metodo/arranque.md`.
 
 - Las preguntas se responden después, en la entrevista de cada persona.
-- Si quien trajo el material aparece en él, ofrecerle una entrevista para confirmar su parte.
+- Si quien trajo el material aparece en él y quedó algo suyo sin confirmar, ofrecerle una entrevista.
 - Lo que hay que preguntarle a alguien de afuera de la empresa se anota para la persona de la empresa que trata con ese tercero.
 
 Cerrar la etapa: contar cuántas preguntas quedaron y para quién. Preguntar "¿Es así?" y guardar.
@@ -247,7 +251,9 @@ Los mensajes siguen el formato de `metodo/guardado.md`:
 
 | Situación | Frase |
 |---|---|
+| Conviene avisar | "Conviene que esas personas sepan que su conversación se usa para este trabajo. Lo dejo anotado y sigo." |
 | Copia sin datos personales | "En el material hay datos personales de otras personas. Guardo una copia sin esos datos. El original queda donde está." |
+| Lo que dijo quien lo trae | "En el material figura esto, dicho por quien lo trae: `<qué dijo>`. ¿Sigue siendo así?" |
 | Pedir una transcripción | "Hay mensajes de voz, y no puedo saber qué dicen. ¿Se puede conseguir su transcripción? Mientras tanto dejo anotado que falta." |
 | Aviso de lectura | "Ahora leo todo el material. Puede llevar unos minutos. Después repasamos lo que encontré." |
 | Resumen de lectura | "Sobre `<proceso>`, el material dice esto: `<resumen>`. ¿Leí bien?" |
