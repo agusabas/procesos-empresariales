@@ -12,8 +12,9 @@ Este catálogo dice qué es cada archivo de esta carpeta, de dónde vino y a qu�
 
 ## Cómo leerlo
 
-- **Archivo:** el nombre con el que quedó guardado. `—` si el archivo no se copió a esta carpeta.
-- **Tipo:** una sola de estas palabras: `instructivo`, `formulario`, `planilla`, `captura de pantalla`, `ejemplo`, `comprobante`, `conversación`, `nota`, `audio`, `otro`.
+- **Archivo:** el nombre con el que quedó guardado, con su carpeta si está dentro de una. `—` si el archivo no se copió a esta carpeta.
+- **Qué es:** si es una conversación, notas o correos, dice también las fechas que cubre.
+- **Tipo:** una sola de estas palabras: `instructivo`, `formulario`, `planilla`, `captura de pantalla`, `ejemplo`, `comprobante`, `conversación`, `nota`, `audio`, `transcripción`, `otro`.
 - **Proceso y paso:** el proceso, con el nombre del mapa, y el paso de su ficha al que corresponde el archivo. `—` si no corresponde a un solo proceso. La marca `PENDIENTE` si todavía no se sabe.
 - **Quién lo aportó:** el nombre de pila de quien lo acercó.
 - **Fecha:** el día en que llegó.
@@ -24,7 +25,9 @@ En "Observaciones" se usan estas frases, tal cual, cuando corresponden:
 | Frase | Cuándo se usa |
 |---|---|
 | `sin transcribir` | Es un audio y todavía no hay transcripción. Hay que pedirla. Su contenido no se adivina. |
+| `transcripción en`, seguido del nombre del archivo | Es un audio cuya transcripción ya llegó. Reemplaza a `sin transcribir`. |
 | `se lee en otra sesión` | Es una conversación entre otras personas. Por ahora solo se cataloga. |
+| `leído hasta`, seguido de una fecha | Es material que se lee por partes o que sigue creciendo. Dice hasta qué fecha del material ya se leyó. |
 | `no revisado por el agente` | El formato no se pudo abrir. |
 | `transcripto por el agente, sin el original` | La persona lo dictó o lo pegó en la conversación. |
 | `guardado sin los datos personales de terceros` | Se guardó una versión en blanco o con esos datos tapados. |

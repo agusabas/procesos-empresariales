@@ -124,7 +124,7 @@ Si hay material, recibir cada archivo con los pasos de "Archivos recibidos", en 
 | Material | Qué se hace en esta etapa |
 |---|---|
 | Un documento sobre cómo se trabaja | Leerlo entero. |
-| Una conversación entre otras personas | Solo catalogarla, con `se lee en otra sesión`. No se lee de paso. |
+| Una conversación entre otras personas | Solo catalogarla, con `se lee en otra sesión`. No se lee de paso: se recibe y se lee después, con `metodo/material-de-terceros.md`. |
 | Un audio sin transcripción | Solo catalogarlo, con `sin transcribir`, y pedir la transcripción. Su contenido nunca se adivina. |
 | Un archivo que no se puede abrir | Catalogarlo con `no revisado por el agente`. |
 
@@ -244,7 +244,7 @@ Lista para enviar: ofrecerla para las personas que no van a sentarse a conversar
 1. Preguntar: "¿Preparo las preguntas en un mensaje listo para enviar?"
 2. Si acepta, mostrar en la conversación un mensaje por persona: una frase que diga para qué es y las preguntas numeradas, en palabras simples.
 3. Anotar en la hoja de esa persona, junto a cada pregunta, que se envió y en qué fecha.
-4. Las respuestas escritas que vuelvan se reciben en otra conversación, como material: van a `empresa/insumos/` y llevan `A CONFIRMAR con <esa persona>`.
+4. Las respuestas escritas que vuelvan se reciben en otra conversación, con `metodo/material-de-terceros.md`: van a `empresa/insumos/` y llevan `A CONFIRMAR con <esa persona>`.
 
 ## Cierre de cada sesión
 

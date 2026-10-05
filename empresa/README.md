@@ -26,7 +26,8 @@ empresa/
 │   └── AAAA-MM-DD-<quien>-<tema>.md
 ├── insumos/
 │   ├── catalogo.md
-│   └── <material tal como se recibió>
+│   ├── <archivo recibido>
+│   └── <entrega de varios archivos>/
 ├── adjuntos/
 │   └── <area>/
 │       └── <proceso>/
@@ -50,7 +51,7 @@ empresa/
 | `procesos/<area>/<codigo>-<slug>.md` | Una ficha por proceso: cómo se hace hoy. |
 | `instructivos/<area>/<codigo>-<slug>.md` | El paso a paso detallado de una tarea. |
 | `sesiones/AAAA-MM-DD-<quien>-<tema>.md` | El registro de cada conversación. |
-| `insumos/` | El material original tal como se recibió, con su `catalogo.md`. |
+| `insumos/` | El material que ya existía o que produjeron otras personas, con su `catalogo.md`. Se guarda como llegó, salvo los datos personales de terceros, que se quitan antes de copiar. |
 | `adjuntos/<area>/<proceso>/` | Los archivos aportados durante las sesiones, con su `catalogo.md`. |
 | `cambios/<slug>/ficha-del-cambio.md` | Un cambio en curso que altera cómo se trabaja. |
 
@@ -68,13 +69,13 @@ Los nombres van en minúsculas, con guiones en lugar de espacios, sin acentos ni
 | `<slug>` | El nombre del proceso, del instructivo o del cambio. |
 | `<proceso>` | El mismo nombre que el archivo de la ficha del proceso, sin `.md`. |
 | `<tema>` | El proceso o el asunto de la conversación. En una entrevista, el nombre del archivo de la ficha, sin `.md`. |
-| Archivos de `insumos/` y de `adjuntos/` | `AAAA-MM-DD-descripcion-corta.extension`, con el día en que llegó. El nombre original queda en el `catalogo.md`. |
+| Archivos de `insumos/` y de `adjuntos/` | `AAAA-MM-DD-descripcion-corta.extension`, con el día en que llegó. El nombre original queda en el `catalogo.md`. Una entrega de varios archivos va en una carpeta con ese mismo formato de nombre. |
 | `AAAA-MM-DD` | La fecha: año, mes y día. |
 
 ## Reglas de esta carpeta
 
 - Cada archivo y cada carpeta se crean cuando hacen falta, no antes.
 - No se crean lugares que no estén en este esquema. Si hace falta uno, se anota en `notas-para-el-metodo.md`.
-- `insumos/` guarda el material como llegó. No se modifica.
+- Los archivos guardados en `insumos/` no se modifican después. Su `catalogo.md` sí se pone al día. Lo único que se quita de un archivo, antes de copiarlo, son los datos personales de terceros.
 - Un registro de `sesiones/` no se edita una vez cerrado.
 - En toda la carpeta valen las reglas de privacidad de `metodo/reglas.md`.

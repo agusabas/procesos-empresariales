@@ -31,7 +31,7 @@ Esta tabla dice en qué lugar de este repositorio vive cada cláusula de la norm
 | 6.1 | Acciones para abordar riesgos y oportunidades | En parte | Cada ficha anota "Qué puede salir mal" y "Problemas e ideas". La plantilla no planifica acciones ni evalúa su resultado. |
 | 6.2 | Objetivos de la calidad y planificación para lograrlos | No | La plantilla no define objetivos. |
 | 6.3 | Planificación de los cambios | Previsto | El lugar ya está definido en `empresa/README.md`: la carpeta `empresa/cambios/`. Las instrucciones para llevar un cambio llegan en una parte posterior. |
-| 7.1 | Recursos | En parte | Solo los conocimientos de la organización: las fichas, los instructivos y el glosario dejan escrito lo que hoy sabe cada persona. El resto de los recursos no se cubre. |
+| 7.1 | Recursos | En parte | Solo los conocimientos de la organización: las fichas, los instructivos y el glosario dejan escrito lo que hoy sabe cada persona. Lo que ya estaba en conversaciones y notas se recoge en `metodo/material-de-terceros.md`. El resto de los recursos no se cubre. |
 | 7.2 | Competencia | No | La plantilla no lo cubre. Los instructivos pueden servir de apoyo para capacitar. |
 | 7.3 | Toma de conciencia | No | La plantilla no lo cubre. |
 | 7.4 | Comunicación | No | La plantilla no lo cubre. |

@@ -52,12 +52,13 @@ La plantilla se construye por partes. Hoy tiene:
 - La estructura de la carpeta `empresa/`.
 - El arranque: quien conduce el relevamiento conversa con el agente, y quedan escritos la empresa, sus áreas, sus personas y la lista de sus procesos, con las preguntas preparadas para cada persona. Lleva alrededor de dos horas, que se pueden repartir en varias conversaciones.
 - Las entrevistas: cada persona cuenta cómo hace su trabajo, en conversaciones de unos 20 minutos, y el agente lo deja escrito en la ficha de cada proceso, con su diagrama.
+- El material de otras personas: conversaciones exportadas, notas de reuniones, correos, capturas o audios transcriptos. El agente guarda una copia sin datos personales, anota lo que dicen sobre cada trabajo y prepara las preguntas para confirmarlo con quien corresponde.
 - El control de los documentos: cada documento lleva un código, una versión, un estado, quién lo aprobó y cuándo toca volver a mirarlo.
 - Los moldes de cada documento: el contexto de la empresa, la hoja de cada persona, el mapa de procesos, la ficha de proceso, el instructivo, la lista de documentos, el glosario, el catálogo de archivos y el registro de cada conversación. También hay un banco de preguntas para las entrevistas.
 - La revisión y la aprobación: repasar lo relevado, confirmarlo, aprobarlo como versión oficial y volver a mirarlo cada cierto tiempo.
 - La relación con la norma: qué parte cubre la plantilla y cuál no.
 
-Todavía no incluye las instrucciones para leer material en el que hablan otras personas ni para seguir un cambio que está en marcha. Si alguien pide una parte que todavía no está, el agente lo dice con palabras simples.
+Todavía no incluye las instrucciones para seguir un cambio que está en marcha. Si alguien pide una parte que todavía no está, el agente lo dice con palabras simples.
 
 ## Qué hay en cada carpeta
 

@@ -172,7 +172,7 @@ Cuando la persona acepta:
 
 - Si la persona no lo tiene a mano, no insistir. Anotarlo en "Documentos prometidos" de su hoja y en "Documentos pendientes" del registro.
 - Si el archivo es de otro proceso, va a la carpeta de ese proceso. Si ese proceso todavía no tiene ficha, no se crea una ficha a medias: alcanza con la carpeta y su catálogo.
-- Si es una conversación entre otras personas, solo se cataloga, con `se lee en otra sesión`.
+- Si es una conversación entre otras personas, no va a `adjuntos/`. Solo se cataloga, en `empresa/insumos/catalogo.md`, con `se lee en otra sesión`. Se recibe y se lee después, con `metodo/material-de-terceros.md`.
 
 ### Cerrar cada tema
 

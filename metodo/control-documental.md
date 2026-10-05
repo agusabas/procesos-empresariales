@@ -241,16 +241,16 @@ Un archivo puede llegar de tres maneras. Se ofrecen en este orden, y nunca se le
 
 Con el archivo a la vista:
 
-1. Revisar el archivo antes de guardarlo, como indica la regla 7 de `metodo/reglas.md`. Si tiene datos personales de terceros, no se guarda: pedir una versión en blanco o con esos datos tapados.
+1. Revisar el archivo antes de guardarlo, como indica la regla 7 de `metodo/reglas.md`. Si tiene datos personales de terceros, no se guarda: pedir una versión en blanco o con esos datos tapados. Si es una conversación o una nota de otras personas, la copia sin esos datos la prepara el agente, como indica `metodo/material-de-terceros.md`.
 2. Darle este nombre: `AAAA-MM-DD-descripcion-corta.extension`. La fecha es el día en que llegó. Va en minúsculas, con guiones y sin acentos ni eñes.
-3. Copiarlo a su carpeta. El original no se mueve, no se cambia y no se borra.
+3. Copiarlo a su carpeta. El original no se mueve, no se cambia y no se borra. Una entrega de varios archivos va en una carpeta propia, con ese mismo formato de nombre.
 4. Anotarlo en el `catalogo.md` de esa carpeta. Si no existe, crearlo copiando `plantillas/catalogo-de-archivos.md`. Ese molde tiene la lista de tipos y las frases de "Observaciones".
 5. Anotarlo en el registro de la sesión, en "Documentos".
 
 | Caso | Qué se hace |
 |---|---|
 | Un audio sin transcripción | No copiarlo. Catalogarlo con `sin transcribir` y pedir la transcripción. Su contenido nunca se adivina. |
-| Una conversación entre otras personas | No copiarla todavía. Catalogarla con `se lee en otra sesión`. No se lee de paso. |
+| Una conversación entre otras personas | No copiarla todavía. Catalogarla con `se lee en otra sesión`. No se lee de paso: se recibe, se filtra y se lee en `metodo/material-de-terceros.md`. |
 | Un formato que no se puede abrir | Guardarlo y catalogarlo con `no revisado por el agente`. Anotarlo en el registro de la sesión para el responsable del programa. |
 | Un archivo de más de 10 MB | No copiarlo. Catalogarlo con `no se copió: pesa más de 10 MB`. |
 | No hay archivo, pero la persona lo dicta o lo pega en la conversación | Escribirlo en un archivo `.md` de la carpeta y catalogarlo con `transcripto por el agente, sin el original`. |
