@@ -50,12 +50,13 @@ La plantilla se construye por partes. Hoy tiene:
 - Las reglas permanentes: registrar lo que pasa hoy, no inventar, cuidar los datos de las personas y conversar con palabras simples.
 - El guardado: el agente guarda el trabajo sin que la persona tenga que hacer nada.
 - La estructura de la carpeta `empresa/`.
+- El arranque: quien conduce el relevamiento conversa con el agente, y quedan escritos la empresa, sus áreas, sus personas y la lista de sus procesos, con las preguntas preparadas para cada persona. Lleva alrededor de dos horas, que se pueden repartir en varias conversaciones.
 - El control de los documentos: cada documento lleva un código, una versión, un estado, quién lo aprobó y cuándo toca volver a mirarlo.
-- Los moldes de la ficha de proceso, el instructivo, el mapa de procesos, la lista de documentos y el glosario.
+- Los moldes de cada documento: el contexto de la empresa, la hoja de cada persona, el mapa de procesos, la ficha de proceso, el instructivo, la lista de documentos, el glosario, el catálogo de archivos y el registro de cada conversación.
 - La revisión y la aprobación: repasar lo relevado, confirmarlo, aprobarlo como versión oficial y volver a mirarlo cada cierto tiempo.
 - La relación con la norma: qué parte cubre la plantilla y cuál no.
 
-Todavía no incluye las instrucciones para empezar el relevamiento ni para conducir las conversaciones. Por eso el relevamiento aún no puede empezar: si alguien saluda al agente, este responde con palabras simples que esa parte todavía no está disponible.
+Todavía no incluye las instrucciones para entrevistar a cada persona. Si alguien pide una parte que todavía no está, el agente lo dice con palabras simples.
 
 ## Qué hay en cada carpeta
 
@@ -64,7 +65,7 @@ Todavía no incluye las instrucciones para empezar el relevamiento ni para condu
 | `AGENTS.md` | Las instrucciones de entrada para el agente. |
 | `CLAUDE.md` | Solo importa `AGENTS.md`, para los agentes que buscan ese nombre de archivo. |
 | `metodo/` | Las instrucciones que sigue el agente: las reglas permanentes, el guardado, el control de los documentos, la relación con la norma y un archivo por cada modo de trabajo. |
-| `plantillas/` | Un molde por cada tipo de documento. Hoy tiene la ficha de proceso, el instructivo, el mapa de procesos, la lista de documentos y el glosario. |
+| `plantillas/` | Un molde por cada tipo de documento que el agente crea en `empresa/`. |
 | `empresa/` | Todo lo que se releva de la empresa. En la plantilla está vacía. Su estructura se explica en `empresa/README.md`. |
 
 En un clon, el agente escribe solo dentro de `empresa/`. Todo lo demás es el método y no se edita.

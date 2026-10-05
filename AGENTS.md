@@ -81,4 +81,5 @@ Un modo existe solo si tiene fila en esta tabla. La columna "Archivo" indica qu�
 
 | Modo | Cuándo corresponde | Con quién | Archivo |
 |---|---|---|---|
+| Arranque | `empresa/contexto.md` no existe, o su lista de arranque tiene etapas sin confirmar | Responsable del programa | `metodo/arranque.md` |
 | Revisión y aprobación | Hay que repasar lo relevado, confirmar o aprobar un documento, ordenar la lista de documentos, hacer la revisión periódica o dar de baja un documento | Responsable del programa. Para aprobar, quien aprueba | `metodo/revision-y-aprobacion.md` |

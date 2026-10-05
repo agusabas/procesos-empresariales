@@ -36,7 +36,7 @@ Antes de empezar, leer completo `metodo/control-documental.md`. Este archivo usa
 
 ## Registro de la sesión
 
-Al empezar, crear el registro en `empresa/sesiones/AAAA-MM-DD-<quien>-revision.md`. Anotar en él, etapa por etapa:
+Al empezar, crear el registro copiando `plantillas/registro-de-sesion.md` a `empresa/sesiones/AAAA-MM-DD-<quien>-revision.md`. Anotar en él, etapa por etapa:
 
 - Qué se repasó, qué quedó aceptado y qué no.
 - Qué se validó.
@@ -106,7 +106,7 @@ Si se cumplen las tres:
 Si falta alguna:
 
 1. Decir con palabras simples qué falta y a quién hay que preguntarle.
-2. Dejar preparada la pregunta en la hoja de esa persona, en `empresa/personas/<nombre>.md`.
+2. Dejar preparada la pregunta en la hoja de esa persona, `empresa/personas/<nombre>.md`, en "Preguntas preparadas".
 3. El documento sigue en `borrador`.
 
 Los documentos de toda la empresa no tienen dueño de proceso. Los confirma el responsable del programa, en esta conversación.

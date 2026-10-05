@@ -17,6 +17,7 @@ Este vocabulario es para el agente. En la conversación se usan las palabras sim
 | Documento vigente | No se reescribe. Los cambios se anotan como propuestos hasta que se aprueban. |
 | Revisión periódica | Fecha de aprobación más el período definido en el arranque. |
 | Ramas | Las sesiones escriben en `borradores`. `main` tiene solo lo revisado. |
+| Archivos recibidos | Se revisan, se guardan con la fecha en el nombre y se catalogan. El original no se toca. |
 | Diagramas | Salen de la tabla de pasos y se vuelven a generar cuando la tabla cambia. |
 
 ## Los tres tipos de archivo
@@ -222,6 +223,38 @@ Qué se hace con cada documento se decide en `metodo/revision-y-aprobacion.md`:
 - `main` tiene solo lo que el responsable del programa ya revisó.
 - Lo que pasa de `borradores` a `main`, y toda aprobación, se hacen en `metodo/revision-y-aprobacion.md`.
 - La versión oficial de un documento es la que está en `main` con estado `vigente`.
+
+## Archivos recibidos
+
+Vale para todo archivo que una persona entrega o señala, en cualquier modo.
+
+| Qué es | Dónde va |
+|---|---|
+| Material que ya existía o que produjeron otras personas: documentos anteriores, notas, conversaciones | `empresa/insumos/` |
+| Un archivo que una persona aporta mientras cuenta un proceso | `empresa/adjuntos/<area>/<proceso>/` |
+
+Un archivo puede llegar de tres maneras. Se ofrecen en este orden, y nunca se le pide a la persona que copie nada a una carpeta:
+
+- La persona lo arrastra a la conversación o lo adjunta.
+- La persona dice dónde está. Buscarlo y, antes de copiarlo, confirmar que es ese, nombrándolo con su fecha.
+- La persona lo dicta o lo pega en la conversación.
+
+Con el archivo a la vista:
+
+1. Revisar el archivo antes de guardarlo, como indica la regla 7 de `metodo/reglas.md`. Si tiene datos personales de terceros, no se guarda: pedir una versión en blanco o con esos datos tapados.
+2. Darle este nombre: `AAAA-MM-DD-descripcion-corta.extension`. La fecha es el día en que llegó. Va en minúsculas, con guiones y sin acentos ni eñes.
+3. Copiarlo a su carpeta. El original no se mueve, no se cambia y no se borra.
+4. Anotarlo en el `catalogo.md` de esa carpeta. Si no existe, crearlo copiando `plantillas/catalogo-de-archivos.md`. Ese molde tiene la lista de tipos y las frases de "Observaciones".
+5. Anotarlo en el registro de la sesión, en "Documentos".
+
+| Caso | Qué se hace |
+|---|---|
+| Un audio sin transcripción | No copiarlo. Catalogarlo con `sin transcribir` y pedir la transcripción. Su contenido nunca se adivina. |
+| Una conversación entre otras personas | No copiarla todavía. Catalogarla con `se lee en otra sesión`. No se lee de paso. |
+| Un formato que no se puede abrir | Guardarlo y catalogarlo con `no revisado por el agente`. Anotarlo en el registro de la sesión para el responsable del programa. |
+| Un archivo de más de 10 MB | No copiarlo. Catalogarlo con `no se copió: pesa más de 10 MB`. |
+| No hay archivo, pero la persona lo dicta o lo pega en la conversación | Escribirlo en un archivo `.md` de la carpeta y catalogarlo con `transcripto por el agente, sin el original`. |
+| Tiene datos personales de terceros y no hay otra versión | No guardarlo. Catalogarlo con `no se guardó: contiene datos personales de terceros`. En el registro de la sesión va como `NO INCORPORADO`. |
 
 ## Diagramas
 

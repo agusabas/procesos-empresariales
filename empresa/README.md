@@ -41,7 +41,7 @@ empresa/
 
 | Lugar | Qué contiene |
 |---|---|
-| `contexto.md` | La empresa, cómo se organiza el programa de relevamiento (roles, forma de trato, datos que no se guardan) y la lista de arranque. |
+| `contexto.md` | La empresa, cómo se organiza el programa de relevamiento (roles, forma de trato, datos que no se guardan), las áreas con sus tres letras, los sistemas en uso y la lista de arranque. |
 | `mapa-de-procesos.md` | El inventario de los procesos de la empresa. Es la lista oficial de sus nombres. |
 | `lista-maestra.md` | La lista de todos los documentos. Un código se asigna solo desde aquí. |
 | `glosario.md` | Una sola definición por cada término propio de la empresa. |
@@ -68,6 +68,7 @@ Los nombres van en minúsculas, con guiones en lugar de espacios, sin acentos ni
 | `<slug>` | El nombre del proceso, del instructivo o del cambio. |
 | `<proceso>` | El mismo nombre que el archivo de la ficha del proceso, sin `.md`. |
 | `<tema>` | El proceso o el asunto de la conversación. |
+| Archivos de `insumos/` y de `adjuntos/` | `AAAA-MM-DD-descripcion-corta.extension`, con el día en que llegó. El nombre original queda en el `catalogo.md`. |
 | `AAAA-MM-DD` | La fecha: año, mes y día. |
 
 ## Reglas de esta carpeta
