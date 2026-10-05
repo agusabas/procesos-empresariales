@@ -26,7 +26,7 @@ Este vocabulario es para el agente. En la conversación se usan las palabras sim
 |---|---|---|
 | Documento controlado | Contexto, mapa de procesos, fichas de proceso, instructivos, formularios y glosario | Lleva código, versión, estado, aprobación y revisión periódica. |
 | Documento de trabajo | Hojas de personas, fichas de cambio, lista maestra y notas para el método | Se identifica por su ruta. Se actualiza libremente. No se aprueba. |
-| Registro | Sesiones, insumos y adjuntos | Se cierra una vez escrito. Después no se edita. |
+| Registro | Sesiones, insumos y adjuntos | Se cierra una vez escrito. Después no se edita. La única excepción es la línea de subida de un registro de sesión, que cambia si la subida falla. |
 
 El tipo de cada archivo sale de su lugar en `empresa/`:
 
@@ -128,7 +128,7 @@ Los estados avanzan en este orden: `pendiente`, `en curso`, `borrador`, `validad
 |---|---|---|
 | `pendiente` | Tiene código y fila en la lista maestra. Todavía no se relevó nada. El archivo puede no existir. | Al asignar el código. |
 | `en curso` | El relevamiento empezó y quedan temas sin conversar. | En la sesión de relevamiento que crea el archivo. |
-| `borrador` | Se conversaron todos los temas. Quedan marcadores abiertos, o falta que el dueño del proceso confirme. | En la sesión de relevamiento que completa los temas. |
+| `borrador` | Se conversaron todos los temas. Quedan marcadores abiertos, falta escuchar a otras personas que participan, o falta que el dueño del proceso confirme. | En la sesión de relevamiento que completa los temas. |
 | `validado` | El dueño del proceso confirmó que es así, y ningún marcador abierto cambia el sentido. | Solo en `metodo/revision-y-aprobacion.md`. |
 | `vigente` | Está aprobado. Es la versión oficial. | Solo en `metodo/revision-y-aprobacion.md`, con la palabra explícita de quien aprueba. |
 | `obsoleto` | Fue reemplazado o dado de baja. Se conserva y no se edita más. | Solo en `metodo/revision-y-aprobacion.md`. |

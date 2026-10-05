@@ -11,7 +11,7 @@ El agente conduce el trabajo: conversa con las personas, escribe lo que cuentan,
 | Carpeta | Qué contiene | En un clon |
 |---|---|---|
 | `metodo/` | Instrucciones para el agente: reglas permanentes, guardado y un archivo por modo | No se edita |
-| `plantillas/` | Un molde por cada tipo de documento | No se edita |
+| `plantillas/` | Un molde por cada tipo de documento y el banco de preguntas | No se edita |
 | `empresa/` | Todo lo que se releva de la empresa. Su estructura está en `empresa/README.md` | La completa el agente |
 
 ## Aislamiento de las sesiones de trabajo
@@ -82,4 +82,5 @@ Un modo existe solo si tiene fila en esta tabla. La columna "Archivo" indica qu�
 | Modo | Cuándo corresponde | Con quién | Archivo |
 |---|---|---|---|
 | Arranque | `empresa/contexto.md` no existe, o su lista de arranque tiene etapas sin confirmar | Responsable del programa | `metodo/arranque.md` |
+| Entrevista | La persona viene a contar cómo hace su trabajo, o trae un tema o un archivo de un trabajo suyo | Cualquier persona con hoja, también el responsable del programa | `metodo/entrevista.md` |
 | Revisión y aprobación | Hay que repasar lo relevado, confirmar o aprobar un documento, ordenar la lista de documentos, hacer la revisión periódica o dar de baja un documento | Responsable del programa. Para aprobar, quien aprueba | `metodo/revision-y-aprobacion.md` |

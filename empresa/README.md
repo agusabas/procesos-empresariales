@@ -67,7 +67,7 @@ Los nombres van en minúsculas, con guiones en lugar de espacios, sin acentos ni
 | `<codigo>` | El código del documento, asignado desde `lista-maestra.md`. |
 | `<slug>` | El nombre del proceso, del instructivo o del cambio. |
 | `<proceso>` | El mismo nombre que el archivo de la ficha del proceso, sin `.md`. |
-| `<tema>` | El proceso o el asunto de la conversación. |
+| `<tema>` | El proceso o el asunto de la conversación. En una entrevista, el nombre del archivo de la ficha, sin `.md`. |
 | Archivos de `insumos/` y de `adjuntos/` | `AAAA-MM-DD-descripcion-corta.extension`, con el día en que llegó. El nombre original queda en el `catalogo.md`. |
 | `AAAA-MM-DD` | La fecha: año, mes y día. |
 

@@ -178,6 +178,7 @@ Al escribir:
 4. En "Origen de la hoja" va que los datos los dio el responsable del programa, con la fecha.
 5. En "De dónde sale cada dato", lo que describe el trabajo de otra persona lleva `A CONFIRMAR con <esa persona>`.
 6. En la hoja del responsable del programa, anotar en "Documentos prometidos" el material que prometió en la etapa 4.
+7. La hoja del responsable del programa la contó él mismo: en "Confirmada por la persona" va `sí`, con la fecha. Las demás hojas quedan en `no` hasta la primera conversación de cada persona.
 
 - Si dos personas comparten el nombre de pila, el archivo lleva también el área, como indica `empresa/README.md`.
 - Si son muchas personas, empezar por un área o por las personas que conviene escuchar primero. Lo que falta se anota como `PENDIENTE: preguntar a <quién>` en "Pendientes" del registro de la sesión.
@@ -235,6 +236,8 @@ Preguntas preparadas, por cada persona:
 2. Convertir cada uno en una pregunta en palabras simples.
 3. Preguntar al responsable del programa si quiere sumar alguna pregunta para esa persona.
 4. Escribirlas en "Preguntas preparadas" de su hoja, agrupadas por proceso, cada una con el lugar de donde sale.
+
+Aquí se preparan solo las preguntas propias de cada persona. Las preguntas generales sobre un proceso no se anotan en las hojas: salen de `plantillas/banco-de-preguntas.md` durante la entrevista.
 
 Lista para enviar: ofrecerla para las personas que no van a sentarse a conversar.
 

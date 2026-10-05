@@ -58,6 +58,7 @@ Reunir en silencio:
 | Documentos en `borrador` y documentos `validado` | Columna "Estado" de la lista maestra |
 | Documentos `vigente` con cambios propuestos | Sección "Cambios propuestos (sin aprobar)" con filas |
 | Marcadores abiertos | `PENDIENTE`, `CONFLICTO` y `A CONFIRMAR` en los archivos de `empresa/` |
+| Hojas provisionales | `A CONFIRMAR con <responsable del programa>` en las hojas de `empresa/personas/` |
 | Códigos duplicados | Columna "Observaciones" de la lista maestra |
 
 Después:
@@ -85,7 +86,8 @@ Si no hay nada pendiente, decirlo y pasar a la etapa 8.
 5. Anotar en el registro de la sesión qué quedó aceptado y qué no.
 6. Cerrar la etapa: resumir qué quedó aceptado y qué no, preguntar si es correcto y guardar.
 
-Los registros de sesión que respaldan un documento aceptado pasan junto con él.
+- Los registros de sesión que respaldan un documento aceptado pasan junto con él.
+- Si lo que cambió es una hoja provisional, preguntar si esa persona y su rol son correctos. Si el responsable del programa lo confirma, quitar de la hoja la marca `A CONFIRMAR con <responsable del programa>`.
 
 ## Etapa 3. Validar
 
