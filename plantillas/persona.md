@@ -1,4 +1,4 @@
-> **Nota para el agente.** Este molde se copia a `empresa/personas/<nombre>.md`, una hoja por persona. Es un documento de trabajo: no lleva bloque de control y se actualiza cada vez que se sabe algo nuevo. En la copia, cada comodín (lo que va entre `<` y `>`) se reemplaza junto con las comillas invertidas que lo rodean, y cada ayuda en cursiva se reemplaza por el contenido. De la persona se anota solo el nombre de pila y el rol. Lo que no se sabe se escribe `PENDIENTE: preguntar a <quién>`. La línea "Confirmada por la persona" pasa a `sí`, con la fecha, cuando la persona confirma sus datos en su primera conversación, como indica `metodo/entrevista.md`. Esta nota se borra de la copia.
+> **Nota para el agente.** Este molde se copia a `empresa/personas/<nombre>.md`, una hoja por persona. Es un documento de trabajo: no lleva bloque de control y se actualiza cada vez que se sabe algo nuevo. En la copia, cada comodín (lo que va entre `<` y `>`) se reemplaza junto con las comillas invertidas que lo rodean, y cada ayuda en cursiva se reemplaza por el contenido. Una parte que todavía no tiene nada conserva su ayuda y su línea de muestra hasta que haya algo para anotar. De la persona se anota solo el nombre de pila y el rol. Lo que no se sabe se escribe `PENDIENTE: preguntar a <quién>`. El marcador `A CONFIRMAR` va una sola vez, en "De dónde sale cada dato", y no junto a cada dato. La línea "Confirmada por la persona" pasa a `sí`, con la fecha, cuando la persona confirma sus datos en su primera conversación, como indica `metodo/entrevista.md`. Esta nota se borra de la copia.
 
 # `<nombre de pila>`
 
@@ -24,7 +24,7 @@ _Con el nombre que figura en el contexto de la empresa. Nunca se anotan usuarios
 
 ## Procesos en los que participa
 
-_Una fila por proceso, con el nombre exacto del mapa de procesos. El estado y la prioridad de cada proceso no se copian aquí: se leen en el mapa._
+_Una fila por proceso, con el nombre exacto del mapa de procesos. Si el proceso todavía no tiene código, en "Código" va `—`. Si todavía no se sabe qué hace la persona en el proceso, en "Su parte" va `—`: se completa en su entrevista. El estado y la prioridad de cada proceso no se copian aquí: se leen en el mapa._
 
 | Código | Proceso | Su parte |
 |---|---|---|
@@ -32,7 +32,7 @@ _Una fila por proceso, con el nombre exacto del mapa de procesos. El estado y la
 
 ## Preguntas preparadas
 
-_Lo que hay que preguntarle, agrupado por proceso. Son lo primero que se le pregunta en su próxima conversación. Cada pregunta se marca cuando la respondió._
+_Lo que hay que preguntarle, agrupado por proceso. Son lo primero que se le pregunta en su próxima conversación. Cada pregunta se marca cuando la respondió. Una pregunta nombra lo que falta saber y de dónde sale; el marcador queda en el documento donde vive el dato._
 
 - [ ] `<pregunta>` (`<proceso o asunto>`; sale de `<de dónde sale la pregunta>`)
 

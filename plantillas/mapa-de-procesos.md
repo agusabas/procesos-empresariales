@@ -1,4 +1,4 @@
-> **Nota para el agente.** Este molde se copia a `empresa/mapa-de-procesos.md` cuando se arma el mapa por primera vez. En la copia, cada comodín (lo que va entre `<` y `>`) se reemplaza junto con las comillas invertidas que lo rodean. La fila de muestra de cada grupo se reemplaza por los procesos reales, y se quita si el grupo todavía no tiene ninguno. Lo que no se sabe se escribe `PENDIENTE: preguntar a <quién>`. Esta nota se borra de la copia. Las reglas de control están en `metodo/control-documental.md`.
+> **Nota para el agente.** Este molde se copia a `empresa/mapa-de-procesos.md` cuando se arma el mapa por primera vez. En la copia, cada comodín (lo que va entre `<` y `>`) se reemplaza junto con las comillas invertidas que lo rodean. La fila de muestra de cada grupo se reemplaza por los procesos reales, y se quita si el grupo todavía no tiene ninguno. Lo que no se sabe de un proceso se escribe en su fila, como `PENDIENTE: preguntar a <quién>`. Lo que no se sabe de un grupo entero va en "Pendientes del mapa": su ayuda en cursiva se reemplaza por esos pendientes, o por "Ninguno". Esta nota se borra de la copia. Las reglas de control están en `metodo/control-documental.md`.
 
 # Mapa de procesos
 
@@ -14,9 +14,11 @@ Este mapa reúne todos los procesos de la empresa que se identificaron hasta aho
 
 ## Cómo leerlo
 
+- **Código:** el código de la ficha del proceso. `—` quiere decir que todavía no lo tiene, porque falta saber su área.
 - **Proceso:** es el nombre oficial. Todos los demás documentos lo usan exactamente así.
 - **Área:** el área a la que pertenece el proceso.
 - **Dueño:** quien responde por el proceso. `A DEFINIR` quiere decir que todavía no se sabe.
+- **Participantes:** quiénes más intervienen, por su nombre de pila. Lo que hace cada persona está en su hoja.
 - **Estado:** el estado de la ficha de ese proceso.
 - **Ficha:** el enlace a la ficha. `—` quiere decir que todavía no se creó.
 
@@ -34,6 +36,7 @@ Este mapa reúne todos los procesos de la empresa que se identificaron hasta aho
 | `P1` | Se releva primero. |
 | `P2` | Se releva después de los `P1`. |
 | `P3` | Se releva al final. |
+| `sin definir` | Todavía no se decidió. |
 
 ## Conducción
 
@@ -59,8 +62,11 @@ Lo que sostiene a la operación.
 |---|---|---|---|---|---|---|---|---|
 | `<código>` | `<nombre del proceso>` | `<área>` | apoyo | `<nombre>` | `<nombres>` | pendiente | `<prioridad>` | — |
 
+## Pendientes del mapa
+
+_Lo que todavía no se sabe y no entra en la fila de un proceso: lo que falta de un grupo entero, dónde empieza y dónde termina la cadena, o un proceso que nombra el material y que nadie reconoció todavía. Una línea por pendiente, con `PENDIENTE: preguntar a <quién>` o con `A CONFIRMAR con <quién>`. Si no hay ninguno, se escribe "Ninguno"._
+
 ## Historial
 
 | Versión | Fecha | Qué cambió | Quién lo contó | Quién aprobó |
 |---|---|---|---|---|
-| 0 | `<AAAA-MM-DD>` | Primera versión del mapa | `<nombre>` | — |

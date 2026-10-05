@@ -62,7 +62,7 @@ Se guarda después de que la persona confirmó el resumen y de que los archivos 
 2. Preparar solo la carpeta de la empresa: `git add -- empresa/`.
 3. Guardar: `git commit --quiet -m "<mensaje>"`, con el mensaje que indica "Formato de los mensajes".
 
-- Un solo guardado por tema o etapa, al cerrarlo. No uno por pregunta ni por corrección.
+- Un solo guardado por tema o etapa, al cerrarlo. No uno por pregunta ni por corrección. Tampoco uno por cada archivo recibido ni por cada código asignado: todo lo que el tema o la etapa escribió va en ese guardado.
 - Si no hay nada nuevo para guardar, seguir sin avisar.
 - Este guardado es local. No se sube nada hasta el cierre de la sesión.
 
@@ -99,13 +99,14 @@ docs(<ámbito>): <asunto> - <cierre> con <nombre>
 |---|---|
 | Cierre de un tema | `docs(<ámbito>): <asunto> - tema <letra> con <nombre>` |
 | Cierre de una etapa | `docs(<ámbito>): <asunto> - etapa <número> con <nombre>` |
-| Archivos recibidos | `docs(<ámbito>): <asunto> - archivos aportados por <nombre>` |
+| Archivos que llegan fuera de un tema o de una etapa | `docs(<ámbito>): <asunto> - archivos aportados por <nombre>` |
 | Cierre de la sesión | `docs(<ámbito>): <asunto> - cierre de sesión con <nombre>` |
 | Subida que no se pudo hacer | `docs(<ámbito>): <asunto> - subida pendiente` |
 | Cambios de una sesión anterior | `docs: cambios sin guardar de una sesión anterior` |
 
 Ejemplo: `docs(ventas): presupuesto a un cliente - tema B con <nombre>`.
 
+- Un archivo que llega dentro de un tema o de una etapa se guarda con el cierre de ese tema o de esa etapa. El mensaje de archivos aportados se usa solo cuando el archivo llega fuera de uno. El archivo de cada modo dice si lo usa.
 - El mensaje va en español neutro, en una sola línea y sin punto final.
 - Sin firmas ni líneas de autoría de ningún asistente o herramienta.
 - Solo nombre de pila. Nunca apellidos ni datos de terceros.

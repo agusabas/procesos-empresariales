@@ -50,7 +50,7 @@ La plantilla se construye por partes. Hoy tiene:
 - Las reglas permanentes: registrar lo que pasa hoy, no inventar, cuidar los datos de las personas y conversar con palabras simples.
 - El guardado: el agente guarda el trabajo sin que la persona tenga que hacer nada.
 - La estructura de la carpeta `empresa/`.
-- El arranque: quien conduce el relevamiento conversa con el agente, y quedan escritos la empresa, sus áreas, sus personas y la lista de sus procesos, con las preguntas preparadas para cada persona. Lleva alrededor de dos horas, que se pueden repartir en varias conversaciones.
+- El arranque: quien conduce el relevamiento conversa con el agente, y quedan escritos la empresa, sus áreas, sus personas y la lista de sus procesos, con las preguntas preparadas para cada persona. Lleva entre dos y tres horas, que se pueden repartir en varias conversaciones.
 - Las entrevistas: cada persona cuenta cómo hace su trabajo, en conversaciones de unos 20 minutos, y el agente lo deja escrito en la ficha de cada proceso, con su diagrama.
 - El material de otras personas: conversaciones exportadas, notas de reuniones, correos, capturas o audios transcriptos. El agente guarda una copia sin datos personales, anota lo que dicen sobre cada trabajo y prepara las preguntas para confirmarlo con quien corresponde.
 - Los cambios en marcha: cuando la empresa cambia algo que altera cómo se trabaja, como un sistema nuevo o una reorganización, el agente lleva una ficha con el plan, las decisiones, lo que falta responder y lo que puede salir mal, hasta que lo nuevo se usa y queda escrito.

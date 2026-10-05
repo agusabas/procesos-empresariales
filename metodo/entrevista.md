@@ -27,7 +27,8 @@ Antes de empezar, leer completos `metodo/control-documental.md` y `plantillas/ba
 7. No se borra ni se reemplaza lo que contó otra persona. Si no coincide, va un bloque `CONFLICTO`.
 8. Una ficha `vigente` no se reescribe. Lo que cambió va a "Cambios propuestos (sin aprobar)".
 9. Este modo deja la ficha, como mucho, en `borrador`. Nunca en `validado` ni en `vigente`.
-10. Los códigos se asignan desde la lista maestra, con los pasos de "Cómo se asigna un código" en `metodo/control-documental.md`.
+10. Los códigos se asignan desde la lista maestra, con los pasos de "Cómo se asigna un código" en `metodo/control-documental.md`. A la persona no se le dicen: cada documento se nombra por su título.
+11. Cada marcador se escribe una sola vez, en el documento donde vive el dato. En el registro de la sesión no se escriben marcadores.
 
 ## Preparar
 
@@ -36,7 +37,7 @@ Se hace en silencio, antes de la primera pregunta:
 1. Mirar la hora. Se tiene presente en la conversación y se escribe como hora de inicio al crear el registro de la sesión.
 2. Leer la hoja de la persona: su rol, sus procesos, sus "Preguntas preparadas", sus "Documentos prometidos" y si está confirmada.
 3. Leer `empresa/glosario.md`, si existe, para entender las palabras propias de la empresa.
-4. Leer en `empresa/mapa-de-procesos.md` el estado y la prioridad de cada proceso de su hoja. Se buscan por código. El estado y la prioridad no se leen en la hoja.
+4. Leer en `empresa/mapa-de-procesos.md` el estado y la prioridad de cada proceso de su hoja. Se buscan por código; los que todavía no tienen código, por nombre. El estado y la prioridad no se leen en la hoja.
 5. Buscar en `empresa/sesiones/` el último registro de esta persona para cada proceso. Si tiene temas sin marcar, hay una entrevista para seguir.
 
 ## Abrir la conversación
@@ -65,13 +66,14 @@ Cuando la persona trae un tema:
 Cuando no trae ningún tema, se propone así:
 
 1. Tomar los procesos de su hoja que en el mapa no están `validado`, `vigente` ni `obsoleto`.
-2. Elegir el de prioridad más alta: primero `P1`, después `P2`, después `P3`.
+2. Elegir el de prioridad más alta: primero `P1`, después `P2`, después `P3` y, al final, los que están `sin definir`.
 3. A igual prioridad, elegir primero el que ya está `en curso`.
 
 Con el proceso elegido:
 
-1. Leer todo lo que ya existe sobre él: la ficha, si está creada; los registros de sesión de cualquier persona; el material de `empresa/insumos/` que lo nombra; los archivos de su carpeta en `empresa/adjuntos/`; y lo que quedó anotado sobre este proceso en "Temas para otra sesión" de otros registros. El material sirve para preguntar mejor, no como verdad.
-2. Crear el registro de la sesión, como indica "El registro de la sesión".
+1. Si figura en el mapa sin código, dárselo antes de seguir, como indica "Un proceso sin código".
+2. Leer todo lo que ya existe sobre él: la ficha, si está creada; los registros de sesión de cualquier persona; el material de `empresa/insumos/` que lo nombra; los archivos de su carpeta en `empresa/adjuntos/`; y lo que quedó anotado sobre este proceso en "Temas para otra sesión" de otros registros. El material sirve para preguntar mejor, no como verdad.
+3. Crear el registro de la sesión, como indica "El registro de la sesión".
 
 ## Etapa 1. Apertura
 
@@ -97,8 +99,9 @@ Va antes del temario. Se saltea si no hay nada para confirmar, recordar ni pregu
 1. Primero las del proceso de hoy y las que no son de ningún proceso.
 2. Después las de otros procesos, mientras no lleven más de unos cinco minutos. Las que queden siguen sin marcar.
 3. Escribir cada respuesta en el lugar de donde salió la pregunta. Si ahí había un `PENDIENTE` o un `A CONFIRMAR con <esta persona>`, se reemplaza por lo que contó.
-4. Si la pregunta viene de una revisión periódica, la respuesta queda en el registro de la sesión, con sus palabras.
-5. Marcar la pregunta en la hoja, con la fecha.
+4. Si la respuesta dice de qué área es un proceso que figuraba sin código, dárselo en ese momento, como indica "Un proceso sin código".
+5. Si la pregunta viene de una revisión periódica, la respuesta queda en el registro de la sesión, con sus palabras.
+6. Marcar la pregunta en la hoja, con la fecha.
 
 Cerrar la etapa: resumir lo que se confirmó y se respondió, preguntar "¿Es así?", escribir y guardar.
 
@@ -144,14 +147,17 @@ Cuando la persona acepta:
 - Se trata un tema por vez, en orden. No se pasa al siguiente sin cerrar el actual.
 - Las preguntas salen del grupo del banco que corresponde a cada parte de la ficha. Se adaptan al proceso y a lo que la persona ya contó.
 - Se hace una pregunta por mensaje y se espera la respuesta.
+- Una pregunta por mensaje no quiere decir un dato por mensaje. Cada tema se abre con una pregunta amplia, que la persona pueda responder a lo largo. Por ejemplo: "¿Cómo fue el último caso, de principio a fin?"
+- Con lo que cuenta se arma lo que se entendió, y se pregunta aparte solo lo que falta. Dentro de un tema no se hace una pregunta por cada parte de la ficha.
 - Se pregunta abierto, sin sugerir la respuesta ni dar opciones cerradas. Por ejemplo: "¿Quién lo decide?"
 - Se pide un caso real y reciente: "¿Cómo fue el último?" Del ejemplo se anota el tipo de caso, nunca el nombre de un cliente.
 - Si la persona no sabe algo, decir la frase de "No sabe algo" y anotar `PENDIENTE: preguntar a <quién>`.
+- Si no sabe dos cosas seguidas sobre lo mismo, preguntar una sola vez a quién consultar, anotar las dos con ese nombre y seguir.
 - Si cuenta cómo debería ser, o propone una mejora, va a "Problemas e ideas". Si no queda claro, preguntar: "¿Eso es lo que se hace hoy, o lo que convendría hacer?"
 - Si critica a alguien, se anota el hecho que afecta al trabajo, no el juicio.
 - Si cuenta algo de otro proceso, anotarlo en "Temas para otra sesión" del registro y volver al tema.
 - Un cambio que ya está decidido o en marcha no es una idea, ni es lo que se hace hoy. Se anota en "Temas para otra sesión", en una línea que empieza con `Cambio:`. Lo retoma el responsable del programa, con `metodo/cambio-en-curso.md`.
-- Si aparece una palabra propia de la empresa que no está en el glosario, preguntar qué significa y agregarla. Si `empresa/glosario.md` todavía no existe, se crea copiando `plantillas/glosario.md`, en estado `en curso`, y se pone al día la fila `GL-GEN-001` de la lista maestra.
+- Si aparece una palabra propia de la empresa que no está en el glosario, preguntar qué significa y agregarla. Si `empresa/glosario.md` todavía no existe, se crea copiando `plantillas/glosario.md`, en estado `en curso`, y se pone al día la fila `GL-GEN-001` de la lista maestra. Si ya está `validado` o `vigente`, el término se suma como indica "Estados" en `metodo/control-documental.md`.
 - No apurar.
 
 ### Cuando la respuesta es vaga
@@ -159,7 +165,7 @@ Cuando la persona acepta:
 | La persona dice | Repregunta |
 |---|---|
 | "A veces" | "¿Cuántas veces por semana, más o menos?" |
-| "Depende" | "¿De qué depende? ¿Hay un caso de ejemplo?" |
+| "Depende" | "¿De qué dependió en el último caso?" |
 | "Lo de siempre" | "Como si hubiera que explicárselo a alguien nuevo: ¿qué es lo primero?" |
 | "Lo ve otra área" | "¿Quién, con nombre de pila?" |
 | "Enseguida" o "rápido" | "¿Cuánto es: minutos, horas o días?" |
@@ -169,7 +175,7 @@ Cuando la persona acepta:
 1. Pedirlo en el momento, con las frases del grupo del banco que lleva este mismo nombre.
 2. Recibirlo con los pasos de "Archivos recibidos", en `metodo/control-documental.md`. Va a `empresa/adjuntos/<area>/<proceso>/`. `<proceso>` es el nombre del archivo de la ficha, sin `.md`.
 3. Enlazarlo en "Documentos" de la ficha, con una frase que diga qué es.
-4. Guardar con el mensaje de archivos recibidos.
+4. El archivo no lleva un guardado propio: se guarda con el cierre del tema o de la etapa en que llegó. Solo si llega fuera de un tema o de una etapa se guarda en el momento, con el mensaje de archivos aportados.
 
 - Si la persona no lo tiene a mano, no insistir. Anotarlo en "Documentos prometidos" de su hoja y en "Documentos pendientes" del registro.
 - Si el archivo es de otro proceso, va a la carpeta de ese proceso. Si ese proceso todavía no tiene ficha, no se crea una ficha a medias: alcanza con la carpeta y su catálogo.
@@ -180,15 +186,18 @@ Cuando la persona acepta:
 1. Resumir en dos o tres frases lo que se entendió.
 2. Preguntar: "¿Es así?"
 3. Corregir lo que la persona marque.
-4. Escribir en la ficha las partes de ese tema, en palabras simples, en tercera persona y contando lo que pasa hoy.
-5. Escribir en el registro de la sesión las preguntas y las respuestas, con las palabras de la persona. Marcar el tema.
-6. Si cambió la tabla de pasos, generar de nuevo el diagrama.
-7. Guardar, como indica `metodo/guardado.md`. Va un solo guardado por tema.
-8. Decir el avance con la frase de "Avance".
+4. Si escribir va a llevar un rato, avisarlo antes con la frase de "Un momento".
+5. Escribir en la ficha las partes de ese tema, en palabras simples, en tercera persona y contando lo que pasa hoy.
+6. Escribir en el registro de la sesión las preguntas y las respuestas, con las palabras de la persona. Marcar el tema.
+7. Si cambió la tabla de pasos, generar de nuevo el diagrama.
+8. Guardar, como indica `metodo/guardado.md`. Va un solo guardado por tema.
+9. Decir el avance con la frase de "Avance". Después del último tema no se dice: sigue "Cerrar la sesión".
 
 ### El tiempo
 
 - Al cerrar cada tema, mirar cuánto tiempo pasó. Si pasaron unos 20 minutos, usar la frase de "Ofrecer cortar" en lugar de la de "Avance".
+- Si la persona elige seguir, no se vuelve a ofrecer hasta que pasen otros 20 minutos.
+- Después del último tema no se ofrece cortar: solo falta la lectura final.
 - Si no se puede ver la hora, calcular unos cuatro minutos por tema y ofrecer cortar al cerrar el quinto.
 - Si la persona tiene que irse en medio de un tema, escribir lo que alcanzó a contar, dejar el tema sin marcar y cerrar la sesión.
 
@@ -216,19 +225,20 @@ No se copia de nuevo. Se le suma lo que cuenta esta persona, y su parte se anota
 | `en curso` o `borrador` | Se suma a lo escrito. |
 | `validado` | Se suma. Si lo nuevo cambia el sentido, la ficha vuelve a `borrador` en el bloque de control, en la lista maestra y en el mapa. |
 | `vigente` | No se toca lo escrito. Va una fila en "Cambios propuestos (sin aprobar)", con la fecha, quién lo cuenta y qué cambió. En "Confirmó el dueño" va `sí` solo si quien lo cuenta es el dueño del proceso. |
-| `obsoleto` | No se toca. Si la persona dice que ese trabajo se sigue haciendo, anotar en el registro `PENDIENTE: preguntar a <responsable del programa>`. |
+| `obsoleto` | No se toca. Si la persona dice que ese trabajo se sigue haciendo, anotarlo como pregunta en "Preguntas preparadas" de la hoja del responsable del programa. |
 
 ### Marcadores
 
 | Situación | Qué se hace |
 |---|---|
-| La persona no sabe algo | Escribir `PENDIENTE: preguntar a <quién>`. Si esa persona tiene hoja, sumar la pregunta a sus "Preguntas preparadas". |
+| La persona no sabe algo | Escribir `PENDIENTE: preguntar a <quién>`. Si esa persona tiene hoja, sumar la pregunta a sus "Preguntas preparadas". Si nadie sabe a quién preguntar, va `PENDIENTE: preguntar a A DEFINIR`, y la pregunta se suma a la hoja del responsable del programa. |
 | Cuenta cómo trabaja otra persona | Escribir lo que cuenta con `A CONFIRMAR con <esa persona>`. Sumar la pregunta a la hoja de esa persona. |
 | Lo que cuenta no coincide con lo que ya contó otra persona | Dejar las dos versiones en un bloque `CONFLICTO`, debajo de la parte o de la tabla donde aparece la diferencia. |
 | Un archivo contradice lo escrito | Bloque `CONFLICTO`, igual que entre dos personas. |
 | Confirma algo que estaba `A CONFIRMAR con` ella | Quitar el marcador. La fuente queda en la fila del historial de esta sesión. |
 | Corrige algo que estaba `A CONFIRMAR con` ella | Vale lo que cuenta: escribir su versión y quitar el marcador. |
 
+- El marcador se escribe una sola vez, en la ficha. La pregunta de la hoja y el registro de la sesión nombran lo que falta, sin repetir el marcador.
 - El bloque `CONFLICTO` tiene la forma que indica `metodo/reglas.md`. El agente no elige cuál versión es la correcta.
 - A la persona no se le dice que otra "dijo lo contrario". Si hace falta, se usa la frase de "Dos versiones".
 
@@ -239,13 +249,24 @@ No se copia de nuevo. Se le suma lo que cuenta esta persona, y su parte se anota
 
 ### Un proceso que aparece en la conversación
 
-1. Asignarle el código con los pasos de "Cómo se asigna un código". Su fila de la lista maestra queda `pendiente`.
-2. Agregar su fila al mapa, en el grupo que corresponde: estado `pendiente`, "Dueño" con `A DEFINIR`, prioridad `P3` y ficha `—`. En "Participantes" va la persona que lo contó, con `A CONFIRMAR con <responsable del programa>`.
-3. Si el mapa está `vigente`, la fila va a su sección "Cambios propuestos (sin aprobar)".
-4. Agregar el proceso a la hoja de la persona, en "Procesos en los que participa".
-5. Si no es el tema de hoy, anotarlo en "Temas para otra sesión". No se releva de paso.
+1. Preguntar a la persona de qué área es ese trabajo.
+2. Si el área figura en `empresa/contexto.md`, asignarle el código con los pasos de "Cómo se asigna un código". Su fila de la lista maestra queda `pendiente`.
+3. Agregar su fila al mapa, en el grupo que corresponde: estado `pendiente`, "Dueño" con `A DEFINIR`, prioridad `sin definir` y ficha `—`. En "Participantes" va la persona que lo contó.
+4. Si el mapa está `vigente`, la fila va a su sección "Cambios propuestos (sin aprobar)".
+5. Agregar el proceso a la hoja de la persona, en "Procesos en los que participa".
+6. Anotar en "Preguntas preparadas" de la hoja del responsable del programa que apareció este proceso, y que falta definir quién responde por él y con qué prioridad se releva.
+7. Si no es el tema de hoy, anotarlo en "Temas para otra sesión". No se releva de paso.
 
-Si el proceso es de un área que no figura en `empresa/contexto.md`, no se inventan letras ni se asigna el código. Se anota en el registro `PENDIENTE: preguntar a <responsable del programa>`.
+Si la persona no sabe de qué área es, o nombra un área que no figura en `empresa/contexto.md`, no se inventan letras ni se asigna el código. El proceso figura en el mapa sin código: en "Código" va `—` y en "Área" va `PENDIENTE: preguntar a <responsable del programa>`.
+
+### Un proceso sin código
+
+Un proceso puede figurar en el mapa sin código porque no se sabía su área. Recibe el código antes de crear su ficha y el registro de la sesión, porque los dos llevan el código en el nombre.
+
+1. Preguntar a la persona de qué área es ese trabajo. Lo que dice sobre el área de un trabajo que ella misma hace vale como dato directo.
+2. Si el área figura en `empresa/contexto.md`, asignar el código con los pasos de "Cómo se asigna un código". En la fila del mapa, escribir el código y reemplazar el `PENDIENTE` de "Área" por el área.
+3. Si no lo sabe, o nombra un área que no figura en `empresa/contexto.md`, el proceso sigue sin código y hoy no se releva. Elegir otro proceso. Lo que la persona alcance a contar de ese trabajo va a "Temas para otra sesión" del registro.
+4. En ese caso, la pregunta por el área sigue en la hoja de la persona que nombra el `PENDIENTE`. Si no está en ninguna hoja, sumarla a la del responsable del programa.
 
 ### Un paso que necesita más detalle
 
@@ -271,10 +292,10 @@ Si hoy no hay tiempo, se anota en "Temas para otra sesión".
    | Quedaron temas sin cerrar | `en curso`, también si la ficha ya estaba en `borrador`. |
    | Se cerraron todos los temas y la persona confirmó la lectura final | `borrador`, aunque falte escuchar a otras personas. |
 
-3. Sumar una fila al historial de la ficha y de cualquier otro documento controlado que la sesión cambió, con la versión, la fecha, qué se agregó y quién lo contó.
+3. Sumar una fila al historial de la ficha y de cualquier otro documento controlado que la sesión cambió, con la versión, la fecha, qué se agregó y quién lo contó. Va una sola fila por documento, también si la sesión lo creó.
 4. Si en esta sesión se creó el glosario, pasarlo a `borrador`, en su bloque de control y en la lista maestra.
 5. Poner al día la hoja de la persona: "Su parte", las preguntas marcadas, los documentos prometidos y "Última actualización".
-6. Completar "Cómo terminó" en el registro, con su línea de subida. Si quien confirmó la lectura final de la ficha completa es el dueño del proceso, anotarlo ahí: es lo que la revisión necesita para validar.
+6. Completar "Cómo terminó" en el registro, con su línea de subida. En "Último resumen que confirmó la persona" va la lectura final, y si fue de la ficha completa o solo de lo escrito hoy. Si quien confirmó la lectura final de la ficha completa es el dueño del proceso, anotarlo ahí: es lo que la revisión necesita para validar.
 7. Hacer el guardado final y la subida, como indica "Al cerrar la sesión" en `metodo/guardado.md`.
 8. Despedirse con la frase de "Despedida".
 
@@ -304,12 +325,14 @@ Los mensajes siguen el formato de `metodo/guardado.md`:
 |---|---|
 | Cierre de la etapa 1 | `docs(<ámbito>): <proceso> - etapa 1 con <nombre>` |
 | Cierre de cada tema | `docs(<ámbito>): <proceso> - tema <letra> con <nombre>` |
-| Archivos recibidos | `docs(<ámbito>): <proceso> - archivos aportados por <nombre>` |
+| Archivos que llegan fuera de un tema o de una etapa | `docs(<ámbito>): <proceso> - archivos aportados por <nombre>` |
 | Cierre de la sesión | `docs(<ámbito>): <proceso> - cierre de sesión con <nombre>` |
 
 `<ámbito>` es la carpeta del área. `<proceso>` es el nombre del proceso como figura en el mapa, en minúsculas.
 
 ## Qué decir
+
+Las frases son modelos. Se dicen cada vez con otras palabras, como indica la regla 8 de `metodo/reglas.md`.
 
 | Situación | Frase |
 |---|---|
@@ -318,6 +341,7 @@ Los mensajes siguen el formato de `metodo/guardado.md`:
 | Seguir | "La vez pasada conversamos sobre `<temas ya hechos>`. Quedaron `<cantidad>` temas. ¿Seguimos con el `<letra>`, o conviene ver otra cosa hoy?" |
 | Nada pendiente | "Por ahora no queda nada pendiente de estos trabajos. ¿Cambió algo en alguno, o hay algún trabajo que no figure?" |
 | Recordar un documento | "La vez pasada quedó pendiente `<documento>`. ¿Se pudo conseguir?" |
+| Un momento | "Un momento, lo dejo anotado." |
 | Avance | "Tema `<letra>` listo: van `<cantidad>` de `<total>`. ¿Seguimos con el siguiente?" |
 | Ofrecer cortar | "Ya llevamos un buen rato y no quiero ocupar más tiempo. Lo conversado quedó anotado. ¿Cortamos aquí y seguimos otro día, o hacemos un tema más?" |
 | No sabe algo | "No hay problema. Lo anoto para preguntárselo a quien corresponda. ¿A quién habría que consultarle?" |
@@ -329,10 +353,10 @@ En la conversación se usan palabras simples, como indica la regla 8 de `metodo/
 
 | En lugar de | Decir |
 |---|---|
-| "ficha de proceso" | "lo que queda escrito de este trabajo" |
-| "proceso" | "trabajo" o "tarea" |
+| "ficha de proceso" | "lo que queda escrito de este proceso" |
 | "temario" | "la lista de temas de hoy" |
 | "borrador", "validado" | "falta confirmarlo", "ya está confirmado" |
 | "instructivo" | "el paso a paso" |
+| Un código | El título del documento |
 
 Las frases están en forma neutra. Adaptarlas a la forma de trato, como indica la regla 8 de `metodo/reglas.md`.

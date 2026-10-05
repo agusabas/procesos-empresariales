@@ -26,13 +26,13 @@ Antes de empezar, leer completo `metodo/control-documental.md`. Este archivo usa
 1. Este modo se abre solo con el responsable del programa o con quien aprueba. Quiénes son figura en `empresa/contexto.md`.
 2. Todo se escribe en `borradores`. `main` se toca solo en la etapa 8, como indica "Pasar a `main` lo revisado". Es la única excepción a la regla de no guardar en `main`.
 3. Un documento pasa a `vigente` solo con la palabra explícita de quien aprueba, dicha por esa persona en esta conversación.
-4. Una aprobación que cuenta otra persona es de segunda mano. No se aprueba: se anota en el registro de la sesión `A CONFIRMAR con <quien aprueba>` y se espera a que esa persona lo diga.
+4. Una aprobación que cuenta otra persona es de segunda mano. No se aprueba: se anota en el registro de la sesión lo que se contó, se suma la pregunta a "Preguntas preparadas" de la hoja de quien aprueba y se espera a que esa persona lo diga.
 5. Si la misma persona es responsable del programa y quien aprueba, su palabra alcanza. La pregunta de aprobación se hace igual.
 6. Confirmar un resumen no es aprobar. La aprobación se pregunta aparte, en un mensaje propio y documento por documento.
 7. Al aprobar se hacen las cuatro cosas juntas, o no se aprueba.
 8. No se cambia lo que contó otra persona. El responsable del programa corrige cómo quedó anotado. Si no está de acuerdo con el contenido, su versión se registra en un bloque `CONFLICTO`.
-9. Los registros cerrados de `sesiones/`, `insumos/` y `adjuntos/` no se editan.
-10. La conversación es llana también en este modo. No se dice "vigente", "validado", "lista maestra" ni "rama": se usan las palabras de la regla 8 de `metodo/reglas.md`.
+9. Los registros cerrados de `sesiones/`, `insumos/` y `adjuntos/` no se editan. Por eso en el registro de la sesión no se escriben marcadores: cada marcador va una sola vez, en el documento donde vive el dato.
+10. La conversación es llana también en este modo. No se dice "vigente", "validado", "lista maestra" ni "rama": se usan las palabras de la regla 8 de `metodo/reglas.md`. Los códigos no se dicen: cada documento se nombra por su título.
 
 ## Registro de la sesión
 
@@ -57,7 +57,8 @@ Reunir en silencio:
 | Lo que cambió y todavía no se repasó | `git diff --stat main borradores -- empresa/` |
 | Documentos en `borrador` y documentos `validado` | Columna "Estado" de la lista maestra |
 | Documentos `vigente` con cambios propuestos | Sección "Cambios propuestos (sin aprobar)" con filas |
-| Marcadores abiertos | `PENDIENTE`, `CONFLICTO` y `A CONFIRMAR` en los archivos de `empresa/` |
+| Marcadores abiertos | `PENDIENTE`, `CONFLICTO` y `A CONFIRMAR` en los archivos de `empresa/`, sin contar `empresa/sesiones/` ni `empresa/insumos/` |
+| Procesos sin código, sin dueño o sin prioridad | Las filas de `empresa/mapa-de-procesos.md` con `—` en "Código", con `A DEFINIR` o con `sin definir`, y su sección "Pendientes del mapa" |
 | Hojas provisionales | `A CONFIRMAR con <responsable del programa>` en las hojas de `empresa/personas/` |
 | Fichas que esperan por un cambio | La parte "Fichas a actualizar" de cada ficha de `empresa/cambios/` |
 | Códigos duplicados | Columna "Observaciones" de la lista maestra |
@@ -151,7 +152,7 @@ Cerrar la etapa: resumir qué quedó aprobado y qué no, preguntar si es correct
 
 ## Etapa 5. Conciliar
 
-Comparar cada fila de `empresa/lista-maestra.md` con el bloque de control de su documento, y cada fila del mapa de procesos con su ficha.
+Comparar cada fila de `empresa/lista-maestra.md` con el bloque de control de su documento, y cada fila del mapa de procesos con su ficha. También se completa lo que le falta a cada fila del mapa.
 
 | Diferencia | Qué se hace |
 |---|---|
@@ -160,6 +161,8 @@ Comparar cada fila de `empresa/lista-maestra.md` con el bloque de control de su 
 | Una fila que no está `pendiente` no tiene archivo | No borrar la fila. Preguntar al responsable del programa qué pasó y anotarlo en "Observaciones". |
 | Dos documentos tienen el mismo código | Resolverlo como indica "Dos documentos con el mismo código" en `metodo/control-documental.md`. |
 | El estado o el enlace del mapa no coinciden con la ficha | Corregir el mapa. |
+| Un proceso del mapa no tiene código | Preguntar al responsable del programa de qué área es. Con el área, asignar el código con los pasos de "Cómo se asigna un código" en `metodo/control-documental.md`. Si no lo sabe, la fila queda como está. |
+| Un proceso del mapa tiene el dueño `A DEFINIR` o la prioridad `sin definir` | Preguntar al responsable del programa y escribirlo en el mapa. Si el mapa está `vigente`, la prioridad se corrige igual y el dueño va a "Cambios propuestos (sin aprobar)". |
 | El nombre o el dueño del mapa no coinciden con la ficha | Preguntar cuál vale. El mapa es la lista oficial de nombres. |
 
 Después, actualizar la línea "Última actualización" de la lista.
@@ -200,10 +203,11 @@ Cerrar la etapa: resumir qué se dio de baja, preguntar si es correcto y guardar
 ## Etapa 8. Cierre
 
 1. Resumir en llano lo que se hizo en la sesión y lo que quedó pendiente. Preguntar si es correcto.
-2. Completar el registro de la sesión, con su línea de subida.
-3. Hacer el guardado final en `borradores`.
-4. Pasar a `main` lo revisado, como indica la sección siguiente. En este modo la subida se hace solo con el último paso de esa sección: no se usan los pasos de subida de "Al cerrar la sesión" en `metodo/guardado.md`.
-5. Agradecer el tiempo y despedirse.
+2. Sumar una fila al historial de cada documento cuyo contenido se corrigió en esta sesión y que todavía no tiene una fila de hoy. Va una sola fila por documento.
+3. Completar el registro de la sesión, con su línea de subida. En "Último resumen que confirmó la persona" va el resumen del paso 1.
+4. Hacer el guardado final en `borradores`.
+5. Pasar a `main` lo revisado, como indica la sección siguiente. En este modo la subida se hace solo con el último paso de esa sección: no se usan los pasos de subida de "Al cerrar la sesión" en `metodo/guardado.md`.
+6. Agradecer el tiempo y despedirse.
 
 Si la persona tiene que irse antes, cerrar la etapa en curso con lo que haya y hacer esta etapa con un resumen corto. Lo que no llegó a repasarse queda para la próxima sesión.
 
@@ -253,6 +257,8 @@ Los mensajes siguen el formato de `metodo/guardado.md`. En este modo, `<asunto>`
 - `<nombre>` es el nombre de pila de la persona con la que se trabajó.
 
 ## Qué decir
+
+Las frases son modelos. Se dicen cada vez con otras palabras, como indica la regla 8 de `metodo/reglas.md`. La pregunta de aprobación y la de baja son la excepción: se dicen tal cual, para que la respuesta no deje dudas.
 
 | Situación | Frase |
 |---|---|

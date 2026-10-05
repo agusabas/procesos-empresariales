@@ -32,14 +32,14 @@ _Se repite un bloque como este por cada etapa o tema que se trabajó._
 
 ## Pendientes
 
-_Lo que quedó sin saber, una línea por dato, con la forma `PENDIENTE: preguntar a <quién>`. Si no quedó nada, se escribe "Ninguno"._
+_Lo que quedó sin saber en esta sesión, una línea por dato, diciendo qué falta y en qué documento quedó anotado. Aquí no se escribe el marcador: va una sola vez, en ese documento. Si el dato todavía no tiene un documento, se dice eso. Si no quedó nada, se escribe "Ninguno"._
 
 ## Documentos
 
 _Los archivos que llegaron en la sesión, uno por línea, con la forma que corresponda. Del archivo que no se incorpora no se copia nada: esta línea es su único rastro. En una sesión de material de terceros, debajo de cada archivo incorporado van tres líneas más: quiénes participan, qué fechas cubre y cómo llegó._
 
 - Incorporado: `<archivo>`, `<qué es>`. Quedó en `<carpeta>`.
-- NO INCORPORADO: `<archivo>`, contiene datos personales de terceros.
+- NO INCORPORADO: `<archivo>`, contiene `<datos personales de terceros, o datos comerciales que no se guardan>`.
 - Para `<nombre del responsable del programa>`: `<archivo>`, `<qué hay que mirar>`.
 
 ## Documentos pendientes
@@ -52,8 +52,8 @@ _Lo que apareció y no era de esta sesión, una línea por tema. Lo que trata de
 
 ## Cómo terminó
 
-- Resumen final confirmado por la persona: `<sí, no o a medias>`
 - Hasta dónde se llegó: `<última etapa o tema cerrado>`
+- Último resumen que confirmó la persona: `<el de qué etapa o tema, o el resumen final de la sesión, si el modo lo tiene>`
 - Estado en que quedó cada documento: `<documento y estado>`
 - Próximo paso: `<qué sigue y con quién>`
 - Subida: `<hecha, o sin servidor; queda en esta computadora>`

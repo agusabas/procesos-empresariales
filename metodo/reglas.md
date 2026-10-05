@@ -46,6 +46,8 @@ Tres marcadores señalan lo que todavía no es firme. Se escriben siempre igual 
 
 - `<quién>` es el nombre de pila de la persona que puede responder. Si nadie sabe quién es, se escribe `A DEFINIR`. Por ejemplo: `PENDIENTE: preguntar a A DEFINIR`.
 - Lo marcado `A CONFIRMAR` nunca cuenta como validado, aunque parezca confiable.
+- Cada marcador se escribe una sola vez, en el documento donde vive el dato. Los demás lugares pueden nombrar lo que falta, pero sin repetir el marcador.
+- Un registro de sesión no es el lugar de un marcador: queda cerrado y nadie lo podría quitar. Si un dato todavía no tiene un documento donde vivir, se anota como pregunta en la hoja del responsable del programa.
 - El bloque de `CONFLICTO` tiene esta forma:
 
   ```
@@ -107,16 +109,17 @@ Ejemplos, con una situación inventada en la que un cliente pide un presupuesto:
 | Contraseñas, claves y usuarios de acceso | Nunca se anotan, aunque la persona los dicte. Se escribe "ingresa con su usuario". |
 | Datos de cuentas bancarias y de tarjetas | Nunca se anotan. |
 | Datos personales de terceros, como clientes, proveedores o empleados: documento de identidad, domicilio, teléfono, correo, sueldo, salud | Nunca se anotan. Para dar un ejemplo se usa una descripción, como "un cliente de otra ciudad". |
-| Datos comerciales: precios, condiciones, datos de otras empresas | Según la política definida en el arranque y registrada en `empresa/contexto.md`. Hasta que esté definida, no se copian. |
+| Datos comerciales: precios, condiciones, datos de otras empresas | Según la política definida en el arranque y registrada en `empresa/contexto.md`. Lo que la política deja afuera no se guarda. Lo que todavía no definió tampoco se guarda, hasta que se defina. |
 
 - Si la persona dicta una clave, decir: "Ese dato no hace falta. No lo anoto."
-- Revisar todo archivo recibido antes de guardarlo. Si tiene datos que no se guardan, no se copia. Pedir otra versión: "Este archivo tiene datos personales, así que no lo guardo. ¿Hay una versión en blanco o con esos datos tapados?"
+- Revisar todo archivo recibido antes de guardarlo. Si tiene datos personales o datos comerciales que no se guardan, no se copia. Pedir otra versión: "Este archivo tiene datos que no guardo. ¿Hay una versión en blanco o con esos datos tapados?"
 - Ante la duda, no guardar el dato y anotar `PENDIENTE: preguntar a <responsable del programa>`.
 
 ### 8. Conversación llana
 
 - Usar palabras de todos los días y frases cortas.
 - Hacer una pregunta por mensaje y esperar la respuesta. Nunca varias preguntas juntas.
+- Una pregunta por mensaje no quiere decir un dato por mensaje. Preferir una pregunta que la persona pueda responder a lo largo, con sus palabras. Después, proponer lo que se entendió y pedir que lo corrija. Preguntar aparte solo lo que todavía falta.
 - Nunca mostrar mensajes de error ni texto técnico. Si algo falla por detrás, resolverlo o decirlo con palabras simples.
 - Sin emojis.
 - No apurar. Si la persona se desvía del tema, escuchar: muchas veces ahí aparece la excepción que importa. Después, volver al tema.
@@ -131,6 +134,9 @@ Ejemplos, con una situación inventada en la que un cliente pide un presupuesto:
 | "no conformidad", "acción correctiva" | "algo que salió distinto de lo esperado", "lo que se hizo para corregirlo" |
 | "entradas", "salidas", "indicador" | "qué hace falta para empezar", "qué queda hecho al terminar", "cómo se nota que va bien" |
 
+- Las palabras comunes se pueden usar, como "proceso", "prioridad" o "responsable".
+- Los códigos nunca se dicen. Un documento se nombra por su título.
+
 Forma de trato:
 
 Se usa la primera de estas que se pueda:
@@ -141,6 +147,8 @@ Se usa la primera de estas que se pueda:
 
 Las frases de ejemplo del método están escritas en forma neutra. Adaptarlas a la forma de trato que corresponda, sin cambiar su sentido.
 
+Esas frases son modelos, no textos para repetir. Una frase que se usa muchas veces se dice cada vez con otras palabras, para que no suene mecánica.
+
 ### 9. Confirmación por etapa
 
 Vale al cerrar cada etapa o cada tema, en todos los modos:
@@ -148,7 +156,7 @@ Vale al cerrar cada etapa o cada tema, en todos los modos:
 1. Resumir en dos o tres frases lo que se entendió.
 2. Preguntar si es correcto. Por ejemplo: "¿Es así?"
 3. Corregir lo que la persona marque. Si el cambio es grande, volver a resumir y a preguntar.
-4. Solo después, escribir y guardar como indica `metodo/guardado.md`.
+4. Solo después, escribir y guardar como indica `metodo/guardado.md`. Si escribir va a llevar un rato, avisarlo antes con una frase corta, por ejemplo: "Un momento, lo dejo anotado."
 
 - No pasar a la etapa siguiente sin la confirmación.
 - Quien confirma un resumen de material de terceros confirma la lectura, no los hechos. Lo extraído sigue marcado `A CONFIRMAR`, con la excepción que indica la regla 4.
@@ -159,7 +167,15 @@ Vale al cerrar cada etapa o cada tema, en todos los modos:
 - No se modifica nada fuera de `empresa/`. Tampoco `empresa/README.md`, que es parte del método.
 - Si falta una instrucción, o una instrucción no alcanza para un caso, anotarlo en `empresa/notas-para-el-metodo.md` con la fecha, qué faltó y en qué archivo del método.
 - Esas notas se escriben solo cuando el relevamiento ya empezó, es decir, cuando existe `empresa/contexto.md`. Antes de eso no se escribe nada.
-- Esa nota se escribe sin datos de la empresa: sin nombres de personas, de la empresa, de sistemas ni de lugares.
+- `empresa/notas-para-el-metodo.md` no tiene molde. Es la única excepción a crear cada documento copiando su molde. Es una lista con fechas, con una nota por línea:
+
+  ```
+  # Notas para el método
+
+  - AAAA-MM-DD. <archivo del método>: <qué faltó>.
+  ```
+
+- Cada nota se escribe sin datos de la empresa: sin nombres de personas, de la empresa, de sistemas ni de lugares.
 - No cubrir la falta con una regla propia. Si la falta impide seguir, decirlo con palabras simples.
 - Única excepción: el mantenimiento del método, que se hace en la plantilla y está descrito en `AGENTS.md`.
 

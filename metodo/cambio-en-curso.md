@@ -27,7 +27,8 @@ Cada etapa se cierra igual: resumen de lo entendido, pregunta de confirmación y
 7. Nada se completa con una suposición. Lo que no se sabe se escribe `PENDIENTE: preguntar a <quién>`.
 8. Va una carpeta por cambio. Puede haber varios cambios abiertos a la vez.
 9. Un cambio `cerrado` no se reabre. Si vuelve a moverse, se abre un cambio nuevo que lo nombra.
-10. Los códigos se asignan desde la lista maestra, con los pasos de "Cómo se asigna un código" en `metodo/control-documental.md`.
+10. Los códigos se asignan desde la lista maestra, con los pasos de "Cómo se asigna un código" en `metodo/control-documental.md`. A la persona no se le dicen: cada documento se nombra por su título.
+11. Cada marcador se escribe una sola vez, en la ficha del cambio. En el registro de la sesión no se escriben marcadores.
 
 ## Al empezar cada sesión
 
@@ -48,7 +49,15 @@ Cada etapa se cierra igual: resumen de lo entendido, pregunta de confirmación y
 
 Son ocho etapas. Las preguntas son una guía: se hace una por mensaje y no se pregunta lo que ya está escrito.
 
-| Etapa | Preguntas de guía | Dónde se escribe |
+Una pregunta por mensaje no quiere decir un dato por mensaje:
+
+1. Abrir con una pregunta amplia: "¿Qué es lo que está cambiando? Sirve todo lo que se pueda contar: por qué se hace, quiénes participan y en qué punto está."
+2. Con ese relato, armar lo que se entendió de cada etapa.
+3. En cada etapa, decir lo que ya se entendió y preguntar qué hay que corregir. Preguntar aparte solo lo que falta.
+
+Cada etapa se cierra igual, con su resumen y su confirmación, aunque el relato ya la haya cubierto.
+
+| Etapa | Preguntas de guía, solo si no salió | Dónde se escribe |
 |---|---|---|
 | 1. Qué cambia y por qué | "¿Qué es lo que está cambiando?", "¿Por qué se hace?" y "¿Qué se espera que mejore?" | "Qué cambia y por qué" |
 | 2. Quién lo lleva y qué terceros participan | "¿Quién lleva este cambio dentro de la empresa?" y "¿Participa alguien de afuera, como un proveedor o un asesor?" | "Quiénes participan" |
@@ -63,6 +72,7 @@ Al cerrar la etapa 1, después de la confirmación:
 
 1. Acordar con la persona un nombre corto para el cambio. De ese nombre sale `<slug>`: en minúsculas, con guiones y sin acentos.
 2. Crear la ficha copiando `plantillas/ficha-de-cambio.md` a `empresa/cambios/<slug>/ficha-del-cambio.md`, con estado `abierto`.
+3. Sumar la primera fila de su historial: la fecha, "Se abrió el cambio" y quién lo contó. El molde trae el historial sin filas.
 
 En la etapa 2:
 
@@ -71,16 +81,18 @@ En la etapa 2:
 
 En la etapa 4:
 
-- Recorrer el mapa de procesos y anotar cada proceso afectado como indica "Procesos afectados".
+- Pedir a la persona que cuente, de una vez, qué trabajos van a cambiar y cómo va a quedar cada uno. Con ese relato y con el mapa de procesos, armar las filas, mostrarlas como una lista corta y preguntar qué hay que corregir.
+- Anotar cada proceso afectado como indica "Procesos afectados".
 - Para cada proceso que ya tiene ficha, leer sus pasos, sus reglas y sus excepciones, y preguntar dos cosas: "¿Qué de esto se hace solo porque la forma actual lo exige?" y "¿Hay algo que hoy se hace y que la forma nueva no tiene previsto?"
 
 Al cerrar la etapa 8:
 
 1. Buscar lo que ya se anotó sobre este cambio en otras sesiones, como indica "Lo anotado en otras sesiones".
-2. Sumar cada `PENDIENTE: preguntar a` y cada `A CONFIRMAR con` de la ficha del cambio a "Preguntas preparadas" de la hoja de la persona nombrada.
+2. Sumar cada `PENDIENTE: preguntar a` y cada `A CONFIRMAR con` de la ficha del cambio a "Preguntas preparadas" de la hoja de la persona nombrada. La pregunta nombra lo que falta: el marcador queda en la ficha del cambio. Lo marcado `PENDIENTE: preguntar a A DEFINIR` va a la hoja del responsable del programa, como pregunta sobre a quién hay que consultar.
 3. Resumir toda la ficha y decir qué sigue.
 
 - Se puede cortar al terminar cualquier etapa. Si pasaron unos 25 minutos, ofrecer cortar con la frase de "Ofrecer cortar".
+- Si la persona elige seguir, no se vuelve a ofrecer hasta que pasen otros 25 minutos. Después de la última etapa no se ofrece: solo falta el cierre.
 - Si la apertura se corta, la sesión siguiente sigue desde la primera etapa sin marcar del registro anterior.
 
 ## Procesos afectados
@@ -138,7 +150,7 @@ Las entrevistas y las sesiones de material dejan lo que aparece sobre un cambio 
 
 | Etapa | Qué se hace |
 |---|---|
-| 1. Qué sigue abierto | Decir primero los pendientes con terceros que siguen sin respuesta, y desde cuándo. Después, lo que hay que preparar y todavía no está listo, y las decisiones que siguen `A CONFIRMAR`. Preguntar por cada uno si hay novedades. |
+| 1. Qué sigue abierto | Decir primero los pendientes con terceros que siguen sin respuesta, y desde cuándo. Después, lo que hay que preparar y todavía no está listo, y las decisiones que siguen `A CONFIRMAR`. Se dicen juntos, en una lista corta, y se pregunta una sola vez de cuáles hay novedades. |
 | 2. Novedades | Buscar lo anotado en otras sesiones. Preguntar por decisiones nuevas, fechas que cambiaron, procesos que se suman y cosas nuevas que pueden salir mal. |
 | 3. Qué sigue | Anotar los próximos pasos. Ofrecer la lista para enviar con lo que sigue sin respuesta. |
 
@@ -181,7 +193,7 @@ Cerrar un cambio es comprobar que lo que cambió ya quedó contado y aprobado. E
 - Va uno por sesión. Se crea copiando `plantillas/registro-de-sesion.md` a `empresa/sesiones/AAAA-MM-DD-<quien>-cambio-<slug>.md`.
 - En "Modo" va `cambio en curso`.
 - En "Etapas o temas" van las etapas de lo que se hace: las ocho de la apertura o las tres del seguimiento.
-- Al cerrar la sesión, completar "Cómo terminó" y seguir "Al cerrar la sesión" en `metodo/guardado.md`.
+- Al cerrar la sesión, completar "Cómo terminó" y seguir "Al cerrar la sesión" en `metodo/guardado.md`. En "Último resumen que confirmó la persona" va el de la última etapa cerrada.
 
 ## Guardado en este modo
 
@@ -193,6 +205,8 @@ Los mensajes siguen el formato de `metodo/guardado.md`:
 | Cierre de la sesión | `docs(empresa): cambio <nombre corto> - cierre de sesión con <nombre>` |
 
 ## Qué decir
+
+Las frases son modelos. Se dicen cada vez con otras palabras, como indica la regla 8 de `metodo/reglas.md`.
 
 | Situación | Frase |
 |---|---|

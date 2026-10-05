@@ -44,14 +44,14 @@ empresa/
 |---|---|
 | `contexto.md` | La empresa, cómo se organiza el programa de relevamiento (roles, forma de trato, datos que no se guardan), las áreas con sus tres letras, los sistemas en uso y la lista de arranque. |
 | `mapa-de-procesos.md` | El inventario de los procesos de la empresa. Es la lista oficial de sus nombres. |
-| `lista-maestra.md` | La lista de todos los documentos. Un código se asigna solo desde aquí. |
+| `lista-maestra.md` | La lista de todos los documentos. Un código se asigna solo desde aquí. También dice por cuánto tiempo se guarda cada registro. |
 | `glosario.md` | Una sola definición por cada término propio de la empresa. |
-| `notas-para-el-metodo.md` | Lo que faltó o no alcanzó en el método. Se escribe sin datos de la empresa. |
+| `notas-para-el-metodo.md` | Lo que faltó o no alcanzó en el método. Es una lista con fechas, con una nota por línea y sin datos de la empresa. Es el único archivo que no sale de un molde: su forma está en la regla 10 de `metodo/reglas.md`. |
 | `personas/<nombre>.md` | Una hoja por persona: rol, área, procesos en los que participa y preguntas preparadas para ella. |
 | `procesos/<area>/<codigo>-<slug>.md` | Una ficha por proceso: cómo se hace hoy. |
 | `instructivos/<area>/<codigo>-<slug>.md` | El paso a paso detallado de una tarea. |
 | `sesiones/AAAA-MM-DD-<quien>-<tema>.md` | El registro de cada conversación. |
-| `insumos/` | El material que ya existía o que produjeron otras personas, con su `catalogo.md`. Se guarda como llegó, salvo los datos personales de terceros, que se quitan antes de copiar. |
+| `insumos/` | El material que ya existía o que produjeron otras personas, con su `catalogo.md`. Se guarda como llegó, salvo los datos que no se guardan, que se quitan antes de copiar: los datos personales de terceros y los datos comerciales que la empresa deja afuera. |
 | `adjuntos/<area>/<proceso>/` | Los archivos aportados durante las sesiones, con su `catalogo.md`. |
 | `cambios/<slug>/ficha-del-cambio.md` | Un cambio en curso que altera cómo se trabaja. |
 
@@ -76,6 +76,6 @@ Los nombres van en minúsculas, con guiones en lugar de espacios, sin acentos ni
 
 - Cada archivo y cada carpeta se crean cuando hacen falta, no antes.
 - No se crean lugares que no estén en este esquema. Si hace falta uno, se anota en `notas-para-el-metodo.md`.
-- Los archivos guardados en `insumos/` no se modifican después. Su `catalogo.md` sí se pone al día. Lo único que se quita de un archivo, antes de copiarlo, son los datos personales de terceros.
-- Un registro de `sesiones/` no se edita una vez cerrado, salvo su línea de subida.
-- En toda la carpeta valen las reglas de privacidad de `metodo/reglas.md`.
+- Los archivos guardados en `insumos/` no se modifican después. Su `catalogo.md` sí se pone al día. Lo único que se quita de un archivo, antes de copiarlo, son los datos que no se guardan.
+- Un registro de `sesiones/` no se edita una vez cerrado, salvo su línea de subida. Por eso en un registro no se escriben marcadores.
+- En toda la carpeta valen las reglas de privacidad de `metodo/reglas.md`: no se guardan datos personales de terceros, ni los datos comerciales que la política de `contexto.md` deja afuera o todavía no definió.

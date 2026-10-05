@@ -129,4 +129,3 @@ _Se usa solo cuando el documento está `vigente`: lo que cambió no se escribe a
 
 | Versión | Fecha | Qué cambió | Quién lo contó | Quién aprobó |
 |---|---|---|---|---|
-| 0 | `<AAAA-MM-DD>` | Primera sesión | `<nombre>` | — |

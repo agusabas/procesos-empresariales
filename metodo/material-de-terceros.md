@@ -25,13 +25,14 @@ Cada etapa se cierra igual: resumen de lo entendido, pregunta de confirmación y
 2. Todo lo que se escribe a partir del material lleva su fuente y `A CONFIRMAR con <quién>`.
 3. La única excepción es lo que dijo en el material la misma persona que lo trae. Se le pregunta en el momento si sigue siendo así. Si lo confirma, vale como su palabra directa y no lleva marcador.
 4. Quien trae el material confirma la lectura, no los hechos.
-5. Nada se copia a `empresa/` antes de quitarle los datos personales de terceros.
+5. Nada se copia a `empresa/` antes de quitarle los datos personales de terceros y los datos comerciales que la empresa deja afuera.
 6. El original no se mueve, no se cambia y no se borra.
 7. Lo que dice un audio nunca se adivina ni se completa por el contexto.
 8. Las críticas a personas no se anotan. Se anota el hecho que afecta al trabajo.
-9. Este modo nunca lleva una ficha a `borrador`: nadie que hace el trabajo lo contó directamente. El glosario no es una ficha y sigue su propia regla, que está en "Estados" de `metodo/control-documental.md`.
+9. Este modo nunca lleva una ficha a `borrador`: nadie que hace el trabajo lo contó directamente. El glosario no es una ficha: su estado sigue lo que indica "Estados" en `metodo/control-documental.md`.
 10. Lo que trata de un cambio que está en marcha no se desarrolla aquí. Se anota en "Temas para otra sesión" del registro, en una línea que empieza con `Cambio:`, y se retoma en `metodo/cambio-en-curso.md`.
-11. Los códigos se asignan desde la lista maestra, con los pasos de "Cómo se asigna un código" en `metodo/control-documental.md`.
+11. Los códigos se asignan desde la lista maestra, con los pasos de "Cómo se asigna un código" en `metodo/control-documental.md`. A la persona no se le dicen: cada documento se nombra por su título.
+12. Cada marcador se escribe una sola vez, en el documento donde vive el dato. En el registro de la sesión no se escriben marcadores.
 
 ## Etapa 1. Recibir y catalogar
 
@@ -45,13 +46,15 @@ Antes de recibir lo nuevo, leer `empresa/insumos/catalogo.md` y los catálogos d
 
 ### Qué se pregunta
 
-Una pregunta por mensaje, y solo lo que el material no dice por sí mismo:
+Pregunta de apertura: "¿Qué es este material? Sirve todo lo que se pueda contar: de dónde salió, de cuándo es y quiénes hablan."
 
-| Qué se busca | Pregunta de guía |
+Con la respuesta y con lo que el material muestra por sí mismo, como las fechas y los nombres, decir lo que se entendió y preguntar qué hay que corregir. Después se pregunta solo lo que falta, con una pregunta por mensaje:
+
+| Qué tiene que quedar | Pregunta, solo si no salió |
 |---|---|
 | Qué es | "¿Qué es este material?" |
 | Fechas | "¿De qué fechas es?" |
-| Quiénes participan | "¿Quiénes hablan ahí, y qué hace cada una de esas personas?" |
+| Quiénes participan | "¿Qué hace en la empresa cada una de las personas que hablan ahí?" |
 | Cómo llegó | "¿Cómo se obtuvo: lo exportó alguien que participa, lo reenviaron, lo anotó alguien?" |
 | Si lo saben | "¿Las personas que hablan ahí saben que se usa para este trabajo?" |
 
@@ -76,18 +79,19 @@ El material no se copia tal cual. Se guarda una copia que el agente prepara:
 | Una clave, un usuario de acceso o un dato bancario | `[dato omitido]` |
 | El nombre de un cliente o de otra persona de afuera que solo se menciona | Su rol: "un cliente", "un proveedor" |
 | Un mensaje personal, que no tiene que ver con el trabajo | `[mensaje personal omitido]` |
-| Un dato comercial | Lo que indica la fila "Datos comerciales" de `empresa/contexto.md` |
+| Un dato comercial que la fila "Datos comerciales" de `empresa/contexto.md` deja afuera, o sobre el que todavía no define nada | `[dato omitido]` |
 
 - Las personas de la empresa quedan con su nombre de pila.
 - Se filtra el texto completo, no solo las partes que se van a usar.
-- En el catálogo, estas copias llevan `guardado sin los datos personales de terceros`. La imagen que no se guardó lleva `no se guardó: contiene datos personales de terceros`, y su descripción lleva `transcripto por el agente, sin el original`.
+- En el catálogo, estas copias llevan `guardado sin los datos personales de terceros`. Si también se quitaron datos comerciales, se suma `guardado sin los datos comerciales que la empresa deja afuera`.
+- La imagen que no se guardó lleva `no se guardó: contiene datos personales de terceros`, y su descripción lleva `transcripto por el agente, sin el original`.
 
 ### Cómo se guarda y se cataloga
 
 - Todo va a `empresa/insumos/`, con el nombre `AAAA-MM-DD-descripcion-corta.extension`. La fecha es el día en que llegó.
 - Una entrega de varios archivos, como una conversación con sus adjuntos, va en una carpeta propia: `empresa/insumos/AAAA-MM-DD-descripcion-corta/`.
 - Hay un solo catálogo, `empresa/insumos/catalogo.md`. Lleva una fila por archivo. En "Archivo" va la ruta a partir de `insumos/`.
-- En "Qué es" van también las fechas que cubre el material. Por ejemplo: "Conversación del equipo de ventas, del AAAA-MM-DD al AAAA-MM-DD".
+- En "Fecha del material" van las fechas que cubre. Por ejemplo: "del AAAA-MM-DD al AAAA-MM-DD". Si no se saben, va `sin fecha`.
 - En "Proceso y paso" va `—`.
 - Los adjuntos quedan con su entrega. Si una ficha usa uno, lo enlaza desde "Documentos" con `../../insumos/` y su ruta.
 - Los adjuntos que no tienen que ver con el trabajo no se guardan ni se anotan.
@@ -95,7 +99,7 @@ El material no se copia tal cual. Se guarda una copia que el agente prepara:
 | Caso | Qué se hace |
 |---|---|
 | Un audio sin transcripción | Anotarlo en el catálogo con `sin transcribir` y pedir la transcripción a quien lo trajo, con la frase de "Pedir una transcripción". |
-| Una conversación con respuestas en audio | Se lee igual. En la copia, en el lugar de cada audio va `[audio sin transcribir]`, con su nombre original. En las notas de lectura y en la ficha, lo que depende de ese audio se marca `PENDIENTE: falta la transcripción de <archivo>`. No se deduce por el contexto. |
+| Una conversación con respuestas en audio | Se lee igual. En la copia, en el lugar de cada audio va `[audio sin transcribir]`, con su nombre original. En la ficha, lo que depende de ese audio se marca `PENDIENTE: falta la transcripción de <archivo>`. En las notas de lectura se nombra el audio, sin el marcador. No se deduce por el contexto. |
 | Llega la transcripción de un audio | Guardarla como texto, filtrada, con el tipo `transcripción`. En la fila del audio, cambiar `sin transcribir` por `transcripción en` y el nombre del archivo. Leerla con este mismo modo y reemplazar en las fichas cada `PENDIENTE: falta la transcripción` por lo que dice, con su fuente y `A CONFIRMAR`. |
 | Una imagen | Leerla y describirla: qué es y qué muestra del trabajo. Los datos personales de terceros que tenga no se transcriben. |
 | Una imagen que no se puede ver | Anotarla con `no revisado por el agente` y pedir a quien la trajo que cuente qué muestra. Lo que cuente es de segunda mano. |
@@ -112,7 +116,7 @@ Comparar cada persona del material con las hojas de `empresa/personas/`:
 | Es de la empresa, no tiene hoja, y el material lo trajo el responsable del programa | Preguntarle quién es y qué hace. Crear su hoja copiando `plantillas/persona.md`. En "Origen de la hoja" van el responsable del programa, el archivo y la fecha. |
 | Es de la empresa, no tiene hoja, y el material lo trajo otra persona | Crear una hoja provisional con lo que se sabe y con `A CONFIRMAR con <responsable del programa>`. |
 | Es de afuera de la empresa, como alguien de un proveedor | No lleva hoja. Su nombre de pila y su rol se anotan en el registro de la sesión. |
-| No se sabe quién es | No lleva hoja. Se anota en el registro `PENDIENTE: preguntar a <responsable del programa>`. |
+| No se sabe quién es | No lleva hoja. La pregunta por quién es se suma a "Preguntas preparadas" de la hoja del responsable del programa. |
 
 En toda hoja nueva, "Confirmada por la persona" queda en `no`. Lo que el material muestra del trabajo de esa persona lleva `A CONFIRMAR con <esa persona>`.
 
@@ -161,7 +165,7 @@ Se repasa un proceso por mensaje:
 - La persona confirma la lectura, no los hechos. Lo leído sigue `A CONFIRMAR`.
 - La excepción es lo que ella misma dijo en el material. Se le pregunta con la frase de "Lo que dijo quien lo trae". Si lo confirma, vale como su palabra directa y se escribe sin marcador. Si lo corrige, se escribe lo que cuenta ahora.
 - Lo que la persona agrega de su parte sobre el trabajo de otras es de segunda mano: también lleva `A CONFIRMAR con <esa persona>`.
-- Lo poco claro queda como `PENDIENTE: preguntar a <quién>`, con el nombre de quien lo dijo.
+- Lo poco claro se escribe en la etapa 4 como `PENDIENTE: preguntar a <quién>`, con el nombre de quien lo dijo, en la ficha donde iría el dato.
 
 Cerrar la etapa: resumir qué se va a escribir y en qué fichas. Preguntar "¿Es así?" y guardar.
 
@@ -176,7 +180,7 @@ Cada afirmación se escribe con esta forma:
 - `<quién>` es la persona que hace ese trabajo. Si no se sabe, el dueño del proceso. Si tampoco se sabe, el responsable del programa.
 - En la tabla de pasos, la fuente y el marcador van en la celda "Qué hace".
 - Lo que viene del material no reemplaza lo que una persona contó directamente. Se agrega.
-- Lo que quien trajo el material confirmó sobre lo que ella misma dijo se escribe sin marcador. En el historial figura como contado por ella, con la fecha de hoy.
+- Lo que quien trajo el material confirmó sobre lo que ella misma dijo se escribe sin marcador, con ella como fuente y con la fecha de hoy.
 
 Qué se hace según el estado de la ficha. Vale la primera fila que se cumple:
 
@@ -186,16 +190,17 @@ Qué se hace según el estado de la ficha. Vale la primera fila que se cumple:
 | Está `en curso` o en `borrador` | Se suma a lo escrito. El estado no cambia. |
 | Está `validado` | Se suma. Si lo nuevo cambia el sentido, vuelve a `borrador` en el bloque de control, en la lista maestra y en el mapa. |
 | Está `vigente` | No se toca lo escrito. Va una fila en "Cambios propuestos (sin aprobar)", con la fuente. En "Confirmó el dueño" va `no`. |
-| Está `obsoleto` | No se toca. Se anota en el registro `PENDIENTE: preguntar a <responsable del programa>`. |
+| Está `obsoleto` | No se toca. Lo que el material dice sobre ese proceso se suma como pregunta a "Preguntas preparadas" de la hoja del responsable del programa. |
 
 Además:
 
 - Si lo que dice el material no coincide con lo ya escrito, se dejan las dos versiones en un bloque `CONFLICTO`, con la forma que indica `metodo/reglas.md`. El agente no elige cuál es la correcta.
-- Un proceso que no está en el mapa recibe su código y su fila como indica "Un proceso que aparece en la conversación" en `metodo/entrevista.md`. En "Participantes" van las personas que el material muestra.
+- Un proceso que no está en el mapa recibe su código y su fila como indica "Un proceso que aparece en la conversación" en `metodo/entrevista.md`. El área se le pregunta a quien trajo el material. Si es el responsable del programa, también se le preguntan en el momento el dueño y la prioridad. En "Participantes" van las personas que el material muestra.
+- Un proceso que queda sin código, porque no se sabe su área, no tiene ficha. Lo leído sobre él no se escribe en esta etapa: se anota en "Temas para otra sesión" del registro, y sirve para preguntar cuando ese proceso se releve.
 - Si cambió la tabla de pasos, el diagrama se genera de nuevo, con las reglas de "Diagramas" en `metodo/control-documental.md`.
-- Cada término nuevo va al glosario con la segunda forma de su molde: con la fuente y `A CONFIRMAR con <quién>`. Si `empresa/glosario.md` todavía no existe, se crea copiando `plantillas/glosario.md`, en estado `en curso`, y se pone al día la fila `GL-GEN-001` de la lista maestra.
-- En la hoja de cada persona que el material muestra trabajando, se agrega el proceso en "Procesos en los que participa". "Su parte" lleva `A CONFIRMAR con <esa persona>`.
-- En el historial de cada documento que cambió va una fila. En "Quién lo contó" van el archivo y quién lo trajo.
+- Cada término nuevo va al glosario con la segunda forma de su molde: con la fuente y `A CONFIRMAR con <quién>`. Si `empresa/glosario.md` todavía no existe, se crea copiando `plantillas/glosario.md`, en estado `en curso`, y se pone al día la fila `GL-GEN-001` de la lista maestra. Si ya está `validado` o `vigente`, el término se suma como indica "Estados" en `metodo/control-documental.md`.
+- En la hoja de cada persona que el material muestra trabajando, se agrega el proceso en "Procesos en los que participa", con lo que hace en "Su parte". El marcador `A CONFIRMAR con <esa persona>` va una sola vez, en "De dónde sale cada dato" de esa hoja.
+- La fila del historial de cada documento que cambió se suma al cerrar la sesión, como indica "Cierre".
 
 Cerrar la etapa: resumir qué se escribió y en qué ficha. Preguntar "¿Es así?" y guardar.
 
@@ -203,8 +208,9 @@ Cerrar la etapa: resumir qué se escribió y en qué ficha. Preguntar "¿Es así
 
 1. Tomar cada `A CONFIRMAR con` y cada `PENDIENTE: preguntar a` que se escribió en la etapa 4.
 2. Convertir cada uno en una pregunta en palabras simples.
-3. Escribirla en "Preguntas preparadas" de la hoja de la persona nombrada, agrupada por proceso, con el lugar de donde sale.
-4. Ofrecer la lista para enviar, como indica la etapa 8 de `metodo/arranque.md`.
+3. Escribirla en "Preguntas preparadas" de la hoja de la persona nombrada, agrupada por proceso, con el lugar de donde sale. La pregunta nombra lo que falta: el marcador queda donde estaba.
+4. Lo marcado `PENDIENTE: preguntar a A DEFINIR` va a la hoja del responsable del programa, como pregunta sobre a quién hay que consultar.
+5. Ofrecer la lista para enviar, como indica la etapa 8 de `metodo/arranque.md`.
 
 - Las preguntas se responden después, en la entrevista de cada persona.
 - Si quien trajo el material aparece en él y quedó algo suyo sin confirmar, ofrecerle una entrevista.
@@ -214,18 +220,23 @@ Cerrar la etapa: contar cuántas preguntas quedaron y para quién. Preguntar "¿
 
 ## Cierre
 
+Los pasos 1 a 3 se dicen cuando se terminó la etapa 5. Los demás se hacen siempre que una sesión termina, también si se cortó antes.
+
 1. Decir qué se escribió y dónde: cuántas fichas se tocaron, cuáles se crearon y qué términos se sumaron.
 2. Decir qué falta confirmar y con quién.
 3. Decir qué material quedó esperando: audios sin transcripción, partes sin leer.
-4. Si en esta sesión se creó el glosario, pasarlo a `borrador`, en su bloque de control y en la lista maestra.
-5. Completar "Cómo terminó" en el registro, con su línea de subida.
-6. Hacer el guardado final y la subida, como indica "Al cerrar la sesión" en `metodo/guardado.md`.
-7. Agradecer el tiempo.
+4. Sumar una fila al historial de cada documento controlado que la sesión cambió. Va una sola fila por documento, también si la sesión lo creó. En "Quién lo contó" van el archivo y quién lo trajo.
+5. Si en esta sesión se creó el glosario, pasarlo a `borrador`, en su bloque de control y en la lista maestra.
+6. Completar "Cómo terminó" en el registro, con su línea de subida. En "Último resumen que confirmó la persona" va el de la última etapa cerrada.
+7. Hacer el guardado final y la subida, como indica "Al cerrar la sesión" en `metodo/guardado.md`.
+8. Agradecer el tiempo.
 
 ## El tiempo
 
 - Leer lleva tiempo y se hace en silencio. Antes de empezar la etapa 2, avisar con la frase de "Aviso de lectura".
 - Se corta al terminar una etapa. Si pasaron unos 25 minutos, ofrecer cortar con la frase de "Ofrecer cortar".
+- Si la persona elige seguir, no se vuelve a ofrecer hasta que pasen otros 25 minutos. Después de la etapa 5 no se ofrece: solo falta el cierre.
+- Antes de escribir en la etapa 4, avisar que lleva un rato, como indica la regla 9 de `metodo/reglas.md`.
 - Si la sesión se corta, la siguiente crea un registro nuevo, pone el anterior en "Sesión anterior" y sigue desde la primera etapa sin marcar.
 - Lo que ya se leyó no se lee de nuevo: lo dice `leído hasta` en el catálogo.
 
@@ -249,6 +260,8 @@ Los mensajes siguen el formato de `metodo/guardado.md`:
 `<nombre>` es el nombre de pila de quien trajo el material.
 
 ## Qué decir
+
+Las frases son modelos. Se dicen cada vez con otras palabras, como indica la regla 8 de `metodo/reglas.md`.
 
 | Situación | Frase |
 |---|---|

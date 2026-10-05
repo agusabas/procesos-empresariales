@@ -1,4 +1,4 @@
-> **Nota para el agente.** Este archivo es un recurso del método, no un molde: no se copia a `empresa/`. Reúne preguntas para las entrevistas de `metodo/entrevista.md`. No se lee en voz alta ni se recorre como un cuestionario: se elige lo que sirve, se adapta al proceso y a lo que la persona ya contó, y se hace una pregunta por mensaje. Las preguntas están en forma neutra. Se adaptan a la forma de trato, como indica la regla 8 de `metodo/reglas.md`.
+> **Nota para el agente.** Este archivo es un recurso del método, no un molde: no se copia a `empresa/`. Reúne preguntas para las entrevistas de `metodo/entrevista.md`. No se lee en voz alta ni se recorre como un cuestionario: se elige lo que sirve, se adapta al proceso y a lo que la persona ya contó, y se hace una pregunta por mensaje. Conviene abrir cada tema con una pregunta que la persona pueda responder a lo largo, y usar las demás solo para lo que falte. Las preguntas están en forma neutra. Se adaptan a la forma de trato, como indica la regla 8 de `metodo/reglas.md`.
 
 # Banco de preguntas
 
@@ -72,11 +72,11 @@ Repreguntas:
 
 - "Si llega incompleto, ¿qué se hace?"
 - "¿Cuál es el dato que falta más seguido?"
-- "¿Hay que ir a buscar algo a otro lado? ¿A dónde?"
+- "¿Hay que ir a buscar algo a otro lado?"
 
 ## Pasos
 
-- "¿Cómo fue el último caso, paso por paso? ¿Qué fue lo primero?"
+- "¿Cómo fue el último caso, paso por paso, desde lo primero que se hizo?"
 - "¿Y después?"
 - "¿En qué momento interviene otra persona?"
 - "¿Cómo se sabe que ya está terminado?"
@@ -91,7 +91,7 @@ Repreguntas:
 ## Con qué se hace
 
 - "¿Con qué se hace: un sistema, una planilla, un cuaderno, mensajes?"
-- "¿En qué pantalla o en qué planilla? ¿Cómo se llama?"
+- "¿Cómo se llama la pantalla o la planilla donde se hace?"
 - "¿Hay que pasar datos a mano de un lugar a otro?"
 
 Repreguntas:
@@ -108,7 +108,7 @@ Repreguntas:
 
 Repreguntas:
 
-- "¿Cuál fue el que más tardó? ¿Por qué?"
+- "¿Qué pasó con el que más tardó?"
 - "¿Qué es lo que más demora?"
 - "Con todo a mano desde el principio, ¿cuánto llevaría?"
 
@@ -120,16 +120,17 @@ Repreguntas:
 
 ## Reglas que se siguen
 
-- "¿En qué momento hay que decidir algo? ¿Qué se decide?"
+- "¿Qué decisiones hay que tomar a lo largo de este trabajo?"
 - "¿Qué se mira para decidir?"
 - "¿Hay alguna regla fija, del estilo 'si pasa tal cosa, se hace tal otra'?"
 - "¿Esa regla está escrita en algún lado, o se sabe de memoria?"
 
 Repreguntas:
 
-- "¿Hay un ejemplo de un caso al que se le dijo que sí y otro al que se le dijo que no? ¿Cuál fue la diferencia?"
+- "¿Qué diferencia hubo entre un caso al que se le dijo que sí y otro al que se le dijo que no?"
 - "¿Desde qué cantidad o desde qué importe cambia la decisión?"
-- "¿Quién puso esa regla? ¿Cambió alguna vez?"
+- "¿Quién puso esa regla?"
+- "¿Cambió alguna vez?"
 - "Si otra persona tuviera que decidirlo, ¿qué datos necesitaría?"
 
 ## Excepciones
@@ -147,7 +148,7 @@ Repreguntas:
 ## Qué registro queda
 
 - "Cuando termina, ¿dónde queda anotado que se hizo?"
-- "¿Se imprime o se archiva algo? ¿Dónde?"
+- "¿Se imprime o se archiva algo?"
 - "Si dentro de seis meses alguien pregunta por un caso, ¿de dónde se saca?"
 
 Repreguntas:
@@ -171,7 +172,8 @@ Repreguntas:
 ## Cómo se nota que va bien
 
 - "¿Cómo se nota que esto está saliendo bien?"
-- "¿Y cómo se nota cuando sale mal? ¿Quién avisa?"
+- "¿Y cómo se nota cuando sale mal?"
+- "¿Quién avisa cuando sale mal?"
 - "¿Se cuenta o se mide algo: cuánto tarda, cuántos quedan esperando, cuántos errores hay?"
 
 Repreguntas:
@@ -187,7 +189,8 @@ Repreguntas:
 
 Repreguntas:
 
-- "¿Pasó alguna vez? ¿Cómo se resolvió?"
+- "¿Pasó alguna vez?"
+- "¿Cómo se resolvió?"
 - "¿Quién se da cuenta primero?"
 
 Lo que sale de este grupo son hechos: qué puede fallar y qué se hace hoy. Va a "Qué puede salir mal".
@@ -201,7 +204,7 @@ Lo que sale de este grupo son hechos: qué puede fallar y qué se hace hoy. Va a
 Repreguntas:
 
 - "¿Qué se hace cuando pasa eso?"
-- "¿Se podría haber evitado? ¿Cómo?"
+- "¿Cómo se podría haber evitado?"
 - "Si se pudiera cambiar una sola cosa, ¿cuál sería?"
 
 Lo que sale de este grupo va a "Problemas e ideas". Nunca a "Cómo se hace hoy".

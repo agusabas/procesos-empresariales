@@ -1,4 +1,4 @@
-> **Nota para el agente.** Este molde se copia a `empresa/contexto.md` al cerrar la etapa 1 del arranque, como indica `metodo/arranque.md`. En la copia, cada comodín (lo que va entre `<` y `>`) se reemplaza junto con las comillas invertidas que lo rodean. Cada ayuda en cursiva se reemplaza por el contenido cuando se trabaja su etapa; hasta entonces queda como está. Lo que no se sabe se escribe `PENDIENTE: preguntar a <quién>`. Esta nota se borra de la copia. Las reglas de control están en `metodo/control-documental.md`.
+> **Nota para el agente.** Este molde se copia a `empresa/contexto.md` al cerrar la etapa 1 del arranque, como indica `metodo/arranque.md`. En la copia, cada comodín (lo que va entre `<` y `>`) se reemplaza junto con las comillas invertidas que lo rodean, y cada ayuda en cursiva se reemplaza por el contenido. Eso se hace cuando se trabaja la etapa de cada parte: los comodines y las ayudas de una etapa que todavía no se trabajó quedan como están. Lo que se preguntó y no se sabe se escribe `PENDIENTE: preguntar a <quién>`. Esta nota se borra de la copia. Las reglas de control están en `metodo/control-documental.md`.
 
 # Contexto de la empresa
 
@@ -12,13 +12,17 @@
 
 ## La empresa
 
+### Nombre
+
+_Cómo se llama la empresa._
+
 ### Qué hace
 
 _A qué se dedica, qué vende o qué servicio presta, y a qué tipo de clientes._
 
 ### Tamaño
 
-_Cuántas personas trabajan, más o menos, y cómo se reparten._
+_Cuántas personas trabajan, más o menos._
 
 ### Dónde funciona
 
@@ -41,7 +45,7 @@ _Qué quiere tener la empresa cuando el relevamiento esté hecho._
 | Período de revisión | `<cantidad>` meses |
 | Forma de trato | `<usted, tú o vos>` |
 | Datos que no se guardan | `<qué datos pidió la empresa que no queden escritos>` |
-| Datos comerciales | `<si se guardan precios, condiciones y datos de otras empresas, y cuáles>` |
+| Datos comerciales | `<qué datos comerciales se anotan y cuáles quedan afuera>` |
 | Qué se releva primero | `<con qué criterio se decide el orden>` |
 
 Los datos personales, las claves y los datos bancarios no se guardan nunca, diga lo que diga esta tabla.
@@ -80,4 +84,3 @@ Cada etapa se marca cuando la persona confirmó su resumen, con la fecha.
 
 | Versión | Fecha | Qué cambió | Quién lo contó | Quién aprobó |
 |---|---|---|---|---|
-| 0 | `<AAAA-MM-DD>` | Primera sesión del arranque | `<nombre>` | — |

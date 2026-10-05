@@ -1,4 +1,4 @@
-> **Nota para el agente.** Este molde se copia a `empresa/lista-maestra.md` la primera vez que hace falta asignar un código. Es un documento de trabajo: no lleva bloque de control. En la copia, cada comodín (lo que va entre `<` y `>`) se reemplaza junto con las comillas invertidas que lo rodean. Un plazo que todavía no se definió se escribe `PENDIENTE: preguntar a <responsable del programa>`. Esta nota se borra de la copia. Cómo se asigna un código y cómo se concilia esta lista está en `metodo/control-documental.md`.
+> **Nota para el agente.** Este molde se copia a `empresa/lista-maestra.md` la primera vez que hace falta asignar un código. Es un documento de trabajo: no lleva bloque de control. En la copia, cada comodín (lo que va entre `<` y `>`) se reemplaza junto con las comillas invertidas que lo rodean. Los plazos de la tabla "Registros" quedan como están hasta la etapa 3 del arranque, que es donde se preguntan. Si la empresa no fija ninguno, va "sin plazo fijo". Esta nota se borra de la copia. Cómo se asigna un código y cómo se concilia esta lista está en `metodo/control-documental.md`.
 
 # Lista maestra
 
@@ -23,5 +23,5 @@ Qué se guarda como registro, dónde y por cuánto tiempo. Un registro no se edi
 | Registro | Qué se guarda | Dónde | Por cuánto tiempo |
 |---|---|---|---|
 | Sesiones | El registro de cada conversación | `sesiones/` | `<plazo>` |
-| Insumos | El material recibido, sin los datos personales de terceros | `insumos/` | `<plazo>` |
+| Insumos | El material recibido, sin los datos que no se guardan | `insumos/` | `<plazo>` |
 | Adjuntos | Los archivos aportados durante las sesiones | `adjuntos/` | `<plazo>` |

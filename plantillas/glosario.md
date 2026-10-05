@@ -29,4 +29,3 @@ _Si el glosario ya está `vigente`, los términos nuevos no se escriben aquí: s
 
 | Versión | Fecha | Qué cambió | Quién lo contó | Quién aprobó |
 |---|---|---|---|---|
-| 0 | `<AAAA-MM-DD>` | Primeros términos | `<nombre>` | — |

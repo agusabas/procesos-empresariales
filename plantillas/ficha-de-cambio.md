@@ -97,4 +97,3 @@ Los registros de sesión de los que ya se tomó lo anotado sobre este cambio. No
 
 | Fecha | Qué pasó | Quién lo contó |
 |---|---|---|
-| `<AAAA-MM-DD>` | Se abrió el cambio | `<nombre>` |

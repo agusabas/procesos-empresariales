@@ -6,18 +6,19 @@
 
 Este catálogo dice qué es cada archivo de esta carpeta, de dónde vino y a qué corresponde, para poder entenderlo sin abrirlo.
 
-| Archivo | Qué es | Tipo | Proceso y paso | Quién lo aportó | Fecha | Nombre original | Observaciones |
-|---|---|---|---|---|---|---|---|
-| `<archivo>` | `<qué es, en una frase>` | `<tipo>` | `<proceso y paso>` | `<nombre>` | `<AAAA-MM-DD>` | `<nombre original>` | `<observaciones>` |
+| Archivo | Qué es | Tipo | Proceso y paso | Quién lo aportó | Fecha | Fecha del material | Nombre original | Observaciones |
+|---|---|---|---|---|---|---|---|---|
+| `<archivo>` | `<qué es, en una frase>` | `<tipo>` | `<proceso y paso>` | `<nombre>` | `<AAAA-MM-DD>` | `<fecha del material>` | `<nombre original>` | `<observaciones>` |
 
 ## Cómo leerlo
 
 - **Archivo:** el nombre con el que quedó guardado, con su carpeta si está dentro de una. `—` si el archivo no se copió a esta carpeta.
-- **Qué es:** si es una conversación, notas o correos, dice también las fechas que cubre.
+- **Qué es:** una frase que dice qué es el archivo.
 - **Tipo:** una sola de estas palabras: `instructivo`, `formulario`, `planilla`, `captura de pantalla`, `ejemplo`, `comprobante`, `conversación`, `nota`, `audio`, `transcripción`, `otro`.
 - **Proceso y paso:** el proceso, con el nombre del mapa, y el paso de su ficha al que corresponde el archivo. `—` si no corresponde a un solo proceso. La marca `PENDIENTE` si todavía no se sabe.
 - **Quién lo aportó:** el nombre de pila de quien lo acercó.
 - **Fecha:** el día en que llegó.
+- **Fecha del material:** de cuándo es el material. Si es una conversación, notas o correos, las fechas que cubre, de la primera a la última. `sin fecha` si no se sabe.
 - **Nombre original:** cómo se llamaba el archivo antes de guardarlo.
 
 En "Observaciones" se usan estas frases, tal cual, cuando corresponden:
@@ -31,5 +32,7 @@ En "Observaciones" se usan estas frases, tal cual, cuando corresponden:
 | `no revisado por el agente` | El formato no se pudo abrir. |
 | `transcripto por el agente, sin el original` | La persona lo dictó o lo pegó en la conversación. |
 | `guardado sin los datos personales de terceros` | Se guardó una versión en blanco o con esos datos tapados. |
+| `guardado sin los datos comerciales que la empresa deja afuera` | Se guardó una versión sin los datos comerciales que la empresa pidió no guardar, o que todavía no definió. |
 | `no se guardó: contiene datos personales de terceros` | El archivo no está en esta carpeta. Esta fila es su único rastro. |
+| `no se guardó: contiene datos comerciales que la empresa deja afuera` | El archivo no está en esta carpeta. Esta fila es su único rastro. |
 | `no se copió: pesa más de 10 MB` | El archivo sigue donde lo tiene la persona. |

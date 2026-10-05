@@ -46,4 +46,3 @@ _Lo que suele fallar, cómo se nota y qué se hace para resolverlo. Hechos, no j
 
 | Versión | Fecha | Qué cambió | Quién lo contó | Quién aprobó |
 |---|---|---|---|---|
-| 0 | `<AAAA-MM-DD>` | Primera sesión | `<nombre>` | — |

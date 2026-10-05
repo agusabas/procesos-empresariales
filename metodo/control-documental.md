@@ -43,7 +43,8 @@ El tipo de cada archivo sale de su lugar en `empresa/`:
 | `notas-para-el-metodo.md` | Documento de trabajo | No lleva |
 | `sesiones/`, `insumos/` y `adjuntos/` | Registro | No lleva |
 
-- Todo documento nuevo se crea copiando su molde de `plantillas/`. La nota inicial de cada molde dice a qué lugar de `empresa/` va la copia.
+- Todo documento nuevo se crea copiando su molde de `plantillas/`. La nota inicial de cada molde dice a qué lugar de `empresa/` va la copia. La única excepción es `empresa/notas-para-el-metodo.md`, que no tiene molde: su forma está en la regla 10 de `metodo/reglas.md`.
+- Un documento creado con una versión anterior de su molde no se rehace. Lo que le falta se completa la próxima vez que se toca ese documento.
 - El `catalogo.md` de `insumos/` y el de cada carpeta de `adjuntos/` son documentos de trabajo: se actualizan cada vez que llega un archivo.
 - Los formularios todavía no tienen lugar propio ni molde. Hasta que se definan, no se asignan códigos `FO`. Un formulario que aporta una persona se guarda como cualquier otro archivo aportado, en `empresa/adjuntos/`.
 
@@ -66,11 +67,11 @@ El código tiene la forma `TIPO-ÁREA-NNN`. Por ejemplo, `PR-VEN-001` es la prim
 
 1. Abrir `empresa/lista-maestra.md`. Si no existe, crearla copiando `plantillas/lista-maestra.md`.
 2. Comprobar que el documento no tiene ya un código: buscar su título y su ubicación en la lista.
-3. Definir el tipo y el área. Si el área no tiene letras en `empresa/contexto.md`, no inventarlas: anotar `PENDIENTE: preguntar a <responsable del programa>` y no asignar el código.
+3. Definir el tipo y el área. Si no se sabe de qué área es, o si el área no tiene letras en `empresa/contexto.md`, el código no se asigna y no se inventa nada. Un proceso en esa situación figura igual en el mapa, sin código, como indica "Mapa de procesos". Recibe su código cuando se sabe su área.
 4. Buscar en la lista todas las filas de ese tipo y esa área, también las que están `obsoleto`. Tomar el número más alto y sumar 1. Si no hay ninguna, el número es `001`.
 5. Agregar la fila a la lista, con estado `pendiente` y versión `0`. La fila se escribe antes que cualquier otra cosa.
-6. Escribir el código donde corresponde: en la fila del mapa de procesos, si es un proceso; en el nombre del archivo y en el bloque de control, cuando el archivo se crea.
-7. Guardar como indica `metodo/guardado.md`.
+6. Escribir el código donde corresponde: en la fila del mapa de procesos, si es un proceso; en el nombre del archivo y en el bloque de control, cuando el archivo se crea. Si el proceso ya figuraba en el mapa sin código, cambiar también el `—` por el código en las hojas de las personas que lo tienen anotado.
+7. El código queda guardado con el guardado del tema o de la etapa en curso. No lleva un guardado propio.
 
 El número se elige mirando la lista maestra. Nunca se eligen números contando los archivos de una carpeta. Las filas de la lista no se borran.
 
@@ -80,7 +81,7 @@ Puede pasar cuando dos computadoras asignan un código antes de ponerse al día.
 
 1. No borrar, no unir y no cambiar de código nada en el momento.
 2. Conserva el código el documento que se guardó primero. La fecha del primer guardado de cada archivo se ve con `git log --diff-filter=A --format=%as -- <ruta>`. Si no se puede saber cuál fue primero, lo decide el responsable del programa.
-3. Anotar en la columna "Observaciones" de las dos filas de la lista: `PENDIENTE: preguntar a <responsable del programa>`, con la aclaración "código duplicado". Si el otro documento no está `vigente`, anotarlo también junto a su código, en el bloque de control.
+3. Escribir el marcador una sola vez, en la columna "Observaciones" de la fila del documento que se guardó después: `PENDIENTE: preguntar a <responsable del programa>`, con la aclaración "código duplicado". Si no se sabe cuál fue primero, va en cualquiera de las dos filas. En "Observaciones" de la otra fila se anota, sin marcador, con qué documento se repite el código.
 4. Seguir con el trabajo. El duplicado se resuelve en la etapa de conciliación de `metodo/revision-y-aprobacion.md`.
 
 Para resolverlo:
@@ -126,7 +127,7 @@ Los estados avanzan en este orden: `pendiente`, `en curso`, `borrador`, `validad
 
 | Estado | Qué significa | Cuándo se pone |
 |---|---|---|
-| `pendiente` | Tiene código y fila en la lista maestra. Todavía no se relevó nada. El archivo puede no existir. | Al asignar el código. |
+| `pendiente` | Está identificado: figura en el mapa de procesos o en la lista maestra. Todavía no se relevó nada. Un proceso recibe su código cuando se sabe su área. El archivo puede no existir. | Al identificarlo. |
 | `en curso` | El relevamiento empezó y quedan temas sin conversar. | En la sesión de relevamiento que crea el archivo. |
 | `borrador` | Se conversaron todos los temas. Quedan marcadores abiertos, falta escuchar a otras personas que participan, o falta que el dueño del proceso confirme. | En la sesión de relevamiento que completa los temas. |
 | `validado` | El dueño del proceso confirmó que es así, y ningún marcador abierto cambia el sentido. | Solo en `metodo/revision-y-aprobacion.md`. |
@@ -136,7 +137,7 @@ Los estados avanzan en este orden: `pendiente`, `en curso`, `borrador`, `validad
 - Un marcador cambia el sentido cuando afecta quién hace algo, qué se hace, en qué orden, con qué regla o con qué excepción. No lo cambia cuando falta un detalle, como una duración exacta. Ante la duda, lo cambia.
 - Un documento `validado` vuelve a `borrador` si aparece un `PENDIENTE`, un `CONFLICTO` o un `A CONFIRMAR` que cambia el sentido.
 - Una ficha en `borrador` vuelve a `en curso` si una entrevista posterior queda con temas sin cerrar.
-- El glosario se crea en estado `en curso` y pasa a `borrador` al cerrar la sesión en la que se creó. Desde ahí sigue el camino de la revisión y la aprobación. Mientras no esté `vigente`, se le siguen sumando términos.
+- El glosario se crea en estado `en curso` y pasa a `borrador` al cerrar la sesión en la que se creó. Desde ahí sigue las reglas de cualquier documento, sin casos especiales: si está `validado` y se le suma un término, vuelve a `borrador`; si está `vigente`, el término nuevo va a "Cambios propuestos (sin aprobar)".
 - Un documento `vigente` no retrocede. Lo que cambia se anota como indica "Cambios en un documento vigente".
 - El estado se escribe en tres lugares: el bloque de control, la lista maestra y, si es una ficha, el mapa de procesos. Se cambian los tres en el mismo guardado.
 
@@ -144,8 +145,12 @@ Los estados avanzan en este orden: `pendiente`, `en curso`, `borrador`, `validad
 
 - La versión es un número entero: `0`, `1`, `2`.
 - Todo documento controlado termina con la sección `## Historial`, con estas columnas: `| Versión | Fecha | Qué cambió | Quién lo contó | Quién aprobó |`.
-- Cada sesión que cambia el documento suma una fila con la versión que tiene en ese momento, la fecha, qué se agregó y quién lo contó. En "Quién aprobó" va `—`.
+- Los moldes traen el historial sin filas. Las filas las suma siempre el modo que está trabajando.
+- Cada sesión que cambia el contenido de un documento le suma una fila al cerrarse. Va una sola fila por documento y por sesión, también en la sesión que lo crea.
+- Esa fila lleva la versión que el documento tiene en ese momento, la fecha, qué se agregó y quién lo contó. En "Quién aprobó" va `—`.
+- Poner al día las columnas "Estado", "Ficha" y "Prioridad" del mapa de procesos no cuenta como un cambio de contenido: no suma fila.
 - Cada aprobación suma una fila con la versión nueva y el nombre de pila de quien aprobó.
+- Validar, revisar sin cambios y dar de baja suman su propia fila en el momento, como indica `metodo/revision-y-aprobacion.md`.
 - Las filas del historial no se borran ni se reescriben.
 
 ## Aprobar: cuatro cosas juntas
@@ -202,7 +207,7 @@ Qué se hace con cada documento se decide en `metodo/revision-y-aprobacion.md`:
 
 - Es `empresa/lista-maestra.md` y se crea copiando `plantillas/lista-maestra.md`. Es un documento de trabajo.
 - Tiene una fila por cada documento controlado, con su código, título, tipo, área, estado, versión, fechas, quién elaboró, revisó y aprobó, ubicación y observaciones.
-- Tiene una tabla de registros: qué se guarda, dónde y por cuánto tiempo.
+- Tiene una tabla de registros: qué se guarda, dónde y por cuánto tiempo. Si la empresa no fija un plazo, va "sin plazo fijo".
 - La fuente de verdad es el bloque de control de cada documento. La lista se concilia contra los bloques en `metodo/revision-y-aprobacion.md`.
 - Cada vez que la lista cambia, se actualiza su línea "Última actualización".
 
@@ -219,7 +224,11 @@ Qué se hace con cada documento se decide en `metodo/revision-y-aprobacion.md`:
 
 - Sus columnas son: `| Código | Proceso | Área | Tipo | Dueño | Participantes | Estado | Prioridad | Ficha |`.
 - Es la lista oficial de nombres de procesos. Todos los demás archivos nombran cada proceso exactamente como figura en el mapa.
-- Para sumar un proceso, primero se le asigna el código y después se agrega su fila. Si el mapa está `vigente`, la fila va a "Cambios propuestos (sin aprobar)" hasta que se apruebe. El proceso se puede relevar mientras tanto.
+- Para sumar un proceso, se le asigna el código, si ya se sabe su área, y se agrega su fila. Si el mapa está `vigente`, la fila va a "Cambios propuestos (sin aprobar)" hasta que se apruebe. El proceso se puede relevar mientras tanto.
+- Un proceso del que todavía no se sabe el área figura en el mapa sin código: en "Código" va `—` y en "Área" va `PENDIENTE: preguntar a <quién>`. No tiene fila en la lista maestra hasta que recibe su código.
+- En "Participantes" van solo los nombres de pila. Lo que hace cada persona en el proceso, y su marcador, están en la hoja de esa persona.
+- En "Prioridad" va `P1`, `P2`, `P3` o `sin definir`.
+- Lo que no se sabe de un grupo entero, o de dónde empieza y dónde termina la cadena, va en la sección "Pendientes del mapa". Ahí va también un proceso que nombra el material y que nadie reconoció todavía: no lleva fila hasta que alguien lo confirme.
 
 ## Ramas: `borradores` y `main`
 
@@ -245,11 +254,13 @@ Un archivo puede llegar de tres maneras. Se ofrecen en este orden, y nunca se le
 
 Con el archivo a la vista:
 
-1. Revisar el archivo antes de guardarlo, como indica la regla 7 de `metodo/reglas.md`. Si tiene datos personales de terceros, no se guarda: pedir una versión en blanco o con esos datos tapados. Si es una conversación o una nota de otras personas, la copia sin esos datos la prepara el agente, como indica `metodo/material-de-terceros.md`.
+1. Revisar el archivo antes de guardarlo, como indica la regla 7 de `metodo/reglas.md`. Se miran dos cosas: los datos personales de terceros y los datos comerciales que la política de `empresa/contexto.md` deja afuera. Lo que esa política todavía no definió cuenta como dejado afuera hasta que se defina. Si el archivo tiene alguno de esos datos, no se guarda: pedir una versión en blanco o con esos datos tapados. Si es una conversación o una nota de otras personas, la copia sin esos datos la prepara el agente, como indica `metodo/material-de-terceros.md`.
 2. Darle este nombre: `AAAA-MM-DD-descripcion-corta.extension`. La fecha es el día en que llegó. Va en minúsculas, con guiones y sin acentos ni eñes.
 3. Copiarlo a su carpeta. El original no se mueve, no se cambia y no se borra. Una entrega de varios archivos va en una carpeta propia, con ese mismo formato de nombre.
 4. Anotarlo en el `catalogo.md` de esa carpeta. Si no existe, crearlo copiando `plantillas/catalogo-de-archivos.md`. Ese molde tiene la lista de tipos y las frases de "Observaciones".
 5. Anotarlo en el registro de la sesión, en "Documentos".
+
+El archivo queda guardado con el guardado del tema o de la etapa en la que llegó. Lleva un guardado propio solo si llega fuera de un tema o de una etapa.
 
 | Caso | Qué se hace |
 |---|---|
@@ -259,6 +270,8 @@ Con el archivo a la vista:
 | Un archivo de más de 10 MB | No copiarlo. Catalogarlo con `no se copió: pesa más de 10 MB`. |
 | No hay archivo, pero la persona lo dicta o lo pega en la conversación | Escribirlo en un archivo `.md` de la carpeta y catalogarlo con `transcripto por el agente, sin el original`. |
 | Tiene datos personales de terceros y no hay otra versión | No guardarlo. Catalogarlo con `no se guardó: contiene datos personales de terceros`. En el registro de la sesión va como `NO INCORPORADO`. |
+| Tiene datos comerciales que la empresa deja afuera y no hay otra versión | No guardarlo. Catalogarlo con `no se guardó: contiene datos comerciales que la empresa deja afuera`. En el registro de la sesión va como `NO INCORPORADO`. |
+| Llega una versión en blanco o con los datos tapados | Guardarla. Catalogarla con `guardado sin los datos personales de terceros`, con `guardado sin los datos comerciales que la empresa deja afuera`, o con las dos frases. |
 
 ## Diagramas
 
