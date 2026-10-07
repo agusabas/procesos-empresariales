@@ -1,0 +1,81 @@
+# La carpeta de la empresa
+
+En la plantilla esta carpeta está vacía: solo contiene este archivo. En el clon de una empresa, el agente la completa a medida que avanza el relevamiento. Todo lo que se sabe de la empresa vive en esta carpeta y en ningún otro lugar.
+
+Este archivo es también el esquema: indica qué va en cada lugar y cómo se nombra. Forma parte del método, así que en un clon no se edita.
+
+## Estructura
+
+```
+empresa/
+├── README.md
+├── contexto.md
+├── mapa-de-procesos.md
+├── lista-maestra.md
+├── glosario.md
+├── notas-para-el-metodo.md
+├── personas/
+│   └── <nombre>.md
+├── procesos/
+│   └── <area>/
+│       └── <codigo>-<slug>.md
+├── instructivos/
+│   └── <area>/
+│       └── <codigo>-<slug>.md
+├── sesiones/
+│   └── AAAA-MM-DD-<quien>-<tema>.md
+├── insumos/
+│   ├── catalogo.md
+│   ├── <archivo recibido>
+│   └── <entrega de varios archivos>/
+├── adjuntos/
+│   └── <area>/
+│       └── <proceso>/
+│           ├── catalogo.md
+│           └── <archivos aportados>
+└── cambios/
+    └── <slug>/
+        └── ficha-del-cambio.md
+```
+
+## Qué contiene cada lugar
+
+| Lugar | Qué contiene |
+|---|---|
+| `contexto.md` | La empresa, cómo se organiza el programa de relevamiento (roles, forma de trato, datos que no se guardan), las áreas con sus tres letras, los sistemas en uso y la lista de arranque. |
+| `mapa-de-procesos.md` | El inventario de los procesos de la empresa. Es la lista oficial de sus nombres. |
+| `lista-maestra.md` | La lista de todos los documentos. Un código se asigna solo desde aquí. También dice por cuánto tiempo se guarda cada registro. |
+| `glosario.md` | Una sola definición por cada término propio de la empresa. |
+| `notas-para-el-metodo.md` | Lo que faltó o no alcanzó en el método. Es una lista con fechas, con una nota por línea y sin datos de la empresa. Es el único archivo que no sale de un molde: su forma está en la regla 10 de `metodo/reglas.md`. |
+| `personas/<nombre>.md` | Una hoja por persona: rol, área, procesos en los que participa y preguntas preparadas para ella. |
+| `procesos/<area>/<codigo>-<slug>.md` | Una ficha por proceso: cómo se hace hoy. |
+| `instructivos/<area>/<codigo>-<slug>.md` | El paso a paso detallado de una tarea. |
+| `sesiones/AAAA-MM-DD-<quien>-<tema>.md` | El registro de cada conversación. |
+| `insumos/` | El material que ya existía o que produjeron otras personas, con su `catalogo.md`. Se guarda como llegó, salvo los datos que no se guardan, que se quitan antes de copiar: los datos personales de terceros y los datos comerciales que la empresa deja afuera. |
+| `adjuntos/<area>/<proceso>/` | Los archivos aportados durante las sesiones, con su `catalogo.md`. |
+| `cambios/<slug>/ficha-del-cambio.md` | Un cambio en curso que altera cómo se trabaja. |
+
+Qué tipo de archivo es cada lugar, y cómo se controla, está en `metodo/control-documental.md`.
+
+## Cómo se nombra
+
+Los nombres van en minúsculas, con guiones en lugar de espacios, sin acentos ni eñes. La única excepción es `<codigo>`, que se escribe tal como figura en la lista maestra.
+
+| Parte | Qué va |
+|---|---|
+| `<nombre>`, `<quien>` | El nombre de pila de la persona. Si dos personas comparten el nombre, se agrega el área: `<nombre>-<area>`. |
+| `<area>` | El nombre del área, como figura en `contexto.md`. Lo que es de toda la empresa usa `general`, también un proceso que no es de un área sola. |
+| `<codigo>` | El código del documento, asignado desde `lista-maestra.md`. |
+| `<slug>` | El nombre del proceso, del instructivo o del cambio. |
+| `<proceso>` | El mismo nombre que el archivo de la ficha del proceso, sin `.md`. |
+| `<tema>` | El proceso o el asunto de la conversación. En una entrevista, el nombre del archivo de la ficha, sin `.md`. En el seguimiento de un cambio, `cambio-<slug>`. |
+| Archivos de `insumos/` y de `adjuntos/` | `AAAA-MM-DD-descripcion-corta.extension`, con el día en que llegó. El nombre original queda en el `catalogo.md`. Una entrega de varios archivos va en una carpeta con ese mismo formato de nombre. |
+| `AAAA-MM-DD` | La fecha: año, mes y día. |
+
+## Reglas de esta carpeta
+
+- Cada archivo y cada carpeta se crean cuando hacen falta, no antes.
+- No se crean lugares que no estén en este esquema. Si hace falta uno, se anota en `notas-para-el-metodo.md`.
+- Los archivos guardados en `insumos/` no se modifican después. Su `catalogo.md` sí se pone al día. Lo único que se quita de un archivo, antes de copiarlo, son los datos que no se guardan.
+- Un registro de `sesiones/` no se edita una vez cerrado, salvo su línea de subida. Por eso en un registro no se escriben marcadores. Lo que falta sobre un archivo recibido se anota en su fila del catálogo.
+- En toda la carpeta valen las reglas de privacidad de `metodo/reglas.md`: no se guardan datos personales de terceros, ni los datos comerciales que la política de `contexto.md` deja afuera o todavía no definió.

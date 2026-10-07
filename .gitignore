@@ -1,0 +1,5 @@
+# Archivos de trabajo local y del sistema operativo que no forman parte de la plantilla
+.atl/
+odd/
+.DS_Store
+Thumbs.db
