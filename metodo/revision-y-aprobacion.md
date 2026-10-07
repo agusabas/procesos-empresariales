@@ -10,7 +10,7 @@ Antes de empezar, leer completo `metodo/control-documental.md`. Este archivo usa
 |---|---|---|
 | 1. Qué hay pendiente | Avisar las revisiones que vencen y contar lo que espera | Responsable del programa o quien aprueba |
 | 2. Qué cambió | Repasar lo nuevo desde la última revisión, por clases | Responsable del programa |
-| 3. Validar | Completar lo que le falta al mapa, hacer las preguntas pendientes de quien está presente y pasar a `validado` lo que confirmó el dueño del proceso | Responsable del programa |
+| 3. Validar | Completar lo que le falta al mapa, hacer las preguntas pendientes de quien está presente, confirmar los cambios propuestos que esperan al dueño, ofrecer la prueba de uso y pasar a `validado` lo que confirmó el dueño del proceso | Responsable del programa |
 | 4. Aprobar | Pasar a `vigente`, con las cuatro cosas juntas | Quien aprueba |
 | 5. Conciliar | Poner la lista maestra al día con los documentos | Responsable del programa |
 | 6. Revisión periódica | Volver a mirar los documentos que vencen | Responsable del programa y quien aprueba |
@@ -18,6 +18,7 @@ Antes de empezar, leer completo `metodo/control-documental.md`. Este archivo usa
 | 8. Cierre | Resumen final, paso a `main` y subida | Quien esté en la conversación |
 
 - Las etapas se hacen en este orden. Una etapa sin nada pendiente se saltea sin comentarla. La excepción es la etapa 4: si la persona vino a aprobar y no hay nada que se pueda aprobar, se le dice qué falta y de quién depende.
+- Si en la conversación está quien aprueba y no el responsable del programa, las etapas 2, 3 y 5 no se hacen. Al cerrar, se dice qué quedó esperando al responsable del programa.
 - Si la persona pide empezar por otra etapa, se empieza por esa.
 - Cada etapa se cierra igual: resumen de lo entendido, pregunta de confirmación y guardado. Es la regla 9 de `metodo/reglas.md`.
 
@@ -40,7 +41,8 @@ Al empezar, crear el registro copiando `plantillas/registro-de-sesion.md` a `emp
 
 - Qué se repasó, qué quedó aceptado y qué no.
 - Qué se validó.
-- Qué se aprobó, con las palabras textuales de quien aprobó.
+- Qué se aprobó, con las palabras textuales de quien aprobó, y el resumen o el texto que se leyó antes de cada aprobación.
+- Si quien aprueba se sumó a la conversación ya empezada, su nombre y desde qué momento habla.
 - Qué se dio de baja y por qué.
 - Qué quedó pendiente y para quién.
 - La línea de subida que indica `metodo/guardado.md`.
@@ -124,8 +126,10 @@ Primero se completa lo que se puede completar con la persona que está en la con
    | El dueño de un proceso que tiene `A DEFINIR` | Escribirlo en el mapa, en "Dueño" de la ficha, si existe, y en "Rol en el relevamiento" de la hoja de esa persona. |
    | La prioridad de un proceso que tiene `sin definir` | Escribirla en el mapa. |
 
-2. Las preguntas preparadas de su hoja que frenan los documentos en revisión. Se hacen de a una. La respuesta se escribe en el lugar de donde salió la pregunta, el marcador que la nombraba se cierra y la pregunta se marca con la fecha.
+2. Las preguntas preparadas de su hoja que frenan los documentos en revisión. Se hacen de a una. La respuesta se escribe en el lugar de donde salió la pregunta, el marcador que la nombraba se cierra y la pregunta se marca con la fecha. Si el documento está `vigente`, la respuesta sigue "Cambios en un documento vigente" en `metodo/control-documental.md`: en su lugar si no cambia el sentido, y como cambio propuesto si lo cambia.
 3. Lo marcado `PENDIENTE: preguntar a A DEFINIR` en esos documentos. Si está el responsable del programa, se le pregunta a quién hay que consultar.
+4. Las filas de "Cambios propuestos (sin aprobar)" que tienen `no` en "Confirmó el dueño". Si el dueño está en la conversación, se le pregunta si es así: si confirma, el `no` pasa a `sí` con la fecha, sin sumar otra fila; si corrige, se corrige la fila. Si el dueño no está, la pregunta queda en su hoja.
+5. La prueba de uso, una sola vez por documento. Si hay alguien que cubre ese trabajo cuando falta el dueño, ofrecer que esa persona lea la ficha o el instructivo y diga dónde tendría que preguntar. Si el responsable del programa acepta, queda como pregunta preparada en la hoja de esa persona: "leer `<título>` y decir dónde tendría que preguntar". Lo que esa persona señale después se anota como `PENDIENTE: preguntar a <dueño>`, como indica `metodo/entrevista.md`. No se le pregunta qué haría distinto: eso es otra versión, y va por la regla 3 de `metodo/reglas.md`.
 
 - Si la persona responde que no sabe, seguir los pasos de "Marcadores" en `metodo/reglas.md`.
 - Si el mapa está `vigente`, la prioridad se corrige igual. Lo demás va a "Cambios propuestos (sin aprobar)".
@@ -137,7 +141,7 @@ Para cada documento en `borrador`, comprobar las tres condiciones:
 
 | Condición | Cómo se comprueba |
 |---|---|
-| El dueño del proceso confirmó directamente que es así | Hay un registro en `empresa/sesiones/` donde lo confirma. |
+| El dueño del proceso confirmó directamente que es así | Hay un registro en `empresa/sesiones/` donde confirma la lectura del documento completo, con fecha igual o posterior a la última fila de contenido del historial. Vale también el registro de la sesión que recibió su confirmación por escrito, sobre una lectura completa que el agente le preparó, como indica la regla 4 de `metodo/reglas.md`. |
 | Ningún `PENDIENTE` ni `CONFLICTO` abierto cambia el sentido | Buscar los marcadores en el documento. |
 | Nada que cambie el sentido sigue `A CONFIRMAR` | Buscar el marcador en el documento. |
 
@@ -145,7 +149,8 @@ Si se cumplen las tres:
 
 1. Contar al responsable del programa qué documento queda confirmado y qué marcadores menores siguen abiertos.
 2. Preguntar si está de acuerdo.
-3. Escribir el estado `validado` en el bloque de control, en la lista maestra y en el mapa de procesos. Escribir en "Revisó" el nombre de pila del dueño del proceso. Sumar una fila al historial.
+3. Si no está de acuerdo con el contenido, vale la regla 8 de este modo: su versión va a un bloque `CONFLICTO`, el documento sigue en `borrador` y lo resuelve el dueño del proceso.
+4. Si está de acuerdo, escribir el estado `validado` en el bloque de control, en la lista maestra y en el mapa de procesos. Escribir en "Revisó" el nombre de pila del dueño del proceso. Sumar una fila al historial.
 
 Si falta alguna:
 
@@ -167,9 +172,11 @@ Esta etapa necesita a quien aprueba en la conversación. Si no está:
 
 Si la persona vino a aprobar, o pidió aprobar un documento, y no hay ninguno que se pueda aprobar, la etapa no se saltea en silencio. Decir la frase de "No se puede aprobar", con lo que le falta a cada documento y de quién depende.
 
+Si quien aprueba no es la persona identificada al empezar la conversación, pedirle su nombre de pila antes de la primera pregunta de aprobación. Anotar en el registro de la sesión su nombre y desde qué momento habla.
+
 Con quien aprueba, se trabaja cada documento `validado` y cada documento `vigente` con cambios propuestos que el dueño del proceso confirmó. Un documento por vez:
 
-1. Resumir en llano qué documento es, qué describe, qué cambia respecto de la versión anterior y qué marcadores menores siguen abiertos.
+1. Resumir en llano qué documento es, qué describe, qué cambia respecto de la versión anterior y qué marcadores menores siguen abiertos. Ofrecer una sola vez leer el texto: las partes que cambian, o el documento entero si es la primera aprobación. Si la persona no acepta, vale el resumen. Lo que se leyó, resumen o texto, queda en el registro de la sesión.
 2. Preguntar si el resumen es correcto.
 3. Preguntar la aprobación, sola en un mensaje: "¿Queda aprobado como versión oficial?"
 4. Tomar como aprobación solo una respuesta clara, como "sí, queda aprobado". Una duda, un silencio o un "después lo veo" no aprueban.
@@ -182,11 +189,12 @@ Con quien aprueba, se trabaja cada documento `validado` y cada documento `vigent
    | 3 | La próxima revisión pasa a ser la fecha de hoy más el período. |
    | 4 | La fila de la lista maestra queda al día. |
 
-6. Si el documento ya estaba `vigente`, pasar los cambios aprobados al cuerpo y quitar sus filas de "Cambios propuestos (sin aprobar)".
+6. Si el documento ya estaba `vigente`, copiar tal cual al cuerpo el texto aprobado de cada fila de "Cambios propuestos (sin aprobar)" y quitar esas filas. Solo el diagrama se genera de nuevo, si la tabla de pasos cambió.
 7. Releer el documento y la lista para comprobar que las cuatro cosas quedaron hechas. Solo entonces escribir "Vigente desde", "Aprobó" y el estado `vigente`, también en el mapa de procesos.
 8. Anotar en el registro de la sesión las palabras textuales de quien aprobó.
-9. Guardar. Va un guardado por cada documento aprobado.
-10. Confirmar con la frase de "Aprobado".
+9. Preguntar quién tiene que enterarse de que esta es la versión oficial y dónde la va a encontrar. Anotarlo en el registro de la sesión y ofrecer un resumen listo para enviar. Guardar el trabajo no avisa a nadie: avisar es tarea de quien aprueba.
+10. Guardar. Va un guardado por cada documento aprobado.
+11. Confirmar con la frase de "Aprobado".
 
 Si alguna de las cuatro cosas no se puede hacer, no se aprueba: deshacer lo escrito para ese documento con `git restore -- <rutas>` y decir la frase de "No se puede aprobar".
 
@@ -274,7 +282,7 @@ Pasa a `main` lo que quedó aceptado en la etapa 2 y todo documento que esta ses
 6. Unir de inmediato: `git merge --quiet -m "<mensaje>" main`. Este paso no se saltea nunca: sin él, la próxima revisión encuentra conflictos.
 7. Con servidor, subir una sola vez: `git push --quiet origin main borradores`.
 
-- Si un documento cambió de nombre o de lugar, traer la carpeta que lo contiene y no el archivo suelto.
+- Si un documento cambió de nombre o de lugar, traer solo el documento en su ruta nueva y quitar de `main` su ruta anterior: `git rm --quiet -- <ruta anterior>`. Lo mismo con su carpeta de `adjuntos/`. El resto de la carpeta no se trae. La ruta anterior está en el historial del documento y en "Observaciones" de su fila de la lista maestra.
 - `empresa/README.md` no se trae con `git restore`: es parte del método.
 - Si un paso falla, deshacer una unión que quedó a medias con `git merge --abort` y volver con `git switch --quiet borradores`. No insistir. Decir la frase de "No se pudo pasar lo revisado". Lo revisado sigue guardado en `borradores` y vuelve a aparecer en la próxima revisión.
 - Si la falla ocurre con archivos ya traídos a `main` y todavía sin guardar, no cambiar de rama ni escribir nada más. Decir la misma frase y terminar ahí.
@@ -311,6 +319,8 @@ Las frases son modelos. Se dicen cada vez con otras palabras, como indica la reg
 | Aprobación contada por otra persona | "Lo anoto. Para dejarlo como versión oficial necesito que `<nombre>` lo diga aquí." |
 | Pedir la aprobación | "¿Queda aprobado como versión oficial?" |
 | No se puede aprobar | "Todavía no lo puedo dejar como versión oficial. Falta `<qué falta>`, y depende de `<quién>`." |
+| Leer antes de aprobar | "¿Leemos lo que cambia, o alcanza con el resumen?" |
+| Quién tiene que enterarse | "¿Quién tiene que saber que esta es la versión oficial, y dónde la va a buscar?" |
 | Aprobado | "Listo. Quedó como versión oficial número `<n>`. Toca volver a mirarlo el `<fecha>`." |
 | Dar de baja | "¿Queda dado de baja?" |
 | No se pudo pasar lo revisado | "Lo que repasamos quedó guardado, pero no pude dejarlo junto con lo ya revisado. Conviene pedir ayuda a quien preparó esta carpeta." |
