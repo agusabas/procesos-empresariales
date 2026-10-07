@@ -28,7 +28,7 @@ _Quién responde por que esto salga bien, con nombre de pila y rol. Quién lo cu
 
 ### Participantes
 
-_Quiénes más intervienen, con nombre de pila y rol, y en qué parte._
+_Quiénes más intervienen, con nombre de pila y rol, y en qué parte. Aquí y en "Dueño" van los nombres; en la tabla de pasos va el rol._
 
 ### Qué lo pone en marcha
 
@@ -40,7 +40,7 @@ _Lo que hay que tener antes de empezar: datos, documentos, autorizaciones. Quié
 
 ### Pasos
 
-_Una fila por paso, en el orden en que se hacen. Un paso termina cuando cambia quién lo hace, cuando se decide algo o cuando queda algo hecho. Si un paso lo hacen dos sectores, va en dos filas. En "Con qué" va el sistema, la planilla o el papel que se usa hoy. Si en el paso se copian datos de otro lugar, "Con qué" dice de dónde: `<sistema o planilla>`, copiado de `<origen>`. "Cuánto tarda" es el tiempo de trabajo del paso, en minutos, horas o días. Un paso que se hace solo en algunos casos dice cuándo y, si se sabe, en cuántos de cada diez._
+_Una fila por paso, en el orden en que se hacen. Un paso termina cuando cambia quién lo hace, cuando se decide algo o cuando queda algo hecho. Si un paso lo hacen dos sectores, va en dos filas. En "Quién" va el rol o el sector, como lo dice la empresa: "quien atiende el mostrador", "Administración". Nunca un nombre de pila: los nombres van en "Participantes", en el mapa y en las hojas. En "Con qué" va el sistema, la planilla o el papel que se usa hoy. Si en el paso se copian datos de otro lugar, "Con qué" dice de dónde: `<sistema o planilla>`, copiado de `<origen>`. "Cuánto tarda" es el tiempo de trabajo del paso, en minutos, horas o días. Un paso que se hace solo en algunos casos dice cuándo y, si se sabe, en cuántos de cada diez._
 
 | Paso | Quién | Qué hace | Con qué (sistema/planilla) | Cuánto tarda |
 |---|---|---|---|---|
@@ -78,7 +78,11 @@ flowchart TD
 
 ### Qué queda hecho al terminar
 
-_Qué queda hecho cuando el trabajo termina y a quién le llega. Si lo sigue otro proceso del mapa, nombrarlo como figura ahí._
+_Qué queda hecho cuando el trabajo termina y a quién le llega._
+
+Sigue en: `<proceso, como figura en el mapa, o 'termina acá'>`. Espera hasta que lo toman: `<tiempo>`.
+
+Plazo prometido a quien lo pide: `<plazo, o 'sin plazo prometido'>`.
 
 ### Reglas que se siguen
 
@@ -86,7 +90,7 @@ _Los criterios que se aplican para decidir. Una regla por renglón. Si se sabe, 
 
 ### Excepciones
 
-_Los casos que se salen de lo habitual, qué se hace en cada uno, quién lo autoriza y cada cuánto pasa._
+_Los casos que se salen de lo habitual, qué se hace en cada uno, quién lo autoriza y cada cuánto pasa. Si se sabe, en qué paso pasa: el número y qué hace, como en la tabla._
 
 ### Qué registro queda
 
@@ -102,7 +106,7 @@ _Cómo se nota hoy que esto sale bien o mal. Si hoy no se mide, decirlo. Según 
 
 ### Qué puede salir mal
 
-_Lo que puede fallar, qué consecuencia tiene y qué se hace hoy para evitarlo o para resolverlo._
+_Lo que puede fallar, qué consecuencia tiene y qué se hace hoy para evitarlo o para resolverlo. Si se sabe, en qué paso pasa: el número y qué hace, como en la tabla. Si el trabajo lo necesita, los cuidados para las personas y los equipos._
 
 ## Documentos
 

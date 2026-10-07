@@ -128,6 +128,11 @@ Repreguntas:
 - "¿A quién le llega?"
 - "¿Cómo se entera esa persona de que ya está listo?"
 - "¿Quién sigue con eso después? ¿Es parte de otro trabajo?"
+- "¿Para cuándo se le promete a quien lo pidió?"
+
+Si sigue otro trabajo:
+
+- "¿Cuánto suele pasar hasta que lo toman?"
 
 ## Reglas que se siguen
 
@@ -204,8 +209,13 @@ Repreguntas:
 - "¿Cuándo fue la última vez que pasó?"
 - "¿Cómo se resolvió?"
 - "¿Quién se da cuenta primero?"
+- "¿En qué parte del trabajo pasa eso?"
 
-Lo que sale de este grupo son hechos: qué puede fallar y qué se hace hoy. Va a "Qué puede salir mal".
+Si el trabajo es con máquinas, mercadería, vehículos o productos que pueden hacer daño:
+
+- "¿Qué cuidado hay que tener para no lastimarse ni romper nada?"
+
+Lo que sale de este grupo son hechos: qué puede fallar, qué cuidados hay y qué se hace hoy. Va a "Qué puede salir mal".
 
 ## Problemas e ideas
 

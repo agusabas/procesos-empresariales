@@ -168,7 +168,7 @@ Cuando la persona acepta:
 - Si critica a alguien, se anota el hecho que afecta al trabajo, no el juicio.
 - Si cuenta algo de otro proceso, anotarlo en "Temas para otra sesión" del registro y volver al tema con la frase de "Volver al tema".
 - Un cambio que ya está decidido o en marcha no es una idea, ni es lo que se hace hoy. Se anota en "Temas para otra sesión", en una línea que empieza con `Cambio:`. Lo retoma el responsable del programa, con `metodo/cambio-en-curso.md`.
-- Si aparece una palabra propia de la empresa que no está en el glosario, preguntar qué significa y agregarla. Si `empresa/glosario.md` todavía no existe, se crea copiando `plantillas/glosario.md`, en estado `en curso`, y se pone al día la fila `GL-GEN-001` de la lista maestra. Si ya está `validado` o `vigente`, el término se suma como indica "Estados" en `metodo/control-documental.md`.
+- Si aparece una palabra propia de la empresa que no está en el glosario, preguntar qué significa y agregarla. Si `empresa/glosario.md` todavía no existe, se crea copiando `plantillas/glosario.md`, en estado `en curso`, y se pone al día la fila `GL-GEN-001` de la lista maestra. Si ya está `validado` o `vigente`, el término se suma como indica "Estados" en `metodo/control-documental.md`. Un rol que la empresa nombra de dos formas se fija en el glosario con una sola.
 - No apurar.
 
 ### Cuando la respuesta es vaga
@@ -222,6 +222,8 @@ Los pasos 1 a 3 se saltean cuando lo entendido en el tema ya se le mostró enter
 - Si la persona tiene que irse en medio de un tema, escribir lo que alcanzó a contar, dejar el tema sin marcar y cerrar la sesión.
 
 ## Escribir la ficha
+
+- En la tabla de pasos, "Quién" lleva el rol o el sector como lo dice la empresa. El nombre de pila va a "Participantes", al mapa y a la hoja de esa persona.
 
 ### La primera vez
 
