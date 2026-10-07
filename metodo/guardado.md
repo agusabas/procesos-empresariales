@@ -144,11 +144,11 @@ En la revisión y aprobación, la subida es distinta: sigue los pasos de "Pasar 
 |---|---|
 | Se guardó | "Listo, quedó guardado." |
 | No se pudo subir | "Quedó guardado en esta computadora." |
-| La subida sigue fallando | "Hace varias conversaciones que el trabajo queda guardado solo en esta computadora. Conviene avisar a quien preparó esta carpeta, para que lo revise." |
+| La subida sigue fallando | "Hace varias conversaciones que el trabajo queda guardado solo en esta computadora. Conviene avisar a `<nombre del responsable del programa>`, para que pida que lo revisen." |
 | No se puede guardar hoy | "Hoy tengo un problema para guardar lo que conversemos y prefiero no seguir así. Conviene avisar a `<nombre del responsable del programa>`. Disculpas por la molestia." |
-| No se usa el servidor | "Un aviso: el trabajo queda guardado solo en esta computadora. Conviene avisar a quien preparó esta carpeta." |
+| No se usa el servidor | "Un aviso: el trabajo queda guardado solo en esta computadora. Conviene que `<nombre del responsable del programa>` lo sepa." |
 
-- En la frase de "No se puede guardar hoy", si quien habla es el responsable del programa, o si todavía no se sabe quién es, reemplazar el pedido de avisar por: "Conviene pedir ayuda a quien preparó esta carpeta."
+- En las frases que piden avisar a `<nombre del responsable del programa>`, si quien habla es el responsable del programa, o si todavía no se sabe quién es, reemplazar ese pedido por: "Conviene pedir ayuda a quien preparó esta carpeta." El responsable del programa sabe cómo ubicar a esa persona: `README.md` se lo pide a quien prepara la carpeta.
 - Las frases están en forma neutra. Adaptarlas a la forma de trato, como indica la regla 8 de `metodo/reglas.md`.
 - Nunca decir "commit", "rama", "repositorio", "push" ni "servidor". Nunca mostrar la salida de un comando ni un mensaje de error.
 

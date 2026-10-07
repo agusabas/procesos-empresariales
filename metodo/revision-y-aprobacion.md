@@ -323,6 +323,6 @@ Las frases son modelos. Se dicen cada vez con otras palabras, como indica la reg
 | Quién tiene que enterarse | "¿Quién tiene que saber que esta es la versión oficial, y dónde la va a buscar?" |
 | Aprobado | "Listo. Quedó como versión oficial número `<n>`. Toca volver a mirarlo el `<fecha>`." |
 | Dar de baja | "¿Queda dado de baja?" |
-| No se pudo pasar lo revisado | "Lo que repasamos quedó guardado, pero no pude dejarlo junto con lo ya revisado. Conviene pedir ayuda a quien preparó esta carpeta." |
+| No se pudo pasar lo revisado | "Lo que repasamos quedó guardado, pero no pude dejarlo junto con lo ya revisado. Conviene pedir ayuda a quien preparó esta carpeta. Si hace falta, `<nombre del responsable del programa>` sabe cómo ubicarlo." |
 
 Las frases están en forma neutra. Adaptarlas a la forma de trato, como indica la regla 8 de `metodo/reglas.md`.

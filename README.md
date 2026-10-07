@@ -25,13 +25,16 @@ Hace falta tener instalado `git` y contar con un agente de IA que lea el archivo
    La última línea deja anotado dónde está la plantilla con el nombre `plantilla`. Así el clon puede recibir mejoras del método, y el trabajo de la empresa nunca se sube a la plantilla.
 
 2. Abrir esa carpeta con el agente de IA.
-3. Saludar. Con un "Hola" alcanza: el agente lee sus instrucciones y dice cómo seguir.
+3. Permitir al agente, sin que pregunte cada vez, los comandos de `git` que usan `metodo/guardado.md` y `metodo/revision-y-aprobacion.md`, y la escritura dentro de `empresa/`. Para todo lo demás, que siga preguntando. Cada herramienta lo configura de una forma distinta. Sin este paso, el agente pide permiso en cada guardado.
+4. Saludar. Con un "Hola" alcanza: el agente lee sus instrucciones y dice cómo seguir.
 
 Cada empresa trabaja en su propio clon. La plantilla no guarda datos de ninguna empresa, y el clon de una empresa no debe subirse a la plantilla ni a un lugar público.
 
+Quien prepara la carpeta le dice a la persona que conduce el trabajo cómo ubicarlo. Si algo del guardado falla, el agente va a pedir su ayuda.
+
 ## Cómo tener una copia en un servidor
 
-Este paso es opcional. Sin él, todo el trabajo queda guardado solo en la computadora donde se conversa con el agente.
+Este paso no es obligatorio, pero conviene hacerlo: sin él, todo el trabajo queda guardado solo en la computadora donde se conversa con el agente.
 
 Para tener además una copia en un servidor privado de la empresa, quien preparó el clon lo conecta una sola vez:
 
