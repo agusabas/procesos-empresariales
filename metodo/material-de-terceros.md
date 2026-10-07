@@ -23,13 +23,13 @@ Cada etapa se cierra igual: resumen de lo entendido, pregunta de confirmación y
 
 1. El material lo trae, por lo general, el responsable del programa. Lo puede traer cualquier persona con hoja, y las reglas son las mismas.
 2. Todo lo que se escribe a partir del material lleva su fuente y `A CONFIRMAR con <quién>`.
-3. Hay dos excepciones, las de la regla 4 de `metodo/reglas.md`: lo que dijo en el material la misma persona que lo trae, y lo que el material dice sobre el trabajo de esa persona. Se le pregunta en el momento. Si lo confirma, vale como su palabra directa y no lleva marcador.
+3. Hay tres excepciones, las de la regla 4 de `metodo/reglas.md`. Dos valen con la persona que trae el material: lo que ella misma dijo en el material, y lo que el material dice sobre su trabajo. Se le pregunta en el momento. Si lo confirma, vale como su palabra directa y no lleva marcador. La tercera es la respuesta escrita de una persona a sus propias preguntas preparadas: se escribe como indica "Respuestas escritas a preguntas preparadas".
 4. Quien trae el material confirma la lectura, no los hechos.
 5. Nada se copia a `empresa/` antes de quitarle los datos personales de terceros y los datos comerciales que la empresa deja afuera.
 6. El original no se mueve, no se cambia y no se borra.
 7. Lo que dice un audio nunca se adivina ni se completa por el contexto.
 8. Las críticas a personas no se anotan. Se anota el hecho que afecta al trabajo.
-9. Este modo nunca lleva una ficha a `borrador`: nadie que hace el trabajo lo contó directamente. El glosario no es una ficha: su estado sigue lo que indica "Estados" en `metodo/control-documental.md`.
+9. Este modo no lleva una ficha a `borrador`: nadie que hace el trabajo lo contó directamente. La única excepción es la confirmación escrita de la lectura completa por el dueño del proceso, como indica "Respuestas escritas a preguntas preparadas". El glosario no es una ficha: su estado sigue lo que indica "Estados" en `metodo/control-documental.md`.
 10. Lo que trata de un cambio que está en marcha no se desarrolla aquí. Se anota en "Temas para otra sesión" del registro, en una línea que empieza con `Cambio:`, y se retoma en `metodo/cambio-en-curso.md`.
 11. Los códigos se asignan desde la lista maestra, con los pasos de "Cómo se asigna un código" en `metodo/control-documental.md`. A la persona no se le dicen: cada documento se nombra por su título.
 12. Cada marcador se escribe una sola vez, en el documento donde vive el dato. Lo que falta sobre un archivo va en su fila del catálogo. En el registro de la sesión no se escriben marcadores.
@@ -201,7 +201,7 @@ Qué se hace según el estado de la ficha. Vale la primera fila que se cumple:
 | No existe | Crearla como indica "La primera vez" en `metodo/entrevista.md`. Queda `en curso`. |
 | Está `en curso` o en `borrador` | Se suma a lo escrito. El estado no cambia. |
 | Está `validado` | Se suma. Si lo nuevo cambia el sentido, vuelve a `borrador` en el bloque de control, en la lista maestra y en el mapa. |
-| Está `vigente` | No se toca lo escrito. Va una fila en "Cambios propuestos (sin aprobar)", con la fuente. En "Confirmó el dueño" va `no`. |
+| Está `vigente` | No se toca el contenido aprobado. Lo que cambia va en una fila de "Cambios propuestos (sin aprobar)", con la fuente y el texto que va a quedar. En "Confirmó el dueño" va `no`. Los problemas van a "Problemas e ideas", sin aprobación, como indica "Cambios en un documento vigente" en `metodo/control-documental.md`. |
 | Está `obsoleto` | No se toca. Lo que el material dice sobre ese proceso se suma como pregunta a "Preguntas preparadas" de la hoja del responsable del programa. |
 
 Además:
@@ -219,11 +219,23 @@ Además:
 
 Cerrar la etapa: decir qué se escribió y en qué ficha, y guardar. Se pregunta "¿Es así?" solo si se escribió algo distinto de lo acordado al cerrar la etapa 3.
 
+### Respuestas escritas a preguntas preparadas
+
+Es el material que vuelve cuando una persona recibe sus preguntas por escrito, como indica la etapa 8 de `metodo/arranque.md`, y las responde ella misma. Se recibe, se cataloga y se lee como cualquier otro material. En "Qué es" del catálogo va que son las respuestas de esa persona a sus preguntas preparadas. Lo que cambia es cómo se escribe:
+
+1. Comprobar en su hoja que las preguntas figuran como enviadas y que quien responde es la persona nombrada. Si otra persona respondió en su nombre, es material común: lleva `A CONFIRMAR con <la persona nombrada>`.
+2. Lo que responde sobre su propio trabajo vale como su palabra directa. Se escribe con su fuente, `(fuente: <nombre>, <archivo>, <AAAA-MM-DD>)`, y sin marcador. Cierra los marcadores que la nombran sobre ese punto, como indica "Marcadores" en `metodo/reglas.md`. Si el documento está `vigente`, la respuesta sigue "Cambios en un documento vigente" en `metodo/control-documental.md`.
+3. Lo que responde sobre el trabajo de otras personas sigue `A CONFIRMAR con <esa otra persona>`.
+4. Si responde que no sabe, el marcador sigue abierto y se siguen los pasos de "Marcadores" en `metodo/reglas.md`. Como la persona no está en la conversación, la pregunta por a quién consultar va a la hoja del responsable del programa.
+5. En su hoja, marcar cada pregunta respondida con la fecha de la respuesta y el archivo.
+6. Si la respuesta confirma la lectura de un documento completo que se le envió, anotarlo en "Cómo terminó" del registro de esta sesión, con sus palabras. Es lo que la revisión necesita para validar, como indica "Las tres condiciones" en `metodo/revision-y-aprobacion.md`.
+7. Si quien confirma esa lectura es el dueño del proceso y la ficha tiene todas sus partes escritas, la ficha pasa a `borrador` en el bloque de control, en la lista maestra y en el mapa. Es la única vez que este modo lleva una ficha a `borrador`.
+
 ## Etapa 5. Preguntas para las personas
 
-1. Tomar cada `A CONFIRMAR con` y cada `PENDIENTE: preguntar a` que se escribió en la etapa 4, y los que quedaron en las filas del catálogo en la etapa 1.
+1. Tomar cada `A CONFIRMAR con`, cada `PENDIENTE: preguntar a` y cada bloque `CONFLICTO` que se escribió en la etapa 4, y los marcadores que quedaron en las filas del catálogo en la etapa 1.
 2. Convertir cada uno en una pregunta en palabras simples.
-3. Escribirla en "Preguntas preparadas" de la hoja de la persona nombrada, agrupada por proceso, con el lugar de donde sale. La pregunta nombra lo que falta: el marcador queda donde estaba.
+3. Escribirla en "Preguntas preparadas" de la hoja de la persona nombrada, agrupada por proceso, con el lugar de donde sale. De un `CONFLICTO` sale una pregunta para quien lo resuelve, que figura en su bloque. La pregunta nombra lo que falta: el marcador queda donde estaba.
 4. Lo marcado `PENDIENTE: preguntar a A DEFINIR` va a la hoja del responsable del programa, como pregunta sobre a quién hay que consultar.
 5. Ofrecer la lista para enviar, como indica la etapa 8 de `metodo/arranque.md`.
 

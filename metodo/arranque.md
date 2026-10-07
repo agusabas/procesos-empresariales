@@ -10,7 +10,7 @@ Funciona aunque en `empresa/` no haya nada más que `README.md`. Antes de empeza
 |---|---|---|---|
 | 1. Quién habla y qué va a pasar | Quién conduce el relevamiento | `contexto.md`, `lista-maestra.md` y el registro de la sesión | 5 |
 | 2. La empresa | Nombre, qué hace, tamaño, lugares, por qué ahora y qué se espera | "La empresa", en `contexto.md` | 10 a 15 |
-| 3. Cómo se organiza el relevamiento | Quién aprueba, cada cuánto se revisa, forma de trato, datos que no se guardan y por cuánto tiempo se guardan los registros | "Cómo se organiza el relevamiento", en `contexto.md`, y "Registros", en `lista-maestra.md` | 10 |
+| 3. Cómo se organiza el relevamiento | Quién aprueba, cada cuánto se revisa, forma de trato, datos que no se guardan y plazo mínimo de guarda de los registros | "Cómo se organiza el relevamiento", en `contexto.md`, y "Registros", en `lista-maestra.md` | 10 |
 | 4. Qué hay ya escrito | El material que ya existe | `insumos/` y su `catalogo.md` | 5 sin material; 15 o más con material |
 | 5. Áreas y sistemas | Las áreas con sus tres letras, los sistemas y las herramientas | "Áreas" y "Sistemas y herramientas", en `contexto.md` | 10 a 15 |
 | 6. Personas | Quién trabaja en cada área y de qué se ocupa | Una hoja por persona, en `personas/` | 10 a 20 |
@@ -135,13 +135,13 @@ En esta etapa cada dato es una decisión. Se pregunta de a una:
 | Forma de trato | "¿Cómo conviene tratar a las personas en estas conversaciones: de usted, de tú o de vos?" |
 | Datos que no se guardan | "¿Hay algún dato que la empresa prefiera que no quede escrito?" |
 | Datos comerciales | "¿Qué datos comerciales conviene dejar afuera de lo que se anota?" |
-| Plazo de los registros | "¿Por cuánto tiempo hay que guardar lo anotado en estas conversaciones y los archivos que se reciban? Si no hay un plazo, se guardan sin plazo fijo." |
+| Plazo mínimo de los registros | "¿Hay algún plazo mínimo para conservar lo anotado en estas conversaciones y los archivos que se reciban? Lo escrito se conserva siempre." |
 
 - Antes de preguntar por los datos, contar en una frase lo que nunca se guarda: datos personales, claves y datos bancarios.
 - La pregunta por los datos comerciales es abierta: no se le da una lista para elegir. Si la persona pregunta qué son, dar ejemplos, como los precios, las condiciones o los datos de otras empresas. Con la respuesta, decir qué se anota y qué queda afuera, y pedir que lo confirme.
 - Quien aprueba puede ser la misma persona que conduce.
 - Si no se define un período de revisión, son 12 meses.
-- Si no se define un plazo para los registros, va "sin plazo fijo". El plazo se escribe en las tres filas de la tabla "Registros" de `empresa/lista-maestra.md`.
+- Si no se define un plazo mínimo para los registros, va "sin plazo fijo". El plazo se escribe en la columna "Plazo mínimo" de las tres filas de la tabla "Registros" de `empresa/lista-maestra.md`. Es un mínimo, no una fecha de borrado: el método conserva todo lo escrito.
 - Lo demás se escribe en "Cómo se organiza el relevamiento", en `empresa/contexto.md`.
 - Desde el cierre de esta etapa se usa la forma de trato elegida.
 
@@ -296,9 +296,9 @@ Volver al catálogo de `empresa/insumos/`, ahora que el mapa existe:
 
 Preguntas preparadas:
 
-1. Buscar cada `PENDIENTE: preguntar a` y cada `A CONFIRMAR con` en `empresa/`. La búsqueda deja afuera los registros de `empresa/sesiones/` y los archivos guardados en `empresa/insumos/`. Los catálogos sí se miran.
+1. Buscar cada `PENDIENTE: preguntar a`, cada `A CONFIRMAR con` y cada bloque `CONFLICTO` en `empresa/`. La búsqueda deja afuera los registros de `empresa/sesiones/` y los archivos guardados en `empresa/insumos/`. Los catálogos sí se miran.
 2. Convertir cada uno en una sola pregunta, en palabras simples. De un marcador que abarca varios procesos sale una sola pregunta.
-3. Escribirla en "Preguntas preparadas" de la hoja de la persona nombrada, agrupada por proceso, con el lugar de donde sale. La pregunta nombra lo que falta: el marcador queda donde estaba.
+3. Escribirla en "Preguntas preparadas" de la hoja de la persona nombrada, agrupada por proceso, con el lugar de donde sale. De un `CONFLICTO` sale una pregunta para quien lo resuelve, que figura en su bloque. La pregunta nombra lo que falta: el marcador queda donde estaba.
 4. Lo que nombra al responsable del programa va a su propia hoja. También se preparan preguntas para él.
 5. Lo marcado `PENDIENTE: preguntar a A DEFINIR` va a la hoja del responsable del programa, como pregunta sobre a quién hay que consultar.
 6. Las filas del mapa con el dueño `A DEFINIR` o con la prioridad `sin definir` no son marcadores y la búsqueda no las encuentra. También van a la hoja del responsable del programa, como preguntas.
@@ -321,9 +321,9 @@ Mostrar el plan:
 
 Lista para enviar: se ofrece una sola vez, con la frase de "Lista para enviar". Si la persona no responde ni sí ni no, cuenta como no, y se le dice que la puede pedir después.
 
-1. Si acepta, mostrar en la conversación un mensaje por persona: una frase que diga para qué es y las preguntas numeradas, en palabras simples.
+1. Si acepta, mostrar en la conversación un mensaje por persona: una frase que diga para qué es y las preguntas numeradas, en palabras simples. Si una pregunta pide confirmar la lectura de un documento completo, el mensaje lleva también ese texto, en palabras simples.
 2. Anotar en la hoja de esa persona, junto a cada pregunta, que se envió y en qué fecha.
-3. Las respuestas escritas que vuelvan se reciben en otra conversación, con `metodo/material-de-terceros.md`: van a `empresa/insumos/` y llevan `A CONFIRMAR con <esa persona>`.
+3. Las respuestas escritas que vuelvan se reciben en otra conversación, como indica "Respuestas escritas a preguntas preparadas" en `metodo/material-de-terceros.md`: van a `empresa/insumos/`. Lo que la persona responde sobre su propio trabajo cierra los marcadores que la nombran, como indica "Marcadores" en `metodo/reglas.md`. Lo que dice del trabajo de otras personas sigue `A CONFIRMAR`.
 
 ## Cierre del arranque
 

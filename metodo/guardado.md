@@ -65,6 +65,7 @@ Se guarda después de que la persona confirmó el resumen y de que los archivos 
 - Un solo guardado por tema o etapa, al cerrarlo. No uno por pregunta ni por corrección. Tampoco uno por cada archivo recibido ni por cada código asignado: todo lo que el tema o la etapa escribió va en ese guardado.
 - Si no hay nada nuevo para guardar, seguir sin avisar.
 - Este guardado es local. No se sube nada hasta el cierre de la sesión.
+- En la revisión y aprobación hay una excepción: cada documento aprobado lleva su propio guardado, como indica "Etapa 4. Aprobar" en `metodo/revision-y-aprobacion.md`.
 
 ### Si un guardado falla
 
@@ -129,11 +130,13 @@ Ejemplo: `docs(ventas): presupuesto a un cliente - tema B con <nombre>`.
 5. Si el `rebase` da conflicto, deshacerlo de inmediato con `git rebase --abort`, para que nada quede a medias. Lo guardado sigue en esta computadora. Seguir con "Si no se puede subir".
 6. Si la subida falla por cualquier motivo, como falta de conexión o de acceso, seguir con "Si no se puede subir".
 
+En la revisión y aprobación, la subida es distinta: sigue los pasos de "Pasar a `main` lo revisado" en `metodo/revision-y-aprobacion.md`, que suben `main` y `borradores` juntas.
+
 ### Si no se puede subir
 
 - No insistir. Lo guardado en esta computadora no se pierde, y sube en la próxima sesión que logre subir.
 - Si la sesión lleva registro, cambiar su línea de subida por `SUBIDA PENDIENTE: quedó solo en esta computadora`. Guardar ese cambio con un guardado nuevo, con el mensaje de subida pendiente.
-- Decir con calma la frase de "No se pudo subir".
+- Decir con calma la frase de "No se pudo subir". Si el registro de la sesión anterior ya decía `SUBIDA PENDIENTE`, la subida viene fallando: decir en su lugar la frase de "La subida sigue fallando", una sola vez por sesión, y anotar en el registro que se dijo.
 
 ## Qué decir a la persona
 
@@ -141,6 +144,7 @@ Ejemplo: `docs(ventas): presupuesto a un cliente - tema B con <nombre>`.
 |---|---|
 | Se guardó | "Listo, quedó guardado." |
 | No se pudo subir | "Quedó guardado en esta computadora." |
+| La subida sigue fallando | "Hace varias conversaciones que el trabajo queda guardado solo en esta computadora. Conviene avisar a quien preparó esta carpeta, para que lo revise." |
 | No se puede guardar hoy | "Hoy tengo un problema para guardar lo que conversemos y prefiero no seguir así. Conviene avisar a `<nombre del responsable del programa>`. Disculpas por la molestia." |
 | No se usa el servidor | "Un aviso: el trabajo queda guardado solo en esta computadora. Conviene avisar a quien preparó esta carpeta." |
 

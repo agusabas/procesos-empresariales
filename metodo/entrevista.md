@@ -25,7 +25,7 @@ Antes de empezar, leer completos `metodo/control-documental.md` y `plantillas/ba
 5. Lo que cuenta sobre el trabajo de otra persona es de segunda mano: lleva `A CONFIRMAR con <esa persona>`.
 6. Nada se completa con una suposición. Lo que no sabe se escribe `PENDIENTE: preguntar a <quién>`.
 7. No se borra ni se reemplaza lo que contó otra persona. Si no coincide, va un bloque `CONFLICTO`.
-8. Una ficha `vigente` no se reescribe. Lo que cambió va a "Cambios propuestos (sin aprobar)".
+8. El contenido aprobado de una ficha `vigente` no se reescribe. Lo que cambió va a "Cambios propuestos (sin aprobar)". Los problemas y las ideas van a "Problemas e ideas", sin aprobación.
 9. Este modo deja la ficha, como mucho, en `borrador`. Nunca en `validado` ni en `vigente`.
 10. Los códigos se asignan desde la lista maestra, con los pasos de "Cómo se asigna un código" en `metodo/control-documental.md`. A la persona no se le dicen: cada documento se nombra por su título.
 11. Cada marcador se escribe una sola vez, en el documento donde vive el dato. En el registro de la sesión no se escriben marcadores.
@@ -81,7 +81,7 @@ Con el proceso elegido:
 
 Va antes del temario. Se saltea si no hay nada para confirmar, recordar ni preguntar. Lleva, como mucho, unos cinco minutos: lo que no entra queda para otra conversación.
 
-**Confirmar la hoja.** Se hace en la primera sesión de la persona:
+**Confirmar la hoja.** Se hace en la primera entrevista en que "Confirmada por la persona" siga en `no`:
 
 1. Contar en dos frases lo que dice su hoja: rol, áreas, sistemas y procesos.
 2. Preguntar: "¿Es así?" Corregir lo que marque.
@@ -100,10 +100,12 @@ Va antes del temario. Se saltea si no hay nada para confirmar, recordar ni pregu
 
 1. Primero las del proceso de hoy y las que no son de ningún proceso.
 2. Después las de otros procesos, mientras la etapa no pase de unos cinco minutos. Las que queden siguen sin marcar.
-3. Escribir cada respuesta en el lugar de donde salió la pregunta. Si ahí había un `PENDIENTE` o un `A CONFIRMAR con <esta persona>`, se reemplaza por lo que contó.
-4. Si la respuesta dice de qué área es un proceso que figuraba sin código, dárselo en ese momento, como indica "Un proceso sin código".
-5. Si la pregunta viene de una revisión periódica, la respuesta queda en el registro de la sesión, con sus palabras.
-6. Marcar la pregunta en la hoja, con la fecha.
+3. Escribir cada respuesta en el lugar de donde salió la pregunta. Si ahí había un `PENDIENTE` o un `A CONFIRMAR con <esta persona>`, se reemplaza por lo que contó. Si el documento está `vigente`, la respuesta sigue "Cambios en un documento vigente" en `metodo/control-documental.md`: en su lugar si no cambia el sentido, y como cambio propuesto si lo cambia.
+4. Si la pregunta pide confirmar una fila de "Cambios propuestos (sin aprobar)" y la persona es el dueño del proceso: si confirma, el `no` de "Confirmó el dueño" pasa a `sí` con la fecha, sin sumar otra fila; si corrige, se corrige la fila.
+5. Si la pregunta pide leer la ficha y decir dónde tendría que preguntar, lo que la persona señale se anota como indica "Si la ficha ya existe".
+6. Si la respuesta dice de qué área es un proceso que figuraba sin código, dárselo en ese momento, como indica "Un proceso sin código".
+7. Si la pregunta viene de una revisión periódica, la respuesta queda en el registro de la sesión, con sus palabras.
+8. Marcar la pregunta en la hoja, con la fecha.
 
 - Si la persona responde que no sabe, seguir los pasos de "Marcadores" en `metodo/reglas.md`: la pregunta se marca con la fecha y la aclaración "no supo", y se le pregunta una sola vez a quién consultar.
 - Si una pregunta preparada pide confirmar algo que ya se confirmó con la hoja, se marca sin repetirla.
@@ -176,6 +178,7 @@ Cuando la persona acepta:
 | "Lo de siempre" | "Como si hubiera que explicárselo a alguien nuevo: ¿qué es lo primero?" |
 | "Lo ve otra área" | "¿Quién, con nombre de pila?" |
 | "Enseguida" o "rápido" | "¿Cuánto es: minutos, horas o días?" |
+| "Se revisa" o "se controla" | "¿Qué se mira para dar por bueno el resultado?" |
 
 ### Cuando aparece un documento, un formulario o una pantalla
 
@@ -234,9 +237,11 @@ No se copia de nuevo. Se le suma lo que cuenta esta persona, y su parte se anota
 | Estado de la ficha | Qué se hace |
 |---|---|
 | `en curso` o `borrador` | Se suma a lo escrito. |
-| `validado` | Se suma. Si lo nuevo cambia el sentido, la ficha vuelve a `borrador` en el bloque de control, en la lista maestra y en el mapa. |
-| `vigente` | No se toca lo escrito. Va una fila en "Cambios propuestos (sin aprobar)", con la fecha, quién lo cuenta y qué cambió. En "Confirmó el dueño" va `sí` solo si quien lo cuenta es el dueño del proceso. |
+| `validado` | Se suma. La ficha vuelve a `borrador` en el bloque de control, en la lista maestra y en el mapa, y "Revisó" vuelve a `—`, como indica "Estados" en `metodo/control-documental.md`. Se queda en `validado` solo si lo nuevo no cambia el sentido, quien lo cuenta es el dueño del proceso y confirma la lectura final de la ficha completa: la confirmación del dueño vale solo para lo que leyó. |
+| `vigente` | No se toca el contenido aprobado. Lo que cambia va en una fila de "Cambios propuestos (sin aprobar)", con la fecha, quién lo cuenta y el texto que va a quedar. En "Confirmó el dueño" va `sí` solo si quien lo cuenta es el dueño del proceso. Los problemas y las ideas van a "Problemas e ideas", sin aprobación, como indica "Cambios en un documento vigente" en `metodo/control-documental.md`. |
 | `obsoleto` | No se toca. Si la persona dice que ese trabajo se sigue haciendo, anotarlo como pregunta en "Preguntas preparadas" de la hoja del responsable del programa. |
+
+Cuando quien habla no es el dueño del proceso, lo que no entiende de lo ya escrito, o lo que tendría que preguntar para hacer ese trabajo, se anota como `PENDIENTE: preguntar a <dueño>`, y la pregunta va a la hoja del dueño. No se le pregunta qué haría distinto: si cuenta otra forma de hacerlo, es otra versión y va por la regla 3 de `metodo/reglas.md`.
 
 ### Marcadores
 
@@ -244,14 +249,15 @@ No se copia de nuevo. Se le suma lo que cuenta esta persona, y su parte se anota
 |---|---|
 | La persona no sabe algo | Escribir `PENDIENTE: preguntar a <quién>`. Si esa persona tiene hoja, sumar la pregunta a sus "Preguntas preparadas". Si nadie sabe a quién preguntar, va `PENDIENTE: preguntar a A DEFINIR`, y la pregunta se suma a la hoja del responsable del programa. |
 | Cuenta cómo trabaja otra persona | Escribir lo que cuenta con `A CONFIRMAR con <esa persona>`. Sumar la pregunta a la hoja de esa persona. |
-| Lo que cuenta no coincide con lo que ya contó otra persona | Dejar las dos versiones en un bloque `CONFLICTO`, debajo de la parte o de la tabla donde aparece la diferencia. |
+| Lo que cuenta no coincide con lo que ya contó otra persona | Comprobar primero que hablan de lo mismo, como indica la regla 3 de `metodo/reglas.md`. Si es así, dejar las dos versiones en un bloque `CONFLICTO`, debajo de la parte o de la tabla donde aparece la diferencia, y sumar la pregunta a la hoja de quien lo resuelve. |
 | Un archivo contradice lo escrito | Bloque `CONFLICTO`, igual que entre dos personas. |
+| Es quien resuelve un `CONFLICTO` abierto y dice qué pasa hoy | Cerrarlo como indica "Marcadores" en `metodo/reglas.md`. |
 | Confirma algo que estaba `A CONFIRMAR con` ella | Quitar el marcador. La fuente queda en la fila del historial de esta sesión. |
 | Corrige algo que estaba `A CONFIRMAR con` ella | Vale lo que cuenta: escribir su versión y quitar el marcador. |
 
 - El marcador se escribe una sola vez, en la ficha. La pregunta de la hoja y el registro de la sesión nombran lo que falta, sin repetir el marcador.
 - Si la persona nombra a alguien que interviene en el proceso y no figuraba, sumar su nombre a "Participantes" del mapa y el proceso a la hoja de esa persona. En "Su parte" va lo que se contó, sin marcador: el marcador está en la ficha.
-- El bloque `CONFLICTO` tiene la forma que indica `metodo/reglas.md`. El agente no elige cuál versión es la correcta.
+- El bloque `CONFLICTO` tiene la forma que indica "Marcadores" en `metodo/reglas.md`. El agente no elige cuál versión es la correcta. Lo cierra quien lo resuelve, cuando dice qué pasa hoy, como indica esa misma sección. Si la persona entrevistada es quien lo resuelve, se le pregunta en la Etapa 1, como una pregunta preparada más.
 - A la persona no se le dice que otra "dijo lo contrario". Si hace falta, se usa la frase de "Dos versiones".
 
 ### El diagrama
@@ -304,7 +310,7 @@ Si hoy no hay tiempo, se anota en "Temas para otra sesión".
    | Situación | Estado |
    |---|---|
    | La ficha está `vigente` | No cambia. |
-   | La ficha está `validado` y lo nuevo no cambia el sentido | No cambia. |
+   | La ficha está `validado`, lo nuevo no cambia el sentido, y quien contó es el dueño del proceso y confirmó la lectura final de la ficha completa | No cambia. |
    | Quedaron temas sin cerrar | `en curso`, también si la ficha ya estaba en `borrador`. |
    | Se cerraron todos los temas y la persona confirmó la lectura final | `borrador`, aunque falte escuchar a otras personas. |
 
