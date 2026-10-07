@@ -1,12 +1,17 @@
 # Plantilla para documentar cómo trabaja una empresa
 
+*A template for documenting how a company actually works. An AI agent interviews people and writes process maps, SOP-style process sheets with flowcharts, and work instructions, under ISO 9001-style document control. Everything is Markdown and git. The method and the conversations are in Spanish.*
+
 Esta plantilla sirve para relevar, es decir, averiguar y dejar por escrito, cómo trabaja una empresa: quién hace qué, con qué, cada cuánto y qué pasa cuando algo sale distinto de lo habitual. El trabajo lo conduce un agente de IA que conversa con las personas. Nadie tiene que llenar formularios ni aprender palabras técnicas.
+
+Este trabajo se conoce también como relevamiento o levantamiento de procesos, mapeo de procesos o documentación de procesos. Lo que queda escrito es lo que muchas empresas llaman manual de procedimientos. Tiene un mapa de procesos, una ficha por cada proceso con su diagrama de flujo, e instructivos de trabajo. Cada ficha cumple la función de un procedimiento operativo estándar (SOP). Todo son archivos de texto en formato Markdown, en una carpeta con `git`.
 
 ## Para quién es
 
 - Para una empresa de cualquier tamaño que quiere dejar escrito cómo trabaja, tenga o no procesos documentados.
 - Para la persona que conduce ese trabajo, sea de la empresa o un consultor externo.
-- Para quien quiere ordenar esa documentación según la norma IRAM-ISO 9001, sin pedir a las personas que aprendan su vocabulario.
+- Para quien quiere ordenar esa documentación según la norma IRAM-ISO 9001, sin pedir a las personas que aprendan su vocabulario. Incluye el control documental y la lista maestra que pide un sistema de gestión de la calidad.
+- Para una pyme donde cómo se trabaja vive en la cabeza de pocas personas. Sirve para dejarlo escrito antes de que alguien se vaya, o para que alguien nuevo aprenda el trabajo.
 
 La plantilla ayuda a ordenar la documentación. No certifica nada por sí sola. Qué cubre de la norma, qué cubre solo en parte y qué no cubre está en `metodo/norma.md`.
 
