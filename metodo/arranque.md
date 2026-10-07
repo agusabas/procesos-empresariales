@@ -366,7 +366,7 @@ Las frases son modelos. Se dicen cada vez con otras palabras, como indica la reg
 | Situación | Frase |
 |---|---|
 | Pedir el nombre | "Hola. Antes de empezar, ¿con quién estoy hablando? Con el nombre de pila alcanza." |
-| Presentación | "Este trabajo sirve para dejar por escrito cómo se trabaja en la empresa. Antes de conversar con cada persona hace falta una preparación: cómo es la empresa, cómo nos organizamos, qué hay ya escrito, qué áreas y qué personas hay, qué procesos tiene y qué preguntarle a cada persona. Lleva entre dos y tres horas, que se pueden repartir en varias conversaciones." |
+| Presentación | "Este trabajo sirve para dejar por escrito cómo se trabaja en la empresa. Antes de conversar con cada persona hace falta una preparación. En ella vemos cómo es la empresa, cómo nos organizamos y qué hay ya escrito. También qué áreas y qué personas hay, qué procesos tiene y qué preguntarle a cada persona. Lleva entre dos y tres horas, que se pueden repartir en varias conversaciones." |
 | No es quien conduce | "Esta primera parte se hace con la persona que va a conducir el trabajo. Cuando esa persona pueda, alcanza con que abra esta carpeta y salude." |
 | Un momento | "Un momento, lo dejo anotado." |
 | Avance | "Etapa `<número>` de 8 lista. ¿Seguimos con la siguiente?" |
