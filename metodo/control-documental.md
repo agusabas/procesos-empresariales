@@ -244,7 +244,7 @@ Qué se hace con cada documento se decide en `metodo/revision-y-aprobacion.md`:
 
 - Es `empresa/lista-maestra.md` y se crea copiando `plantillas/lista-maestra.md`. Es un documento de trabajo.
 - Tiene una fila por cada documento controlado, con su código, título, tipo, área, estado, versión, fechas, quién elaboró, revisó y aprobó, ubicación y observaciones.
-- Tiene una tabla de registros: qué se guarda, dónde y por cuánto tiempo. Si la empresa no fija un plazo, va "sin plazo fijo".
+- Tiene una tabla de registros: qué se guarda, dónde y con qué plazo mínimo de guarda. Si la empresa no fija un plazo, va "sin plazo fijo".
 - La fuente de verdad es el bloque de control de cada documento. La lista se concilia contra los bloques en `metodo/revision-y-aprobacion.md`.
 - Cada vez que la lista cambia, se actualiza su línea "Última actualización".
 

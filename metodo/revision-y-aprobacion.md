@@ -155,7 +155,7 @@ Si se cumplen las tres:
 Si falta alguna:
 
 1. Decir con palabras simples qué falta y a quién hay que preguntarle.
-2. Dejar preparada la pregunta en la hoja de esa persona, `empresa/personas/<nombre>.md`, en "Preguntas preparadas". Si esa persona es la que está en la conversación, ya se le preguntó en "Antes de validar".
+2. Dejar preparada la pregunta en la hoja de esa persona, `empresa/personas/<nombre>.md`, en "Preguntas preparadas". Si esa persona es la que está en la conversación, ya se le preguntó en "Antes de validar". Si recibe las preguntas por escrito, como dice su hoja, la pregunta preparada es leer `<título>` completo y decir si es así. El texto se ofrece listo para enviar.
 3. El documento sigue en `borrador`.
 
 El contexto, el mapa de procesos y el glosario no tienen dueño de proceso. Los confirma el responsable del programa, en esta conversación.
