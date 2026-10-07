@@ -14,7 +14,7 @@ Este vocabulario es para el agente. En la conversación se usan las palabras sim
 | Estados | `pendiente`, `en curso`, `borrador`, `validado`, `vigente` y `obsoleto`. |
 | Versión | `0` hasta la primera aprobación. Cada aprobación suma 1. |
 | Aprobar | Cuatro cosas juntas o ninguna: versión, historial, próxima revisión y lista maestra. |
-| Documento vigente | No se reescribe. Los cambios se anotan como propuestos hasta que se aprueban. |
+| Documento vigente | Su contenido aprobado no se reescribe. Los cambios se anotan como propuestos hasta que se aprueban. Las secciones de trabajo se ponen al día sin aprobación. |
 | Revisión periódica | Fecha de aprobación más el período definido en el arranque. |
 | Ramas | Las sesiones escriben en `borradores`. `main` tiene solo lo revisado. |
 | Archivos recibidos | Se revisan, se guardan con la fecha en el nombre y se catalogan. El original no se toca. |
@@ -24,7 +24,7 @@ Este vocabulario es para el agente. En la conversación se usan las palabras sim
 
 | Tipo | Cuáles son | Cómo se cuida |
 |---|---|---|
-| Documento controlado | Contexto, mapa de procesos, fichas de proceso, instructivos, formularios y glosario | Lleva código, versión, estado, aprobación y revisión periódica. |
+| Documento controlado | Contexto, mapa de procesos, fichas de proceso, instructivos y glosario. Los formularios, cuando tengan molde | Lleva código, versión, estado, aprobación y revisión periódica. |
 | Documento de trabajo | Hojas de personas, fichas de cambio, lista maestra y notas para el método | Se identifica por su ruta. Se actualiza libremente. No se aprueba. |
 | Registro | Sesiones, insumos y adjuntos | Se cierra una vez escrito. Después no se edita. La única excepción es la línea de subida de un registro de sesión, que cambia si la subida falla. |
 
@@ -47,7 +47,7 @@ El tipo de cada archivo sale de su lugar en `empresa/`:
 - Un documento creado con una versión anterior de su molde no se rehace. La próxima vez que se toca, se completa solo su estructura: las secciones y las columnas que le faltan. Lo que ya estaba escrito no se mueve ni se pasa a la forma nueva.
 - Una parte nueva queda con su ayuda hasta que alguien cuente ese dato. Si ya ninguna etapa lo va a preguntar, se suma como pregunta a la hoja del responsable del programa.
 - El `catalogo.md` de `insumos/` y el de cada carpeta de `adjuntos/` son documentos de trabajo: se actualizan cada vez que llega un archivo.
-- Los formularios todavía no tienen lugar propio ni molde. Hasta que se definan, no se asignan códigos `FO`. Un formulario que aporta una persona se guarda como cualquier otro archivo aportado, en `empresa/adjuntos/`.
+- Los formularios todavía no tienen lugar propio ni molde, y por eso todavía no son documentos controlados. Hasta que se definan, no se asignan códigos `FO`. Un formulario que aporta una persona se guarda como cualquier otro archivo aportado, en `empresa/adjuntos/`. Lo mismo vale para los documentos de afuera que la empresa usa, como una norma o un manual de un proveedor: se catalogan, pero no se controla qué versión está en uso.
 
 ## Códigos
 
@@ -128,10 +128,11 @@ Todo documento controlado empieza, debajo del título, con dos tablas. Son tabla
 | Vigente desde | La fecha en que se aprobó la versión actual. `—` hasta la primera aprobación. | Solo al aprobar. |
 | Próxima revisión | La fecha en que toca volver a mirarlo. `—` hasta la primera aprobación. | Al aprobar y en la revisión periódica. |
 | Elaboró | El nombre de pila del responsable del programa, que es quien conduce el relevamiento. | Al crear el documento. |
-| Revisó | El nombre de pila del dueño del proceso que validó. `—` hasta que valide. | Al pasar a `validado`. |
+| Revisó | El nombre de pila del dueño del proceso que validó. `—` hasta que valide. | Al pasar a `validado`. Vuelve a `—` si el documento retrocede a `borrador`. |
 | Aprobó | El nombre de pila de quien aprobó. `—` hasta la aprobación. | Solo al aprobar. |
 
 - El agente nunca figura en el bloque.
+- En "Elaboró", "Revisó" y "Aprobó" va el nombre de pila. Si dos personas de la empresa comparten el nombre, va el nombre y el área, igual que en el nombre del archivo de su hoja, como indica `empresa/README.md`.
 - El contexto, el mapa de procesos y el glosario no tienen dueño de proceso. En ellos revisa el responsable del programa. Una ficha de proceso del área "General" tiene dueño, como cualquier otra.
 - Si el bloque y la lista maestra no coinciden, vale el bloque. Mientras un documento no tiene archivo, vale su fila de la lista.
 
@@ -149,7 +150,7 @@ Los estados avanzan en este orden: `pendiente`, `en curso`, `borrador`, `validad
 | `obsoleto` | Fue reemplazado o dado de baja. Se conserva y no se edita más. | Solo en `metodo/revision-y-aprobacion.md`. |
 
 - Un marcador cambia el sentido cuando afecta quién hace algo, qué se hace, en qué orden, con qué regla o con qué excepción. No lo cambia cuando falta un detalle, como una duración exacta. Ante la duda, lo cambia.
-- Un documento `validado` vuelve a `borrador` si aparece un `PENDIENTE`, un `CONFLICTO` o un `A CONFIRMAR` que cambia el sentido.
+- Un documento `validado` vuelve a `borrador` si aparece un `PENDIENTE`, un `CONFLICTO` o un `A CONFIRMAR` que cambia el sentido. También si una sesión posterior le suma contenido que el dueño no leyó. Cuando retrocede, "Revisó" vuelve a `—` en el bloque y en la lista maestra.
 - Una ficha en `borrador` vuelve a `en curso` si una entrevista posterior queda con temas sin cerrar.
 - El glosario se crea en estado `en curso` y pasa a `borrador` al cerrar la sesión en la que se creó. Desde ahí sigue las reglas de cualquier documento, sin casos especiales: si está `validado` y se le suma un término, vuelve a `borrador`; si está `vigente`, el término nuevo va a "Cambios propuestos (sin aprobar)".
 - Un documento `vigente` no retrocede. Lo que cambia se anota como indica "Cambios en un documento vigente".
@@ -171,7 +172,7 @@ Los estados avanzan en este orden: `pendiente`, `en curso`, `borrador`, `validad
 
 Antes de aprobar tienen que cumplirse las cuatro condiciones:
 
-1. El documento está `validado`. O está `vigente` y tiene cambios propuestos que el dueño del proceso confirmó.
+1. El documento está `validado`. O está `vigente` y tiene cambios propuestos que el dueño del proceso confirmó. En el contexto, el mapa de procesos y el glosario, que no tienen dueño, los confirma el responsable del programa.
 2. Ningún marcador abierto cambia el sentido.
 3. Quien aprueba lo dijo de forma explícita, en esta conversación y para este documento.
 4. El documento tiene su fila en la lista maestra.
@@ -191,13 +192,19 @@ Al aprobar se hacen cuatro cosas juntas, en un mismo guardado:
 
 ## Cambios en un documento vigente
 
-1. No tocar lo ya escrito.
+La versión identifica el contenido aprobado. El contenido aprobado es todo el documento, salvo sus secciones de trabajo: "Problemas e ideas", "Cambios propuestos (sin aprobar)", "Historial" y las tres columnas del mapa que se nombran más abajo. Las secciones de trabajo se ponen al día sin aprobación y sin cambiar la versión. En una ficha de proceso, lo aprobado es "Cómo se hace hoy" y "Documentos"; "Problemas e ideas" es material de trabajo, porque no describe cómo se hace hoy.
+
+1. No tocar lo ya escrito en el contenido aprobado.
 2. Anotar el cambio en la sección `## Cambios propuestos (sin aprobar)`, que va justo antes de `## Historial`. Si el documento no tiene esa sección, agregarla ahí.
-3. Usar una fila por cambio, con estas columnas: `| Fecha | Quién lo cuenta | Qué cambió | Confirmó el dueño |`.
+3. Usar una fila por cambio, con estas columnas: `| Fecha | Quién lo cuenta | Qué cambió | Confirmó el dueño |`. En "Qué cambió" van la parte afectada y el texto que va a quedar, tal como quedaría en el cuerpo. Así quien aprueba lee lo mismo que se va a escribir.
 4. El estado sigue `vigente` y la versión no cambia.
-5. Cuando el cambio se aprueba, pasa al cuerpo del documento, su fila sale de la sección y se hacen las cuatro cosas de "Aprobar".
+5. Cuando el cambio se aprueba, su texto se copia tal cual al cuerpo del documento, su fila sale de la sección y se hacen las cuatro cosas de "Aprobar". Solo el diagrama se genera de nuevo, si la tabla de pasos cambió.
+
+Cerrar un marcador que no cambia el sentido se hace en su lugar, sin cambiar la versión, con una fila en el historial. Es la única edición del contenido aprobado que no pasa por aprobación, porque por definición no cambia el sentido. Si la respuesta cambia el sentido, va a "Cambios propuestos (sin aprobar)".
 
 Tres datos del mapa de procesos se actualizan sin aprobación, aunque el mapa esté `vigente`: las columnas "Estado", "Ficha" y "Prioridad". Las dos primeras copian datos de cada ficha. La prioridad es el orden del relevamiento y la decide el responsable del programa.
+
+Con el mapa `vigente`, la fila de un proceso nuevo entra igual al cuerpo del mapa, con su estado, su ficha y su prioridad. En "Cambios propuestos (sin aprobar)" queda una fila que registra el alta. Lo que se aprueba con la versión siguiente es su nombre, su área, su tipo y su dueño.
 
 Lo que un cambio en marcha va a modificar no se anota en la ficha del proceso mientras sea un plan. Va en la ficha del cambio, como indica `metodo/cambio-en-curso.md`.
 
@@ -213,12 +220,15 @@ En cualquier modo puede aparecer un dato de la empresa que cambia `empresa/conte
 
 - La sesión suma su fila al historial del contexto, como cualquier sesión que cambia un documento.
 - Un área nueva es la excepción: la suma solo el responsable del programa, porque sus letras no se cambian después. Mientras tanto va como pregunta en su hoja.
+- El cambio de responsable del programa o de quien aprueba es la otra excepción. Lo dice quien deja el rol o, si ya no está en la empresa, quien tiene el otro rol. Se escribe en el contexto sin esperar aprobación, aunque el contexto esté `vigente`, con una fila en el historial que diga quién lo dijo y cuándo. Las hojas de las dos personas se ponen al día en el mismo guardado.
 
 ## Revisión periódica
 
 - La próxima revisión es la fecha de aprobación más el período definido en el arranque, que figura en `empresa/contexto.md`. Si no está definido, son 12 meses.
 - La fecha cae el mismo día, tantos meses después. Si ese día no existe en el mes, cae el último día de ese mes.
 - Una revisión está vencida cuando su fecha es anterior a hoy. Está por vencer cuando faltan 30 días o menos.
+- Un documento con la revisión vencida sigue `vigente` hasta que la revisión decida otra cosa. El vencimiento es un aviso, no un cambio de estado.
+- Además de la fecha, conviene mirar antes un documento cuando cambia una regla que sigue, o cuando un problema ya anotado en él vuelve a aparecer en otra conversación. El agente lo avisa al responsable del programa y la revisión se hace igual que la periódica. No hay otro calendario ni otro registro para esto.
 
 Aviso: al empezar cada sesión con el responsable del programa, en cualquier modo, leer la columna "Próxima revisión" de la lista maestra y avisar qué documentos están vencidos o por vencer. Por ejemplo: "Antes de empezar: hay dos documentos que toca volver a mirar." Después, nombrar cada uno con su fecha. Si no hay ninguno, no decir nada.
 
@@ -251,7 +261,7 @@ Qué se hace con cada documento se decide en `metodo/revision-y-aprobacion.md`:
 
 - Sus columnas son: `| Código | Proceso | Área | Tipo | Dueño | Participantes | Estado | Prioridad | Ficha |`.
 - Es la lista oficial de nombres de procesos. Todos los demás archivos nombran cada proceso exactamente como figura en el mapa.
-- Para sumar un proceso, se le asigna el código, si ya se sabe su área, y se agrega su fila. Si el mapa está `vigente`, la fila va a "Cambios propuestos (sin aprobar)" hasta que se apruebe. El proceso se puede relevar mientras tanto.
+- Para sumar un proceso, se le asigna el código, si ya se sabe su área, y se agrega su fila. Si el mapa está `vigente`, la fila entra igual al cuerpo y el alta queda registrada en "Cambios propuestos (sin aprobar)", como indica "Cambios en un documento vigente". El proceso se puede relevar mientras tanto.
 - Un proceso que es de toda la empresa lleva el área "General".
 - Un proceso del que todavía no se sabe el área figura en el mapa sin código: en "Código" va `—` y en "Área" va `PENDIENTE: preguntar a <quién>`. No tiene fila en la lista maestra hasta que recibe su código.
 - Un proceso puede tener un área provisoria: en "Área" va el área, seguida de `A CONFIRMAR con <quién>`. Tiene código. Si esa persona corrige el área, el código cambia como indica "Cambiar un código".
