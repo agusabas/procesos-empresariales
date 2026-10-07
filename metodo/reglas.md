@@ -49,6 +49,7 @@ Tres marcadores señalan lo que todavía no es firme. Se escriben siempre igual 
 - Un marcador se cierra solo cuando la persona que nombra responde sobre ese punto. Confirmar un resumen, aceptar un documento en una revisión o aprobarlo no cierra sus marcadores.
 - La respuesta escrita de la persona nombrada también cierra los marcadores que la nombran, cuando responde a sus propias preguntas preparadas. Se escribe con su fuente: la persona, el archivo y la fecha. Lo que esa respuesta diga sobre el trabajo de otras personas sigue `A CONFIRMAR`. Cómo se recibe una respuesta escrita está en `metodo/material-de-terceros.md`.
 - Un `CONFLICTO` se cierra cuando quien lo resuelve dice qué pasa hoy. Si pasan las dos cosas, se escriben como regla o como excepción, con lo que hace que pase una u otra. El bloque se reemplaza por ese texto. La fila del historial dice quién lo resolvió y cuándo. Si el documento está `vigente`, el texto va a "Cambios propuestos (sin aprobar)", como indica "Cambios en un documento vigente" en `metodo/control-documental.md`.
+- Si quien resuelve un `CONFLICTO` es una de las dos versiones, no se le pregunta cuál es la correcta. Se le pregunta por el último caso real: "¿Cómo se hizo en el último caso? Si quedó algo anotado de ese caso, sirve verlo." Si la respuesta no lo cierra, el conflicto sigue abierto con las dos versiones.
 - Si un dato que estaba `PENDIENTE` llega de otra fuente, se escribe con su fuente y el marcador pasa a ser `A CONFIRMAR con` la misma persona. Sigue abierto.
 - Cada marcador se escribe una sola vez, en el documento donde vive el dato. Los demás lugares pueden nombrar lo que falta, pero sin repetir el marcador.
 - Si el mismo dato aparece en varias partes de un documento, el marcador va en la primera. Las demás lo nombran sin el marcador.
@@ -84,12 +85,14 @@ Ejemplos, con una situación inventada en la que un cliente pide un presupuesto:
 - Escribir cómo se hace hoy el trabajo, con sus vueltas y sus problemas.
 - Lo que "debería hacerse" y las ideas de mejora se anotan aparte, como problema o como idea. Nunca como descripción de lo que se hace.
 - Si no queda claro, preguntar: "¿Eso es lo que se hace hoy, o lo que convendría hacer?"
+- Hay señales de que una parte puede ser lo que debería pasar, y no lo que pasa: "se debe", "tiene que", "corresponde", "siempre", "nunca", "según el procedimiento"; un control o una aprobación sin decir quién lo hace; un recorrido sin esperas, sin excepciones y sin problemas. Con una señal, antes de escribir en "Cómo se hace hoy", llevar la conversación al último caso real. La pregunta de arriba queda como último recurso.
 
 ### 2. Nunca inventar
 
 - No completar un hueco con una suposición, aunque parezca obvia. Vale para pasos, nombres, números y responsables.
 - Lo que falta se escribe `PENDIENTE: preguntar a <quién>`.
 - Que una persona no sepa algo está bien. Decirlo así: "No hay problema. Lo anoto para preguntárselo a quien corresponda." Después, preguntar a quién habría que consultarle.
+- Si la persona está apurada, antes de preguntar a quién consultar, preguntar: "¿Es algo que no se sabe, o algo para dejar para otro día?" Si es para otro día, va `PENDIENTE: preguntar a <esta persona>` y la pregunta queda en su hoja.
 - A quién consultar se pregunta una sola vez por asunto. Si la persona ya dijo que tampoco lo sabe, no se le vuelve a preguntar por ese asunto: va `A DEFINIR`.
 - No se pregunta a quién consultar cuando el modo ya indica qué se hace con lo que falta.
 

@@ -10,7 +10,7 @@ Antes de empezar, leer completo `metodo/control-documental.md`. Este archivo usa
 |---|---|---|
 | 1. Qué hay pendiente | Avisar las revisiones que vencen y contar lo que espera | Responsable del programa o quien aprueba |
 | 2. Qué cambió | Repasar lo nuevo desde la última revisión, por clases | Responsable del programa |
-| 3. Validar | Completar lo que le falta al mapa, hacer las preguntas pendientes de quien está presente, confirmar los cambios propuestos que esperan al dueño, ofrecer la prueba de uso y pasar a `validado` lo que confirmó el dueño del proceso | Responsable del programa |
+| 3. Validar | Completar lo que le falta al mapa, hacer las preguntas pendientes de quien está presente, confirmar los cambios propuestos que esperan al dueño, ofrecer la prueba de uso y pasar a `validado` lo que confirmó el dueño del proceso. El acuerdo del responsable del programa se pide una vez, al cerrar la etapa | Responsable del programa |
 | 4. Aprobar | Pasar a `vigente`, con las cuatro cosas juntas | Quien aprueba |
 | 5. Conciliar | Poner la lista maestra al día con los documentos | Responsable del programa |
 | 6. Revisión periódica | Volver a mirar los documentos que vencen | Responsable del programa y quien aprueba |
@@ -69,7 +69,7 @@ Reunir en silencio:
 Después:
 
 1. Decir primero el aviso de revisiones, como indica "Revisión periódica" en `metodo/control-documental.md`.
-2. Contar en dos o tres frases llanas lo que espera: cuántos documentos tienen cosas nuevas, cuántos esperan que alguien los confirme y cuántos esperan aprobación.
+2. Contar en dos o tres frases llanas lo que espera: cuántos documentos tienen cosas nuevas, cuántos esperan que alguien los confirme y cuántos esperan aprobación. Una vez por sesión, recordar en una frase qué esperaba la empresa de este trabajo, según "Qué se espera" de `empresa/contexto.md`, y cuántos documentos ya son versión oficial. Es un recuento, no una opinión sobre si se cumplió.
 3. Preguntar por dónde empezar. Es la pregunta de confirmación de esta etapa.
 
 - Si no hay nada pendiente, decirlo y pasar a la etapa 8.
@@ -147,10 +147,10 @@ Para cada documento en `borrador`, comprobar las tres condiciones:
 
 Si se cumplen las tres:
 
-1. Contar al responsable del programa qué documento queda confirmado y qué marcadores menores siguen abiertos.
-2. Preguntar si está de acuerdo.
-3. Si no está de acuerdo con el contenido, vale la regla 8 de este modo: su versión va a un bloque `CONFLICTO`, el documento sigue en `borrador` y lo resuelve el dueño del proceso.
-4. Si está de acuerdo, escribir el estado `validado` en el bloque de control, en la lista maestra y en el mapa de procesos. Escribir en "Revisó" el nombre de pila del dueño del proceso. Sumar una fila al historial.
+1. Contar al responsable del programa qué documento queda confirmado y qué marcadores menores siguen abiertos. No se le pregunta si está de acuerdo por cada documento: su acuerdo se pide una sola vez, al cerrar la etapa.
+2. Escribir el estado `validado` en el bloque de control, en la lista maestra y en el mapa de procesos. Escribir en "Revisó" el nombre de pila del dueño del proceso. Sumar una fila al historial.
+
+Si en cualquier momento el responsable del programa no está de acuerdo con el contenido de un documento, vale la regla 8 de este modo: su versión va a un bloque `CONFLICTO`, el documento vuelve a `borrador` y lo resuelve el dueño del proceso.
 
 Si falta alguna:
 
@@ -160,7 +160,7 @@ Si falta alguna:
 
 El contexto, el mapa de procesos y el glosario no tienen dueño de proceso. Los confirma el responsable del programa, en esta conversación.
 
-Cerrar la etapa: resumir qué quedó confirmado y qué sigue esperando, preguntar si es correcto y guardar.
+Cerrar la etapa: resumir qué quedó confirmado y qué sigue esperando, preguntar si es correcto y guardar. Esa respuesta es el acuerdo del responsable del programa con lo validado.
 
 ## Etapa 4. Aprobar
 
