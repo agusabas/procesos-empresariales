@@ -18,9 +18,9 @@ Una fila por documento, ordenadas por código. Las filas no se borran: un docume
 
 ## Registros
 
-Qué se guarda como registro, dónde y por cuánto tiempo. Un registro no se edita una vez cerrado. Los registros propios de cada proceso figuran en su ficha, en "Qué registro queda".
+Qué se guarda como registro, dónde y con qué plazo mínimo de guarda. Lo escrito se conserva siempre: el plazo es el mínimo que la empresa exige, no una fecha de borrado. Un registro no se edita una vez cerrado. Los registros propios de cada proceso figuran en su ficha, en "Qué registro queda".
 
-| Registro | Qué se guarda | Dónde | Por cuánto tiempo |
+| Registro | Qué se guarda | Dónde | Plazo mínimo |
 |---|---|---|---|
 | Sesiones | El registro de cada conversación | `sesiones/` | `<plazo>` |
 | Insumos | El material recibido, sin los datos que no se guardan | `insumos/` | `<plazo>` |

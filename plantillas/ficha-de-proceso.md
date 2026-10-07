@@ -40,7 +40,7 @@ _Lo que hay que tener antes de empezar: datos, documentos, autorizaciones. Quié
 
 ### Pasos
 
-_Una fila por paso, en el orden en que se hacen. Si un paso lo hacen dos sectores, va en dos filas. En "Con qué" va el sistema, la planilla o el papel que se usa hoy._
+_Una fila por paso, en el orden en que se hacen. Un paso termina cuando cambia quién lo hace, cuando se decide algo o cuando queda algo hecho. Si un paso lo hacen dos sectores, va en dos filas. En "Con qué" va el sistema, la planilla o el papel que se usa hoy._
 
 | Paso | Quién | Qué hace | Con qué (sistema/planilla) | Cuánto tarda |
 |---|---|---|---|---|
@@ -74,7 +74,7 @@ flowchart TD
 
 ### Qué queda hecho al terminar
 
-_Qué queda hecho cuando el trabajo termina y a quién le llega._
+_Qué queda hecho cuando el trabajo termina y a quién le llega. Si lo sigue otro proceso del mapa, nombrarlo como figura ahí._
 
 ### Reglas que se siguen
 
@@ -108,7 +108,7 @@ _Forma de cada línea:_ `- [<archivo>](../../adjuntos/<area>/<proceso>/<archivo>
 
 ## Problemas e ideas
 
-_Esta parte va separada a propósito. Nada de lo que hay aquí describe cómo se hace hoy._
+_Esta parte va separada a propósito. Nada de lo que hay aquí describe cómo se hace hoy. Es material de trabajo: se pone al día sin aprobación y sin cambiar la versión, también con la ficha `vigente`, como indica "Cambios en un documento vigente" en `metodo/control-documental.md`._
 
 ### Problemas
 
@@ -120,7 +120,7 @@ _Lo que propone quien hace el trabajo. Anotar quién lo propuso y la fecha._
 
 ## Cambios propuestos (sin aprobar)
 
-_Se usa solo cuando el documento está `vigente`: lo que cambió no se escribe arriba, se anota aquí hasta que se apruebe. Mientras no haya cambios, la tabla queda sin filas._
+_Se usa solo cuando el documento está `vigente`: lo que cambió no se escribe arriba, se anota aquí hasta que se apruebe. En "Qué cambió" van la parte afectada y el texto que va a quedar, tal como quedaría en el cuerpo. Mientras no haya cambios, la tabla queda sin filas._
 
 | Fecha | Quién lo cuenta | Qué cambió | Confirmó el dueño |
 |---|---|---|---|

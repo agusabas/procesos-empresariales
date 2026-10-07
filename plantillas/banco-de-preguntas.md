@@ -117,6 +117,7 @@ Repreguntas:
 - "Cuando termina, ¿qué queda hecho?"
 - "¿A quién le llega?"
 - "¿Cómo se entera esa persona de que ya está listo?"
+- "¿Quién sigue con eso después? ¿Es parte de otro trabajo?"
 
 ## Reglas que se siguen
 
