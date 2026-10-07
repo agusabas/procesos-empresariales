@@ -200,7 +200,7 @@ Qué se hace según el estado de la ficha. Vale la primera fila que se cumple:
 |---|---|
 | No existe | Crearla como indica "La primera vez" en `metodo/entrevista.md`. Queda `en curso`. |
 | Está `en curso` o en `borrador` | Se suma a lo escrito. El estado no cambia. |
-| Está `validado` | Se suma. Si lo nuevo cambia el sentido, vuelve a `borrador` en el bloque de control, en la lista maestra y en el mapa. |
+| Está `validado` | Se suma, y la ficha vuelve a `borrador` en el bloque de control, en la lista maestra y en el mapa. "Revisó" vuelve a `—`: el dueño no leyó lo nuevo, como indica "Estados" en `metodo/control-documental.md`. |
 | Está `vigente` | No se toca el contenido aprobado. Lo que cambia va en una fila de "Cambios propuestos (sin aprobar)", con la fuente y el texto que va a quedar. En "Confirmó el dueño" va `no`. Los problemas van a "Problemas e ideas", sin aprobación, como indica "Cambios en un documento vigente" en `metodo/control-documental.md`. |
 | Está `obsoleto` | No se toca. Lo que el material dice sobre ese proceso se suma como pregunta a "Preguntas preparadas" de la hoja del responsable del programa. |
 
@@ -229,7 +229,7 @@ Es el material que vuelve cuando una persona recibe sus preguntas por escrito, c
 4. Si responde que no sabe, el marcador sigue abierto y se siguen los pasos de "Marcadores" en `metodo/reglas.md`. Como la persona no está en la conversación, la pregunta por a quién consultar va a la hoja del responsable del programa.
 5. En su hoja, marcar cada pregunta respondida con la fecha de la respuesta y el archivo.
 6. Si la respuesta confirma la lectura de un documento completo que se le envió, anotarlo en "Cómo terminó" del registro de esta sesión, con sus palabras. Es lo que la revisión necesita para validar, como indica "Las tres condiciones" en `metodo/revision-y-aprobacion.md`.
-7. Si quien confirma esa lectura es el dueño del proceso y la ficha tiene todas sus partes escritas, la ficha pasa a `borrador` en el bloque de control, en la lista maestra y en el mapa. Es la única vez que este modo lleva una ficha a `borrador`.
+7. Si quien confirma esa lectura es el dueño del proceso, y la ficha tiene todas sus partes escritas, la ficha pasa a `borrador`. El estado se escribe en el bloque de control, en la lista maestra y en el mapa. Es la única vez que este modo lleva una ficha a `borrador`.
 
 ## Etapa 5. Preguntas para las personas
 

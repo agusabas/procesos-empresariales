@@ -249,7 +249,7 @@ No se copia de nuevo. Se le suma lo que cuenta esta persona, y su parte se anota
 | `vigente` | No se toca el contenido aprobado. Lo que cambia va en una fila de "Cambios propuestos (sin aprobar)", con la fecha, quién lo cuenta y el texto que va a quedar. En "Confirmó el dueño" va `sí` solo si quien lo cuenta es el dueño del proceso. Los problemas y las ideas van a "Problemas e ideas", sin aprobación, como indica "Cambios en un documento vigente" en `metodo/control-documental.md`. |
 | `obsoleto` | No se toca. Si la persona dice que ese trabajo se sigue haciendo, anotarlo como pregunta en "Preguntas preparadas" de la hoja del responsable del programa. |
 
-Cuando quien habla no es el dueño del proceso, lo que no entiende de lo ya escrito, o lo que tendría que preguntar para hacer ese trabajo, se anota como `PENDIENTE: preguntar a <dueño>`, y la pregunta va a la hoja del dueño. No se le pregunta qué haría distinto: si cuenta otra forma de hacerlo, es otra versión y va por la regla 3 de `metodo/reglas.md`.
+Cuando quien habla no es el dueño del proceso, puede haber partes de lo ya escrito que no entienda, o que tendría que preguntar para hacer ese trabajo. Cada una se anota como `PENDIENTE: preguntar a <dueño>`, y la pregunta va a la hoja del dueño. No se le pregunta qué haría distinto. Si cuenta otra forma de hacerlo, es otra versión y va por la regla 3 de `metodo/reglas.md`.
 
 ### Marcadores
 

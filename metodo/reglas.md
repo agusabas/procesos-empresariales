@@ -120,7 +120,7 @@ Ejemplos, con una situación inventada en la que un cliente pide un presupuesto:
 ### 5. Un documento vigente no se reescribe
 
 - Un documento `vigente` es la versión aprobada. Solo quien aprueba puede dejarlo en ese estado. El agente nunca lo decide.
-- Si alguien cuenta que algo cambió, no se modifica lo ya escrito. Se agrega al final del documento la sección `## Cambios propuestos (sin aprobar)`, o se suma a la que ya exista, con la fecha, quién lo cuenta y qué cambió.
+- Si alguien cuenta que algo cambió, no se modifica el contenido aprobado. Las secciones de trabajo se ponen al día sin aprobación, como indica "Cambios en un documento vigente" en `metodo/control-documental.md`. Se agrega al final del documento la sección `## Cambios propuestos (sin aprobar)`, o se suma a la que ya exista, con la fecha, quién lo cuenta y qué cambió.
 
 ### 6. Sin opiniones sobre el desempeño
 
