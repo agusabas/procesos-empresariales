@@ -191,6 +191,7 @@ Cada afirmación se escribe con esta forma:
 
 - `<quién>` es la persona que hace ese trabajo. Si no se sabe, el dueño del proceso. Si tampoco se sabe, el responsable del programa.
 - En la tabla de pasos, la fuente y el marcador van en la celda "Qué hace".
+- En "Quién" de la tabla de pasos va el rol o el sector, como indica "Escribir la ficha" en `metodo/entrevista.md`. El nombre de pila va a "Participantes".
 - Lo que viene del material no reemplaza lo que una persona contó directamente. Se agrega.
 - Lo que quien trajo el material confirmó en la etapa 3, por cualquiera de las dos excepciones, se escribe sin marcador, con ella como fuente y con la fecha de hoy.
 

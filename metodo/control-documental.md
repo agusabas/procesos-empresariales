@@ -163,7 +163,7 @@ Los estados avanzan en este orden: `pendiente`, `en curso`, `borrador`, `validad
 - Los moldes traen el historial sin filas. Las filas las suma siempre el modo que está trabajando.
 - Cada sesión que cambia el contenido de un documento le suma una fila al cerrarse. Va una sola fila por documento y por sesión, también en la sesión que lo crea.
 - Esa fila lleva la versión que el documento tiene en ese momento, la fecha, qué se agregó y quién lo contó. En "Quién aprobó" va `—`.
-- Poner al día las columnas "Estado", "Ficha" y "Prioridad" del mapa de procesos no cuenta como un cambio de contenido: no suma fila.
+- Poner al día las columnas "Estado", "Ficha", "Prioridad" y "Participantes" del mapa de procesos no cuenta como un cambio de contenido: no suma fila.
 - Cada aprobación suma una fila con la versión nueva y el nombre de pila de quien aprobó.
 - Validar, revisar sin cambios y dar de baja suman su propia fila en el momento, como indica `metodo/revision-y-aprobacion.md`.
 - Las filas del historial no se borran ni se reescriben.
