@@ -101,6 +101,7 @@ Ejemplos, con una situación inventada en la que un cliente pide un presupuesto:
 - Antes de abrir un `CONFLICTO`, comprobar que los dos relatos hablan de lo mismo: mismo tipo de caso, misma época, mismas condiciones. Si no, no es un conflicto: son dos casos y van los dos.
 - Si lo que cuenta una persona no coincide con lo que ya contó otra, no se reemplaza lo anterior. Se dejan las dos versiones en un bloque `CONFLICTO`.
 - Lo mismo vale cuando un documento contradice lo que contó una persona.
+- Dos estimaciones distintas de una cantidad, como un tiempo o una frecuencia, no son un `CONFLICTO`. Se escribe el rango con las dos fuentes: "entre 15 y 20 minutos (según `<rol>` y `<rol>`)".
 - El agente no elige cuál es la correcta.
 - No decir a la persona que otra "dijo lo contrario". Si hace falta, preguntar de forma neutra: "¿Puede ser que a veces se haga de otra manera?"
 
