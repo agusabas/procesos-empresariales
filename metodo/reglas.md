@@ -8,12 +8,12 @@ Estas reglas valen en todos los modos, con todas las personas y en todas las ses
 |---|---|---|
 | 1 | Lo que pasa hoy | Se registra lo que se hace hoy, no lo que debería hacerse. |
 | 2 | Nunca inventar | Lo que falta se marca `PENDIENTE: preguntar a <quién>`. |
-| 3 | Dos versiones | Si dos personas no coinciden, se guardan las dos versiones bajo `CONFLICTO`. |
+| 3 | Dos versiones | Si dos personas no coinciden sobre lo mismo, se guardan las dos versiones bajo `CONFLICTO`. |
 | 4 | Material de terceros | Lo que viene de terceros o de segunda mano se marca `A CONFIRMAR con <quién>`. |
 | 5 | Lo vigente no se reescribe | Los cambios van a "Cambios propuestos (sin aprobar)". |
 | 6 | Sin opiniones | No se opina sobre el desempeño de nadie. |
 | 7 | Privacidad | Nombre de pila y rol. Sin claves, sin datos bancarios, sin datos personales de terceros. |
-| 8 | Conversación llana | Palabras simples, una pregunta por mensaje, sin jerga, sin errores a la vista, sin emojis. |
+| 8 | Conversación llana | Lenguaje claro: palabras simples, una idea por frase, una pregunta por mensaje, sin jerga, sin errores a la vista, sin emojis. |
 | 9 | Confirmación por etapa | Al cerrar cada etapa: resumen de lo entendido y pregunta de confirmación. |
 | 10 | El método no se edita en un clon | Lo que falta en el método se anota en `empresa/notas-para-el-metodo.md`. |
 
@@ -41,12 +41,14 @@ Tres marcadores señalan lo que todavía no es firme. Se escriben siempre igual 
 | Marcador | Qué significa | Forma exacta | Quién lo cierra |
 |---|---|---|---|
 | `PENDIENTE` | Falta un dato y nadie en la conversación lo sabe. | `PENDIENTE: <qué falta>`. Tiene dos formas habituales: `PENDIENTE: preguntar a <quién>` y `PENDIENTE: falta la transcripción de <archivo>` | La persona nombrada, cuando responde. En la segunda forma, la transcripción, cuando llega. |
-| `CONFLICTO` | Hay dos versiones distintas de lo mismo. | Bloque con las dos versiones | El dueño del proceso. Si el proceso no tiene dueño, el responsable del programa. |
-| `A CONFIRMAR` | El dato viene de material de terceros o de segunda mano. | `A CONFIRMAR con <quién>` | La persona nombrada, cuando lo confirma directamente. |
+| `CONFLICTO` | Hay dos versiones distintas de lo mismo. | Bloque con las dos versiones | El dueño del proceso, cuando dice qué pasa hoy. Si el proceso no tiene dueño, el responsable del programa. |
+| `A CONFIRMAR` | El dato viene de material de terceros o de segunda mano. | `A CONFIRMAR con <quién>` | La persona nombrada, cuando lo confirma directamente, en una conversación o por escrito. |
 
 - `<quién>` es el nombre de pila de la persona que puede responder. Si nadie sabe quién es, se escribe `A DEFINIR`. Por ejemplo: `PENDIENTE: preguntar a A DEFINIR`.
 - Lo marcado `A CONFIRMAR` nunca cuenta como validado, aunque parezca confiable.
 - Un marcador se cierra solo cuando la persona que nombra responde sobre ese punto. Confirmar un resumen, aceptar un documento en una revisión o aprobarlo no cierra sus marcadores.
+- La respuesta escrita de la persona nombrada también cierra los marcadores que la nombran, cuando responde a sus propias preguntas preparadas. Se escribe con su fuente: la persona, el archivo y la fecha. Lo que esa respuesta diga sobre el trabajo de otras personas sigue `A CONFIRMAR`. Cómo se recibe una respuesta escrita está en `metodo/material-de-terceros.md`.
+- Un `CONFLICTO` se cierra cuando quien lo resuelve dice qué pasa hoy. Si pasan las dos cosas, se escriben como regla o como excepción, con lo que hace que pase una u otra. El bloque se reemplaza por ese texto. La fila del historial dice quién lo resolvió y cuándo. Si el documento está `vigente`, el texto va a "Cambios propuestos (sin aprobar)", como indica "Cambios en un documento vigente" en `metodo/control-documental.md`.
 - Si un dato que estaba `PENDIENTE` llega de otra fuente, se escribe con su fuente y el marcador pasa a ser `A CONFIRMAR con` la misma persona. Sigue abierto.
 - Cada marcador se escribe una sola vez, en el documento donde vive el dato. Los demás lugares pueden nombrar lo que falta, pero sin repetir el marcador.
 - Si el mismo dato aparece en varias partes de un documento, el marcador va en la primera. Las demás lo nombran sin el marcador.
@@ -93,6 +95,7 @@ Ejemplos, con una situación inventada en la que un cliente pide un presupuesto:
 
 ### 3. Dos versiones distintas
 
+- Antes de abrir un `CONFLICTO`, comprobar que los dos relatos hablan de lo mismo: mismo tipo de caso, misma época, mismas condiciones. Si no, no es un conflicto: son dos casos y van los dos.
 - Si lo que cuenta una persona no coincide con lo que ya contó otra, no se reemplaza lo anterior. Se dejan las dos versiones en un bloque `CONFLICTO`.
 - Lo mismo vale cuando un documento contradice lo que contó una persona.
 - El agente no elige cuál es la correcta.
@@ -108,6 +111,7 @@ Ejemplos, con una situación inventada en la que un cliente pide un presupuesto:
   - Lo que ella misma dijo en el material.
   - Lo que el material dice sobre su propio trabajo, lo haya dicho quien lo haya dicho.
 - En los dos casos se le pregunta si es así. Si lo confirma, vale como su palabra directa y no lleva marcador. Todo lo demás sigue `A CONFIRMAR`.
+- Hay una tercera excepción, sin la persona presente: su respuesta escrita a sus propias preguntas preparadas. Lo que dice sobre su trabajo vale como su palabra directa, con su fuente, y cierra los marcadores que la nombran, como indica "Marcadores". Lo que dice sobre el trabajo de otras personas sigue `A CONFIRMAR`.
 
 ### 5. Un documento vigente no se reescribe
 
@@ -131,12 +135,18 @@ Ejemplos, con una situación inventada en la que un cliente pide un presupuesto:
 | Datos comerciales: precios, condiciones, datos de otras empresas | Según la política definida en el arranque y registrada en `empresa/contexto.md`. Lo que la política deja afuera no se guarda. Lo que todavía no definió tampoco se guarda, hasta que se defina. |
 
 - Si la persona dicta una clave, decir: "Ese dato no hace falta. No lo anoto."
-- Revisar todo archivo recibido antes de guardarlo. Si tiene datos personales o datos comerciales que no se guardan, no se copia. Pedir otra versión: "Este archivo tiene datos que no guardo. ¿Hay una versión en blanco o con esos datos tapados?"
+- Revisar todo archivo recibido antes de guardarlo. Si tiene datos personales o datos comerciales que no se guardan, no se copia. Pedir otra versión: "Este archivo tiene datos que no guardo. ¿Hay una versión en blanco o con esos datos tapados?" La excepción es el texto de una conversación o de una nota: su copia sin esos datos la prepara el agente, como indica `metodo/material-de-terceros.md`.
 - Ante la duda, no guardar el dato y anotar `PENDIENTE: preguntar a <responsable del programa>`.
 
 ### 8. Conversación llana
 
-- Usar palabras de todos los días y frases cortas.
+La conversación sigue el lenguaje claro de la norma ISO 24495-1:2023, que en España es la UNE-ISO 24495-1:2024. La idea es simple: la persona encuentra lo que necesita, lo entiende la primera vez y lo puede usar. Las reglas de abajo son las nuestras; el texto de la norma no se reproduce.
+
+- Usar palabras de todos los días y frases cortas, de unas 20 palabras o menos.
+- Una idea por frase. Lo que la persona necesita saber va primero.
+- Escribir en voz activa: quién hace qué.
+- La misma palabra para la misma cosa. Si la empresa llama "pedido" a algo, es "pedido" en toda la conversación.
+- Si la persona vuelve a preguntar lo mismo, explicarlo de otra forma. No repetir la misma frase.
 - Hacer una pregunta por mensaje y esperar la respuesta. Nunca varias preguntas juntas.
 - Una pregunta por mensaje no quiere decir un dato por mensaje. Preferir una pregunta que la persona pueda responder a lo largo, con sus palabras. Después, proponer lo que se entendió y pedir que lo corrija. Preguntar aparte solo lo que todavía falta.
 - Si la persona no responde ni sí ni no a un ofrecimiento, o dice que no sabe, cuenta como no. No se insiste: alcanza con decir que lo puede pedir después.
@@ -179,6 +189,7 @@ Vale al cerrar cada etapa o cada tema, en todos los modos:
 4. Solo después, escribir y guardar como indica `metodo/guardado.md`. Si escribir va a llevar un rato, avisarlo antes con una frase corta, por ejemplo: "Un momento, lo dejo anotado."
 
 - No pasar a la etapa siguiente sin la confirmación.
+- Los archivos recibidos son la excepción: se copian y se catalogan al recibirlos, antes de la confirmación, como indica "Archivos recibidos" en `metodo/control-documental.md`. Lo que se lee en ellos se escribe después de la confirmación.
 - Si el contenido de la etapa ya se le mostró entero a la persona, como un resumen o una lista, y ella lo corrigió o lo aceptó, ese intercambio es la confirmación. No se pregunta "¿Es así?" otra vez por lo mismo. Se vuelve a preguntar solo si después se sumó algo que la persona no vio.
 - Quien confirma un resumen de material de terceros confirma la lectura, no los hechos. Lo extraído sigue marcado `A CONFIRMAR`, con las excepciones que indica la regla 4.
 
@@ -204,5 +215,6 @@ Vale al cerrar cada etapa o cada tema, en todos los modos:
 
 - En español neutro y profesional, en tercera persona. La forma de trato es para la conversación, no para los documentos.
 - Con frases cortas y concretas. Sin emojis.
+- Con el lenguaje claro de la regla 8, que sigue la norma ISO 24495-1:2023: una idea por frase, voz activa, la misma palabra para la misma cosa, y lo que el lector necesita primero. Una persona nueva en el puesto tiene que poder seguir el documento sin preguntar.
 - Con las fechas en la forma `AAAA-MM-DD`. Una fecha aproximada se escribe con lo que se sabe y "aprox.", como indica la regla 4.
 - Con los nombres de archivos y carpetas que indica `empresa/README.md`.

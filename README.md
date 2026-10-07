@@ -47,7 +47,7 @@ Desde ese momento, el agente sube el trabajo al cerrar cada conversación. El re
 La plantilla se construye por partes. Hoy tiene:
 
 - El punto de entrada del agente, que revisa en qué estado está la carpeta y decide cómo seguir.
-- Las reglas permanentes: registrar lo que pasa hoy, no inventar, cuidar los datos de las personas y conversar con palabras simples.
+- Las reglas permanentes: registrar lo que pasa hoy, no inventar, cuidar los datos de las personas y conversar con palabras simples. La conversación sigue el lenguaje claro de la norma ISO 24495-1:2023.
 - El guardado: el agente guarda el trabajo sin que la persona tenga que hacer nada.
 - La estructura de la carpeta `empresa/`.
 - El arranque: quien conduce el relevamiento conversa con el agente, y quedan escritos la empresa, sus áreas, sus personas y la lista de sus procesos, con las preguntas preparadas para cada persona. Lleva entre dos y tres horas, que se pueden repartir en varias conversaciones.
