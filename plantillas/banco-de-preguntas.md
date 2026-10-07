@@ -36,6 +36,7 @@ Repreguntas:
 
 - "¿Qué pasaría si un día nadie lo hiciera?"
 - "¿Hay algo parecido que se haga de otra manera, o que haga otra área?"
+- "¿Con qué otros nombres se conoce este trabajo?"
 
 ## Quién responde y quiénes intervienen
 
@@ -49,6 +50,10 @@ Repreguntas:
 - "¿Hay algo anotado que le sirva a quien lo cubre?"
 - "¿Qué se acumula hasta la vuelta?"
 - "¿Hay alguna parte que hoy no esté escrita en ningún lado?"
+
+Al cerrar el paso a paso, con la tabla de pasos a la vista:
+
+- "De estos pasos, ¿cuáles sabe hacer una sola persona?"
 
 ## Qué lo pone en marcha
 
@@ -88,6 +93,10 @@ Repreguntas:
 - "¿Qué cambia de un caso a otro en el orden?"
 - "¿Hay algún paso que se haga dos veces, o que se anote en dos lugares?"
 
+Para un paso que se hace solo en algunos casos:
+
+- "De cada diez casos, ¿en cuántos hace falta hacer esto?"
+
 ## Con qué se hace
 
 - "¿Con qué se hace: un sistema, una planilla, un cuaderno, mensajes?"
@@ -98,6 +107,7 @@ Repreguntas:
 
 - "¿Esa planilla la usa una sola persona, o la ve alguien más?"
 - "¿Dónde está guardada?"
+- "Lo que se carga ahí, ¿de dónde se saca?"
 - "¿Qué se hace cuando el sistema no funciona?"
 
 ## Cuánto tarda
@@ -176,6 +186,7 @@ Repreguntas:
 - "¿Y cómo se nota cuando sale mal?"
 - "¿Quién avisa cuando sale mal?"
 - "¿Se cuenta o se mide algo: cuánto tarda, cuántos quedan esperando, cuántos errores hay?"
+- "De cada diez casos, ¿cuántos hay que corregir o volver a hacer?"
 
 Repreguntas:
 
@@ -205,6 +216,7 @@ Lo que sale de este grupo son hechos: qué puede fallar y qué se hace hoy. Va a
 Repreguntas:
 
 - "¿Qué se hace cuando pasa eso?"
+- "¿Cada cuánto pasa eso, más o menos?"
 - "¿Cómo se podría haber evitado?"
 - "Si se pudiera cambiar una sola cosa, ¿cuál sería?"
 
