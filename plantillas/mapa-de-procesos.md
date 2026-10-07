@@ -18,7 +18,7 @@ Este mapa reúne todos los procesos de la empresa que se identificaron hasta aho
 - **Proceso:** es el nombre oficial. Todos los demás documentos lo usan exactamente así.
 - **Área:** el área a la que pertenece el proceso. "General" quiere decir que es de toda la empresa. Si lleva `A CONFIRMAR`, es provisoria.
 - **Dueño:** quien responde por el proceso. `A DEFINIR` quiere decir que todavía no se sabe.
-- **Participantes:** quiénes intervienen además del dueño, por su nombre de pila. `—` quiere decir que no interviene nadie más. Lo que hace cada persona está en la ficha del proceso.
+- **Participantes:** quiénes intervienen además del dueño, por su nombre de pila. `—` quiere decir que no interviene nadie más. Lo que hace cada persona está en la ficha del proceso. Esta columna se pone al día sin aprobación, aunque el mapa esté aprobado: dice a quién preguntar, no cómo se trabaja.
 - **Estado:** el estado de la ficha de ese proceso.
 - **Ficha:** el enlace a la ficha. `—` quiere decir que todavía no se creó.
 

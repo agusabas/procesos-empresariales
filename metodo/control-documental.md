@@ -192,7 +192,7 @@ Al aprobar se hacen cuatro cosas juntas, en un mismo guardado:
 
 ## Cambios en un documento vigente
 
-La versión identifica el contenido aprobado. El contenido aprobado es todo el documento, salvo sus secciones de trabajo: "Problemas e ideas", "Cambios propuestos (sin aprobar)", "Historial" y las tres columnas del mapa que se nombran más abajo. Las secciones de trabajo se ponen al día sin aprobación y sin cambiar la versión. En una ficha de proceso, lo aprobado es "Cómo se hace hoy" y "Documentos"; "Problemas e ideas" es material de trabajo, porque no describe cómo se hace hoy.
+La versión identifica el contenido aprobado. El contenido aprobado es todo el documento, salvo sus secciones de trabajo: "Problemas e ideas", "Cambios propuestos (sin aprobar)", "Historial" y las cuatro columnas del mapa que se nombran más abajo. Las secciones de trabajo se ponen al día sin aprobación y sin cambiar la versión. En una ficha de proceso, lo aprobado es "Cómo se hace hoy" y "Documentos"; "Problemas e ideas" es material de trabajo, porque no describe cómo se hace hoy.
 
 1. No tocar lo ya escrito en el contenido aprobado.
 2. Anotar el cambio en la sección `## Cambios propuestos (sin aprobar)`, que va justo antes de `## Historial`. Si el documento no tiene esa sección, agregarla ahí.
@@ -202,9 +202,9 @@ La versión identifica el contenido aprobado. El contenido aprobado es todo el d
 
 Cerrar un marcador que no cambia el sentido se hace en su lugar, sin cambiar la versión, con una fila en el historial. Es la única edición del contenido aprobado que no pasa por aprobación, porque por definición no cambia el sentido. Si la respuesta cambia el sentido, va a "Cambios propuestos (sin aprobar)".
 
-Tres datos del mapa de procesos se actualizan sin aprobación, aunque el mapa esté `vigente`: las columnas "Estado", "Ficha" y "Prioridad". Las dos primeras copian datos de cada ficha. La prioridad es el orden del relevamiento y la decide el responsable del programa.
+Cuatro datos del mapa de procesos se actualizan sin aprobación, aunque el mapa esté `vigente`: las columnas "Estado", "Ficha", "Prioridad" y "Participantes". Las dos primeras copian datos de cada ficha. La prioridad es el orden del relevamiento y la decide el responsable del programa. "Participantes" copia lo que dicen las fichas y las hojas: dice a quién preguntar, no cómo se trabaja. "Dueño" sigue siendo contenido aprobado.
 
-Con el mapa `vigente`, la fila de un proceso nuevo entra igual al cuerpo del mapa, con su estado, su ficha y su prioridad. En "Cambios propuestos (sin aprobar)" queda una fila que registra el alta. Lo que se aprueba con la versión siguiente es su nombre, su área, su tipo y su dueño.
+Con el mapa `vigente`, la fila de un proceso nuevo entra igual al cuerpo del mapa, con su estado, su ficha, su prioridad y sus participantes. En "Cambios propuestos (sin aprobar)" queda una fila que registra el alta. Lo que se aprueba con la versión siguiente es su nombre, su área, su tipo y su dueño.
 
 Lo que un cambio en marcha va a modificar no se anota en la ficha del proceso mientras sea un plan. Va en la ficha del cambio, como indica `metodo/cambio-en-curso.md`.
 
@@ -267,7 +267,7 @@ Qué se hace con cada documento se decide en `metodo/revision-y-aprobacion.md`:
 - Un proceso puede tener un área provisoria: en "Área" va el área, seguida de `A CONFIRMAR con <quién>`. Tiene código. Si esa persona corrige el área, el código cambia como indica "Cambiar un código".
 - En "Participantes" van los nombres de pila de quienes intervienen además del dueño. El dueño no se repite ahí. Si no interviene nadie más, va `—`.
 - Lo que hace cada persona en el proceso está en la ficha, con su marcador. Mientras el proceso no tiene ficha, está en la hoja de esa persona, y el marcador va ahí.
-- Cuando un modo sabe de un participante nuevo, suma su nombre a "Participantes" y el proceso a la hoja de esa persona, en el mismo guardado.
+- Cuando un modo sabe de un participante nuevo, suma su nombre a "Participantes" y el proceso a la hoja de esa persona, en el mismo guardado. Vale también con el mapa `vigente`: "Participantes" se pone al día sin aprobación, como indica "Cambios en un documento vigente".
 - En "Prioridad" va `P1`, `P2`, `P3` o `sin definir`.
 - Lo que no se sabe de un grupo entero, o de dónde empieza y dónde termina la cadena, va en la sección "Pendientes del mapa". Ahí va también un proceso que nombra el material y que nadie reconoció todavía: no lleva fila hasta que alguien lo confirme.
 - Lo que el material dice sobre un proceso que todavía no tiene código va también a "Pendientes del mapa", con su fuente, hasta que el proceso tenga ficha.
