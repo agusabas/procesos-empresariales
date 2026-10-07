@@ -54,7 +54,7 @@ Repreguntas:
 
 - "¿Qué tiene que pasar para que este trabajo empiece?"
 - "¿Cómo llega el aviso de que hay que hacerlo: por un mensaje, por un papel, de palabra?"
-- "¿Hay un día o un horario fijo?"
+- "¿En qué momento se hace: un día fijo, un horario, cuando llega el pedido?"
 
 Repreguntas:
 
@@ -85,7 +85,7 @@ Repreguntas:
 
 - "Eso que 'se carga', ¿quién lo carga y dónde?"
 - "Entre ese paso y el siguiente, ¿hay que esperar a alguien?"
-- "¿Se hace siempre en ese orden, o a veces cambia?"
+- "¿Qué cambia de un caso a otro en el orden?"
 - "¿Hay algún paso que se haga dos veces, o que se anote en dos lugares?"
 
 ## Con qué se hace
@@ -131,7 +131,7 @@ Repreguntas:
 - "¿Qué diferencia hubo entre un caso al que se le dijo que sí y otro al que se le dijo que no?"
 - "¿Desde qué cantidad o desde qué importe cambia la decisión?"
 - "¿Quién puso esa regla?"
-- "¿Cambió alguna vez?"
+- "¿Desde cuándo se hace así?"
 - "Si otra persona tuviera que decidirlo, ¿qué datos necesitaría?"
 
 ## Excepciones
@@ -149,7 +149,7 @@ Repreguntas:
 ## Qué registro queda
 
 - "Cuando termina, ¿dónde queda anotado que se hizo?"
-- "¿Se imprime o se archiva algo?"
+- "¿Qué se imprime o se guarda al terminar?"
 - "Si dentro de seis meses alguien pregunta por un caso, ¿de dónde se saca?"
 
 Repreguntas:
@@ -190,7 +190,7 @@ Repreguntas:
 
 Repreguntas:
 
-- "¿Pasó alguna vez?"
+- "¿Cuándo fue la última vez que pasó?"
 - "¿Cómo se resolvió?"
 - "¿Quién se da cuenta primero?"
 
@@ -227,6 +227,27 @@ Repreguntas:
 - "Si es una pantalla, ¿se puede sacar una captura?"
 
 Si el archivo tiene datos personales, se pide el formulario en blanco o una versión con esos datos tapados. Es la regla 7 de `metodo/reglas.md`.
+
+## Cuando hay poco tiempo
+
+Sirve en cualquier tema, cuando la persona dice que tiene poco tiempo. Qué se hace con la respuesta está en "El temario", en `metodo/entrevista.md`.
+
+- "¿Cuánto tiempo hay hoy? Con diez minutos alcanza para lo principal."
+- "Si hoy no se puede más, ¿qué es lo que no debería faltar en lo anotado?"
+
+## Cuando cuenta cómo debería ser
+
+Sirve en cualquier tema, cuando aparecen las señales de la regla 1 de `metodo/reglas.md`: "se debe", "siempre", "según el procedimiento", o un recorrido sin esperas ni excepciones. Antes de la primera repregunta se dice la frase de "Lo que se hace distinto", de `metodo/entrevista.md`. Lo que sale de aquí describe el último caso real.
+
+- "La última vez que se hizo así, ¿qué pasó ese día?"
+- "De cada diez casos, ¿en cuántos se hace exactamente así?"
+- "¿Qué cambia cuando hay apuro?"
+- "Si alguien nuevo siguiera esto al pie de la letra, ¿qué le faltaría saber?"
+- "¿Qué quedó anotado del último caso? Si se puede ver con los datos tapados, sirve."
+
+Último recurso, si con lo anterior no queda claro:
+
+- "¿Eso es lo que se hace hoy, o lo que convendría hacer?"
 
 ## Para cerrar
 

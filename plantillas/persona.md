@@ -33,7 +33,7 @@ _Una fila por proceso, con el nombre exacto del mapa de procesos. Si el proceso 
 
 ## Preguntas preparadas
 
-_Lo que hay que preguntarle, agrupado por proceso. Son lo primero que se le pregunta en su próxima conversación. Cada pregunta se marca cuando la respondió, en una conversación o por escrito; en ese caso, con la fecha y el archivo de la respuesta. Una pregunta nombra lo que falta saber y de dónde sale; el marcador queda en el documento donde vive el dato._
+_Lo que hay que preguntarle, agrupado por proceso. Son lo primero que se le pregunta en su próxima conversación. Cada pregunta se marca cuando la respondió, en una conversación o por escrito; en ese caso, con la fecha y el archivo de la respuesta. Una pregunta nombra lo que falta saber y de dónde sale; el marcador queda en el documento donde vive el dato. Si la pregunta sale de un marcador que cambia el sentido, la línea termina con "frena la validación": esas se hacen primero._
 
 - [ ] `<pregunta>` (`<proceso o asunto>`; sale de `<de dónde sale la pregunta>`)
 

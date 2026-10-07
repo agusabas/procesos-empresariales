@@ -9,7 +9,7 @@ Antes de empezar, leer completos `metodo/control-documental.md` y `plantillas/ba
 | Momento | Qué se hace |
 |---|---|
 | Preparar | En silencio: leer la hoja de la persona, el mapa y lo que ya existe del proceso. |
-| Abrir | Saludar. La primera vez, contar para qué es este trabajo. |
+| Abrir | Saludar. La primera vez, contar para qué es este trabajo. Las siguientes, decir en qué quedó lo que contó. |
 | Elegir el proceso | Uno solo por sesión. |
 | Etapa 1. Apertura | Confirmar la hoja, recordar los documentos prometidos y hacer las preguntas preparadas. |
 | Temario | Mostrar entre 4 y 6 temas con letra y decir que lleva unos 20 minutos. |
@@ -43,7 +43,7 @@ Se hace en silencio, antes de la primera pregunta:
 ## Abrir la conversación
 
 - Si es la primera sesión de la persona, decir la frase de "Presentación".
-- Si ya conversó antes, alcanza con un saludo corto.
+- Si ya conversó antes, saludar y decir en una frase en qué quedó lo que contó la vez pasada: falta confirmarlo, ya está confirmado o ya es la versión aprobada. El estado sale del mapa, que "Preparar" ya leyó. Las palabras son las de la regla 8 de `metodo/reglas.md`.
 
 ## Elegir el proceso
 
@@ -98,14 +98,15 @@ Va antes del temario. Se saltea si no hay nada para confirmar, recordar ni pregu
 
 **Preguntas preparadas.** Se hacen de a una por mensaje:
 
-1. Primero las del proceso de hoy y las que no son de ningún proceso.
+1. Primero las que frenan una validación: las que salen de un marcador que cambia el sentido, como lo define "Estados" en `metodo/control-documental.md`. En la hoja, su línea termina con "frena la validación". Después las del proceso de hoy y las que no son de ningún proceso.
 2. Después las de otros procesos, mientras la etapa no pase de unos cinco minutos. Las que queden siguen sin marcar.
-3. Escribir cada respuesta en el lugar de donde salió la pregunta. Si ahí había un `PENDIENTE` o un `A CONFIRMAR con <esta persona>`, se reemplaza por lo que contó. Si el documento está `vigente`, la respuesta sigue "Cambios en un documento vigente" en `metodo/control-documental.md`: en su lugar si no cambia el sentido, y como cambio propuesto si lo cambia.
-4. Si la pregunta pide confirmar una fila de "Cambios propuestos (sin aprobar)" y la persona es el dueño del proceso: si confirma, el `no` de "Confirmó el dueño" pasa a `sí` con la fecha, sin sumar otra fila; si corrige, se corrige la fila.
-5. Si la pregunta pide leer la ficha y decir dónde tendría que preguntar, lo que la persona señale se anota como indica "Si la ficha ya existe".
-6. Si la respuesta dice de qué área es un proceso que figuraba sin código, dárselo en ese momento, como indica "Un proceso sin código".
-7. Si la pregunta viene de una revisión periódica, la respuesta queda en el registro de la sesión, con sus palabras.
-8. Marcar la pregunta en la hoja, con la fecha.
+3. Si la persona avisó que tiene poco tiempo, se hacen solo las que frenan una validación. Las demás quedan sin marcar.
+4. Escribir cada respuesta en el lugar de donde salió la pregunta. Si ahí había un `PENDIENTE` o un `A CONFIRMAR con <esta persona>`, se reemplaza por lo que contó. Si el documento está `vigente`, la respuesta sigue "Cambios en un documento vigente" en `metodo/control-documental.md`: en su lugar si no cambia el sentido, y como cambio propuesto si lo cambia.
+5. Si la pregunta pide confirmar una fila de "Cambios propuestos (sin aprobar)" y la persona es el dueño del proceso: si confirma, el `no` de "Confirmó el dueño" pasa a `sí` con la fecha, sin sumar otra fila; si corrige, se corrige la fila.
+6. Si la pregunta pide leer la ficha y decir dónde tendría que preguntar, lo que la persona señale se anota como indica "Si la ficha ya existe".
+7. Si la respuesta dice de qué área es un proceso que figuraba sin código, dárselo en ese momento, como indica "Un proceso sin código".
+8. Si la pregunta viene de una revisión periódica, la respuesta queda en el registro de la sesión, con sus palabras.
+9. Marcar la pregunta en la hoja, con la fecha.
 
 - Si la persona responde que no sabe, seguir los pasos de "Marcadores" en `metodo/reglas.md`: la pregunta se marca con la fecha y la aclaración "no supo", y se le pregunta una sola vez a quién consultar.
 - Si una pregunta preparada pide confirmar algo que ya se confirmó con la hoja, se marca sin repetirla.
@@ -130,6 +131,7 @@ El temario sale de las partes de la ficha. Este es el punto de partida:
 - Los títulos se adaptan al proceso y son neutros: no dan por hecho quién hace qué.
 - Si la ficha ya tiene contenido, el temario cubre lo que falta, los marcadores que nombran a esta persona y los pasos en los que interviene.
 - El temario se muestra completo antes de empezar, con el tiempo que lleva.
+- Si la persona dice que tiene poco tiempo, preguntar cuánto, con la primera pregunta de "Cuando hay poco tiempo" del banco. Con menos de 15 minutos, mostrar el temario igual, pero empezar por "C. Paso a paso", con el último caso. Los temas que no se llegan a conversar quedan sin marcar, como indica "Seguir en otra sesión".
 
 Ejemplo, con una situación inventada en la que un cliente pide un presupuesto:
 
@@ -160,11 +162,11 @@ Cuando la persona acepta:
 - Un detalle que la ficha pide y que no se llegó a preguntar, como un plazo o un medio, queda como `PENDIENTE: preguntar a <esta persona>` y se suma a sus preguntas preparadas.
 - Se pregunta abierto, sin sugerir la respuesta ni dar opciones cerradas. Por ejemplo: "¿Quién lo decide?"
 - Se pide un caso real y reciente: "¿Cómo fue el último?" Del ejemplo se anota el tipo de caso, nunca el nombre de un cliente.
-- Si la persona no sabe algo, decir la frase de "No sabe algo" y anotar `PENDIENTE: preguntar a <quién>`.
+- Si la persona no sabe algo, decir la frase de "No sabe algo" y anotar `PENDIENTE: preguntar a <quién>`. Si está apurada, antes preguntar con la frase de "Dejar para otro día", como indica la regla 2 de `metodo/reglas.md`. Si es para otro día, va `PENDIENTE: preguntar a <esta persona>` y la pregunta queda en su hoja.
 - Si no sabe dos cosas seguidas sobre lo mismo, preguntar una sola vez a quién consultar, anotar las dos con ese nombre y seguir.
-- Si cuenta cómo debería ser, o propone una mejora, va a "Problemas e ideas". Si no queda claro, preguntar: "¿Eso es lo que se hace hoy, o lo que convendría hacer?"
+- Si cuenta cómo debería ser, o propone una mejora, va a "Problemas e ideas". Las señales de que una parte puede ser lo que debería pasar, y no lo que pasa, están en la regla 1 de `metodo/reglas.md`. Con una señal, decir la frase de "Lo que se hace distinto" y llevar la conversación al último caso real, con las preguntas de "Cuando cuenta cómo debería ser" del banco. La pregunta "¿Eso es lo que se hace hoy, o lo que convendría hacer?" queda como último recurso.
 - Si critica a alguien, se anota el hecho que afecta al trabajo, no el juicio.
-- Si cuenta algo de otro proceso, anotarlo en "Temas para otra sesión" del registro y volver al tema.
+- Si cuenta algo de otro proceso, anotarlo en "Temas para otra sesión" del registro y volver al tema con la frase de "Volver al tema".
 - Un cambio que ya está decidido o en marcha no es una idea, ni es lo que se hace hoy. Se anota en "Temas para otra sesión", en una línea que empieza con `Cambio:`. Lo retoma el responsable del programa, con `metodo/cambio-en-curso.md`.
 - Si aparece una palabra propia de la empresa que no está en el glosario, preguntar qué significa y agregarla. Si `empresa/glosario.md` todavía no existe, se crea copiando `plantillas/glosario.md`, en estado `en curso`, y se pone al día la fila `GL-GEN-001` de la lista maestra. Si ya está `validado` o `vigente`, el término se suma como indica "Estados" en `metodo/control-documental.md`.
 - No apurar.
@@ -175,10 +177,16 @@ Cuando la persona acepta:
 |---|---|
 | "A veces" | "¿Cuántas veces por semana, más o menos?" |
 | "Depende" | "¿De qué dependió en el último caso?" |
-| "Lo de siempre" | "Como si hubiera que explicárselo a alguien nuevo: ¿qué es lo primero?" |
+| "Lo de siempre", "normal" o "bien" | "Como si hubiera que explicárselo a alguien nuevo: ¿qué es lo primero?" |
 | "Lo ve otra área" | "¿Quién, con nombre de pila?" |
 | "Enseguida" o "rápido" | "¿Cuánto es: minutos, horas o días?" |
 | "Se revisa" o "se controla" | "¿Qué se mira para dar por bueno el resultado?" |
+| "En general" o "normalmente" | "Eso es como suele pasar. En el último caso, ¿qué pasó exactamente?" |
+| "Sí", cuando la pregunta pedía más | "¿Cómo fue la última vez?" |
+| "No" | "¿Y qué se hace en su lugar?" |
+| "Yo" | "¿Y después, quién lo sigue?" |
+| "Ahí" o "en el sistema" | "¿En qué pantalla o en qué planilla? Con el nombre alcanza." |
+| Un solo verbo, como "cargo" o "mando" | "¿Qué se carga, y de dónde sale?" o "¿Por dónde se manda, y a quién?" |
 
 ### Cuando aparece un documento, un formulario o una pantalla
 
@@ -267,15 +275,16 @@ Cuando quien habla no es el dueño del proceso, lo que no entiende de lo ya escr
 
 ### Un proceso que aparece en la conversación
 
-1. Preguntar a la persona de qué área es ese trabajo.
+Si el proceso es el tema de hoy, los pasos de abajo se hacen en el momento, porque la ficha y el registro llevan el código en el nombre. Si no lo es, en el momento solo se anota en "Temas para otra sesión" del registro, y se vuelve al tema. No se releva de paso. Sus pasos se hacen al cerrar la sesión, antes de la lectura final, con una sola pregunta para todos los trabajos que aparecieron: la frase de "Otros trabajos que aparecieron".
+
+1. Preguntar a la persona de qué área es cada uno de esos trabajos.
 2. Si el área figura en `empresa/contexto.md`, asignarle el código con los pasos de "Cómo se asigna un código". Su fila de la lista maestra queda `pendiente`.
 3. Agregar su fila al mapa, en el grupo que corresponde: estado `pendiente`, "Dueño" con `A DEFINIR`, prioridad `sin definir` y ficha `—`. En "Participantes" va la persona que lo contó.
-4. Si el mapa está `vigente`, la fila va a su sección "Cambios propuestos (sin aprobar)".
+4. Si el mapa está `vigente`, la fila entra igual al cuerpo y el alta queda registrada en "Cambios propuestos (sin aprobar)", como indica "Cambios en un documento vigente" en `metodo/control-documental.md`.
 5. Agregar el proceso a la hoja de la persona, en "Procesos en los que participa".
 6. Anotar en "Preguntas preparadas" de la hoja del responsable del programa que apareció este proceso, y que falta definir quién responde por él y con qué prioridad se releva.
-7. Si no es el tema de hoy, anotarlo en "Temas para otra sesión". No se releva de paso.
 
-Si la persona no sabe de qué área es, o nombra un área que no figura en `empresa/contexto.md`, no se inventan letras ni se asigna el código. El proceso figura en el mapa sin código: en "Código" va `—` y en "Área" va `PENDIENTE: preguntar a <responsable del programa>`. Si ese proceso es el tema de hoy, sigue "Un proceso sin código".
+Si la persona no sabe de qué área es, o nombra un área que no figura en `empresa/contexto.md`, no se inventan letras ni se asigna el código. El proceso figura en el mapa sin código: en "Código" va `—` y en "Área" va `PENDIENTE: preguntar a <responsable del programa>`. Si la persona ya se fue sin responder, las filas se agregan igual, sin código y con "Área" `PENDIENTE: preguntar a <esta persona>`. Si ese proceso es el tema de hoy, sigue "Un proceso sin código".
 
 ### Un proceso sin código
 
@@ -304,8 +313,9 @@ Si hoy no hay tiempo, se anota en "Temas para otra sesión".
 
 ## Cerrar la sesión
 
-1. Hacer la lectura final. Si se cerraron todos los temas, leer un resumen de toda la ficha, en palabras simples, como para alguien nuevo. Si quedaron temas, leer lo que se escribió hoy. Preguntar: "¿Es así como pasa?" Corregir lo que la persona marque.
-2. Dejar el estado que corresponde, en el bloque de control, en la lista maestra y en el mapa. Vale la primera fila que se cumple:
+1. Si en la sesión aparecieron otros trabajos que no son el tema de hoy, resolverlos con una sola pregunta, como indica "Un proceso que aparece en la conversación".
+2. Hacer la lectura final. Si se cerraron todos los temas, leer un resumen de toda la ficha, en palabras simples, como para alguien nuevo. Si quedaron temas, leer lo que se escribió hoy. Preguntar: "¿Es así como pasa?" Cuando quien escucha la lectura de la ficha completa es el dueño del proceso, preguntar en su lugar con la frase de "Lectura final con el dueño": no da por hecho que haya errores, pero invita a marcarlos. Un "nada" o un "está bien así" vale como confirmación. Corregir lo que la persona marque.
+3. Dejar el estado que corresponde, en el bloque de control, en la lista maestra y en el mapa. Vale la primera fila que se cumple:
 
    | Situación | Estado |
    |---|---|
@@ -314,12 +324,12 @@ Si hoy no hay tiempo, se anota en "Temas para otra sesión".
    | Quedaron temas sin cerrar | `en curso`, también si la ficha ya estaba en `borrador`. |
    | Se cerraron todos los temas y la persona confirmó la lectura final | `borrador`, aunque falte escuchar a otras personas. |
 
-3. Sumar una fila al historial de la ficha y de cualquier otro documento controlado que la sesión cambió, con la versión, la fecha, qué se agregó y quién lo contó. Va una sola fila por documento, también si la sesión lo creó.
-4. Si en esta sesión se creó el glosario, pasarlo a `borrador`, en su bloque de control y en la lista maestra.
-5. Poner al día la hoja de la persona: "Su parte", las preguntas marcadas, los documentos prometidos y "Última actualización".
-6. Completar "Cómo terminó" en el registro, con su línea de subida. En "Último resumen que confirmó la persona" va la lectura final, y si fue de la ficha completa o solo de lo escrito hoy. Si quien confirmó la lectura final de la ficha completa es el dueño del proceso, anotarlo ahí: es lo que la revisión necesita para validar.
-7. Hacer el guardado final y la subida, como indica "Al cerrar la sesión" en `metodo/guardado.md`.
-8. Despedirse con la frase de "Despedida".
+4. Sumar una fila al historial de la ficha y de cualquier otro documento controlado que la sesión cambió, con la versión, la fecha, qué se agregó y quién lo contó. Va una sola fila por documento, también si la sesión lo creó.
+5. Si en esta sesión se creó el glosario, pasarlo a `borrador`, en su bloque de control y en la lista maestra.
+6. Poner al día la hoja de la persona: "Su parte", las preguntas marcadas, los documentos prometidos y "Última actualización".
+7. Completar "Cómo terminó" en el registro, con su línea de subida. En "Último resumen que confirmó la persona" va la lectura final, y si fue de la ficha completa o solo de lo escrito hoy. Si quien confirmó la lectura final de la ficha completa es el dueño del proceso, anotarlo ahí: es lo que la revisión necesita para validar.
+8. Hacer el guardado final y la subida, como indica "Al cerrar la sesión" en `metodo/guardado.md`.
+9. Despedirse con la frase de "Despedida".
 
 ## Seguir en otra sesión
 
@@ -368,8 +378,13 @@ Las frases son modelos. Se dicen cada vez con otras palabras, como indica la reg
 | Un momento | "Un momento, lo dejo anotado." |
 | Avance | "Tema `<letra>` listo: van `<cantidad>` de `<total>`. ¿Seguimos con el siguiente?" |
 | Ofrecer cortar | "Ya llevamos un buen rato y no quiero ocupar más tiempo. Lo conversado quedó anotado. ¿Cortamos aquí y seguimos otro día, o hacemos un tema más?" |
+| Dejar para otro día | "¿Es algo que no se sabe, o algo para dejar para otro día?" |
 | No sabe algo | "No hay problema. Lo anoto para preguntárselo a quien corresponda. ¿A quién habría que consultarle?" |
 | Dos versiones | "¿Puede ser que a veces se haga de otra manera?" |
+| Volver al tema | "Eso sobre `<otro trabajo>` queda anotado para otra conversación. Volviendo a `<trabajo de hoy>`: ¿qué pasa después de `<último paso que contó>`?" |
+| Lo que se hace distinto | "En casi todos los trabajos hay cosas que en la práctica se hacen distinto de como se pensaron. Eso es justo lo que sirve anotar, y no es para evaluar a nadie." |
+| Otros trabajos que aparecieron | "Hoy aparecieron estos otros trabajos: `<lista>`. ¿De qué área es cada uno?" |
+| Lectura final con el dueño | "¿Hay algo que no sea así, o que falte?" |
 | Ofrecer un instructivo | "Ese paso tiene mucho detalle. ¿Conviene dejarlo escrito aparte, paso a paso?" |
 | Despedida | "Listo, quedó guardado. `<nombre del responsable del programa>` lo va a repasar y, si hay algo para ajustar, consulta. Gracias por el tiempo." |
 
