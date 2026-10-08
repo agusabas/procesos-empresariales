@@ -124,4 +124,4 @@ Dos cuidados:
 
 ## Licencia
 
-Licencia: pendiente de definir.
+Este repositorio se publica con la licencia Creative Commons Atribución 4.0 Internacional (CC BY 4.0). Se puede copiar, adaptar y usar, también con fines comerciales. La única condición es decir de dónde viene y qué se cambió. El texto completo de la licencia está en `LICENSE`.
